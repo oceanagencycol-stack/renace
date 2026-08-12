@@ -54,6 +54,15 @@
 <body>
 <div class="sp" id="sp" aria-hidden="true"></div>
 <a href="#contenido" class="sr" data-i="skip">Saltar al contenido</a>
+<div class="tbar" id="tbar" hidden>
+  <a class="tbar__a" href="https://mapa-emergencia.artefactofilms.workers.dev" target="_blank" rel="noopener">
+    <span class="tbar__p" aria-hidden="true"></span>
+    <b data-i="tb0">¿Necesitas ayuda ahora o quieres reportar dónde falta gente?</b>
+    <span data-i="tb1">Mapa de emergencia comunitario, en tiempo real</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+  </a>
+  <button class="tbar__x" id="tbarX" aria-label="Cerrar aviso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+</div>
 <header class="nav" id="nav">
   <div class="nav__inner">
     <a class="brand" href="#inicio" aria-label="RENACE">
@@ -247,6 +256,17 @@
         <ul class="mapa__l" id="mapaLista"></ul>
       </aside>
     </div>
+    <aside class="emg rv">
+      <div class="emg__t">
+        <p class="emg__k" data-i="eg0">Si lo que necesitas es ayuda ahora</p>
+        <h3 data-i="eg1">Mapa de emergencia comunitario</h3>
+        <p data-i="eg2">Cientos de personas coordinan ahí, en vivo, dónde faltan manos, dónde ya sobran y qué se necesita en cada dirección de Valle, Chocó y Cauca. Puedes consultarlo o añadir un punto.</p>
+        <p class="emg__n" data-i="eg3">No es nuestro. Lo hizo y lo sostiene Artefacto. Lo enlazamos porque resuelve la urgencia inmediata, que no es lo que hace RENACE.</p>
+      </div>
+      <a class="btn emg__b" href="https://mapa-emergencia.artefactofilms.workers.dev" target="_blank" rel="noopener">
+        <span data-i="eg4">Abrir el mapa de emergencia</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+    </aside>
   </div>
 </section>
 <section class="sec ali-sec" id="alianza" style="padding-top:0">
@@ -510,7 +530,8 @@
         <li><a href="mailto:funhogarsinolvido@gmail.com">funhogarsinolvido@gmail.com</a></li>
         <li data-i="f4">Buenaventura, Valle del Cauca</li>
         <li><a href="#transparencia" data-i="f5">Transparencia y documentos</a></li>
-        <li><a href="#metas" data-i="f6">Las metas</a></li></ul></div>
+        <li><a href="#metas" data-i="f6">Las metas</a></li>
+        <li><a href="https://mapa-emergencia.artefactofilms.workers.dev" target="_blank" rel="noopener" data-i="f9">Mapa de emergencia (Artefacto) ↗</a></li></ul></div>
     </div>
     <div class="foot__bottom"><span data-i="f7">© 2026 RENACE · Alianza de reconstrucción</span>
       <span data-i="f8">Datos tratados conforme a la Ley 1581 de 2012 · Plataforma por Ocean Industries</span></div>
@@ -644,6 +665,12 @@ pp2:'raised',pp3:'projects delivered',pp4:'alliance commission',
 pp5:'Donate now',pp6:'See the public log',pp7:'Not right now, thanks',
 d0:'raised',d1:'of the US$ 500,000 goal',d2:'contributions logged',d3:'projects delivered',
 d4:'municipalities in operation',d5:'partner organizations',n7:'Map',
+tb0:'Need help right now, or want to report where hands are missing?',
+tb1:'Community emergency map, live · in Spanish',
+eg0:'If what you need is help right now',eg1:'Community emergency map',
+eg2:'Hundreds of people coordinate there, live, where hands are missing, where there are already enough, and what is needed at each address across Valle, Chocó and Cauca. You can check it or add a point.',
+eg3:'It is not ours. It was built and is maintained by Artefacto. We link it because it solves the immediate emergency, which is not what RENACE does.',
+eg4:'Open the emergency map',f9:'Emergency map (Artefacto) ↗',
 al0:'The alliance',al1:'Who each one is and what they bring.',
 al2:'Eight organizations with different trades. None of them could do this alone: it took presence on the ground, legal capacity to receive and execute, convening power and technology to make it verifiable.',
 al3:'The legal details of the entity that receives and executes are in the transparency section, and can be checked on RUES and DIAN.',n8:'The alliance',
@@ -1122,6 +1149,14 @@ if(bar){bar.setAttribute('data-fill',pc+'%');
 if(reduce)bar.style.width=pc+'%';
 else{var o=new IntersectionObserver(function(e,ob){if(e[0].isIntersecting){setTimeout(function(){bar.style.width=pc+'%';},280);ob.disconnect();}},{threshold:.4});
 o.observe(bar.closest('.cmp')||bar);}}}
+
+/* aviso superior: se muestra salvo que lo hayan cerrado */
+(function(){
+var t=document.getElementById('tbar'),x=document.getElementById('tbarX'); if(!t||!x)return;
+var oculto=false; try{oculto=localStorage.getItem('renace_tbar_no')>Date.now();}catch(e){}
+if(!oculto)t.hidden=false;
+x.addEventListener('click',function(){t.hidden=true;
+try{localStorage.setItem('renace_tbar_no',Date.now()+3*864e5);}catch(e){}});})();
 
 var btn=document.getElementById('btnCopiar');
 if(btn){btn.addEventListener('click',function(){
