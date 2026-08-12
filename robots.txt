@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://renacecol.org/sitemap.xml
+Sitemap: https://www.renacecol.org/sitemap.xml
