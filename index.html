@@ -284,101 +284,71 @@
 </section>
 <section class="sec" id="aportar">
   <div class="wrap">
-    <div class="sec__head rv"><p class="eyebrow" data-i="e4">Cómo aportar hoy</p><h2 data-i="a0">Tres formas de que tu ayuda llegue esta semana.</h2>
-      <p class="lede" data-i="a1">No esperamos a que la plataforma esté lista para empezar a reconstruir. Ya estamos recogiendo.</p></div>
-    <div class="picker rv">
-      <h3 data-i="pk0">Arma tu aporte</h3>
-      <p class="picker__sub" data-i="pk1">Elige cuánto y a qué frente quieres que vaya. Te preparamos el mensaje con los datos listos.</p>
-      <p class="picker__lab" data-i="pk2">Monto</p>
-      <div class="chips" id="pkM">
-        <button class="chipx" type="button" data-v="50000" aria-pressed="false">$50.000</button>
-        <button class="chipx" type="button" data-v="100000" aria-pressed="false">$100.000</button>
-        <button class="chipx" type="button" data-v="250000" aria-pressed="true">$250.000</button>
-        <button class="chipx" type="button" data-v="1000000" aria-pressed="false">$1.000.000</button>
-        <input class="picker__in" id="pkOtro" inputmode="numeric" placeholder="Otro monto" aria-label="Otro monto">
+    <div class="sec__head rv"><p class="eyebrow" data-i="e4">Cómo aportar hoy</p><h2 data-i="a0">Dónde transferir, según desde dónde estés.</h2>
+      <p class="lede" data-i="a1">Tres vías, todas verificadas. Elige la que te quede más fácil: el resultado es el mismo, y todas terminan en el mismo registro público.</p></div>
+    <div class="via rv">
+      <div class="via__tabs" role="tablist" aria-label="Canales de aporte">
+        <button class="via__tab" role="tab" id="tb-banco" aria-controls="pn-banco" aria-selected="true" data-i="w0">Banco en Colombia</button>
+        <button class="via__tab" role="tab" id="tb-breb" aria-controls="pn-breb" aria-selected="false" data-i="w1">Bre-B · al instante</button>
+        <button class="via__tab" role="tab" id="tb-usa" aria-controls="pn-usa" aria-selected="false" data-i="w2">Desde el exterior</button>
       </div>
-      <p class="picker__lab" data-i="pk3">Destino</p>
-      <div class="chips" id="pkD">
-        <button class="chipx" type="button" data-d="Vivienda" aria-pressed="true" data-i="pk4">Vivienda</button>
-        <button class="chipx" type="button" data-d="Colegios" aria-pressed="false" data-i="pk5">Colegios</button>
-        <button class="chipx" type="button" data-d="Centros de salud" aria-pressed="false" data-i="pk6">Centros de salud</button>
-        <button class="chipx" type="button" data-d="Ayuda de emergencia" aria-pressed="false" data-i="pk7">Emergencia</button>
-        <button class="chipx" type="button" data-d="Donde más se necesite" aria-pressed="false" data-i="pk8">Donde más se necesite</button>
+
+      <div class="via__panel" role="tabpanel" id="pn-banco" aria-labelledby="tb-banco">
+        <p class="via__k" data-i="w3">Cuenta de ahorros · Davivienda</p>
+        <p class="via__big">1089 0083 0473<button class="cp" type="button" data-copy="108900830473" aria-label="Copiar"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></p>
+        <dl class="via__rows">
+          <div><dt data-i="w4">Titular</dt><dd>Fundación Un Hogar Sin Olvido</dd></div>
+          <div><dt data-i="w5">NIT</dt><dd class="mn">901.047.625-4</dd></div>
+          <div><dt data-i="w6">Quién ejecuta</dt><dd data-i="w7">Esta es la cuenta de la fundación que compra, factura y entrega.</dd></div>
+        </dl>
       </div>
-      <div class="picker__out">
-        <div class="picker__big" id="pkBig">—</div>
-        <div class="picker__meta" id="pkMeta"></div>
+
+      <div class="via__panel" role="tabpanel" id="pn-breb" aria-labelledby="tb-breb" hidden>
+        <p class="via__k" data-i="w8">Llave Bre-B · desde cualquier banco o billetera</p>
+        <p class="via__big">@ARQJUANCUERO1<button class="cp" type="button" data-copy="@ARQJUANCUERO1" aria-label="Copiar"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></p>
+        <dl class="via__rows">
+          <div><dt data-i="w4b">Titular</dt><dd>Juan Cuero<span data-i="w9">Director de la alianza</span></dd></div>
+          <div><dt data-i="w10">Cuánto tarda</dt><dd data-i="w11">Segundos, sin costo, 24 horas al día.</dd></div>
+          <div><dt data-i="w12">Por qué no es la fundación</dt><dd data-i="w13">Es un canal temporal mientras la fundación habilita el suyo. Todo lo que entra se traslada a la cuenta de la fundación y recibe folio igual que cualquier otro aporte.</dd></div>
+        </dl>
       </div>
-      <a class="btn btn--wa" id="pkBtn" href="#" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.9 9.9 0 0 0 4.74 1.2c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2Zm0 18.02a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Z"/></svg>
-        <span data-i="pk9">Aportar por WhatsApp</span></a>
-    </div>
-    <div class="aportes">
-      <article class="aporte aporte--principal rv" data-tag="Vía directa" id="tagDirecta">
-        <h3 data-i="a2">Aporte en dinero</h3>
-        <p data-i="a3">Transferencia o consignación a la cuenta de la fundación aliada que ejecuta y factura.</p>
-        <div class="cuenta">
-          <div class="cuenta__l" data-i="a4">Cuenta de ahorros · Davivienda</div>
-          <div class="cuenta__n">1089 0083 0473</div>
-          <div class="cuenta__t" data-i="a5">Titular: Fundación Un Hogar Sin Olvido<br>NIT 901.047.625-4 · Buenaventura, Valle del Cauca</div>
-          <button class="copiar" id="btnCopiar" type="button">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-            <span data-i="cop">Copiar número</span></button>
+
+      <div class="via__panel" role="tabpanel" id="pn-usa" aria-labelledby="tb-usa" hidden>
+        <p class="via__k" data-i="w14">DolarApp · en dólares, desde la app</p>
+        <p class="via__big">$juancuero1<button class="cp" type="button" data-copy="$juancuero1" aria-label="Copiar"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></p>
+        <p class="via__k via__k2" data-i="w15">O por transferencia bancaria desde Estados Unidos (ACH o wire)</p>
+        <dl class="via__rows via__rows--g">
+          <div><dt data-i="w16">Banco</dt><dd>Lead Bank</dd></div>
+          <div><dt data-i="w17">Cuenta</dt><dd class="mn">218779775597<button class="cp" type="button" data-copy="218779775597" aria-label="Copiar"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></dd></div>
+          <div><dt data-i="w18">ABA / Routing</dt><dd class="mn">101019644<button class="cp" type="button" data-copy="101019644" aria-label="Copiar"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></dd></div>
+          <div><dt data-i="w19">Tipo</dt><dd data-i="w20">Corriente (checking)</dd></div>
+          <div class="w"><dt data-i="w21">Dirección del banco</dt><dd>1801 Main St., Kansas City, MO 64108, USA</dd></div>
+          <div class="w"><dt data-i="w4c">Titular</dt><dd>Juan Cuero<span data-i="w22">Director de la alianza. Canal temporal mientras la fundación habilita su cuenta en dólares; lo recibido se traslada a la fundación y recibe folio.</span></dd></div>
+        </dl>
+      </div>
+
+      <div class="via__foot">
+        <div class="via__amt">
+          <span data-i="w23">Monto</span>
+          <button class="chipx" type="button" data-v="50000" aria-pressed="false">$50.000</button>
+          <button class="chipx" type="button" data-v="100000" aria-pressed="false">$100.000</button>
+          <button class="chipx" type="button" data-v="250000" aria-pressed="true">$250.000</button>
+          <button class="chipx" type="button" data-v="1000000" aria-pressed="false">$1.000.000</button>
+          <input class="via__in" id="pkOtro" inputmode="numeric" placeholder="Otro" aria-label="Otro monto">
         </div>
-        <ul>
-          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="a6">Envía el comprobante por WhatsApp y te devolvemos tu folio</span></li>
-          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="a7">Sin comisión de la alianza: el 100 % entra a la operación</span></li>
-        </ul>
-        <a class="btn btn--wa" href="#" data-wa="Hola. Acabo de hacer un aporte a RENACE y quiero enviar el comprobante." data-wa-en="Hello. I just made a contribution to RENACE and I would like to send the receipt.">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.9 9.9 0 0 0 4.74 1.2c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2Zm0 18.02a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Z"/></svg>
-          <span data-i="a8">Enviar comprobante</span></a>
-      </article>
-      <article class="aporte rv">
-        <h3 data-i="a9">Aporte en especie</h3><p data-i="a10">Materiales y ayuda que se están pidiendo hoy desde los territorios.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="a11">Tejas, cemento, madera y herramienta</span></li>
-          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="a12">Mobiliario escolar y dotación de aulas</span></li>
-          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="a13">Mercados, agua potable y elementos de aseo</span></li>
-          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="a14">Colchonetas, cobijas y kits de bebé</span></li>
-        </ul>
-        <a class="btn btn--ghost" href="#" data-wa="Hola. Quiero hacer una donación en especie para RENACE. ¿Dónde y cuándo la entrego?" data-wa-en="Hello. I would like to make an in-kind donation to RENACE. Where and when can I deliver it?"><span data-i="a15">Coordinar entrega</span></a>
-      </article>
-      <article class="aporte rv">
-        <h3 data-i="a16">Empresas y aliados</h3><p data-i="a17">Producto, logística, mano de obra o convocatoria — todo suma a la meta.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="a18">Apadrinar una obra completa con tu marca</span></li>
-          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="a19">Transporte y bodegaje hacia Chocó y el Pacífico</span></li>
-          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="a20">Voluntariado en acopio, empaque y obra</span></li>
-          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="a21">Reporte de ejecución con factura y acta para tu junta</span></li>
-        </ul>
-        <a class="btn btn--ghost" href="#" data-wa="Hola. Represento a una empresa y quiero ser aliado de RENACE. ¿Me comparten la presentación?" data-wa-en="Hello. I represent a company and would like to become a RENACE partner. Could you share the deck?"><span data-i="a22">Quiero ser aliado</span></a>
-      </article>
-    </div>
-    <div class="usd rv">
-      <p class="eyebrow" data-i="u0">Canales rápidos y desde el exterior</p>
-      <h3 data-i="u1">Llave Bre-B, DolarApp y transferencia en dólares</h3>
-      <p data-i="u2">Tres vías más para aportar: desde cualquier banco colombiano en segundos, desde una billetera en dólares, o por transferencia bancaria desde Estados Unidos.</p>
-      <div class="llaves">
-        <div class="llave"><span data-i="k1">Llave Bre-B · Colombia</span><b class="mono">@ARQJUANCUERO1<button class="cp" type="button" data-copy="@ARQJUANCUERO1" aria-label="Copiar"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></b>
-          <em data-i="k2">Transferencia interoperable desde cualquier banco o billetera</em></div>
-        <div class="llave"><span data-i="k3">DolarApp · USD</span><b class="mono">$juancuero1<button class="cp" type="button" data-copy="$juancuero1" aria-label="Copiar"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></b>
-          <em data-i="k4">Envío en dólares desde la app, sin costo de conversión</em></div>
+        <a class="btn btn--wa" id="pkBtn" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.9 9.9 0 0 0 4.74 1.2c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2Zm0 18.02a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Z"/></svg><span data-i="w24">Avisar mi aporte y recibir folio</span></a>
       </div>
-      <div class="usd__sub" data-i="k5">Transferencia bancaria desde Estados Unidos (ACH o wire)</div>
-      <div class="usd__grid">
-        <div><span data-i="u3">Beneficiario</span><b>Juan Cuero</b></div>
-        <div><span data-i="u4">Banco</span><b>Lead Bank</b></div>
-        <div><span data-i="u5">Nro. de cuenta</span><b>218779775597</b></div>
-        <div><span data-i="u6">ABA / Routing</span><b>101019644</b></div>
-        <div><span data-i="u7">Tipo de cuenta</span><b data-i="u8">Corriente (checking)</b></div>
-        <div><span data-i="u9">Dirección del banco</span><b>1801 Main St., Kansas City, MO 64108, USA</b></div>
-      </div>
-      <div class="usd__nota" data-i="u10"><strong>Qué son estos tres canales y por qué no están a nombre de la fundación.</strong> La llave Bre-B, la cuenta DolarApp y la cuenta en Estados Unidos están a nombre de Juan Cuero, director de la alianza, y funcionan como canales temporales mientras se habilitan los equivalentes institucionales de la Fundación Un Hogar Sin Olvido. Todo lo que entre por aquí se traslada a la fundación, recibe folio igual que cualquier otro aporte y queda con la misma evidencia publicada. Si prefieres transferir directo a la cuenta de la fundación en Davivienda, es la primera opción de esta sección.</div>
-      <a class="btn btn--wa" href="#" data-wa="Hola. Voy a hacer (o acabo de hacer) una transferencia en dólares para RENACE. Quiero avisar y recibir mi folio." data-wa-en="Hello. I am about to make (or just made) a USD transfer to RENACE. I would like to notify you and receive my tracking number.">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.9 9.9 0 0 0 4.74 1.2c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2Zm0 18.02a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Z"/></svg>
-        <span data-i="u11">Avisar de mi transferencia</span></a>
+      <p class="via__nota" data-i="w25">Cuando transfieras, mándanos el comprobante por WhatsApp. Te devolvemos el folio y tu aporte entra al registro público de esta página.</p>
     </div>
-    <div class="nota rv" style="margin-top:28px;max-width:none" data-i="a23"><strong>Antes de donar, verifica.</strong> En emergencias aparecen cuentas falsas que suplantan fundaciones reales. Confirma siempre el titular y el NIT antes de transferir, aquí y en cualquier otra campaña. Si tienes dudas, escríbenos por WhatsApp y te enviamos el RUT y el certificado de existencia de la fundación.</div>
+
+    <div class="otras rv">
+      <div><h3 data-i="w26">¿Prefieres aportar en especie?</h3>
+        <p data-i="w27">Tejas, cemento, madera y herramienta. Mobiliario escolar. Mercados, agua y aseo. Colchonetas y cobijas. No recibimos ropa usada, medicamentos ni perecederos.</p>
+        <a href="#" data-wa="Hola. Quiero hacer una donación en especie para RENACE. ¿Dónde y cuándo la entrego?" data-wa-en="Hello. I would like to make an in-kind donation to RENACE. Where and when can I deliver it?" data-i="w28">Coordinar una entrega →</a></div>
+      <div><h3 data-i="w29">¿Vienes de una empresa o fundación?</h3>
+        <p data-i="w30">Puedes apadrinar una obra completa, poner transporte y bodegaje hacia el Pacífico, o mover a tu equipo. Recibes reporte de ejecución con factura y acta.</p>
+        <a href="#" data-wa="Hola. Represento a una empresa y quiero ser aliado de RENACE. ¿Me comparten la presentación?" data-wa-en="Hello. I represent a company and would like to become a RENACE partner. Could you share the deck?" data-i="w31">Hablar con el equipo →</a></div>
+    </div>
   </div>
 </section>
 <section class="sec" id="transparencia" style="padding-top:0">
@@ -531,7 +501,10 @@ var WA='573166891508',CUENTA='108900830473';
 var PROGRESO={recaudadoCOP:500000,aportes:1,obras:0,metaObras:100,metaUSD:500000,trm:3125.47,
 actualizado:{es:'Actualizado 12 ago 2026',en:'Updated Aug 12, 2026'}};
 var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var pkMonto=250000,pkDest='Vivienda';
+var VIA='banco', pkMonto2=250000;
+var V_TXT={banco:{es:'a la cuenta Davivienda de la fundación',en:'to the foundation Davivienda account'},
+breb:{es:'por la llave Bre-B',en:'via the Bre-B key'},
+usa:{es:'desde el exterior',en:'from abroad'}};
 var DEST_EN={'Vivienda':'Housing','Colegios':'Schools','Centros de salud':'Health posts','Ayuda de emergencia':'Emergency relief','Donde m\u00e1s se necesite':'Wherever it is needed most'};
 function fmtCOP(n){return '$'+Number(n||0).toLocaleString('es-CO');}
 function pintarProgreso(lang){
@@ -593,7 +566,7 @@ t15:'Real percentage',t16:'How much of the project you supported is executed tod
 t17:'Evidence attached',t18:'Invoices, records and delivery photos tied to the number, with date and place.',
 t19:'Protected data',t20:'Handled under Colombian data protection law 1581/2012. We never publish your identity without permission.',
 t21:'Honest status: today this page is the front door. Public lookup by number and the execution dashboard are still being built — the receipt above is an illustrative example, not real data. In the meantime, every contribution is logged manually and proof is sent over WhatsApp.',
-e4:'How to give today',a0:'Three ways for your help to arrive this week.',a1:'We are not waiting for the platform to be ready to start rebuilding. We are already collecting.',
+e4:'How to give today',a0:'Where to transfer, depending on where you are.',a1:'Three routes, all verified. Pick whichever is easiest: the outcome is the same, and all of them end in the same public log.',
 a2:'Financial contribution',a3:'Transfer or deposit to the account of the partner foundation that executes and invoices.',
 a4:'Savings account · Davivienda (Colombia)',a5:'Account holder: Fundaci\u00f3n Un Hogar Sin Olvido<br>Tax ID 901.047.625-4 · Buenaventura, Colombia',
 cop:'Copy number',a6:'Send the receipt over WhatsApp and we send back your tracking number',a7:'No alliance commission: 100 % goes into the operation',
@@ -619,6 +592,21 @@ pp0:'Your contribution stays in sight.',
 pp1:'Every peso that comes in gets a tracking number and is published with its invoice, delivery record and photos. You can follow it all the way to the finished work.',
 pp2:'raised',pp3:'projects delivered',pp4:'commission',
 pp5:'Donate now',pp6:'See the public log',pp7:'Not right now, thanks',
+w0:'Bank in Colombia',w1:'Bre-B · instant',w2:'From abroad',
+w3:'Savings account · Davivienda (Colombia)',w4:'Account holder',w4b:'Account holder',w4c:'Account holder',
+w5:'Tax ID (NIT)',w6:'Who executes',w7:'This is the account of the foundation that buys, invoices and delivers.',
+w8:'Bre-B key · from any Colombian bank or wallet',w9:'Director of the alliance',
+w10:'How long it takes',w11:'Seconds, no fee, 24 hours a day.',
+w12:'Why it is not the foundation',w13:'It is a temporary channel while the foundation enables its own. Everything received is transferred to the foundation account and gets a tracking number like any other contribution.',
+w14:'DolarApp · in US dollars, from the app',w15:'Or by bank transfer from the United States (ACH or wire)',
+w16:'Bank',w17:'Account number',w18:'ABA / Routing',w19:'Type',w20:'Checking',w21:'Bank address',
+w22:'Director of the alliance. Temporary channel while the foundation enables its US dollar account; what is received is transferred to the foundation and gets a tracking number.',
+w23:'Amount',w24:'Tell us and get your tracking number',
+w25:'Once you transfer, send us the receipt over WhatsApp. We send back your tracking number and your contribution enters the public log on this page.',
+w26:'Would you rather give in kind?',w27:'Roof tiles, cement, timber and tools. School furniture. Food, water and hygiene. Mattresses and blankets. We do not accept used clothing, medicines or perishables.',
+w28:'Arrange a delivery →',
+w29:'Coming from a company or foundation?',w30:'You can sponsor a full project, provide transport and warehousing to the Pacific coast, or mobilise your team. You receive an execution report with invoice and delivery record.',
+w31:'Talk to the team →',
 pk0:'Build your contribution',pk1:'Choose how much and which front it goes to. We prepare the message with the details ready.',
 pk2:'Amount',pk3:'Destination',pk4:'Housing',pk5:'Schools',pk6:'Health posts',pk7:'Emergency',pk8:'Wherever needed most',pk9:'Give via WhatsApp',
 v0:'Verify us yourself, in 30 seconds',v1:'You do not have to take our word for it. These are public Colombian government registries: look up tax ID <b>901.047.625-4</b> and compare.',
@@ -657,7 +645,7 @@ tagDirecta:'Direct channel'};
 
 var nodes=document.querySelectorAll('[data-i]'),ES={};
 nodes.forEach(function(el){ES[el.getAttribute('data-i')]=el.innerHTML;});
-var tagEl=document.getElementById('tagDirecta'),tagES=tagEl.getAttribute('data-tag');
+var tagEl=document.getElementById('tagDirecta'),tagES=tagEl?tagEl.getAttribute('data-tag'):'';
 var bES=document.getElementById('bES'),bEN=document.getElementById('bEN');
 
 function waLink(t){return 'https://wa.me/'+WA+'?text='+encodeURIComponent(t);}
@@ -671,7 +659,7 @@ if(f){f.href=waLink(lang==='en'?'Hello. I am writing from the RENACE website.':'
 function setLang(lang,push){
 var d=(lang==='en')?EN:ES;
 nodes.forEach(function(el){var k=el.getAttribute('data-i');if(d[k]!==undefined){el.innerHTML=d[k];}});
-tagEl.setAttribute('data-tag',lang==='en'?EN.tagDirecta:tagES);
+if(tagEl)tagEl.setAttribute('data-tag',lang==='en'?EN.tagDirecta:tagES);
 document.documentElement.lang=(lang==='en')?'en':'es-CO';
 bES.classList.toggle('on',lang!=='en');bEN.classList.toggle('on',lang==='en');
 setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}if(typeof pintaEntregas==='function')pintaEntregas();if(typeof pintaRegistro==='function')pintaRegistro();
@@ -730,30 +718,35 @@ if(m&&!m.dataset.done){m.dataset.done='1';contar(m,P.recaudadoCOP,1100,fmtCOP);}
 if(a&&!a.dataset.done){a.dataset.done='1';contar(a,P.aportes,700,function(v){return String(v);});}
 var d=document.getElementById('dkV');if(d)d.textContent=fmtCOP(P.recaudadoCOP);}
 
-/* selector de aporte */
+/* tres vias de aporte, una sola superficie */
 function pintaPicker(){
-var big=document.getElementById('pkBig');if(!big)return;
+var btn=document.getElementById('pkBtn'); if(!btn)return;
+var via=V_TXT[VIA]||V_TXT.banco;
 var lang=document.documentElement.lang==='en'?'en':'es';
-var usd=pkMonto/PROGRESO.trm,pct=usd/PROGRESO.metaUSD*100;
-var pctTxt=pct<0.01?(lang==='en'?'<0.01 %':'<0,01 %'):(lang==='en'?pct.toFixed(2)+' %':pct.toFixed(2).replace('.',',')+' %');
-var meta=document.getElementById('pkMeta'),btn=document.getElementById('pkBtn');
-big.textContent=fmtCOP(pkMonto)+' COP';
-if(meta)meta.innerHTML=(lang==='en'
-?'\u2248 US$ '+Math.round(usd).toLocaleString('en-US')+' \u00b7 <b>'+pctTxt+'</b> of the funding goal \u00b7 '+(DEST_EN[pkDest]||pkDest)
-:'\u2248 US$ '+Math.round(usd).toLocaleString('es-CO')+' \u00b7 <b>'+pctTxt+'</b> de la meta de recursos \u00b7 '+pkDest);
-if(btn)btn.href=waLink(lang==='en'
-?'Hello. I would like to contribute COP '+pkMonto.toLocaleString('en-US')+' to RENACE, for '+(DEST_EN[pkDest]||pkDest)+'. Could you confirm the details?'
-:'Hola. Quiero aportar '+fmtCOP(pkMonto)+' a RENACE, para '+pkDest+'. \u00bfMe confirman los datos?');}
-function grupo(id,cb){var g=document.getElementById(id);if(!g)return;
-g.addEventListener('click',function(e){var b=e.target.closest('.chipx');if(!b)return;
-g.querySelectorAll('.chipx').forEach(function(x){x.setAttribute('aria-pressed','false');});
-b.setAttribute('aria-pressed','true');cb(b);pintaPicker();});}
-grupo('pkM',function(b){pkMonto=parseInt(b.getAttribute('data-v'),10);var o=document.getElementById('pkOtro');if(o)o.value='';});
-grupo('pkD',function(b){pkDest=b.getAttribute('data-d');});
-var pkOtro=document.getElementById('pkOtro');
-if(pkOtro)pkOtro.addEventListener('input',function(){
-var v=parseInt(this.value.replace(/\D/g,''),10);
-if(v>0){pkMonto=v;document.querySelectorAll('#pkM .chipx').forEach(function(x){x.setAttribute('aria-pressed','false');});pintaPicker();}});
+btn.href=waLink(lang==='en'
+?'Hello. I am making a contribution of COP '+pkMonto2.toLocaleString('en-US')+' to RENACE '+V_TXT[VIA].en+'. I will send the receipt to get my tracking number.'
+:'Hola. Voy a aportar '+fmtCOP(pkMonto2)+' a RENACE '+via.es+'. Les mando el comprobante para recibir mi folio.');}
+(function(){
+var tabs=document.querySelectorAll('.via__tab'); if(!tabs.length)return;
+var MAP={'tb-banco':'banco','tb-breb':'breb','tb-usa':'usa'};
+tabs.forEach(function(t){t.addEventListener('click',function(){
+tabs.forEach(function(x){x.setAttribute('aria-selected','false');
+var p=document.getElementById(x.getAttribute('aria-controls')); if(p)p.hidden=true;});
+t.setAttribute('aria-selected','true');
+var p=document.getElementById(t.getAttribute('aria-controls')); if(p)p.hidden=false;
+VIA=MAP[t.id]||'banco'; pintaPicker();});
+t.addEventListener('keydown',function(e){
+var i=[].indexOf.call(tabs,t), n=e.key==='ArrowRight'?i+1:(e.key==='ArrowLeft'?i-1:-1);
+if(n>=0&&n<tabs.length){e.preventDefault();tabs[n].focus();tabs[n].click();}});});
+var amt=document.querySelector('.via__amt'); if(amt){
+amt.addEventListener('click',function(e){var b=e.target.closest('.chipx'); if(!b)return;
+amt.querySelectorAll('.chipx').forEach(function(x){x.setAttribute('aria-pressed','false');});
+b.setAttribute('aria-pressed','true'); pkMonto2=parseInt(b.getAttribute('data-v'),10);
+var o=document.getElementById('pkOtro'); if(o)o.value=''; pintaPicker();});}
+var otro=document.getElementById('pkOtro');
+if(otro)otro.addEventListener('input',function(){var v=parseInt(this.value.replace(/\D/g,''),10);
+if(v>0){pkMonto2=v;amt.querySelectorAll('.chipx').forEach(function(x){x.setAttribute('aria-pressed','false');});pintaPicker();}});
+})();
 pintaPicker();
 
 /* barra fija en movil */
