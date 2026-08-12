@@ -327,6 +327,16 @@
           <div class="ruta__item"><span class="ruta__dot num">5</span><div><div class="ruta__t" data-i="t11">Cerrado con evidencia</div><p class="ruta__d" data-i="t12">Fotos y porcentaje ejecutado de la obra que apoyaste.</p></div></div>
         </div>
       </div>
+      <div class="fol rv">
+        <label class="fol__l" for="folIn" data-i="fl0">Consulta tu folio</label>
+        <div class="fol__b">
+          <input id="folIn" type="search" inputmode="latin" autocomplete="off" spellcheck="false"
+                 placeholder="RNC-2608-000001" aria-describedby="folR">
+          <button id="folGo" type="button" data-i="fl1">Buscar</button>
+        </div>
+        <p class="fol__h" data-i="fl2">Escribe el folio que te enviamos por WhatsApp. La búsqueda ocurre en tu navegador, contra el mismo registro público que puedes descargar.</p>
+        <div id="folR" class="fol__r" role="status" aria-live="polite"></div>
+      </div>
       <div class="cmp rv">
         <span class="cmp__tag" data-i="cm0">Documento real · primer aporte</span>
         <div class="cmp__c">
@@ -346,7 +356,7 @@
         <p class="cmp__n" data-i="cm8">Este no es un ejemplo: es la primera entrada del registro público, con los mismos datos que puedes descargar en CSV más arriba.</p>
       </div>
     </div>
-    <p class="fuente rv" style="color:rgba(243,238,228,.55);margin-top:36px" data-i="t21">Estado honesto: el comprobante de arriba es real, con los datos del primer aporte del registro. Lo que todavía está en construcción es la consulta pública por folio: hoy el donante recibe su soporte por WhatsApp y el registro completo se descarga en CSV desde esta misma página.</p>
+    <p class="fuente rv" style="color:rgba(243,238,228,.55);margin-top:36px" data-i="t21">Estado honesto: el comprobante de arriba es real, con los datos del primer aporte del registro. La consulta por folio de arriba funciona contra ese mismo registro, sin crear cuenta ni entregar datos. Lo que sigue en construcción es el panel de ejecución por obra, con las facturas y actas cargadas desde el terreno.</p>
   </div>
 </section>
 <section class="sec ent-sec" id="entregas">
@@ -493,7 +503,7 @@
     <div class="sec__head rv"><p class="eyebrow" data-i="e6">Preguntas</p><h2 data-i="p0">Lo que todo el mundo pregunta antes de dar.</h2></div>
     <div class="faq rv">
       <details><summary data-i="p1">¿Cómo sé que mi plata llegó?</summary>
-        <div class="a"><p data-i="p2">Cuando envías tu comprobante por WhatsApp te devolvemos un folio. Ese folio queda asociado a la obra a la que se destinó tu aporte y, cuando se ejecuta, te llega la factura y el acta. Cuando la plataforma esté en línea, podrás consultarlo tú mismo sin escribirle a nadie.</p></div></details>
+        <div class="a"><p data-i="p2">Cuando envías tu comprobante por WhatsApp te devolvemos un folio. Ese folio queda asociado a la obra a la que se destinó tu aporte y, cuando se ejecuta, te llega la factura y el acta. Y puedes consultarlo tú mismo aquí arriba, en la sección de trazabilidad, sin escribirle a nadie.</p></div></details>
       <details><summary data-i="p3">¿Puedo donar desde fuera de Colombia?</summary>
         <div class="a"><p data-i="p4">Sí. Arriba, en "Cómo aportar", están los datos para transferencia en dólares desde Estados Unidos (ACH o wire). Lee la nota sobre el titular de esa cuenta antes de transferir. Si prefieres otro medio o transferir directo a la fundación, escríbenos por WhatsApp y lo coordinamos.</p></div></details>
       <details><summary data-i="p5">¿Quién decide qué se reconstruye primero?</summary>
@@ -642,7 +652,7 @@ t5:'Assigned to a project',t6:'Housing, school, health post or emergency relief.
 t7:'Purchased',t8:'Supplier invoice tied to the number, with quantity and unit price.',
 t9:'Executed on the ground',t10:'Municipality, community, number of families and signed record.',
 t11:'Closed with evidence',t12:'Photos and execution percentage of the project you supported.',
-t21:'Honest status: the receipt above is real, with the data of the first contribution in the log. What is still being built is the public lookup by number: today donors receive their proof over WhatsApp, and the full log can be downloaded as CSV from this same page.',
+t21:'Honest status: the receipt above is real, with the data of the first contribution in the log. The lookup above runs against that same log, with no account and no personal data. What is still being built is the execution dashboard by project, with invoices and records uploaded from the field.',
 e4:'How to give today',a0:'Where to transfer, depending on where you are.',a1:'Three routes, all verified. Pick whichever is easiest: the outcome is the same, and all of them end in the same public log.',
 a4:'Savings account · Davivienda (Colombia)',a5:'Account holder: Fundaci\u00f3n Un Hogar Sin Olvido<br>Tax ID 901.047.625-4 · Buenaventura, Colombia',
 cop:'Copy number',a6:'Send the receipt over WhatsApp and we send back your tracking number',a7:'No alliance commission: 100 % goes into the operation',
@@ -666,6 +676,10 @@ eg4:'Open the emergency map',f9:'Emergency map (Artefacto) ↗',
 al0:'The alliance',al1:'Who each one is and what they bring.',
 al2:'Eight organizations with different trades. None of them could do this alone: it took presence on the ground, legal capacity to receive and execute, convening power and technology to make it verifiable.',
 al3:'The legal details of the entity that receives and executes are in the transparency section, and can be checked on RUES and DIAN.',n8:'The alliance',
+fl0:'Look up your tracking number',fl1:'Search',
+fl2:'Enter the number we sent you over WhatsApp. The search runs in your browser, against the same public log you can download.',
+fl3:'Not found',fl4:'We could not find that number. It may not be logged yet — write to us and we will check it.',
+fl5:'Found in the public log',fl6:'Write to us',
 cm0:'Real document · first contribution',cm1:'Reference',cm2:'Logged',cm3:'Date',cm4:'Source',cm5:'Amount',cm6:'Status',cm7:'Executed',
 cm8:'This is not a mock-up: it is the first entry of the public log, with the same data you can download as CSV above.',
 mp0:'Where we are',mp1:'The operation map.',
@@ -706,7 +720,7 @@ x15:'That nobody in the alliance takes a commission, and that every operating co
 x17:'What we will not claim',x18:'Impact figures we have not produced yet',x19:'That your donation is tax-deductible without confirming the tax regime',
 x20:'Testimonials or photos of people without their consent',x21:'That we replace the government in the emergency response',
 e6:'Questions',p0:'What everyone asks before giving.',
-p1:'How do I know my money arrived?',p2:'When you send your receipt over WhatsApp we send back a tracking number. That number is tied to the project your contribution funded and, once executed, you receive the invoice and the record. When the platform is live, you will be able to check it yourself without messaging anyone.',
+p1:'How do I know my money arrived?',p2:'When you send your receipt over WhatsApp we send back a tracking number. That number is tied to the project your contribution funded and, once executed, you receive the invoice and the record. And you can look it up yourself in the traceability section above, without messaging anyone.',
 p3:'Can I donate from outside Colombia?',p4:'Yes. Under \'How to give\' above you will find the details for a USD transfer from the United States (ACH or wire). Please read the note about the account holder before transferring. If you prefer another method, or to transfer directly to the foundation, message us on WhatsApp and we will arrange it.',
 p5:'Who decides what gets rebuilt first?',p6:'Needs are defined by the community, not by the alliance. The organizations already working in Buenaventura, Choc\u00f3 and the Coffee Region draw up the list of priority projects, and purchases follow that list. Nothing is executed "just in case".',
 p7:'Why an alliance and not a single foundation?',p8:'Because no single organization covers presence on the ground, legal capacity to receive and execute funds, convening power and technology to make it verifiable. Each partner brings what they do best: Un Hogar Sin Olvido and Semilla Colectiva, social work and execution; Afroz El Valle and Buenaventura Progresa, the link with Afro-Colombian communities and local leadership on the Pacific coast; MLK Proyectos e Inversiones, private-sector partnerships; \u00c1lvaro Arroyo and Juan Cuero, advocacy and convening; Ocean Industries, the platform and traceability.',
@@ -950,7 +964,7 @@ pop.addEventListener('click',function(e){if(e.target===pop)cerrar(0);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&pop.classList.contains('on'))cerrar(0);});
 /* dispara al 55% de lectura, nunca dentro de la seccion de aportes */
 var disparo=function(){
-var stop=['aportar','mapa','entregas'];
+var stop=['aportar','mapa','entregas','trazabilidad'];
 for(var k=0;k<stop.length;k++){var el=document.getElementById(stop[k]);
 if(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0)return;}}
 var h=document.documentElement.scrollHeight-window.innerHeight;
@@ -1145,6 +1159,46 @@ var oculto=false; try{oculto=localStorage.getItem('renace_tbar_no')>Date.now();}
 if(!oculto)t.hidden=false;
 x.addEventListener('click',function(){t.hidden=true;
 try{localStorage.setItem('renace_tbar_no',Date.now()+3*864e5);}catch(e){}});})();
+
+/* consulta pública por folio, contra el mismo registro descargable */
+(function(){
+var inp=document.getElementById('folIn'),go=document.getElementById('folGo'),out=document.getElementById('folR');
+if(!inp||!go||!out)return;
+var norm=function(v){return String(v||'').toUpperCase().replace(/[^A-Z0-9]/g,'');};
+var PASOS={recibido:20,en_asignacion:40,comprado:60,entregado:100,no_ejecutado:0,costo_operacion:100};
+var T={es:{ok:'Encontrado en el registro público',no:'No encontrado',
+ f:'Folio',d:'Fecha',o:'Origen',m:'Monto',e:'Estado',p:'Ejecutado',
+ nada:'No encontramos ese folio en el registro. Puede que todavía no esté verificado — ',esc:'escríbenos y lo revisamos',
+ vac:'Escribe el folio que quieres consultar.'},
+ en:{ok:'Found in the public log',no:'Not found',
+ f:'Reference',d:'Date',o:'Source',m:'Amount',e:'Status',p:'Executed',
+ nada:'We could not find that number in the log. It may not be verified yet — ',esc:'write to us and we will check it',
+ vac:'Enter the reference you want to look up.'}};
+function buscar(){
+var lang=document.documentElement.lang==='en'?'en':'es',L=T[lang];
+var q=norm(inp.value);
+if(!q){out.className='fol__r no';out.innerHTML='<p>'+L.vac+'</p>';return;}
+var lista=(APORTES&&APORTES.aportes)||[];
+var a=null;
+for(var i=0;i<lista.length;i++){if(norm(lista[i].folio)===q||norm(lista[i].folio).slice(-6)===q){a=lista[i];break;}}
+if(!a){
+out.className='fol__r no';
+out.innerHTML='<div class="ttl"><span>'+L.no+'</span></div><p>'+L.nada
++'<a href="'+waLink(lang==='en'?'Hello. I would like to check my RENACE contribution reference: '+inp.value:'Hola. Quiero consultar mi folio de aporte a RENACE: '+inp.value)
++'" target="_blank" rel="noopener">'+L.esc+'</a>.</p>';return;}
+var nota=(lang==='en'&&a.nota_en?a.nota_en:a.nota)||'';
+var orig=(a.moneda_orig&&a.moneda_orig!=='COP')?' · '+esc(a.moneda_orig)+' '+Number(a.monto_orig||0).toLocaleString(lang==='en'?'en-US':'es-CO'):'';
+out.className='fol__r';
+out.innerHTML='<div class="ttl"><span>'+L.ok+'</span></div><div class="fo">'+esc(a.folio)+'</div><dl>'
++'<div><dt>'+L.d+'</dt><dd>'+fFecha(a.fecha,lang)+'</dd></div>'
++'<div><dt>'+L.o+'</dt><dd>'+esc(a.origen)+(nota?' · '+esc(nota):'')+'</dd></div>'
++'<div><dt>'+L.m+'</dt><dd>'+fmtCOP(a.monto)+orig+'</dd></div>'
++'<div><dt>'+L.e+'</dt><dd>'+((EST[lang]||{})[a.estado]||esc(a.estado))+'</dd></div>'
++'<div><dt>'+L.p+'</dt><dd>'+(PASOS[a.estado]||0)+' %</dd></div></dl>';}
+go.addEventListener('click',buscar);
+inp.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();buscar();}});
+inp.addEventListener('search',function(){if(!inp.value)out.innerHTML='';});
+})();
 
 var btn=document.getElementById('btnCopiar');
 if(btn){btn.addEventListener('click',function(){
