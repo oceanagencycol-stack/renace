@@ -1,0 +1,24 @@
+{
+  "_schema": {
+    "descripcion": "Registro público de entregas de RENACE. Cada objeto se publica en renacecol.org/#entregas.",
+    "como_agregar": "1) Sube la foto o el video a assets/entregas/. 2) Agrega el objeto al principio del array. 3) git push — la web se actualiza sola.",
+    "campos": {
+      "id": "consecutivo E-001, E-002…",
+      "fecha": "AAAA-MM-DD",
+      "titulo": "qué se entregó, en una línea",
+      "titulo_en": "opcional, traducción del título",
+      "lugar": "municipio, departamento",
+      "texto": "dos o tres líneas de qué pasó. Si algo salió mal, se escribe igual.",
+      "texto_en": "opcional",
+      "folios": ["RNC-2608-000001"],
+      "familias": "número o null",
+      "tipo": "foto | video",
+      "media": "nombre del archivo dentro de assets/entregas/",
+      "poster": "solo para video: imagen de portada dentro de assets/entregas/",
+      "credito": "quién tomó la foto o el video",
+      "evidencia": { "factura": true, "acta": true }
+    }
+  },
+  "actualizado": "2026-08-12",
+  "entregas": []
+}

@@ -54,6 +54,7 @@
       <a href="#que-paso" data-i="n1">Qué pasó</a>
       <a href="#como-funciona" data-i="n2">Cómo funciona</a>
       <a href="#trazabilidad" data-i="n3">Trazabilidad</a>
+      <a href="#entregas" data-i="n6">Entregas</a>
       <a href="#aportar" data-i="n4">Cómo aportar</a>
       <a href="#transparencia" data-i="n5">Transparencia</a>
     </nav>
@@ -255,6 +256,17 @@
     <p class="fuente rv" style="color:rgba(243,238,228,.55);margin-top:36px" data-i="t21">Estado honesto: hoy esta página es la puerta de entrada. La consulta pública por folio y el panel de ejecución están en construcción — el comprobante que ves arriba es un ejemplo ilustrativo, no un dato real. Mientras tanto, todo aporte se registra manualmente y el soporte se envía por WhatsApp.</p>
   </div>
 </section>
+<section class="sec ent-sec" id="entregas">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <p class="eyebrow" data-i="g0">Entregas en vivo</p>
+      <h2 data-i="g1">Lo que se está haciendo con los recursos.</h2>
+      <p class="lede" data-i="g2">Cada entrega se publica aquí con fotos, video, factura y acta. Sin maquillaje: si algo sale mal o no se puede ejecutar, también aparece.</p>
+    </div>
+    <div class="galeria rv" id="gGrid" aria-live="polite"></div>
+    <p class="fuente rv" id="gPie"></p>
+  </div>
+</section>
 <section class="sec" id="aportar">
   <div class="wrap">
     <div class="sec__head rv"><p class="eyebrow" data-i="e4">Cómo aportar hoy</p><h2 data-i="a0">Tres formas de que tu ayuda llegue esta semana.</h2>
@@ -379,6 +391,9 @@
           <a class="vlink" href="https://muisca.dian.gov.co/WebRutMuisca/DefConsultaEstadoRUT.faces" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M9 13h6M9 17h4"/></svg>
             <span><b data-i="v4">DIAN — Estado del RUT</b><span data-i="v5">Consulta pública por NIT</span></span><svg class="ar" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+          <a class="vlink" href="https://github.com/oceanagencycol-stack/renace" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.8 2.8 5.8 3.1 5.8 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+            <span><b data-i="v14">El código y los datos son públicos</b><span data-i="v15">Cada cambio de esta página queda registrado con fecha</span></span><svg class="ar" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
           <a class="vlink" href="#" data-wa="Hola. Quiero verificar a RENACE. ¿Me envían el RUT y el certificado de existencia de la fundación?" data-wa-en="Hello. I would like to verify RENACE. Could you send the tax registry and certificate of incorporation?">
             <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5"/></svg>
             <span><b data-i="v6">Pídenos los documentos</b><span data-i="v7">Te enviamos RUT y certificado por WhatsApp</span></span><svg class="ar" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
@@ -470,6 +485,10 @@
   <div class="dock__t"><b id="dkV">—</b><span data-i="dk0">recaudado de US$ 500.000</span></div>
   <a class="btn" href="#aportar" data-i="dk1">Donar</a>
 </div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Detalle de la entrega">
+  <button class="lb__x" id="lbX" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="lb__c"><div class="lb__m" id="lbM"></div><div class="lb__t" id="lbT"></div></div>
+</div>
 <a class="wa-float" id="waFloat" href="#" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.9 9.9 0 0 0 4.74 1.2c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2Zm0 18.02a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Z"/></svg>
 </a>
@@ -498,7 +517,10 @@ var o=document.getElementById('mFillObras');if(o)o.setAttribute('data-fill',Math
 }
 var EN={
 skip:'Skip to content',tag:'Rebuilding homes',cta:'Donate',cta2:'Donate now',cta3:'See the goals',
-n0:'Goals',n1:'What happened',n2:'How it works',n3:'Traceability',n4:'How to give',n5:'Transparency',
+n0:'Goals',n1:'What happened',n2:'How it works',n3:'Traceability',n4:'How to give',n5:'Transparency',n6:'Deliveries',
+g0:'Deliveries, live',g1:'What is being done with the funds.',
+g2:'Every delivery is published here with photos, video, invoice and delivery record. No polish: if something goes wrong or cannot be executed, that shows up too.',
+v14:'Our code and data are public',v15:'Every change to this page is logged with its date',
 alerta:'Active emergency · August 10, 2026 earthquake',
 h1:'Rebuilding <span class="accent">homes</span> where the earthquake took them down.',
 hsub:'RENACE is an alliance of Colombian organizations that raises funds, buys what is needed and rebuilds housing, schools and health posts across the areas hit by the earthquake. Every contribution gets a tracking number you can follow all the way to the finished work.',
@@ -612,7 +634,7 @@ nodes.forEach(function(el){var k=el.getAttribute('data-i');if(d[k]!==undefined){
 tagEl.setAttribute('data-tag',lang==='en'?EN.tagDirecta:tagES);
 document.documentElement.lang=(lang==='en')?'en':'es-CO';
 bES.classList.toggle('on',lang!=='en');bEN.classList.toggle('on',lang==='en');
-setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}
+setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}if(typeof pintaEntregas==='function')pintaEntregas();
 try{localStorage.setItem('renace_lang',lang);}catch(e){}
 if(push&&window.history&&history.replaceState){
 try{var u=new URL(window.location.href);
@@ -727,6 +749,74 @@ var lbl=shCp.querySelector('span'),prev=lbl.textContent;
 var ok=function(){shCp.classList.add('ok');lbl.textContent=document.documentElement.lang==='en'?'Link copied':'Enlace copiado';
 setTimeout(function(){shCp.classList.remove('ok');lbl.textContent=prev;},2200);};
 if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(URL_OK).then(ok).catch(function(){});}else{ok();}});
+
+/* galeria de entregas — se alimenta de /data/entregas.json */
+var CDN_E='https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/entregas/';
+var G_T={es:{vacio_t:'Todavía no hay entregas publicadas.',
+vacio_p:'La primera obra se ejecuta en los próximos días. Cuando pase, aparece aquí con fotos, video, factura y acta — sin edición. Si algo sale mal, también se publica.',
+pie:function(n,f){return n===0?'':'Última actualización: '+f+' · '+n+(n===1?' entrega publicada':' entregas publicadas')+'. Cada archivo se sube al repositorio público y queda con fecha.';},
+fam:'familias',factura:'Factura',acta:'Acta',folio:'Folio'},
+en:{vacio_t:'No deliveries published yet.',
+vacio_p:'The first project is executed in the coming days. When it happens, it appears here with photos, video, invoice and delivery record — unedited. If something goes wrong, that gets published too.',
+pie:function(n,f){return n===0?'':'Last updated: '+f+' · '+n+(n===1?' delivery published':' deliveries published')+'. Every file is uploaded to the public repository with its date.';},
+fam:'families',factura:'Invoice',acta:'Record',folio:'Ref.'}};
+var ENTREGAS=null;
+function fechaLarga(iso,lang){
+try{var d=new Date(iso+'T12:00:00');
+return d.toLocaleDateString(lang==='en'?'en-US':'es-CO',{day:'numeric',month:'short',year:'numeric'});}catch(e){return iso;}}
+function esc(t){var d=document.createElement('div');d.textContent=t==null?'':t;return d.innerHTML;}
+function pintaEntregas(){
+var grid=document.getElementById('gGrid'),pie=document.getElementById('gPie');
+if(!grid||!ENTREGAS)return;
+var lang=document.documentElement.lang==='en'?'en':'es',T=G_T[lang];
+var lista=ENTREGAS.entregas||[];
+if(!lista.length){
+grid.style.display='block';
+grid.innerHTML='<div class="ent-vacio"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5A2.5 2.5 0 0 1 5.5 6h2L9 4h6l1.5 2h2A2.5 2.5 0 0 1 21 8.5v9A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5Z"/><circle cx="12" cy="12.5" r="3.5"/></svg><b>'+T.vacio_t+'</b><p>'+T.vacio_p+'</p></div>';
+if(pie)pie.textContent='';return;}
+grid.style.display='';
+grid.innerHTML=lista.map(function(e,i){
+var tit=esc(lang==='en'&&e.titulo_en?e.titulo_en:e.titulo);
+var txt=esc(lang==='en'&&e.texto_en?e.texto_en:e.texto);
+var med=e.tipo==='video'
+?'<img src="'+CDN_E+esc(e.poster||'')+'" alt="'+tit+'" loading="lazy" decoding="async"><span class="ent__play"><i><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></i></span>'
+:'<img src="'+CDN_E+esc(e.media)+'" alt="'+tit+'" loading="lazy" decoding="async">';
+var tags='';
+(e.folios||[]).forEach(function(f){tags+='<span class="etag etag--folio">'+T.folio+' '+esc(f)+'</span>';});
+if(e.familias)tags+='<span class="etag">'+e.familias+' '+T.fam+'</span>';
+if(e.evidencia&&e.evidencia.factura)tags+='<span class="etag etag--ok">'+T.factura+'</span>';
+if(e.evidencia&&e.evidencia.acta)tags+='<span class="etag etag--ok">'+T.acta+'</span>';
+return '<article class="ent"><div class="ent__m" data-e="'+i+'" role="button" tabindex="0" aria-label="'+tit+'">'+med+'</div>'
++'<div class="ent__b"><div class="ent__d">'+fechaLarga(e.fecha,lang)+' · '+esc(e.lugar)+'</div>'
++'<h3>'+tit+'</h3><p>'+txt+'</p><div class="ent__tags">'+tags+'</div></div></article>';}).join('');
+if(pie)pie.textContent=T.pie(lista.length,fechaLarga(ENTREGAS.actualizado,lang));}
+
+/* visor ampliado */
+var lb=document.getElementById('lb'),lbM=document.getElementById('lbM'),lbT=document.getElementById('lbT'),lbX=document.getElementById('lbX');
+function abrirLb(i){
+if(!ENTREGAS)return; var e=(ENTREGAS.entregas||[])[i]; if(!e)return;
+var lang=document.documentElement.lang==='en'?'en':'es';
+lbM.innerHTML=e.tipo==='video'
+?'<video controls playsinline autoplay poster="'+CDN_E+esc(e.poster||'')+'"><source src="'+CDN_E+esc(e.media)+'" type="video/mp4"></video>'
+:'<img src="'+CDN_E+esc(e.media)+'" alt="'+esc(e.titulo)+'">';
+lbT.innerHTML='<b>'+esc(lang==='en'&&e.titulo_en?e.titulo_en:e.titulo)+'</b>'
++esc(lang==='en'&&e.texto_en?e.texto_en:e.texto)
++'<span>'+fechaLarga(e.fecha,lang)+' · '+esc(e.lugar)+(e.credito?' · '+esc(e.credito):'')+'</span>';
+lb.classList.add('on');document.body.classList.add('lb-open');lbX.focus();}
+function cerrarLb(){lb.classList.remove('on');document.body.classList.remove('lb-open');lbM.innerHTML='';}
+if(lb){
+lbX.addEventListener('click',cerrarLb);
+lb.addEventListener('click',function(e){if(e.target===lb)cerrarLb();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('on'))cerrarLb();});
+var grid0=document.getElementById('gGrid');
+if(grid0){grid0.addEventListener('click',function(e){var m=e.target.closest('[data-e]');if(m)abrirLb(+m.getAttribute('data-e'));});
+grid0.addEventListener('keydown',function(e){if(e.key!=='Enter'&&e.key!==' ')return;var m=e.target.closest('[data-e]');if(m){e.preventDefault();abrirLb(+m.getAttribute('data-e'));}});}}
+
+/* carga del registro; si falla, se muestra el estado vacio honesto */
+fetch('/data/entregas.json',{cache:'no-cache'})
+.then(function(r){return r.ok?r.json():Promise.reject(r.status);})
+.then(function(d){ENTREGAS=d;pintaEntregas();})
+.catch(function(){ENTREGAS={entregas:[],actualizado:''};pintaEntregas();});
 
 var btn=document.getElementById('btnCopiar');
 if(btn){btn.addEventListener('click',function(){
