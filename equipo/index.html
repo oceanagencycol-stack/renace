@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>RENACE · Equipo</title>
+<style>
+:root{--fondo:#0b1512;--panel:#11201b;--borde:#1d332b;--texto:#e8f0ec;--suave:#8fa89d;--sol:#e8a33d;--verde:#2f9e6b;--rojo:#c4553f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fondo);color:var(--texto);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 16px 60px}
+h1{font-size:22px;margin:0 0 2px}.sub{color:var(--suave);font-size:13px;margin-bottom:22px}
+.card{background:var(--panel);border:1px solid var(--borde);border-radius:12px;padding:20px;margin-bottom:16px}
+label{display:block;font-size:12px;color:var(--suave);margin:10px 0 4px}
+input,select{width:100%;padding:10px 12px;background:#0d1a16;border:1px solid var(--borde);border-radius:8px;color:var(--texto);font-size:15px}
+button{background:var(--sol);color:#1a1207;border:0;border-radius:8px;padding:10px 18px;font-weight:600;font-size:14px;cursor:pointer;margin-top:14px}
+button.sec{background:transparent;color:var(--suave);border:1px solid var(--borde);margin:0;padding:5px 10px;font-size:12px;font-weight:500}
+button:disabled{opacity:.5;cursor:default}
+.err{color:var(--rojo);font-size:13px;margin-top:10px;min-height:18px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:16px}
+.stat{background:var(--panel);border:1px solid var(--borde);border-radius:12px;padding:16px}
+.stat b{display:block;font-size:24px;margin-bottom:2px}
+.stat span{color:var(--suave);font-size:12px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;color:var(--suave);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.04em;padding:8px 10px;border-bottom:1px solid var(--borde)}
+td{padding:10px;border-bottom:1px solid var(--borde);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.folio{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--sol)}
+.pill{display:inline-block;padding:2px 8px;border-radius:99px;font-size:11px;background:#16281f;border:1px solid var(--borde)}
+.ok{color:var(--verde)}.no{color:var(--suave)}
+.oculto{display:none}
+a{color:var(--sol)}
+@media(max-width:640px){td,th{padding:7px 5px;font-size:12px}.wrap{padding:16px 10px 50px}}
+</style></head><body><div class="wrap">
+
+<h1>RENACE · Equipo</h1>
+<div class="sub">Registro interno de aportes. Los datos personales de los donantes no salen de aquí.</div>
+
+<div id="login" class="card" style="max-width:380px">
+  <label>Usuario</label><input id="u" autocomplete="username" value="equipo">
+  <label>Contraseña</label><input id="p" type="password" autocomplete="current-password">
+  <button id="btn" onclick="entrar()">Entrar</button>
+  <div class="err" id="err"></div>
+</div>
+
+<div id="panel" class="oculto">
+  <div class="stats" id="stats"></div>
+  <div class="card" style="padding:8px 4px">
+    <div style="overflow-x:auto"><table id="tabla"></table></div>
+  </div>
+  <div class="sub">El estado se publica en la web. La verificación bancaria es interna y no se publica.</div>
+</div>
+
+<script>
+const API = 'https://ocean-n8n.hj1tdk.easypanel.host/webhook/renace-crm';
+let CLAVE = '', DATOS = null;
+
+async function api(body){
+  const r = await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(Object.assign({usuario:document.getElementById('u').value.trim(),clave:CLAVE},body))});
+  return r.json();
+}
+async function entrar(){
+  const b=document.getElementById('btn'); b.disabled=true; b.textContent='Entrando…';
+  CLAVE = document.getElementById('p').value;
+  const d = await api({accion:'listar'});
+  b.disabled=false; b.textContent='Entrar';
+  if(!d.ok){ document.getElementById('err').textContent = d.error||'No se pudo entrar'; return; }
+  DATOS = d;
+  document.getElementById('login').classList.add('oculto');
+  document.getElementById('panel').classList.remove('oculto');
+  pintar();
+}
+function cop(n){ return '$ ' + (n||0).toLocaleString('es-CO'); }
+function pintar(){
+  const d = DATOS;
+  const metaCOP = (d.meta_usd||0) * (d.trm||1);
+  const pct = metaCOP ? Math.min(100, d.total_cop/metaCOP*100) : 0;
+  const sinVerificar = d.aportes.filter(a=>!a.verificado_banco).length;
+  document.getElementById('stats').innerHTML = [
+    ['Recaudado', cop(d.total_cop)],
+    ['Meta', 'US$ ' + (d.meta_usd||0).toLocaleString('en-US') + ' · ' + pct.toFixed(2) + '%'],
+    ['Aportes', d.aportes.length],
+    ['Sin verificar en banco', sinVerificar],
+    ['Obras entregadas', (d.obras_entregadas||0) + ' de ' + (d.meta_obras||0)]
+  ].map(([k,v])=>'<div class="stat"><b>'+v+'</b><span>'+k+'</span></div>').join('');
+
+  const ESTADOS=['recibido','en_asignacion','comprado','entregado','no_ejecutado','costo_operacion'];
+  let h='<tr><th>Folio</th><th>Fecha</th><th>Quién</th><th>Monto</th><th>Canal</th><th>Estado</th><th>Banco</th></tr>';
+  for(const a of d.aportes){
+    const quien = a.nombre_real ? a.nombre_real + (a.publicar?'':' <span class="pill">anónimo en la web</span>') : a.origen;
+    const wa = a.telefono ? '<div><a href="https://wa.me/'+a.telefono+'" target="_blank">wa.me/'+a.telefono+'</a></div>' : '';
+    h += '<tr><td class="folio">'+a.folio+'</td><td>'+a.fecha+'</td><td>'+quien+wa+'</td><td>'+cop(a.monto)+'</td><td>'+a.canal+'</td>'
+      + '<td><select onchange="cambiar(\''+a.folio+'\',this.value)">'
+      + ESTADOS.map(e=>'<option '+(e===a.estado?'selected':'')+'>'+e+'</option>').join('')
+      + '</select></td>'
+      + '<td>'+(a.verificado_banco
+          ? '<span class="ok">✓ verificado</span>'
+          : '<button class="sec" onclick="verificar(\''+a.folio+'\')">marcar visto</button>')
+      + '</td></tr>';
+  }
+  document.getElementById('tabla').innerHTML = h;
+}
+async function cambiar(folio, estado){
+  const d = await api({accion:'actualizar', folio, estado});
+  if(!d.ok){ alert(d.error||'No se pudo'); return; }
+  DATOS.aportes.find(a=>a.folio===folio).estado = estado;
+}
+async function verificar(folio){
+  const d = await api({accion:'actualizar', folio, verificado_banco:true});
+  if(!d.ok){ alert(d.error||'No se pudo'); return; }
+  DATOS.aportes.find(a=>a.folio===folio).verificado_banco = true;
+  pintar();
+}
+document.getElementById('p').addEventListener('keydown',e=>{ if(e.key==='Enter') entrar(); });
+</script>
+</div></body></html>
