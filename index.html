@@ -657,8 +657,7 @@ history.replaceState(null,'',u.toString());}catch(e){}}}
 var saved=null;try{saved=localStorage.getItem('renace_lang');}catch(e){}
 var qs=(window.location.search||'').toLowerCase();
 var fromUrl=(qs.indexOf('lang=en')>-1)?'en':((qs.indexOf('lang=es')>-1)?'es':null);
-var nav0=(navigator.language||'es').toLowerCase();
-var initial=fromUrl||saved||(nav0.indexOf('es')===0?'es':'en');
+var initial=fromUrl||saved||'es';
 setLang(initial==='en'?'en':'es',false);
 bES.addEventListener('click',function(){setLang('es',true);});
 bEN.addEventListener('click',function(){setLang('en',true);});
