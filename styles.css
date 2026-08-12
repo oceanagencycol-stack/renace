@@ -290,4 +290,16 @@ background-image:radial-gradient(circle at 7px 0,transparent 6px,var(--cream) 6.
 .cmp__p i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--olive),var(--sun));transition:width 1.4s cubic-bezier(.2,.9,.3,1)}
 .cmp__f{display:flex;justify-content:space-between;margin-top:9px;font-family:var(--mono);font-size:.62rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
 .cmp__n{color:rgba(243,238,228,.6);font-size:.84rem;line-height:1.55;margin:22px 0 0;max-width:46ch}
+/* reservar el alto del contenido que llega por datos: evita saltos de maqueta */
+#mapaSvg{aspect-ratio:1000/1383}
+#mapaLista{min-height:318px}
+#mapaInfo{min-height:150px}
+#aliL{min-height:1180px}
+@media (max-width:760px){#aliL{min-height:1800px}}
+#novL{min-height:330px}
+@media (max-width:640px){#novL{min-height:430px}}
+#regT2{min-height:190px}
+@media (max-width:720px){#regT2{min-height:260px}}
+.via__panel{min-height:290px}
+@media (max-width:760px){.via__panel{min-height:420px}}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
