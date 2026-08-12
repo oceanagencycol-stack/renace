@@ -36,6 +36,7 @@
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+<div class="sp" id="sp" aria-hidden="true"></div>
 <a href="#contenido" class="sr" data-i="skip">Saltar al contenido</a>
 <header class="nav" id="nav">
   <div class="nav__inner">
@@ -158,6 +159,16 @@
         </tbody>
       </table>
     </div>
+    <div class="bit rv">
+      <div class="bit__i"><div class="bit__d"><span class="bit__dot"></span><span data-i="b0">10 ago 2026</span></div>
+        <div><div class="bit__t" data-i="b1">El sismo</div><p class="bit__x" data-i="b2">Magnitud 7,4 a las 7:34 a.m., epicentro en San José del Palmar. Las organizaciones de la alianza empiezan a levantar necesidades en Buenaventura, Chocó y Cali.</p></div></div>
+      <div class="bit__i"><div class="bit__d"><span class="bit__dot"></span><span data-i="b3">11 ago 2026</span></div>
+        <div><div class="bit__t" data-i="b4">Se forma la alianza</div><p class="bit__x" data-i="b5">Ocho organizaciones acuerdan operar bajo una sola entidad ejecutora, con cero comisión y compromiso de publicar cada aporte.</p></div></div>
+      <div class="bit__i"><div class="bit__d"><span class="bit__dot"></span><span data-i="b6">12 ago 2026</span></div>
+        <div><div class="bit__t" data-i="b7">Primer aporte y plataforma pública</div><p class="bit__x" data-i="b8">La Fundación Un Hogar Sin Olvido abre el recaudo con <b>$500.000</b> — folio RNC-2608-000001. Entra en línea esta página con las metas y el registro público.</p></div></div>
+      <div class="bit__i bit__i--next"><div class="bit__d"><span class="bit__dot"></span><span data-i="b9">Próximo</span></div>
+        <div><div class="bit__t" data-i="b10">Primera compra con factura publicada</div><p class="bit__x" data-i="b11">Cuando se ejecute, aparece aquí con su factura, el acta de entrega y las fotos. Si algo no se puede ejecutar, también se publica.</p></div></div>
+    </div>
     <div class="cero rv">
       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M9 12h6M9 16h4"/></svg>
       <p data-i="m3"><strong>El primer peso ya entró, y lo puso la alianza.</strong> La Fundación Un Hogar Sin Olvido abrió el recaudo con $500.000 antes de pedirle un peso a nadie. Cada punto que suba estas barras va a estar respaldado con factura, acta de entrega y fotos — publicadas, no prometidas.</p>
@@ -243,6 +254,33 @@
   <div class="wrap">
     <div class="sec__head rv"><p class="eyebrow" data-i="e4">Cómo aportar hoy</p><h2 data-i="a0">Tres formas de que tu ayuda llegue esta semana.</h2>
       <p class="lede" data-i="a1">No esperamos a que la plataforma esté lista para empezar a reconstruir. Ya estamos recogiendo.</p></div>
+    <div class="picker rv">
+      <h3 data-i="pk0">Arma tu aporte</h3>
+      <p class="picker__sub" data-i="pk1">Elige cuánto y a qué frente quieres que vaya. Te preparamos el mensaje con los datos listos.</p>
+      <p class="picker__lab" data-i="pk2">Monto</p>
+      <div class="chips" id="pkM">
+        <button class="chipx" type="button" data-v="50000" aria-pressed="false">$50.000</button>
+        <button class="chipx" type="button" data-v="100000" aria-pressed="false">$100.000</button>
+        <button class="chipx" type="button" data-v="250000" aria-pressed="true">$250.000</button>
+        <button class="chipx" type="button" data-v="1000000" aria-pressed="false">$1.000.000</button>
+        <input class="picker__in" id="pkOtro" inputmode="numeric" placeholder="Otro monto" aria-label="Otro monto">
+      </div>
+      <p class="picker__lab" data-i="pk3">Destino</p>
+      <div class="chips" id="pkD">
+        <button class="chipx" type="button" data-d="Vivienda" aria-pressed="true" data-i="pk4">Vivienda</button>
+        <button class="chipx" type="button" data-d="Colegios" aria-pressed="false" data-i="pk5">Colegios</button>
+        <button class="chipx" type="button" data-d="Centros de salud" aria-pressed="false" data-i="pk6">Centros de salud</button>
+        <button class="chipx" type="button" data-d="Ayuda de emergencia" aria-pressed="false" data-i="pk7">Emergencia</button>
+        <button class="chipx" type="button" data-d="Donde más se necesite" aria-pressed="false" data-i="pk8">Donde más se necesite</button>
+      </div>
+      <div class="picker__out">
+        <div class="picker__big" id="pkBig">—</div>
+        <div class="picker__meta" id="pkMeta"></div>
+      </div>
+      <a class="btn btn--wa" id="pkBtn" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.9 9.9 0 0 0 4.74 1.2c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2Zm0 18.02a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Z"/></svg>
+        <span data-i="pk9">Aportar por WhatsApp</span></a>
+    </div>
     <div class="aportes">
       <article class="aporte aporte--principal rv" data-tag="Vía directa" id="tagDirecta">
         <h3 data-i="a2">Aporte en dinero</h3>
@@ -289,9 +327,9 @@
       <h3 data-i="u1">Llave Bre-B, DolarApp y transferencia en dólares</h3>
       <p data-i="u2">Tres vías más para aportar: desde cualquier banco colombiano en segundos, desde una billetera en dólares, o por transferencia bancaria desde Estados Unidos.</p>
       <div class="llaves">
-        <div class="llave"><span data-i="k1">Llave Bre-B · Colombia</span><b class="mono">@ARQJUANCUERO1</b>
+        <div class="llave"><span data-i="k1">Llave Bre-B · Colombia</span><b class="mono">@ARQJUANCUERO1<button class="cp" type="button" data-copy="@ARQJUANCUERO1" aria-label="Copiar"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></b>
           <em data-i="k2">Transferencia interoperable desde cualquier banco o billetera</em></div>
-        <div class="llave"><span data-i="k3">DolarApp · USD</span><b class="mono">$juancuero1</b>
+        <div class="llave"><span data-i="k3">DolarApp · USD</span><b class="mono">$juancuero1<button class="cp" type="button" data-copy="$juancuero1" aria-label="Copiar"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></b>
           <em data-i="k4">Envío en dólares desde la app, sin costo de conversión</em></div>
       </div>
       <div class="usd__sub" data-i="k5">Transferencia bancaria desde Estados Unidos (ACH o wire)</div>
@@ -324,6 +362,33 @@
       <div class="legal__i"><div class="legal__k" data-i="x8">Vigilancia y control</div><div class="legal__v" data-i="x9">Gobernación del Valle del Cauca</div></div>
       <div class="legal__i"><div class="legal__k" data-i="x10">Correo</div><div class="legal__v">funhogarsinolvido@gmail.com</div></div>
       <div class="legal__i"><div class="legal__k" data-i="x11">Contacto</div><div class="legal__v num">+57 316 6891508</div></div>
+    </div>
+    <div class="verify rv">
+      <div class="vcard">
+        <h3 data-i="v0">Verifícanos tú mismo, en 30 segundos</h3>
+        <p data-i="v1">No hace falta que nos creas. Estos son registros públicos del Estado colombiano: busca el NIT <b>901.047.625-4</b> y compara.</p>
+        <div class="vlinks">
+          <a class="vlink" href="https://www.rues.org.co/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>
+            <span><b data-i="v2">RUES — Registro Único Empresarial</b><span data-i="v3">Existencia y representación legal de la fundación</span></span><svg class="ar" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+          <a class="vlink" href="https://muisca.dian.gov.co/WebRutMuisca/DefConsultaEstadoRUT.faces" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M9 13h6M9 17h4"/></svg>
+            <span><b data-i="v4">DIAN — Estado del RUT</b><span data-i="v5">Consulta pública por NIT</span></span><svg class="ar" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+          <a class="vlink" href="#" data-wa="Hola. Quiero verificar a RENACE. ¿Me envían el RUT y el certificado de existencia de la fundación?" data-wa-en="Hello. I would like to verify RENACE. Could you send the tax registry and certificate of incorporation?">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5"/></svg>
+            <span><b data-i="v6">Pídenos los documentos</b><span data-i="v7">Te enviamos RUT y certificado por WhatsApp</span></span><svg class="ar" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        </div>
+      </div>
+      <div class="vcard vcard--alert">
+        <h3 data-i="v8">Nunca te vamos a pedir esto</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></svg><span data-i="v9">Tu clave, tu PIN o un código de verificación</span></li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></svg><span data-i="v10">Los datos de tu tarjeta ni acceso a tu banca</span></li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></svg><span data-i="v11">Que transfieras a una cuenta distinta a las publicadas aquí</span></li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></svg><span data-i="v12">Que dones con urgencia o antes de una hora límite</span></li>
+        </ul>
+        <div class="vdom"><span data-i="v13">Única página oficial:</span><b>renacecol.org</b></div>
+      </div>
     </div>
     <div class="promesas">
       <div class="rv si"><h3 data-i="x12">Lo que sí prometemos</h3><ul>
@@ -365,6 +430,12 @@
       <a class="btn btn--light" href="#" data-wa="Hola. Me interesa ser aliado de RENACE. ¿Me comparten la presentación de la alianza?" data-wa-en="Hello. I am interested in becoming a RENACE partner. Could you share the alliance deck?"><span data-i="z2">Quiero ser aliado</span></a>
       <a class="btn btn--ghost" href="#aportar" data-i="z3">Donar ahora</a>
     </div>
+    <div class="share rv">
+      <a class="sbtn" id="shWa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.9 9.9 0 0 0 4.74 1.2c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2Zm0 18.02a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Z"/></svg><span data-i="s0">Compartir por WhatsApp</span></a>
+      <a class="sbtn" id="shX" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-6.6 7.5L21.7 21h-6l-4.7-6.1L5.6 21H2.5l7-8L2.6 3h6.2l4.2 5.6L17.5 3Zm-1 16h1.7L8.6 4.7H6.8L16.5 19Z"/></svg><span data-i="s1">Compartir en X</span></a>
+      <a class="sbtn" id="shLi" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.75-1.95C20.4 8.75 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3s-2.3 1.57-2.3 3.2V21H9V9Z"/></svg><span data-i="s2">LinkedIn</span></a>
+      <button class="sbtn" id="shCp" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span data-i="s3">Copiar enlace</span></button>
+    </div>
   </div>
 </section>
 </main>
@@ -390,6 +461,10 @@
       <span data-i="f8">Datos tratados conforme a la Ley 1581 de 2012 · Plataforma por Ocean Industries</span></div>
   </div>
 </footer>
+<div class="dock" id="dock">
+  <div class="dock__t"><b id="dkV">—</b><span data-i="dk0">recaudado de US$ 500.000</span></div>
+  <a class="btn" href="#aportar" data-i="dk1">Donar</a>
+</div>
 <a class="wa-float" id="waFloat" href="#" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.9 9.9 0 0 0 4.74 1.2c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2Zm0 18.02a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Z"/></svg>
 </a>
@@ -398,7 +473,10 @@
 var WA='573166891508',CUENTA='108900830473';
 var PROGRESO={recaudadoCOP:500000,aportes:1,obras:0,metaObras:100,metaUSD:500000,trm:3125.47,
 actualizado:{es:'Actualizado 12 ago 2026',en:'Updated Aug 12, 2026'}};
-function fmtCOP(n){return '$'+n.toLocaleString('es-CO');}
+var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var pkMonto=250000,pkDest='Vivienda';
+var DEST_EN={'Vivienda':'Housing','Colegios':'Schools','Centros de salud':'Health posts','Ayuda de emergencia':'Emergency relief','Donde m\u00e1s se necesite':'Wherever it is needed most'};
+function fmtCOP(n){return '$'+Number(n||0).toLocaleString('es-CO');}
 function pintarProgreso(lang){
 var P=PROGRESO,usd=P.recaudadoCOP/P.trm,pct=usd/P.metaUSD*100;
 var pctTxt=(pct>0&&pct<0.01)?'<0,01 %':(pct.toFixed(2).replace('.',',')+' %');
@@ -474,6 +552,21 @@ u2:'Three more ways to give: instantly from any Colombian bank, from a US dollar
 u3:'Beneficiary',u4:'Bank',u5:'Account number',u6:'ABA / Routing',u7:'Account type',u8:'Checking',u9:'Bank address',
 u10:'<strong>What these three channels are, and why they are not in the foundation name.</strong> The Bre-B key, the DolarApp account and the US account are held by Juan Cuero, director of the alliance, and work as temporary channels while the institutional equivalents for Fundaci\u00f3n Un Hogar Sin Olvido are being opened. Everything received here is transferred to the foundation, gets a tracking number like any other contribution, and is backed by the same published evidence. If you prefer to transfer directly to the foundation account at Davivienda, it is the first option in this section.',
 u11:'Notify my transfer',
+pk0:'Build your contribution',pk1:'Choose how much and which front it goes to. We prepare the message with the details ready.',
+pk2:'Amount',pk3:'Destination',pk4:'Housing',pk5:'Schools',pk6:'Health posts',pk7:'Emergency',pk8:'Wherever needed most',pk9:'Give via WhatsApp',
+v0:'Verify us yourself, in 30 seconds',v1:'You do not have to take our word for it. These are public Colombian government registries: look up tax ID <b>901.047.625-4</b> and compare.',
+v2:'RUES \u2014 National business registry',v3:'Legal existence and representation of the foundation',
+v4:'DIAN \u2014 Tax registry status',v5:'Public lookup by tax ID',
+v6:'Ask us for the documents',v7:'We send the tax registry and certificate over WhatsApp',
+v8:'We will never ask you for this',v9:'Your password, PIN or a verification code',
+v10:'Your card details or access to your banking app',v11:'To transfer to any account other than the ones published here',
+v12:'To donate urgently or before a deadline',v13:'Only official page:',
+b0:'Aug 10, 2026',b1:'The earthquake',b2:'Magnitude 7.4 at 7:34 a.m., epicenter in San Jos\u00e9 del Palmar. The alliance organizations begin assessing needs in Buenaventura, Choc\u00f3 and Cali.',
+b3:'Aug 11, 2026',b4:'The alliance is formed',b5:'Eight organizations agree to operate under a single executing entity, with zero commission and a commitment to publish every contribution.',
+b6:'Aug 12, 2026',b7:'First contribution and public platform',b8:'Fundaci\u00f3n Un Hogar Sin Olvido opens the fund with <b>COP 500,000</b> \u2014 reference RNC-2608-000001. This page goes live with the goals and the public log.',
+b9:'Next',b10:'First purchase with published invoice',b11:'Once executed, it appears here with its invoice, delivery record and photos. If something cannot be executed, that gets published too.',
+s0:'Share on WhatsApp',s1:'Share on X',s2:'LinkedIn',s3:'Copy link',
+dk0:'raised of the US$ 500,000 goal',dk1:'Donate',
 e5:'Transparency',x0:'Who receives, who executes and with what paperwork.',
 x1:'Financial resources are received and executed through Fundaci\u00f3n Un Hogar Sin Olvido, a non-profit incorporated in 2016 and supervised by the Valle del Cauca Government.',
 x2:'Legal name',x3:'Tax ID (NIT)',x4:'Legal representative',x5:'Domicile',x5v:'Buenaventura, Valle del Cauca, Colombia',x6:'Incorporated',x7:'January 20, 2016',x8:'Oversight',x9:'Valle del Cauca Government',x10:'Email',x11:'Contact',
@@ -514,7 +607,7 @@ nodes.forEach(function(el){var k=el.getAttribute('data-i');if(d[k]!==undefined){
 tagEl.setAttribute('data-tag',lang==='en'?EN.tagDirecta:tagES);
 document.documentElement.lang=(lang==='en')?'en':'es-CO';
 bES.classList.toggle('on',lang!=='en');bEN.classList.toggle('on',lang==='en');
-setWA(lang);pintarProgreso(lang);
+setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}
 try{localStorage.setItem('renace_lang',lang);}catch(e){}
 if(push&&window.history&&history.replaceState){
 try{var u=new URL(window.location.href);
@@ -538,10 +631,9 @@ menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classL
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('is-open')){menu.classList.remove('is-open');burger.setAttribute('aria-expanded','false');burger.focus();}});}
 
 var reveals=document.querySelectorAll('.rv');
-var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 var fills=document.querySelectorAll('[data-fill],#lvFill,#mFillUsd,#mFillObras');
 var todo=function(){reveals.forEach(function(el){el.classList.add('in');});
-fills.forEach(function(el){el.style.width=el.getAttribute('data-fill');});};
+fills.forEach(function(el){el.style.width=el.getAttribute('data-fill');});animarCifras();};
 if(reduce||!('IntersectionObserver' in window)){todo();}
 else{
 document.documentElement.classList.add('js-rv');
@@ -549,8 +641,87 @@ setTimeout(todo,6000);
 window.addEventListener('hashchange',todo);
 var io=new IntersectionObserver(function(en){en.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);});},{rootMargin:'240px 0px -6% 0px',threshold:.04});
 reveals.forEach(function(el){io.observe(el);});
+setTimeout(animarCifras,650);
 var io2=new IntersectionObserver(function(en){en.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;setTimeout(function(){el.style.width=el.getAttribute('data-fill');},380);io2.unobserve(el);});},{threshold:.4});
 fills.forEach(function(el){io2.observe(el);});}
+
+/* barra de progreso de scroll */
+var sp=document.getElementById('sp'),tick=false;
+function pintaSp(){var h=document.documentElement.scrollHeight-window.innerHeight;
+sp.style.width=(h>0?Math.min(window.scrollY/h*100,100):0)+'%';tick=false;}
+window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(pintaSp);}},{passive:true});pintaSp();
+
+/* conteo animado de numeros reales */
+function contar(el,fin,ms,fmt){
+if(reduce){el.textContent=fmt(fin);return;}
+var t0=null;function paso(t){if(!t0)t0=t;var p=Math.min((t-t0)/ms,1);
+var e=1-Math.pow(1-p,3);el.textContent=fmt(Math.round(fin*e));
+if(p<1)requestAnimationFrame(paso);}requestAnimationFrame(paso);}
+function animarCifras(){
+var P=PROGRESO,m=document.getElementById('lvMonto'),a=document.getElementById('lvAportes');
+if(m&&!m.dataset.done){m.dataset.done='1';contar(m,P.recaudadoCOP,1100,fmtCOP);}
+if(a&&!a.dataset.done){a.dataset.done='1';contar(a,P.aportes,700,function(v){return String(v);});}
+var d=document.getElementById('dkV');if(d)d.textContent=fmtCOP(P.recaudadoCOP);}
+
+/* selector de aporte */
+function pintaPicker(){
+var big=document.getElementById('pkBig');if(!big)return;
+var lang=document.documentElement.lang==='en'?'en':'es';
+var usd=pkMonto/PROGRESO.trm,pct=usd/PROGRESO.metaUSD*100;
+var pctTxt=pct<0.01?(lang==='en'?'<0.01 %':'<0,01 %'):(lang==='en'?pct.toFixed(2)+' %':pct.toFixed(2).replace('.',',')+' %');
+var meta=document.getElementById('pkMeta'),btn=document.getElementById('pkBtn');
+big.textContent=fmtCOP(pkMonto)+' COP';
+if(meta)meta.innerHTML=(lang==='en'
+?'\u2248 US$ '+Math.round(usd).toLocaleString('en-US')+' \u00b7 <b>'+pctTxt+'</b> of the funding goal \u00b7 '+(DEST_EN[pkDest]||pkDest)
+:'\u2248 US$ '+Math.round(usd).toLocaleString('es-CO')+' \u00b7 <b>'+pctTxt+'</b> de la meta de recursos \u00b7 '+pkDest);
+if(btn)btn.href=waLink(lang==='en'
+?'Hello. I would like to contribute COP '+pkMonto.toLocaleString('en-US')+' to RENACE, for '+(DEST_EN[pkDest]||pkDest)+'. Could you confirm the details?'
+:'Hola. Quiero aportar '+fmtCOP(pkMonto)+' a RENACE, para '+pkDest+'. \u00bfMe confirman los datos?');}
+function grupo(id,cb){var g=document.getElementById(id);if(!g)return;
+g.addEventListener('click',function(e){var b=e.target.closest('.chipx');if(!b)return;
+g.querySelectorAll('.chipx').forEach(function(x){x.setAttribute('aria-pressed','false');});
+b.setAttribute('aria-pressed','true');cb(b);pintaPicker();});}
+grupo('pkM',function(b){pkMonto=parseInt(b.getAttribute('data-v'),10);var o=document.getElementById('pkOtro');if(o)o.value='';});
+grupo('pkD',function(b){pkDest=b.getAttribute('data-d');});
+var pkOtro=document.getElementById('pkOtro');
+if(pkOtro)pkOtro.addEventListener('input',function(){
+var v=parseInt(this.value.replace(/\D/g,''),10);
+if(v>0){pkMonto=v;document.querySelectorAll('#pkM .chipx').forEach(function(x){x.setAttribute('aria-pressed','false');});pintaPicker();}});
+pintaPicker();
+
+/* barra fija en movil */
+var dock=document.getElementById('dock'),hero=document.getElementById('inicio'),apo=document.getElementById('aportar');
+if(dock&&hero&&apo&&'IntersectionObserver' in window){
+var fueraHero=false,enAportar=false;
+var upd=function(){var on=fueraHero&&!enAportar;dock.classList.toggle('on',on);document.body.classList.toggle('has-dock',on);};
+new IntersectionObserver(function(e){fueraHero=!e[0].isIntersecting;upd();},{threshold:0}).observe(hero);
+new IntersectionObserver(function(e){enAportar=e[0].isIntersecting;upd();},{threshold:0}).observe(apo);}
+
+/* copiar generico */
+document.querySelectorAll('[data-copy]').forEach(function(b){
+b.addEventListener('click',function(){var v=b.getAttribute('data-copy');
+var ok=function(){b.classList.add('ok');setTimeout(function(){b.classList.remove('ok');},1800);};
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(ok).catch(function(){});}
+else{try{var t=document.createElement('textarea');t.value=v;t.style.position='fixed';t.style.opacity='0';
+document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);ok();}catch(e){}}});});
+
+/* compartir */
+var URL_OK='https://renacecol.org';
+function txtShare(){return document.documentElement.lang==='en'
+?'RENACE: an alliance of eight Colombian organizations rebuilding homes, schools and health posts after the August 10 earthquake. Every contribution gets a tracking number you can follow.'
+:'RENACE: alianza de ocho organizaciones reconstruyendo casas, colegios y puestos de salud tras el terremoto del 10 de agosto. Cada aporte recibe un folio que se puede seguir.';}
+function pintaShare(){
+var t=encodeURIComponent(txtShare()+' '+URL_OK),u=encodeURIComponent(URL_OK);
+var a=document.getElementById('shWa');if(a)a.href='https://wa.me/?text='+t;
+var b=document.getElementById('shX');if(b)b.href='https://twitter.com/intent/tweet?text='+t;
+var c=document.getElementById('shLi');if(c)c.href='https://www.linkedin.com/sharing/share-offsite/?url='+u;}
+pintaShare();
+var shCp=document.getElementById('shCp');
+if(shCp)shCp.addEventListener('click',function(){
+var lbl=shCp.querySelector('span'),prev=lbl.textContent;
+var ok=function(){shCp.classList.add('ok');lbl.textContent=document.documentElement.lang==='en'?'Link copied':'Enlace copiado';
+setTimeout(function(){shCp.classList.remove('ok');lbl.textContent=prev;},2200);};
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(URL_OK).then(ok).catch(function(){});}else{ok();}});
 
 var btn=document.getElementById('btnCopiar');
 if(btn){btn.addEventListener('click',function(){
