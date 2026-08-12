@@ -41,15 +41,6 @@
       ]
     },
     {
-      "source": "/styles.css",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    },
-    {
       "source": "/assets/(.*)",
       "headers": [
         {
@@ -59,11 +50,20 @@
       ]
     },
     {
-      "source": "/(.*).(png|jpg|jpeg|svg|webp|ico)",
+      "source": "/data/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=604800"
+          "value": "public, max-age=60, stale-while-revalidate=600"
+        }
+      ]
+    },
+    {
+      "source": "/styles.css",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
         }
       ]
     },
