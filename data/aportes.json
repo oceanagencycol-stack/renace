@@ -1,26 +1,52 @@
 {
-  "_schema": {
-    "descripcion": "Fuente única de verdad del dinero de RENACE. De aquí salen el panel en vivo, las barras de meta y el registro público.",
-    "como_agregar": "Añade el objeto al principio de 'aportes' y sube 'actualizado'. git push y la web se actualiza sola.",
-    "estados": "recibido | en_asignacion | comprado | entregado | no_ejecutado",
-    "regla": "Si un aporte no se pudo ejecutar, se registra igual con estado no_ejecutado y su razón."
+ "_schema": {
+  "descripcion": "Fuente única de verdad del dinero de RENACE. De aquí salen el panel en vivo, las barras de meta y el registro público.",
+  "como_agregar": "Añade el objeto al principio de 'aportes' y sube 'actualizado'. git push y la web se actualiza sola.",
+  "estados": "recibido | en_asignacion | comprado | entregado | no_ejecutado | costo_operacion",
+  "regla": "Si un aporte no se pudo ejecutar, se registra igual con estado no_ejecutado y su razón.",
+  "costos_operacion": "Los gastos de operar (transporte, bodegaje, transferencias, papeleo) salen de lo recaudado y se registran aquí con estado 'costo_operacion' y su factura. Cero comisión significa que nadie de la alianza cobra un porcentaje como ingreso, no que el 100% llegue en materiales."
+ },
+ "actualizado": "2026-08-12",
+ "trm": 3125.47,
+ "meta_usd": 500000,
+ "meta_obras": 100,
+ "obras_entregadas": 0,
+ "aportes": [
+  {
+   "folio": "RNC-2608-000003",
+   "fecha": "2026-08-12",
+   "origen": "Ocean Industries y aliados",
+   "nota": "Aporte en dólares desde el exterior",
+   "nota_en": "Contribution in US dollars from abroad",
+   "monto": 312547,
+   "moneda": "COP",
+   "monto_orig": 100,
+   "moneda_orig": "USD",
+   "trm_aplicada": 3125.47,
+   "canal": "DolarApp",
+   "estado": "en_asignacion"
   },
-  "actualizado": "2026-08-12",
-  "trm": 3125.47,
-  "meta_usd": 500000,
-  "meta_obras": 100,
-  "obras_entregadas": 0,
-  "aportes": [
-    {
-      "folio": "RNC-2608-000001",
-      "fecha": "2026-08-12",
-      "origen": "Fundación Un Hogar Sin Olvido",
-      "nota": "Aporte semilla de la alianza",
-      "nota_en": "Alliance seed contribution",
-      "monto": 500000,
-      "moneda": "COP",
-      "canal": "Davivienda",
-      "estado": "en_asignacion"
-    }
-  ]
+  {
+   "folio": "RNC-2608-000002",
+   "fecha": "2026-08-12",
+   "origen": "Álvaro Arroyo",
+   "nota": "Aliado de la alianza",
+   "nota_en": "Alliance partner",
+   "monto": 500000,
+   "moneda": "COP",
+   "canal": "Bre-B",
+   "estado": "en_asignacion"
+  },
+  {
+   "folio": "RNC-2608-000001",
+   "fecha": "2026-08-12",
+   "origen": "Fundación Un Hogar Sin Olvido",
+   "nota": "Aporte semilla de la alianza",
+   "nota_en": "Alliance seed contribution",
+   "monto": 500000,
+   "moneda": "COP",
+   "canal": "Davivienda",
+   "estado": "en_asignacion"
+  }
+ ]
 }
