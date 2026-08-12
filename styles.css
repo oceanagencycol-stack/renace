@@ -302,4 +302,9 @@ background-image:radial-gradient(circle at 7px 0,transparent 6px,var(--cream) 6.
 @media (max-width:720px){#regT2{min-height:260px}}
 .via__panel{min-height:290px}
 @media (max-width:760px){.via__panel{min-height:420px}}
+.live{min-height:352px}
+@media (max-width:980px){.live{min-height:346px}}
+.nav__inner{min-height:74px}
+.tag-emergencia{min-height:35px}
+h1{min-height:1.06em}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
