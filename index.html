@@ -62,6 +62,7 @@
       <a href="#metas" data-i="n0">Metas</a>
       <a href="#que-paso" data-i="n1">Qué pasó</a>
       <a href="#mapa" data-i="n7">Mapa</a>
+      <a href="#alianza" data-i="n8">La alianza</a>
       <a href="#como-funciona" data-i="n2">Cómo funciona</a>
       <a href="#trazabilidad" data-i="n3">Trazabilidad</a>
       <a href="#entregas" data-i="n6">Entregas</a>
@@ -246,6 +247,17 @@
     </div>
   </div>
 </section>
+<section class="sec ali-sec" id="alianza" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <p class="eyebrow" data-i="al0">La alianza</p>
+      <h2 data-i="al1">Quién es cada uno y qué pone.</h2>
+      <p class="lede" data-i="al2">Ocho organizaciones con oficios distintos. Ninguna sola podía hacer esto: hacía falta presencia en territorio, capacidad jurídica para recibir y ejecutar, convocatoria y tecnología para hacerlo verificable.</p>
+    </div>
+    <div class="ali" id="aliL"></div>
+    <p class="fuente rv" data-i="al3">Los datos legales de la entidad que recibe y ejecuta están en la sección de transparencia, y se pueden verificar en el RUES y en la DIAN.</p>
+  </div>
+</section>
 <section class="sec" id="como-funciona" style="padding-top:0">
   <div class="wrap">
     <div class="sec__head rv"><p class="eyebrow" data-i="e2">Cómo funciona</p><h2 data-i="c0">Tres pasos. Ninguno a puerta cerrada.</h2></div>
@@ -283,15 +295,23 @@
           <div class="ruta__item"><span class="ruta__dot num">5</span><div><div class="ruta__t" data-i="t11">Cerrado con evidencia</div><p class="ruta__d" data-i="t12">Fotos y porcentaje ejecutado de la obra que apoyaste.</p></div></div>
         </div>
       </div>
-      <div class="traza__grid rv stg">
-        <div class="glass rv"><div class="glass__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5"/></svg></div>
-          <h3 data-i="t13">Folio único</h3><p data-i="t14">Un identificador por aporte, consultable sin crear cuenta ni entregar datos personales.</p></div>
-        <div class="glass rv"><div class="glass__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/></svg></div>
-          <h3 data-i="t15">Porcentaje real</h3><p data-i="t16">Cuánto de la obra que apoyaste está ejecutado hoy — no una barra de adorno.</p></div>
-        <div class="glass rv"><div class="glass__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16V6a2 2 0 0 1 2-2h9l5 5v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 20h8"/></svg></div>
-          <h3 data-i="t17">Evidencia adjunta</h3><p data-i="t18">Facturas, actas y fotos de entrega asociadas al folio, con fecha y lugar.</p></div>
-        <div class="glass rv"><div class="glass__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div>
-          <h3 data-i="t19">Datos protegidos</h3><p data-i="t20">Tratamiento conforme a la Ley 1581 de 2012. Nunca publicamos tu identidad sin permiso.</p></div>
+      <div class="cmp rv">
+        <span class="cmp__tag" data-i="cm0">Documento real · primer aporte</span>
+        <div class="cmp__c">
+          <div class="cmp__top">
+            <div><span data-i="cm1">Folio</span><b id="cmF">—</b></div>
+            <div class="cmp__sello"><span data-i="cm2">Registrado</span></div>
+          </div>
+          <dl class="cmp__r">
+            <div><dt data-i="cm3">Fecha</dt><dd id="cmD">—</dd></div>
+            <div><dt data-i="cm4">Origen</dt><dd id="cmO">—</dd></div>
+            <div><dt data-i="cm5">Monto</dt><dd id="cmM">—</dd></div>
+            <div><dt data-i="cm6">Estado</dt><dd id="cmE">—</dd></div>
+          </dl>
+          <div class="cmp__p"><i id="cmB"></i></div>
+          <div class="cmp__f"><span data-i="cm7">Ejecutado</span><span id="cmP">—</span></div>
+        </div>
+        <p class="cmp__n" data-i="cm8">Este no es un ejemplo: es la primera entrada del registro público, con los mismos datos que puedes descargar en CSV más arriba.</p>
       </div>
     </div>
     <p class="fuente rv" style="color:rgba(243,238,228,.55);margin-top:36px" data-i="t21">Estado honesto: hoy esta página es la puerta de entrada. La consulta pública por folio y el panel de ejecución están en construcción — el comprobante que ves arriba es un ejemplo ilustrativo, no un dato real. Mientras tanto, todo aporte se registra manualmente y el soporte se envía por WhatsApp.</p>
@@ -620,6 +640,11 @@ pp2:'raised',pp3:'projects delivered',pp4:'commission',
 pp5:'Donate now',pp6:'See the public log',pp7:'Not right now, thanks',
 d0:'raised',d1:'of the US$ 500,000 goal',d2:'contributions logged',d3:'projects delivered',
 d4:'municipalities in operation',d5:'partner organizations',n7:'Map',
+al0:'The alliance',al1:'Who each one is and what they bring.',
+al2:'Eight organizations with different trades. None of them could do this alone: it took presence on the ground, legal capacity to receive and execute, convening power and technology to make it verifiable.',
+al3:'The legal details of the entity that receives and executes are in the transparency section, and can be checked on RUES and DIAN.',n8:'The alliance',
+cm0:'Real document · first contribution',cm1:'Reference',cm2:'Logged',cm3:'Date',cm4:'Source',cm5:'Amount',cm6:'Status',cm7:'Executed',
+cm8:'This is not a mock-up: it is the first entry of the public log, with the same data you can download as CSV above.',
 mp0:'Where we are',mp1:'The operation map.',
 mp2:'The dots show where the alliance works and what stage each territory is in. It is not a damage assessment: it is what we are doing, and where.',
 mp3:'Operating',mp4:'Assessing',mp5:'Planned',mp6:'Epicenter',
@@ -694,7 +719,7 @@ nodes.forEach(function(el){var k=el.getAttribute('data-i');if(d[k]!==undefined){
 if(tagEl)tagEl.setAttribute('data-tag',lang==='en'?EN.tagDirecta:tagES);
 document.documentElement.lang=(lang==='en')?'en':'es-CO';
 bES.classList.toggle('on',lang!=='en');bEN.classList.toggle('on',lang==='en');
-setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}if(typeof pintaEntregas==='function')pintaEntregas();if(typeof pintaRegistro==='function')pintaRegistro();if(typeof pintaMapa==='function')pintaMapa();if(typeof pintaNov==='function')pintaNov();if(typeof pintaTablero==='function')pintaTablero();
+setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}if(typeof pintaEntregas==='function')pintaEntregas();if(typeof pintaRegistro==='function')pintaRegistro();if(typeof pintaMapa==='function')pintaMapa();if(typeof pintaNov==='function')pintaNov();if(typeof pintaTablero==='function')pintaTablero();if(typeof pintaAli==='function')pintaAli();if(typeof pintaComprobante==='function')pintaComprobante();
 try{localStorage.setItem('renace_lang',lang);}catch(e){}
 if(push&&window.history&&history.replaceState){
 try{var u=new URL(window.location.href);
@@ -957,7 +982,7 @@ if(d.actualizado){try{var f=new Date(d.actualizado+'T12:00:00');
 PROGRESO.actualizado={es:'Actualizado '+f.toLocaleDateString('es-CO',{day:'numeric',month:'short',year:'numeric'}),
 en:'Updated '+f.toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'})};}catch(e){}}
 var lang=document.documentElement.lang==='en'?'en':'es';
-pintarProgreso(lang); pintaRegistro(); if(typeof pintaTablero==='function')pintaTablero();
+pintarProgreso(lang); pintaRegistro(); if(typeof pintaTablero==='function')pintaTablero(); if(typeof pintaComprobante==='function')pintaComprobante();
 document.querySelectorAll('[data-fill],#lvFill,#mFillUsd,#mFillObras').forEach(function(el){
 if(el.getAttribute('data-fill'))el.style.width=el.getAttribute('data-fill');});
 ['lvMonto','lvAportes'].forEach(function(id){var e=document.getElementById(id);if(e)delete e.dataset.done;});
@@ -1053,6 +1078,42 @@ var P=PROGRESO,usd=P.recaudadoCOP/P.trm,pct=usd/P.metaUSD*100,lang=document.docu
 var s=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};
 s('tRec',fmtCOP(P.recaudadoCOP)); s('tAp',P.aportes); s('tOb',P.obras+' / '+P.metaObras);
 s('tPct',(pct<0.01?(lang==='en'?'<0.01 %':'<0,01 %'):(lang==='en'?pct.toFixed(2)+' %':pct.toFixed(2).replace('.',',')+' %')));}
+
+/* ── organizaciones de la alianza ── */
+var ALI=null;
+function pintaAli(){
+var c=document.getElementById('aliL'); if(!c||!ALI)return;
+var lang=document.documentElement.lang==='en'?'en':'es';
+var L={es:{nit:'NIT',desde:'Desde',sitio:'Sitio web'},en:{nit:'Tax ID',desde:'Since',sitio:'Website'}}[lang];
+c.innerHTML=(ALI.aliados||[]).map(function(a){
+var meta='';
+if(a.ciudad)meta+='<span>'+esc(a.ciudad)+'</span>';
+if(a.nit)meta+='<span>'+L.nit+' <b>'+esc(a.nit)+'</b></span>';
+if(a.desde)meta+='<span>'+L.desde+' <b>'+esc(a.desde)+'</b></span>';
+if(a.web)meta+='<span><a href="'+esc(a.web)+'" target="_blank" rel="noopener">'+L.sitio+' →</a></span>';
+return '<article class="ali__i"><div class="ali__lg"><img src="/assets/'+esc(a.logo)+'" alt="'+esc(a.nombre)+'" height="'+(a.alto||48)+'" style="height:'+(a.alto||48)+'px" loading="lazy" decoding="async"></div>'
++'<div><div class="ali__t"><h3>'+esc(a.nombre)+'</h3><span class="ali__tp">'+esc(a.tipo)+'</span></div>'
++'<p class="ali__rl">'+esc(lang==='en'&&a.rol_en?a.rol_en:a.rol)+'</p>'
++'<p class="ali__x">'+esc(lang==='en'&&a.texto_en?a.texto_en:a.texto)+'</p>'
++(meta?'<div class="ali__m">'+meta+'</div>':'')+'</div></article>';}).join('');}
+fetch('/data/aliados.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null;})
+.then(function(d){ALI=d;pintaAli();}).catch(function(){});
+
+/* ── comprobante real del primer aporte ── */
+function pintaComprobante(){
+if(!APORTES||!(APORTES.aportes||[]).length)return;
+var a=APORTES.aportes[APORTES.aportes.length-1];
+var lang=document.documentElement.lang==='en'?'en':'es';
+var s=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};
+s('cmF',a.folio); s('cmD',fFecha(a.fecha,lang)); s('cmO',a.origen); s('cmM',fmtCOP(a.monto));
+s('cmE',(EST[lang]||{})[a.estado]||a.estado);
+var pasos={recibido:20,en_asignacion:40,comprado:60,entregado:100,no_ejecutado:0};
+var pc=pasos[a.estado]||0; s('cmP',pc+' %');
+var bar=document.getElementById('cmB');
+if(bar){bar.setAttribute('data-fill',pc+'%');
+if(reduce)bar.style.width=pc+'%';
+else{var o=new IntersectionObserver(function(e,ob){if(e[0].isIntersecting){setTimeout(function(){bar.style.width=pc+'%';},280);ob.disconnect();}},{threshold:.4});
+o.observe(bar.closest('.cmp')||bar);}}}
 
 var btn=document.getElementById('btnCopiar');
 if(btn){btn.addEventListener('click',function(){
