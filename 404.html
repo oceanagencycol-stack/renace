@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página no encontrada · RENACE</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F3EEE4">
+<style>html,body{background:#F3EEE4;margin:0}</style>
+<link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/renace-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,700;12..96,75..100,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.e{min-height:100svh;display:grid;place-items:center;padding:clamp(24px,6vw,64px);text-align:center}
+.e__in{max-width:56ch}
+.e img{width:104px;margin:0 auto clamp(24px,4vw,34px)}
+.e h1{font-size:clamp(2.2rem,6vw,3.4rem);margin-bottom:16px}
+.e p{color:var(--muted);font-size:1.05rem;margin-bottom:8px}
+.e__code{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brick);margin-bottom:20px}
+.e__acts{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px}
+</style>
+</head>
+<body>
+<main class="e">
+  <div class="e__in">
+    <img src="https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/renace-mark.svg" alt="RENACE">
+    <p class="e__code">Error 404</p>
+    <h1 data-i="t">Esta página no existe.</h1>
+    <p data-i="p1">El enlace que seguiste está roto o la página se movió. Lo que sí sigue en pie es la reconstrucción.</p>
+    <p data-i="p2" style="font-size:.9rem">Si llegaste buscando cómo donar, el botón de abajo te lleva directo.</p>
+    <div class="e__acts">
+      <a class="btn" href="/#aportar" data-i="b1">Quiero donar</a>
+      <a class="btn btn--ghost" href="/" data-i="b2">Ir al inicio</a>
+    </div>
+  </div>
+</main>
+<script>
+(function(){
+  var EN={t:'This page does not exist.',
+    p1:'The link you followed is broken or the page has moved. What is still standing is the rebuilding.',
+    p2:'If you came here looking for how to donate, the button below takes you straight there.',
+    b1:'Donate now',b2:'Go to homepage'};
+  var en=false;
+  try{en=(window.location.search||'').toLowerCase().indexOf('lang=en')>-1||localStorage.getItem('renace_lang')==='en';}catch(e){}
+  if(en){
+    document.documentElement.lang='en';
+    document.title='Page not found · RENACE';
+    document.querySelectorAll('[data-i]').forEach(function(el){
+      var k=el.getAttribute('data-i'); if(EN[k])el.textContent=EN[k];});
+    document.querySelector('[data-i="b1"]').href='/?lang=en#aportar';
+    document.querySelector('[data-i="b2"]').href='/?lang=en';
+  }
+})();
+</script>
+</body>
+</html>
