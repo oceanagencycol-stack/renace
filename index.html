@@ -160,15 +160,18 @@
         <div class="meta__foot"><span data-i="mav2">Avance verificado</span><span class="num" id="mPct">—</span></div>
       </div>
     </div>
-    <div class="ledger rv">
-      <div class="ledger__h"><span data-i="lg0">Registro público de aportes</span><span data-i="lg1">Se publica cada entrada, sin excepción</span></div>
-      <table>
-        <thead><tr><th data-i="lg2">Folio</th><th data-i="lg3">Fecha</th><th data-i="lg4">Origen</th><th data-i="lg5">Monto</th><th data-i="lg6">Estado</th></tr></thead>
-        <tbody>
-          <tr><td class="num" data-l="Folio">RNC-2608-000001</td><td data-l="Fecha" data-i="lg7">12 ago 2026</td><td data-l="Origen" data-i="lg8">Fundación Un Hogar Sin Olvido · aporte semilla</td><td class="num" data-l="Monto">$500.000 COP</td><td data-l="Estado"><span class="pil" data-i="lg9">En asignación</span></td></tr>
-        </tbody>
-      </table>
-    </div>
+    <section class="reg rv" aria-labelledby="regT">
+      <header class="reg__h">
+        <div>
+          <h3 id="regT" data-i="lg0">Registro público de aportes</h3>
+          <p data-i="lg1">Cada entrada se publica. Sin excepciones, incluidas las que no se pudieron ejecutar.</p>
+        </div>
+        <button class="reg__csv" id="regCsv" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          <span data-i="lg10">Descargar CSV</span></button>
+      </header>
+      <div class="reg__t" id="regT2"></div>
+    </section>
     <div class="bit rv">
       <div class="bit__i"><div class="bit__d"><span class="bit__dot"></span><span data-i="b0">10 ago 2026</span></div>
         <div><div class="bit__t" data-i="b1">El sismo</div><p class="bit__x" data-i="b2">Magnitud 7,4 a las 7:34 a.m., epicentro en San José del Palmar. Las organizaciones de la alianza empiezan a levantar necesidades en Buenaventura, Chocó y Cali.</p></div></div>
@@ -601,8 +604,8 @@ a18:'Sponsor a full project under your brand',a19:'Transport and warehousing to 
 a22:'Become a partner',
 a23:'<strong>Verify before you give.</strong> In emergencies, fake accounts impersonating real foundations appear. Always confirm the account holder and tax ID before transferring, here and in any other campaign. If in doubt, message us on WhatsApp and we will send the tax registry and certificate of incorporation.',
 lv0:'Live',lv1:'Raised so far',lv2:'of the funding goal',lv3:'contribution logged',lv4:'projects delivered',
-lg0:'Public contribution log',lg1:'Every entry gets published, no exceptions',lg2:'Ref.',lg3:'Date',lg4:'Source',lg5:'Amount',lg6:'Status',
-lg7:'Aug 12, 2026',lg8:'Fundaci\u00f3n Un Hogar Sin Olvido \u00b7 seed contribution',lg9:'Being assigned',
+lg0:'Public contribution log',lg1:'Every entry gets published. No exceptions, including the ones that could not be executed.',
+lg10:'Download CSV',
 t2b:'This is where reference <b>RNC-2608-000001</b> stands \u2014 the first logged contribution.',
 k1:'Bre-B key \u00b7 Colombia',k2:'Instant interoperable transfer from any Colombian bank or wallet',
 k3:'DolarApp \u00b7 USD',k4:'Send US dollars straight from the app, no conversion fee',
@@ -671,7 +674,7 @@ nodes.forEach(function(el){var k=el.getAttribute('data-i');if(d[k]!==undefined){
 tagEl.setAttribute('data-tag',lang==='en'?EN.tagDirecta:tagES);
 document.documentElement.lang=(lang==='en')?'en':'es-CO';
 bES.classList.toggle('on',lang!=='en');bEN.classList.toggle('on',lang==='en');
-setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}if(typeof pintaEntregas==='function')pintaEntregas();
+setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}if(typeof pintaEntregas==='function')pintaEntregas();if(typeof pintaRegistro==='function')pintaRegistro();
 try{localStorage.setItem('renace_lang',lang);}catch(e){}
 if(push&&window.history&&history.replaceState){
 try{var u=new URL(window.location.href);
@@ -886,6 +889,72 @@ if(window.matchMedia&&window.matchMedia('(pointer:fine)').matches){
 document.addEventListener('mouseout',function(e){
 if(!e.relatedTarget&&e.clientY<8&&window.scrollY>300)abrir();});}
 }
+
+/* ── el dinero sale de un solo archivo: data/aportes.json ── */
+var EST={es:{recibido:'Recibido',en_asignacion:'En asignación',comprado:'Comprado',entregado:'Entregado',no_ejecutado:'No ejecutado'},
+en:{recibido:'Received',en_asignacion:'Being assigned',comprado:'Purchased',entregado:'Delivered',no_ejecutado:'Not executed'}};
+var R_T={es:{folio:'Folio',fecha:'Fecha',origen:'Origen',monto:'Monto',estado:'Estado',
+tot:function(n){return 'Total · '+n+(n===1?' aporte registrado':' aportes registrados');},
+vacio:'Todavía no hay aportes registrados. La primera entrada aparece aquí en cuanto se verifique el ingreso.'},
+en:{folio:'Ref.',fecha:'Date',origen:'Source',monto:'Amount',estado:'Status',
+tot:function(n){return 'Total · '+n+(n===1?' contribution logged':' contributions logged');},
+vacio:'No contributions logged yet. The first entry appears here as soon as the deposit is verified.'}};
+var APORTES=null;
+function fFecha(iso,lang){try{return new Date(iso+'T12:00:00').toLocaleDateString(lang==='en'?'en-US':'es-CO',
+{day:'2-digit',month:'short',year:'numeric'});}catch(e){return iso;}}
+function pintaRegistro(){
+var cont=document.getElementById('regT2'); if(!cont||!APORTES)return;
+var lang=document.documentElement.lang==='en'?'en':'es',T=R_T[lang],L=EST[lang];
+var lista=APORTES.aportes||[];
+if(!lista.length){cont.innerHTML='<p class="reg__v">'+T.vacio+'</p>';return;}
+var total=lista.reduce(function(a,x){return a+(x.monto||0);},0);
+var filas=lista.map(function(a){
+var cls=a.estado==='entregado'?' ok':(a.estado==='no_ejecutado'?' no':'');
+var nota=(lang==='en'&&a.nota_en?a.nota_en:a.nota)||'';
+return '<tr><td class="f">'+esc(a.folio)+'</td><td class="d">'+fFecha(a.fecha,lang)+'</td>'
++'<td class="o"><b>'+esc(a.origen)+'</b>'+(nota?'<span>'+esc(nota)+'</span>':'')+'</td>'
++'<td class="m r">'+fmtCOP(a.monto)+'</td>'
++'<td class="r"><span class="est'+cls+'"><i></i>'+(L[a.estado]||esc(a.estado))+'</span></td></tr>';}).join('');
+cont.innerHTML='<table><thead><tr><th>'+T.folio+'</th><th>'+T.fecha+'</th><th>'+T.origen+'</th>'
++'<th class="r">'+T.monto+'</th><th class="r">'+T.estado+'</th></tr></thead><tbody>'+filas+'</tbody>'
++'<tfoot><tr><td colspan="3">'+T.tot(lista.length)+'</td><td class="m r">'+fmtCOP(total)+'</td><td></td></tr></tfoot></table>';}
+
+function aplicarAportes(d){
+APORTES=d;
+var t=(d.aportes||[]).reduce(function(a,x){return a+(x.monto||0);},0);
+PROGRESO.recaudadoCOP=t; PROGRESO.aportes=(d.aportes||[]).length;
+if(typeof d.obras_entregadas==='number')PROGRESO.obras=d.obras_entregadas;
+if(d.trm)PROGRESO.trm=d.trm;
+if(d.meta_usd)PROGRESO.metaUSD=d.meta_usd;
+if(d.meta_obras)PROGRESO.metaObras=d.meta_obras;
+if(d.actualizado){try{var f=new Date(d.actualizado+'T12:00:00');
+PROGRESO.actualizado={es:'Actualizado '+f.toLocaleDateString('es-CO',{day:'numeric',month:'short',year:'numeric'}),
+en:'Updated '+f.toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'})};}catch(e){}}
+var lang=document.documentElement.lang==='en'?'en':'es';
+pintarProgreso(lang); pintaRegistro();
+document.querySelectorAll('[data-fill],#lvFill,#mFillUsd,#mFillObras').forEach(function(el){
+if(el.getAttribute('data-fill'))el.style.width=el.getAttribute('data-fill');});
+['lvMonto','lvAportes'].forEach(function(id){var e=document.getElementById(id);if(e)delete e.dataset.done;});
+if(typeof animarCifras==='function')animarCifras();}
+
+fetch('/data/aportes.json',{cache:'no-cache'})
+.then(function(r){return r.ok?r.json():Promise.reject(0);})
+.then(aplicarAportes)
+.catch(function(){pintaRegistro();});
+
+/* exportar el registro tal cual, para que cualquiera lo audite */
+var csvBtn=document.getElementById('regCsv');
+if(csvBtn)csvBtn.addEventListener('click',function(){
+if(!APORTES)return;
+var q=function(v){return '"'+String(v==null?'':v).replace(/"/g,'""')+'"';};
+var filas=[['folio','fecha','origen','nota','monto_cop','moneda','canal','estado'].map(q).join(',')];
+(APORTES.aportes||[]).forEach(function(a){
+filas.push([a.folio,a.fecha,a.origen,a.nota||'',a.monto,a.moneda||'COP',a.canal||'',a.estado].map(q).join(','));});
+var blob=new Blob(['\ufeff'+filas.join('\r\n')],{type:'text/csv;charset=utf-8'});
+var u=URL.createObjectURL(blob),a=document.createElement('a');
+a.href=u; a.download='renace-aportes-'+(APORTES.actualizado||'')+'.csv';
+document.body.appendChild(a); a.click(); document.body.removeChild(a);
+setTimeout(function(){URL.revokeObjectURL(u);},1500);});
 
 var btn=document.getElementById('btnCopiar');
 if(btn){btn.addEventListener('click',function(){
