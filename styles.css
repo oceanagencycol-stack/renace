@@ -330,4 +330,10 @@ background:linear-gradient(180deg,rgba(192,83,43,.045),transparent 62%)}
 .emg__t>p{font-size:.94rem;color:var(--muted);line-height:1.55;margin:0 0 10px;max-width:62ch}
 .emg__n{font-size:.85rem!important;color:var(--muted);opacity:.85;border-left:2px solid var(--line-strong);padding-left:12px;margin:0!important}
 .emg__b{flex:0 0 auto}
+@media (max-width:400px){
+.btn{white-space:normal;text-align:center;line-height:1.3;padding:14px 18px}
+.emg{padding:20px 16px}.emg__b{width:100%}
+.via__foot .btn{width:100%}
+.traza__mesh i{max-width:100vw}
+.wrap{padding-inline:16px}}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
