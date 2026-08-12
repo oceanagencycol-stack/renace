@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="es" href="https://renacecol.org/">
 <link rel="alternate" hreflang="en" href="https://renacecol.org/?lang=en">
 <link rel="alternate" hreflang="x-default" href="https://renacecol.org/">
-<style>html{background:#F3EEE4}body{background:#F3EEE4;margin:0}</style>
+<style>html{background:#F3EEE4}body{background:#F3EEE4;margin:0}.hfoto{position:relative;aspect-ratio:3/2;overflow:hidden;margin:0}.hfoto picture{position:absolute;inset:0;display:block}.hfoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}@media(min-width:981px){.hfoto{aspect-ratio:4/5}}</style>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="RENACE">
 <meta property="og:url" content="https://renacecol.org/">
@@ -30,7 +30,8 @@
 <meta name="color-scheme" content="light">
 <meta name="apple-mobile-web-app-title" content="RENACE">
 <meta name="format-detection" content="telephone=no">
-<link rel="preload" as="image" href="/assets/hero.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/hero-p.webp" type="image/webp" media="(min-width:981px)" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/hero-w.webp" type="image/webp" media="(max-width:980px)" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/f_4ca685b476.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/f_71c30cd3dc.woff2" crossorigin>
 <script type="application/ld+json">
@@ -46,7 +47,7 @@
 {"@type":"Question","name":"¿Por qué una alianza y no una sola fundación?","acceptedAnswer":{"@type":"Answer","text":"Porque ninguna organización sola cubre presencia en territorio, capacidad jurídica para recibir y ejecutar recursos, convocatoria y tecnología para hacerlo verificable. Son ocho organizaciones, cada una aportando lo que sabe hacer."}},
 {"@type":"Question","name":"¿La donación es deducible de renta?","acceptedAnswer":{"@type":"Answer","text":"Todavía no lo prometemos. Depende del régimen tributario de la fundación ejecutora y se está confirmando. Cuando esté, se publica."}}]}
 </script>
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles.css?v=6">
 </head>
 <body>
 <div class="sp" id="sp" aria-hidden="true"></div>
@@ -99,8 +100,10 @@
     <div class="hero__art">
       <figure class="hfoto">
         <picture>
-          <source srcset="/assets/hero.webp" type="image/webp">
-          <img src="/assets/hero.jpg" width="1600" height="1065" fetchpriority="high" decoding="async"
+          <source media="(min-width:981px)" type="image/webp" srcset="/assets/hero-p.webp">
+          <source media="(min-width:981px)" type="image/jpeg" srcset="/assets/hero-p.jpg">
+          <source type="image/webp" srcset="/assets/hero-w.webp">
+          <img src="/assets/hero-w.jpg" width="1200" height="799" fetchpriority="high" decoding="async"
                alt="Brigadas ciudadanas retirando escombros de una edificación colapsada tras el terremoto">
         </picture>
         <figcaption data-i="ph1">Brigadas ciudadanas abriendo paso entre los escombros. El trabajo empieza antes de que llegue la ayuda.</figcaption>
