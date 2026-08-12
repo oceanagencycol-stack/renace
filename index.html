@@ -6,10 +6,10 @@
 <title>RENACE — Reconstruyendo hogares | Alianza de reconstrucción tras el terremoto de Colombia</title>
 <meta name="description" content="RENACE es una alianza de organizaciones colombianas que reconstruye hogares, colegios y centros de salud tras el terremoto del 10 de agosto de 2026. Meta: 100 infraestructuras y US$ 500.000. Cada aporte recibe un folio y se puede seguir.">
 <meta name="theme-color" content="#F3EEE4">
-<link rel="canonical" href="https://renacecolombia.vercel.app/">
-<link rel="alternate" hreflang="es" href="https://renacecolombia.vercel.app/">
-<link rel="alternate" hreflang="en" href="https://renacecolombia.vercel.app/?lang=en">
-<link rel="alternate" hreflang="x-default" href="https://renacecolombia.vercel.app/">
+<link rel="canonical" href="https://renacecol.org/">
+<link rel="alternate" hreflang="es" href="https://renacecol.org/">
+<link rel="alternate" hreflang="en" href="https://renacecol.org/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://renacecol.org/">
 <style>html{background:#F3EEE4}body{background:#F3EEE4;margin:0}</style>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="RENACE">
@@ -30,8 +30,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,600;12..96,75..100,700;12..96,75..100,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"NGO","@id":"https://renacecolombia.vercel.app/#org","name":"RENACE — Alianza de reconstrucción","alternateName":"RENACE","slogan":"Reconstruyendo hogares","url":"https://renacecolombia.vercel.app/","logo":"https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/renace-mark.svg","areaServed":["Chocó","Valle del Cauca","Risaralda","Caldas","Quindío","Colombia"],"email":"funhogarsinolvido@gmail.com","telephone":"+57 311 5110003","member":[{"@type":"NGO","name":"Fundación Un Hogar Sin Olvido","taxID":"901047625-4"},{"@type":"NGO","name":"Fundación Semilla Colectiva"},{"@type":"Organization","name":"Afroz El Valle"},{"@type":"Person","name":"Álvaro Arroyo"},{"@type":"Organization","name":"Ocean Industries","url":"https://www.oceanindustries.com.co/"},{"@type":"Person","name":"Juan Cuero"}]},
-{"@type":"WebSite","@id":"https://renacecolombia.vercel.app/#web","url":"https://renacecolombia.vercel.app/","name":"RENACE","inLanguage":["es-CO","en"],"publisher":{"@id":"https://renacecolombia.vercel.app/#org"}}]}
+{"@type":"NGO","@id":"https://renacecol.org/#org","name":"RENACE — Alianza de reconstrucción","alternateName":"RENACE","slogan":"Reconstruyendo hogares","url":"https://renacecol.org/","logo":"https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/renace-mark.svg","areaServed":["Chocó","Valle del Cauca","Risaralda","Caldas","Quindío","Colombia"],"email":"funhogarsinolvido@gmail.com","telephone":"+57 311 5110003","member":[{"@type":"NGO","name":"Fundación Un Hogar Sin Olvido","taxID":"901047625-4"},{"@type":"NGO","name":"Fundación Semilla Colectiva"},{"@type":"Organization","name":"Afroz El Valle"},{"@type":"Person","name":"Álvaro Arroyo"},{"@type":"Organization","name":"Ocean Industries","url":"https://www.oceanindustries.com.co/"},{"@type":"Person","name":"Juan Cuero"}]},
+{"@type":"WebSite","@id":"https://renacecol.org/#web","url":"https://renacecol.org/","name":"RENACE","inLanguage":["es-CO","en"],"publisher":{"@id":"https://renacecol.org/#org"}}]}
 </script>
 <link rel="stylesheet" href="/styles.css">
 </head>
@@ -77,7 +77,7 @@
       </div>
       <div class="hero__chips">
         <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg><span data-i="ch1">Chocó · Valle · Eje Cafetero</span></span>
-        <span class="chip"><b>6</b>&nbsp;<span data-i="ch2">organizaciones aliadas</span></span>
+        <span class="chip"><b>8</b>&nbsp;<span data-i="ch2">organizaciones aliadas</span></span>
         <span class="chip"><b>0 %</b>&nbsp;<span data-i="ch3">de comisión sobre tu aporte</span></span>
       </div>
     </div>
@@ -97,31 +97,32 @@
           <g fill="#221E1A" opacity=".82"><path d="M120 268 L120 288 L146 288 L146 268 L133 258 Z"/><path d="M156 274 L156 288 L176 288 L176 274 L166 266 Z"/><path d="M232 270 L232 288 L256 288 L256 270 L244 260 Z"/></g>
         </g>
       </svg>
-      <article class="folio">
-        <span class="folio__demo" data-i="demo">Ejemplo ilustrativo</span>
-        <div class="folio__top">
-          <div><div class="folio__label" data-i="fol1">Folio de aporte</div><div class="folio__id num">RNC-2608-000142</div></div>
-          <div class="sello" data-i="fol2">Obra<br>verificada</div>
+      <div class="live">
+        <div class="live__top"><span class="live__dot"></span><span data-i="lv0">En vivo</span>
+          <span class="live__upd" id="lvUpd"></span></div>
+        <div class="live__k" data-i="lv1">Recaudado</div>
+        <div class="live__v"><span id="lvMonto">—</span> <small>COP</small></div>
+        <div class="live__usd" id="lvUsd"></div>
+        <div class="live__track"><div class="live__fill" id="lvFill"></div></div>
+        <div class="live__pct"><span id="lvPct">—</span><span data-i="lv2">de la meta de recursos</span></div>
+        <div class="live__grid">
+          <div><b id="lvAportes">—</b><span data-i="lv3">aporte registrado</span></div>
+          <div><b id="lvObras">—</b><span data-i="lv4">obras entregadas</span></div>
         </div>
-        <dl class="folio__rows">
-          <div class="folio__row"><dt data-i="fol3">Destino</dt><dd data-i="fol4">Techos · Quibdó</dd></div>
-          <div class="folio__row"><dt data-i="fol5">Familias</dt><dd class="num">18</dd></div>
-          <div class="folio__row"><dt data-i="fol6">Evidencia</dt><dd data-i="fol7">Acta + fotos</dd></div>
-        </dl>
-        <div class="folio__track"><div class="folio__fill" data-fill="72%"></div></div>
-        <div class="folio__meta"><span data-i="fol8">Ejecutado</span><span class="num">72 %</span></div>
-      </article>
+      </div>
     </div>
   </div>
   <div class="wrap aliados rv">
     <p class="aliados__title" data-i="ali">Una alianza, no una cuenta suelta</p>
     <div class="aliados__row">
       <span class="aliado"><img src="https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/hogar-sin-olvido.png" alt="Fundación Un Hogar Sin Olvido"></span>
-      <span class="aliado"><img src="https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/semilla-colectiva.svg" alt="Fundación Semilla Colectiva" style="height:54px"><span class="aliado__txt">Semilla<br>Colectiva<small data-i="fnd">Fundación</small></span></span>
-      <span class="aliado"><img src="https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/afroz-el-valle.png" alt="Afroz El Valle" style="height:48px"></span>
-      <span class="aliado"><img src="https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/alvaro-arroyo.png" alt="Álvaro Arroyo" style="height:56px"></span>
-      <span class="aliado"><img src="https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/ocean-industries.png" alt="Ocean Industries" style="height:34px"></span>
-      <span class="aliado"><img src="https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/juan-cuero.png" alt="Juan Cuero" style="height:38px"></span>
+      <span class="aliado"><img src="https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/semilla-colectiva.svg" alt="Fundación Semilla Colectiva" style="height:52px"><span class="aliado__txt">Semilla<br>Colectiva<small data-i="fnd">Fundación</small></span></span>
+      <span class="aliado"><img src="https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/buenaventura-progresa.png" alt="Buenaventura Progresa" style="height:60px"></span>
+      <span class="aliado"><img src="https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/afroz-el-valle.png" alt="Afroz El Valle" style="height:44px"></span>
+      <span class="aliado"><img src="https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/mlk-proyectos.png" alt="MLK Proyectos e Inversiones" style="height:32px"></span>
+      <span class="aliado"><img src="https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/alvaro-arroyo.png" alt="Álvaro Arroyo" style="height:52px"></span>
+      <span class="aliado"><img src="https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/ocean-industries.png" alt="Ocean Industries" style="height:32px"></span>
+      <span class="aliado"><img src="https://cdn.jsdelivr.net/gh/oceanagencycol-stack/renace@main/assets/juan-cuero.png" alt="Juan Cuero" style="height:36px"></span>
     </div>
   </div>
 </section>
@@ -130,27 +131,36 @@
     <div class="sec__head rv">
       <p class="eyebrow" data-i="e0">Las metas</p>
       <h2 data-i="m0">A dónde vamos, en números.</h2>
-      <p class="lede" data-i="m0s">Dos metas públicas. Las dos empiezan hoy en cero y solo se van a mover con evidencia.</p>
+      <p class="lede" data-i="m0s">Dos metas públicas, actualizadas en vivo. Solo se mueven con evidencia detrás.</p>
     </div>
     <div class="metas rv">
       <div class="meta">
         <div class="meta__k" data-i="m1k">Meta de obra</div>
         <div class="meta__v num" style="color:var(--brick)">100</div>
         <div class="meta__d" data-i="m1d">infraestructuras reconstruidas o reparadas — <strong>colegios, viviendas, centros de salud y espacios comunitarios</strong> en Chocó, Valle del Cauca y el Eje Cafetero.</div>
-        <div class="meta__track"><div class="meta__fill" data-fill="0%"></div></div>
-        <div class="meta__foot"><span data-i="mav">Avance verificado</span><span class="num">0 / 100</span></div>
+        <div class="meta__track"><div class="meta__fill" id="mFillObras"></div></div>
+        <div class="meta__foot"><span data-i="mav">Avance verificado</span><span class="num" id="mObras">—</span></div>
       </div>
       <div class="meta">
         <div class="meta__k" data-i="m2k">Meta de recursos</div>
         <div class="meta__v num" style="color:var(--olive)">US$ 500.000</div>
         <div class="meta__d" data-i="m2d">recaudados entre donantes individuales, empresas aliadas y cooperación internacional. <strong>Cero comisión de la alianza</strong> sobre lo recaudado.</div>
-        <div class="meta__track"><div class="meta__fill" data-fill="0%"></div></div>
-        <div class="meta__foot"><span data-i="mav2">Avance verificado</span><span class="num">0 %</span></div>
+        <div class="meta__track"><div class="meta__fill" id="mFillUsd"></div></div>
+        <div class="meta__foot"><span data-i="mav2">Avance verificado</span><span class="num" id="mPct">—</span></div>
       </div>
+    </div>
+    <div class="ledger rv">
+      <div class="ledger__h"><span data-i="lg0">Registro público de aportes</span><span data-i="lg1">Se publica cada entrada, sin excepción</span></div>
+      <table>
+        <thead><tr><th data-i="lg2">Folio</th><th data-i="lg3">Fecha</th><th data-i="lg4">Origen</th><th data-i="lg5">Monto</th><th data-i="lg6">Estado</th></tr></thead>
+        <tbody>
+          <tr><td class="num" data-l="Folio">RNC-2608-000001</td><td data-l="Fecha" data-i="lg7">12 ago 2026</td><td data-l="Origen" data-i="lg8">Fundación Un Hogar Sin Olvido · aporte semilla</td><td class="num" data-l="Monto">$500.000 COP</td><td data-l="Estado"><span class="pil" data-i="lg9">En asignación</span></td></tr>
+        </tbody>
+      </table>
     </div>
     <div class="cero rv">
       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M9 12h6M9 16h4"/></svg>
-      <p data-i="m3"><strong>Empezamos en cero y lo decimos.</strong> Cada punto que suba estas barras va a estar respaldado con factura, acta de entrega y fotos — publicadas, no prometidas.</p>
+      <p data-i="m3"><strong>El primer peso ya entró, y lo puso la alianza.</strong> La Fundación Un Hogar Sin Olvido abrió el recaudo con $500.000 antes de pedirle un peso a nadie. Cada punto que suba estas barras va a estar respaldado con factura, acta de entrega y fotos — publicadas, no prometidas.</p>
     </div>
   </div>
 </section>
@@ -205,9 +215,10 @@
     </div>
     <div class="split" style="align-items:start">
       <div class="glass rv">
-        <h3 style="margin-bottom:20px" data-i="t2">El recorrido de un aporte</h3>
+        <h3 style="margin-bottom:6px" data-i="t2">El recorrido de un aporte</h3>
+        <p class="ruta__real" data-i="t2b">Así va el folio <b>RNC-2608-000001</b>, el primer aporte registrado.</p>
         <div class="ruta">
-          <div class="ruta__item"><span class="ruta__dot num">1</span><div><div class="ruta__t" data-i="t3">Aporte recibido</div><p class="ruta__d" data-i="t4">Monto, fecha y medio de pago. Se emite el folio.</p></div></div>
+          <div class="ruta__item is-done"><span class="ruta__dot num">1</span><div><div class="ruta__t" data-i="t3">Aporte recibido</div><p class="ruta__d" data-i="t4">Monto, fecha y medio de pago. Se emite el folio.</p></div></div>
           <div class="ruta__item"><span class="ruta__dot num">2</span><div><div class="ruta__t" data-i="t5">Asignado a una obra</div><p class="ruta__d" data-i="t6">Vivienda, colegio, centro de salud o ayuda de emergencia.</p></div></div>
           <div class="ruta__item"><span class="ruta__dot num">3</span><div><div class="ruta__t" data-i="t7">Comprado</div><p class="ruta__d" data-i="t8">Factura del proveedor asociada al folio, con cantidad y precio unitario.</p></div></div>
           <div class="ruta__item"><span class="ruta__dot num">4</span><div><div class="ruta__t" data-i="t9">Ejecutado en territorio</div><p class="ruta__d" data-i="t10">Municipio, comunidad, número de familias y acta firmada.</p></div></div>
@@ -274,9 +285,16 @@
       </article>
     </div>
     <div class="usd rv">
-      <p class="eyebrow" data-i="u0">Donantes internacionales</p>
-      <h3 data-i="u1">Transferencia en dólares desde Estados Unidos</h3>
-      <p data-i="u2">Para quien dona desde fuera de Colombia. Recibimos USD por ACH o wire, sin que pierdas dinero en conversiones de tarjeta.</p>
+      <p class="eyebrow" data-i="u0">Canales rápidos y desde el exterior</p>
+      <h3 data-i="u1">Llave Bre-B, DolarApp y transferencia en dólares</h3>
+      <p data-i="u2">Tres vías más para aportar: desde cualquier banco colombiano en segundos, desde una billetera en dólares, o por transferencia bancaria desde Estados Unidos.</p>
+      <div class="llaves">
+        <div class="llave"><span data-i="k1">Llave Bre-B · Colombia</span><b class="mono">@ARQJUANCUERO1</b>
+          <em data-i="k2">Transferencia interoperable desde cualquier banco o billetera</em></div>
+        <div class="llave"><span data-i="k3">DolarApp · USD</span><b class="mono">$juancuero1</b>
+          <em data-i="k4">Envío en dólares desde la app, sin costo de conversión</em></div>
+      </div>
+      <div class="usd__sub" data-i="k5">Transferencia bancaria desde Estados Unidos (ACH o wire)</div>
       <div class="usd__grid">
         <div><span data-i="u3">Beneficiario</span><b>Juan Cuero</b></div>
         <div><span data-i="u4">Banco</span><b>Lead Bank</b></div>
@@ -285,7 +303,7 @@
         <div><span data-i="u7">Tipo de cuenta</span><b data-i="u8">Corriente (checking)</b></div>
         <div><span data-i="u9">Dirección del banco</span><b>1801 Main St., Kansas City, MO 64108, USA</b></div>
       </div>
-      <div class="usd__nota" data-i="u10"><strong>Qué es esta cuenta y por qué no está a nombre de la fundación.</strong> Está a nombre de Juan Cuero, director de la alianza, y funciona como canal temporal mientras se habilita la cuenta en dólares de la Fundación Un Hogar Sin Olvido. Todo lo que entre por aquí se traslada a la fundación, recibe folio igual que cualquier otro aporte y queda con la misma evidencia publicada. Si prefieres transferir directo a la cuenta de la fundación, escríbenos y lo coordinamos.</div>
+      <div class="usd__nota" data-i="u10"><strong>Qué son estos tres canales y por qué no están a nombre de la fundación.</strong> La llave Bre-B, la cuenta DolarApp y la cuenta en Estados Unidos están a nombre de Juan Cuero, director de la alianza, y funcionan como canales temporales mientras se habilitan los equivalentes institucionales de la Fundación Un Hogar Sin Olvido. Todo lo que entre por aquí se traslada a la fundación, recibe folio igual que cualquier otro aporte y queda con la misma evidencia publicada. Si prefieres transferir directo a la cuenta de la fundación en Davivienda, es la primera opción de esta sección.</div>
       <a class="btn btn--wa" href="#" data-wa="Hola. Voy a hacer (o acabo de hacer) una transferencia en dólares para RENACE. Quiero avisar y recibir mi folio." data-wa-en="Hello. I am about to make (or just made) a USD transfer to RENACE. I would like to notify you and receive my tracking number.">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.9 9.9 0 0 0 4.74 1.2c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2Zm0 18.02a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Z"/></svg>
         <span data-i="u11">Avisar de mi transferencia</span></a>
@@ -378,6 +396,23 @@
 <script>(function(){
 'use strict';
 var WA='573115110003',CUENTA='108900830473';
+var PROGRESO={recaudadoCOP:500000,aportes:1,obras:0,metaObras:100,metaUSD:500000,trm:3125.47,
+actualizado:{es:'Actualizado 12 ago 2026',en:'Updated Aug 12, 2026'}};
+function fmtCOP(n){return '$'+n.toLocaleString('es-CO');}
+function pintarProgreso(lang){
+var P=PROGRESO,usd=P.recaudadoCOP/P.trm,pct=usd/P.metaUSD*100;
+var pctTxt=(pct>0&&pct<0.01)?'<0,01 %':(pct.toFixed(2).replace('.',',')+' %');
+if(lang==='en')pctTxt=(pct>0&&pct<0.01)?'<0.01 %':(pct.toFixed(2)+' %');
+var set=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};
+set('lvMonto',fmtCOP(P.recaudadoCOP));
+set('lvUsd',(lang==='en'?'\u2248 US$ ':'\u2248 US$ ')+Math.round(usd).toLocaleString(lang==='en'?'en-US':'es-CO')+(lang==='en'?' of the US$ 500,000 goal':' de la meta de US$ 500.000'));
+set('lvPct',pctTxt); set('mPct',pctTxt);
+set('lvAportes',P.aportes); set('lvObras',P.obras+' / '+P.metaObras); set('mObras',P.obras+' / '+P.metaObras);
+set('lvUpd',P.actualizado[lang==='en'?'en':'es']);
+var w=Math.max(pct,0.6)+'%';
+['lvFill','mFillUsd'].forEach(function(id){var e=document.getElementById(id);if(e)e.setAttribute('data-fill',w);});
+var o=document.getElementById('mFillObras');if(o)o.setAttribute('data-fill',Math.max(P.obras/P.metaObras*100,0)+'%');
+}
 var EN={
 skip:'Skip to content',tag:'Rebuilding homes',cta:'Donate',cta2:'Donate now',cta3:'See the goals',
 n0:'Goals',n1:'What happened',n2:'How it works',n3:'Traceability',n4:'How to give',n5:'Transparency',
@@ -387,7 +422,7 @@ hsub:'RENACE is an alliance of Colombian organizations that raises funds, buys w
 ch1:'Choc\u00f3 · Valle del Cauca · Coffee Region',ch2:'partner organizations',ch3:'commission on your gift',
 demo:'Illustrative example',fol1:'Contribution no.',fol2:'Work<br>verified',fol3:'Destination',fol4:'Roofing · Quibd\u00f3',fol5:'Families',fol6:'Evidence',fol7:'Record + photos',fol8:'Executed',
 ali:'An alliance, not just a bank account',fnd:'Foundation',
-e0:'The goals',m0:'Where we are going, in numbers.',m0s:'Two public goals. Both start at zero today and will only move with evidence.',
+e0:'The goals',m0:'Where we are going, in numbers.',m0s:'Two public goals, updated live. They only move with evidence behind them.',
 m1k:'Build goal',m1d:'pieces of infrastructure rebuilt or repaired — <strong>schools, homes, health posts and community spaces</strong> across Choc\u00f3, Valle del Cauca and the Coffee Region.',
 m2k:'Funding goal',m2d:'raised from individual donors, corporate partners and international cooperation. <strong>Zero alliance commission</strong> on funds raised.',
 mav:'Verified progress',mav2:'Verified progress',
@@ -427,10 +462,17 @@ a15:'Coordinate delivery',a16:'Companies and partners',a17:'Product, logistics, 
 a18:'Sponsor a full project under your brand',a19:'Transport and warehousing to Choc\u00f3 and the Pacific coast',a20:'Volunteering in collection, packing and construction',a21:'Execution report with invoice and record for your board',
 a22:'Become a partner',
 a23:'<strong>Verify before you give.</strong> In emergencies, fake accounts impersonating real foundations appear. Always confirm the account holder and tax ID before transferring, here and in any other campaign. If in doubt, message us on WhatsApp and we will send the tax registry and certificate of incorporation.',
-u0:'International donors',u1:'USD transfer from the United States',
-u2:'For donors outside Colombia. We receive USD by ACH or wire, so you do not lose money on card conversion fees.',
+lv0:'Live',lv1:'Raised so far',lv2:'of the funding goal',lv3:'contribution logged',lv4:'projects delivered',
+lg0:'Public contribution log',lg1:'Every entry gets published, no exceptions',lg2:'Ref.',lg3:'Date',lg4:'Source',lg5:'Amount',lg6:'Status',
+lg7:'Aug 12, 2026',lg8:'Fundaci\u00f3n Un Hogar Sin Olvido \u00b7 seed contribution',lg9:'Being assigned',
+t2b:'This is where reference <b>RNC-2608-000001</b> stands \u2014 the first logged contribution.',
+k1:'Bre-B key \u00b7 Colombia',k2:'Instant interoperable transfer from any Colombian bank or wallet',
+k3:'DolarApp \u00b7 USD',k4:'Send US dollars straight from the app, no conversion fee',
+k5:'Bank transfer from the United States (ACH or wire)',
+u0:'Fast and international channels',u1:'Bre-B key, DolarApp and USD transfer',
+u2:'Three more ways to give: instantly from any Colombian bank, from a US dollar wallet, or by bank transfer from the United States.',
 u3:'Beneficiary',u4:'Bank',u5:'Account number',u6:'ABA / Routing',u7:'Account type',u8:'Checking',u9:'Bank address',
-u10:'<strong>What this account is, and why it is not in the foundation name.</strong> It is held by Juan Cuero, director of the alliance, and works as a temporary channel while the US dollar account for Fundaci\u00f3n Un Hogar Sin Olvido is being opened. Everything received here is transferred to the foundation, gets a tracking number like any other contribution, and is backed by the same published evidence. If you prefer to transfer directly to the foundation account, message us and we will arrange it.',
+u10:'<strong>What these three channels are, and why they are not in the foundation name.</strong> The Bre-B key, the DolarApp account and the US account are held by Juan Cuero, director of the alliance, and work as temporary channels while the institutional equivalents for Fundaci\u00f3n Un Hogar Sin Olvido are being opened. Everything received here is transferred to the foundation, gets a tracking number like any other contribution, and is backed by the same published evidence. If you prefer to transfer directly to the foundation account at Davivienda, it is the first option in this section.',
 u11:'Notify my transfer',
 e5:'Transparency',x0:'Who receives, who executes and with what paperwork.',
 x1:'Financial resources are received and executed through Fundaci\u00f3n Un Hogar Sin Olvido, a non-profit incorporated in 2016 and supervised by the Valle del Cauca Government.',
@@ -472,7 +514,7 @@ nodes.forEach(function(el){var k=el.getAttribute('data-i');if(d[k]!==undefined){
 tagEl.setAttribute('data-tag',lang==='en'?EN.tagDirecta:tagES);
 document.documentElement.lang=(lang==='en')?'en':'es-CO';
 bES.classList.toggle('on',lang!=='en');bEN.classList.toggle('on',lang==='en');
-setWA(lang);
+setWA(lang);pintarProgreso(lang);
 try{localStorage.setItem('renace_lang',lang);}catch(e){}
 if(push&&window.history&&history.replaceState){
 try{var u=new URL(window.location.href);
@@ -497,7 +539,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classL
 
 var reveals=document.querySelectorAll('.rv');
 var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var fills=document.querySelectorAll('[data-fill]');
+var fills=document.querySelectorAll('[data-fill],#lvFill,#mFillUsd,#mFillObras');
 var todo=function(){reveals.forEach(function(el){el.classList.add('in');});
 fills.forEach(function(el){el.style.width=el.getAttribute('data-fill');});};
 if(reduce||!('IntersectionObserver' in window)){todo();}
