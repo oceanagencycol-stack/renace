@@ -1,0 +1,34 @@
+{
+ "_schema": {
+  "tipos": "noticia | necesidad | avance | alerta",
+  "como_agregar": "Añade al principio del array y empuja."
+ },
+ "actualizado": "2026-08-12",
+ "novedades": [
+  {
+   "fecha": "2026-08-12",
+   "tipo": "avance",
+   "titulo": "Primer aporte y plataforma pública en línea",
+   "titulo_en": "First contribution and public platform live",
+   "texto": "La Fundación Un Hogar Sin Olvido abre el recaudo con $500.000 — folio RNC-2608-000001. Entra en línea esta página con las metas y el registro público.",
+   "texto_en": "Fundación Un Hogar Sin Olvido opens the fund with COP 500,000 — reference RNC-2608-000001. This page goes live with the goals and the public log."
+  },
+  {
+   "fecha": "2026-08-11",
+   "tipo": "noticia",
+   "titulo": "Se forma la alianza",
+   "titulo_en": "The alliance is formed",
+   "texto": "Ocho organizaciones acuerdan operar bajo una sola entidad ejecutora, con cero comisión y compromiso de publicar cada aporte.",
+   "texto_en": "Eight organizations agree to operate under a single executing entity, with zero commission and a commitment to publish every contribution."
+  },
+  {
+   "fecha": "2026-08-10",
+   "tipo": "alerta",
+   "titulo": "Sismo de magnitud 7,4 en el Pacífico",
+   "titulo_en": "Magnitude 7.4 earthquake on the Pacific coast",
+   "texto": "7:34 a.m., epicentro en San José del Palmar, Chocó, a 96 km de profundidad. Se sintió en 16 departamentos y dejó más de 100 réplicas en 36 horas.",
+   "texto_en": "7:34 a.m., epicenter in San José del Palmar, Chocó, 96 km deep. Felt across 16 departments, with more than 100 aftershocks in 36 hours.",
+   "fuente": "Servicio Geológico Colombiano"
+  }
+ ]
+}

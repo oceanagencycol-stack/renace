@@ -61,6 +61,7 @@
     <nav class="nav__links" id="menu" aria-label="Principal">
       <a href="#metas" data-i="n0">Metas</a>
       <a href="#que-paso" data-i="n1">Qué pasó</a>
+      <a href="#mapa" data-i="n7">Mapa</a>
       <a href="#como-funciona" data-i="n2">Cómo funciona</a>
       <a href="#trazabilidad" data-i="n3">Trazabilidad</a>
       <a href="#entregas" data-i="n6">Entregas</a>
@@ -125,7 +126,7 @@
   </div>
   <div class="wrap aliados rv">
     <p class="aliados__title" data-i="ali">Una alianza, no una cuenta suelta</p>
-    <div class="aliados__row">
+    <div class="aliados__row stg">
       <span class="aliado"><img loading="lazy" decoding="async" height="46" src="/assets/hogar-sin-olvido.png" alt="Fundación Un Hogar Sin Olvido"></span>
       <span class="aliado"><img loading="lazy" decoding="async" height="52" src="/assets/semilla-colectiva.svg" alt="Fundación Semilla Colectiva" style="height:52px"><span class="aliado__txt">Semilla<br>Colectiva<small data-i="fnd">Fundación</small></span></span>
       <span class="aliado"><img loading="lazy" decoding="async" height="60" src="/assets/buenaventura-progresa.png" alt="Buenaventura Progresa" style="height:60px"></span>
@@ -144,7 +145,15 @@
       <h2 data-i="m0">A dónde vamos, en números.</h2>
       <p class="lede" data-i="m0s">Dos metas públicas, actualizadas en vivo. Solo se mueven con evidencia detrás.</p>
     </div>
-    <div class="metas rv">
+    <div class="tab rv stg" id="tablero">
+      <div><b id="tRec">—</b><span data-i="d0">recaudado</span></div>
+      <div><b id="tPct">—</b><span data-i="d1">de la meta de US$ 500.000</span></div>
+      <div><b id="tAp">—</b><span data-i="d2">aportes registrados</span></div>
+      <div><b id="tOb">—</b><span data-i="d3">obras entregadas</span></div>
+      <div><b id="tMu">—</b><span data-i="d4">municipios en operación</span></div>
+      <div><b>8</b><span data-i="d5">organizaciones aliadas</span></div>
+    </div>
+    <div class="metas rv stg">
       <div class="meta">
         <div class="meta__k" data-i="m1k">Meta de obra</div>
         <div class="meta__v num" style="color:var(--brick)">100</div>
@@ -172,16 +181,11 @@
       </header>
       <div class="reg__t" id="regT2"></div>
     </section>
-    <div class="bit rv">
-      <div class="bit__i"><div class="bit__d"><span class="bit__dot"></span><span data-i="b0">10 ago 2026</span></div>
-        <div><div class="bit__t" data-i="b1">El sismo</div><p class="bit__x" data-i="b2">Magnitud 7,4 a las 7:34 a.m., epicentro en San José del Palmar. Las organizaciones de la alianza empiezan a levantar necesidades en Buenaventura, Chocó y Cali.</p></div></div>
-      <div class="bit__i"><div class="bit__d"><span class="bit__dot"></span><span data-i="b3">11 ago 2026</span></div>
-        <div><div class="bit__t" data-i="b4">Se forma la alianza</div><p class="bit__x" data-i="b5">Ocho organizaciones acuerdan operar bajo una sola entidad ejecutora, con cero comisión y compromiso de publicar cada aporte.</p></div></div>
-      <div class="bit__i"><div class="bit__d"><span class="bit__dot"></span><span data-i="b6">12 ago 2026</span></div>
-        <div><div class="bit__t" data-i="b7">Primer aporte y plataforma pública</div><p class="bit__x" data-i="b8">La Fundación Un Hogar Sin Olvido abre el recaudo con <b>$500.000</b> — folio RNC-2608-000001. Entra en línea esta página con las metas y el registro público.</p></div></div>
-      <div class="bit__i bit__i--next"><div class="bit__d"><span class="bit__dot"></span><span data-i="b9">Próximo</span></div>
-        <div><div class="bit__t" data-i="b10">Primera compra con factura publicada</div><p class="bit__x" data-i="b11">Cuando se ejecute, aparece aquí con su factura, el acta de entrega y las fotos. Si algo no se puede ejecutar, también se publica.</p></div></div>
-    </div>
+    <section class="nov rv" aria-labelledby="novT">
+      <header class="nov__h"><h3 id="novT" data-i="n20">Qué está pasando</h3>
+        <p data-i="n21">Novedades, avances y necesidades nuevas, con fecha.</p></header>
+      <div id="novL"></div>
+    </section>
     <div class="cero rv">
       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M9 12h6M9 16h4"/></svg>
       <p data-i="m3"><strong>El primer peso ya entró, y lo puso la alianza.</strong> La Fundación Un Hogar Sin Olvido abrió el recaudo con $500.000 antes de pedirle un peso a nadie. Cada punto que suba estas barras va a estar respaldado con factura, acta de entrega y fotos — publicadas, no prometidas.</p>
@@ -195,7 +199,7 @@
       <h2 data-i="q1">Un minuto de temblor. Años de reconstrucción por delante.</h2>
       <p class="lede" data-i="q2">El 10 de agosto de 2026, a las 7:34 de la mañana, un sismo de magnitud 7,4 con epicentro en San José del Palmar (Chocó) sacudió el occidente y el centro de Colombia. Fue el más fuerte registrado en el país en la última década. La emergencia no termina cuando dejan de temblar las paredes: empieza ahí.</p>
     </div>
-    <div class="hechos rv">
+    <div class="hechos rv stg">
       <div class="hecho"><div class="hecho__v num">7,4</div><div class="hecho__l" data-i="q3">Magnitud del sismo principal, según el Servicio Geológico Colombiano</div></div>
       <div class="hecho"><div class="hecho__v num">96<sup>km</sup></div><div class="hecho__l" data-i="q4">Profundidad aproximada del epicentro, en San José del Palmar, Chocó</div></div>
       <div class="hecho"><div class="hecho__v num">16</div><div class="hecho__l" data-i="q5">Departamentos donde se sintió el movimiento</div></div>
@@ -220,10 +224,32 @@
     </div>
   </div>
 </section>
+<section class="sec mapa-sec" id="mapa" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <p class="eyebrow" data-i="mp0">Dónde estamos</p>
+      <h2 data-i="mp1">El mapa de la operación.</h2>
+      <p class="lede" data-i="mp2">Los puntos marcan dónde trabaja la alianza y en qué etapa va cada territorio. No es una medición de daño: es lo que estamos haciendo, y dónde.</p>
+    </div>
+    <div class="mapa rv">
+      <div class="mapa__c"><div id="mapaSvg" role="img" aria-label="Mapa de Colombia con las zonas de operación de RENACE"></div></div>
+      <aside class="mapa__p">
+        <div class="mapa__leg">
+          <span><i class="pt pt--op"></i><span data-i="mp3">Operando</span></span>
+          <span><i class="pt pt--ev"></i><span data-i="mp4">Evaluando</span></span>
+          <span><i class="pt pt--pl"></i><span data-i="mp5">Planeado</span></span>
+          <span><i class="pt pt--ep"></i><span data-i="mp6">Epicentro</span></span>
+        </div>
+        <div id="mapaInfo" class="mapa__i" aria-live="polite"></div>
+        <ul class="mapa__l" id="mapaLista"></ul>
+      </aside>
+    </div>
+  </div>
+</section>
 <section class="sec" id="como-funciona" style="padding-top:0">
   <div class="wrap">
     <div class="sec__head rv"><p class="eyebrow" data-i="e2">Cómo funciona</p><h2 data-i="c0">Tres pasos. Ninguno a puerta cerrada.</h2></div>
-    <div class="pasos">
+    <div class="pasos rv stg">
       <article class="paso rv"><div class="paso__n"></div>
         <div class="paso__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M3 8 12 3l9 5"/><path d="M9 14h6"/></svg></div>
         <h3 data-i="c1">Recibimos y registramos</h3><p data-i="c2">Cada aporte entra por la cuenta de la fundación aliada, queda registrado con fecha y monto, y recibe un folio único que te enviamos por WhatsApp.</p></article>
@@ -257,7 +283,7 @@
           <div class="ruta__item"><span class="ruta__dot num">5</span><div><div class="ruta__t" data-i="t11">Cerrado con evidencia</div><p class="ruta__d" data-i="t12">Fotos y porcentaje ejecutado de la obra que apoyaste.</p></div></div>
         </div>
       </div>
-      <div class="traza__grid">
+      <div class="traza__grid rv stg">
         <div class="glass rv"><div class="glass__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5"/></svg></div>
           <h3 data-i="t13">Folio único</h3><p data-i="t14">Un identificador por aporte, consultable sin crear cuenta ni entregar datos personales.</p></div>
         <div class="glass rv"><div class="glass__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/></svg></div>
@@ -341,7 +367,7 @@
       <p class="via__nota" data-i="w25">Cuando transfieras, mándanos el comprobante por WhatsApp. Te devolvemos el folio y tu aporte entra al registro público de esta página.</p>
     </div>
 
-    <div class="otras rv">
+    <div class="otras rv stg">
       <div><h3 data-i="w26">¿Prefieres aportar en especie?</h3>
         <p data-i="w27">Tejas, cemento, madera y herramienta. Mobiliario escolar. Mercados, agua y aseo. Colchonetas y cobijas. No recibimos ropa usada, medicamentos ni perecederos.</p>
         <a href="#" data-wa="Hola. Quiero hacer una donación en especie para RENACE. ¿Dónde y cuándo la entrego?" data-wa-en="Hello. I would like to make an in-kind donation to RENACE. Where and when can I deliver it?" data-i="w28">Coordinar una entrega →</a></div>
@@ -592,6 +618,12 @@ pp0:'Your contribution stays in sight.',
 pp1:'Every peso that comes in gets a tracking number and is published with its invoice, delivery record and photos. You can follow it all the way to the finished work.',
 pp2:'raised',pp3:'projects delivered',pp4:'commission',
 pp5:'Donate now',pp6:'See the public log',pp7:'Not right now, thanks',
+d0:'raised',d1:'of the US$ 500,000 goal',d2:'contributions logged',d3:'projects delivered',
+d4:'municipalities in operation',d5:'partner organizations',n7:'Map',
+mp0:'Where we are',mp1:'The operation map.',
+mp2:'The dots show where the alliance works and what stage each territory is in. It is not a damage assessment: it is what we are doing, and where.',
+mp3:'Operating',mp4:'Assessing',mp5:'Planned',mp6:'Epicenter',
+n20:'What is happening',n21:'Updates, progress and new needs, dated.',
 w0:'Bank in Colombia',w1:'Bre-B · instant',w2:'From abroad',
 w3:'Savings account · Davivienda (Colombia)',w4:'Account holder',w4b:'Account holder',w4c:'Account holder',
 w5:'Tax ID (NIT)',w6:'Who executes',w7:'This is the account of the foundation that buys, invoices and delivers.',
@@ -662,7 +694,7 @@ nodes.forEach(function(el){var k=el.getAttribute('data-i');if(d[k]!==undefined){
 if(tagEl)tagEl.setAttribute('data-tag',lang==='en'?EN.tagDirecta:tagES);
 document.documentElement.lang=(lang==='en')?'en':'es-CO';
 bES.classList.toggle('on',lang!=='en');bEN.classList.toggle('on',lang==='en');
-setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}if(typeof pintaEntregas==='function')pintaEntregas();if(typeof pintaRegistro==='function')pintaRegistro();
+setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}if(typeof pintaEntregas==='function')pintaEntregas();if(typeof pintaRegistro==='function')pintaRegistro();if(typeof pintaMapa==='function')pintaMapa();if(typeof pintaNov==='function')pintaNov();if(typeof pintaTablero==='function')pintaTablero();
 try{localStorage.setItem('renace_lang',lang);}catch(e){}
 if(push&&window.history&&history.replaceState){
 try{var u=new URL(window.location.href);
@@ -872,10 +904,11 @@ pop.addEventListener('click',function(e){if(e.target===pop)cerrar(0);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&pop.classList.contains('on'))cerrar(0);});
 /* dispara al 55% de lectura, nunca dentro de la seccion de aportes */
 var disparo=function(){
-var ap=document.getElementById('aportar');
-if(ap){var r=ap.getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0)return;}
+var stop=['aportar','mapa','entregas'];
+for(var k=0;k<stop.length;k++){var el=document.getElementById(stop[k]);
+if(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0)return;}}
 var h=document.documentElement.scrollHeight-window.innerHeight;
-if(h>0&&window.scrollY/h>0.38){abrir();window.removeEventListener('scroll',disparo);}};
+if(h>0&&window.scrollY/h>0.42){abrir();window.removeEventListener('scroll',disparo);}};
 window.addEventListener('scroll',disparo,{passive:true});
 /* y al intentar salir, solo en escritorio y con puntero fino */
 if(window.matchMedia&&window.matchMedia('(pointer:fine)').matches){
@@ -924,7 +957,7 @@ if(d.actualizado){try{var f=new Date(d.actualizado+'T12:00:00');
 PROGRESO.actualizado={es:'Actualizado '+f.toLocaleDateString('es-CO',{day:'numeric',month:'short',year:'numeric'}),
 en:'Updated '+f.toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'})};}catch(e){}}
 var lang=document.documentElement.lang==='en'?'en':'es';
-pintarProgreso(lang); pintaRegistro();
+pintarProgreso(lang); pintaRegistro(); if(typeof pintaTablero==='function')pintaTablero();
 document.querySelectorAll('[data-fill],#lvFill,#mFillUsd,#mFillObras').forEach(function(el){
 if(el.getAttribute('data-fill'))el.style.width=el.getAttribute('data-fill');});
 ['lvMonto','lvAportes'].forEach(function(id){var e=document.getElementById(id);if(e)delete e.dataset.done;});
@@ -948,6 +981,78 @@ var u=URL.createObjectURL(blob),a=document.createElement('a');
 a.href=u; a.download='renace-aportes-'+(APORTES.actualizado||'')+'.csv';
 document.body.appendChild(a); a.click(); document.body.removeChild(a);
 setTimeout(function(){URL.revokeObjectURL(u);},1500);});
+
+/* ── mapa de operación ── */
+var ZONAS=null, MAPA=null, TIPO={operando:'op',evaluando:'ev',planeado:'pl'};
+var M_T={es:{operando:'Operando',evaluando:'Evaluando',planeado:'Planeado',epi:'Epicentro',fuente:'Fuente'},
+ en:{operando:'Operating',evaluando:'Assessing',planeado:'Planned',epi:'Epicenter',fuente:'Source'}};
+function svgPunto(z,cls,i,extra){
+return '<g class="pto '+(extra||'')+'" data-z="'+i+'" tabindex="0" role="button" aria-label="'+esc(z.n||z.nombre)+'">'
++'<circle class="anillo s-'+cls+'" cx="'+z.x+'" cy="'+z.y+'" r="14"/>'
++'<circle class="c c-'+cls+'" cx="'+z.x+'" cy="'+z.y+'" r="13"/>'
++'<circle class="h" cx="'+z.x+'" cy="'+z.y+'" r="34"/></g>';}
+function pintaMapa(){
+var cont=document.getElementById('mapaSvg'); if(!cont||!MAPA||!ZONAS)return;
+var lang=document.documentElement.lang==='en'?'en':'es', T=M_T[lang];
+var af=ZONAS.deps_afectados||[];
+var deps=MAPA.deps.map(function(d){
+return '<path class="dep'+(af.indexOf(d.n)>-1?' on':'')+'" d="'+d.d+'"><title>'+esc(d.n)+'</title></path>';}).join('');
+var pts=ZONAS.zonas.map(function(z,i){return svgPunto(z,TIPO[z.estado]||'pl',i);}).join('');
+var ep=ZONAS.epicentro?svgPunto(ZONAS.epicentro,'ep','ep','epic'):'';
+cont.innerHTML='<svg viewBox="'+MAPA.vb+'" xmlns="http://www.w3.org/2000/svg">'+deps+pts+ep+'</svg>';
+var lista=document.getElementById('mapaLista');
+if(lista)lista.innerHTML=ZONAS.zonas.map(function(z,i){
+return '<li><button type="button" data-z="'+i+'" aria-current="false"><i class="pt pt--'+(TIPO[z.estado]||'pl')+'"></i>'
++esc(z.n)+'<span class="dp">'+esc(z.dep)+'</span></button></li>';}).join('');
+sel(ZONAS.zonas.length?'0':'ep');
+var mc=document.querySelector('.mapa__c');
+if(mc){ if(reduce||!('IntersectionObserver' in window)){mc.classList.add('in');}
+else{new IntersectionObserver(function(en,o){if(en[0].isIntersecting){mc.classList.add('in');o.disconnect();}},{threshold:.18}).observe(mc);}}}
+function sel(id){
+if(!ZONAS)return;
+var lang=document.documentElement.lang==='en'?'en':'es', T=M_T[lang];
+var z = id==='ep' ? ZONAS.epicentro : ZONAS.zonas[+id];
+if(!z)return;
+document.querySelectorAll('.pto').forEach(function(g){g.classList.toggle('sel',g.getAttribute('data-z')===String(id));});
+document.querySelectorAll('.mapa__l button').forEach(function(b){b.setAttribute('aria-current',b.getAttribute('data-z')===String(id)?'true':'false');});
+var info=document.getElementById('mapaInfo'); if(!info)return;
+info.classList.add('sw'); setTimeout(function(){info.classList.remove('sw');},170);
+var esEp = id==='ep';
+var txt = esEp ? (lang==='en'&&z.nota_en?z.nota_en:z.nota) : (lang==='en'&&z.foco_en?z.foco_en:z.foco);
+info.innerHTML='<em>'+(esEp?T.epi:T[z.estado]||'')+' · '+esc(z.dep)+'</em><b>'+esc(z.n||z.nombre)+'</b><p>'+esc(txt)+'</p>'
++(z.fuente?'<cite>'+T.fuente+': '+esc(z.fuente)+'</cite>':'');}
+(function(){
+var c=document.getElementById('mapaSvg'), l=document.getElementById('mapaLista');
+var go=function(e){var t=e.target.closest('[data-z]'); if(t)sel(t.getAttribute('data-z'));};
+if(c){c.addEventListener('click',go);
+c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){var t=e.target.closest('[data-z]');if(t){e.preventDefault();sel(t.getAttribute('data-z'));}}});}
+if(l)l.addEventListener('click',go);})();
+Promise.all([
+ fetch('/assets/col.json',{cache:'force-cache'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}),
+ fetch('/data/zonas.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
+]).then(function(r){MAPA=r[0];ZONAS=r[1];pintaMapa();
+var mu=document.getElementById('tMu');
+if(mu&&ZONAS)mu.textContent=ZONAS.zonas.filter(function(z){return z.estado==='operando';}).length;});
+
+/* ── novedades ── */
+var NOV=null;
+function pintaNov(){
+var c=document.getElementById('novL'); if(!c||!NOV)return;
+var lang=document.documentElement.lang==='en'?'en':'es';
+c.innerHTML=(NOV.novedades||[]).map(function(n){
+return '<article class="nov__i"><div class="nov__d"><i class="'+esc(n.tipo)+'"></i>'+fFecha(n.fecha,lang)+'</div>'
++'<div><div class="nov__t">'+esc(lang==='en'&&n.titulo_en?n.titulo_en:n.titulo)+'</div>'
++'<p class="nov__x">'+esc(lang==='en'&&n.texto_en?n.texto_en:n.texto)
++(n.fuente?'<span class="nov__f">'+esc(n.fuente)+'</span>':'')+'</p></div></article>';}).join('');}
+fetch('/data/novedades.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null;})
+.then(function(d){NOV=d;pintaNov();}).catch(function(){});
+
+/* ── tablero ── */
+function pintaTablero(){
+var P=PROGRESO,usd=P.recaudadoCOP/P.trm,pct=usd/P.metaUSD*100,lang=document.documentElement.lang==='en'?'en':'es';
+var s=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};
+s('tRec',fmtCOP(P.recaudadoCOP)); s('tAp',P.aportes); s('tOb',P.obras+' / '+P.metaObras);
+s('tPct',(pct<0.01?(lang==='en'?'<0.01 %':'<0,01 %'):(lang==='en'?pct.toFixed(2)+' %':pct.toFixed(2).replace('.',',')+' %')));}
 
 var btn=document.getElementById('btnCopiar');
 if(btn){btn.addEventListener('click',function(){

@@ -1,0 +1,80 @@
+{
+ "_schema": {
+  "descripcion": "Zonas donde opera RENACE. 'estado' describe NUESTRA operación, no una medición de daño.",
+  "estados": "operando | evaluando | planeado",
+  "como_agregar": "Añade el objeto y empuja. El mapa se actualiza solo."
+ },
+ "actualizado": "2026-08-12",
+ "epicentro": {
+  "nombre": "San José del Palmar",
+  "dep": "Chocó",
+  "x": 229.8,
+  "y": 630.5,
+  "nota": "Epicentro del sismo de magnitud 7,4 del 10 de agosto de 2026, a 96 km de profundidad.",
+  "nota_en": "Epicenter of the magnitude 7.4 earthquake of August 10, 2026, at a depth of 96 km.",
+  "fuente": "Servicio Geológico Colombiano"
+ },
+ "deps_afectados": [
+  "Chocó",
+  "Valle del Cauca",
+  "Risaralda",
+  "Caldas",
+  "Quindío"
+ ],
+ "zonas": [
+  {
+   "n": "Buenaventura",
+   "dep": "Valle del Cauca",
+   "x": 164.0,
+   "y": 714.7,
+   "estado": "operando",
+   "foco": "Sede de la fundación ejecutora y base logística hacia el litoral.",
+   "foco_en": "Home of the executing foundation and logistics base toward the coastline."
+  },
+  {
+   "n": "Quibdó",
+   "dep": "Chocó",
+   "x": 194.4,
+   "y": 565.1,
+   "estado": "operando",
+   "foco": "Levantamiento de necesidades con las organizaciones del territorio. Vías y aeropuerto afectados.",
+   "foco_en": "Needs assessment with local organizations. Roads and airport affected."
+  },
+  {
+   "n": "Cali",
+   "dep": "Valle del Cauca",
+   "x": 205.9,
+   "y": 751.0,
+   "estado": "evaluando",
+   "foco": "Barrios con edificaciones colapsadas y familias en albergue temporal.",
+   "foco_en": "Neighbourhoods with collapsed buildings and families in temporary shelters."
+  },
+  {
+   "n": "Pereira",
+   "dep": "Risaralda",
+   "x": 274.3,
+   "y": 637.9,
+   "estado": "planeado",
+   "foco": "Daño estructural en vivienda y colegios, pendiente de verificación en terreno.",
+   "foco_en": "Structural damage to housing and schools, pending on-site verification."
+  },
+  {
+   "n": "Manizales",
+   "dep": "Caldas",
+   "x": 288.3,
+   "y": 616.4,
+   "estado": "planeado",
+   "foco": "Daño estructural reportado, pendiente de verificación en terreno.",
+   "foco_en": "Reported structural damage, pending on-site verification."
+  },
+  {
+   "n": "Armenia",
+   "dep": "Quindío",
+   "x": 275.1,
+   "y": 661.0,
+   "estado": "planeado",
+   "foco": "Daño estructural reportado, pendiente de verificación en terreno.",
+   "foco_en": "Reported structural damage, pending on-site verification."
+  }
+ ]
+}
