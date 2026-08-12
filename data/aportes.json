@@ -13,6 +13,16 @@
  "obras_entregadas": 0,
  "aportes": [
   {
+   "folio": "RNC-2608-000004",
+   "fecha": "2026-08-12",
+   "origen": "Aporte anónimo",
+   "nota": "Aporte por Bre-B",
+   "monto": 12345,
+   "moneda": "COP",
+   "canal": "Bre-B",
+   "estado": "recibido"
+  },
+  {
    "folio": "RNC-2608-000003",
    "fecha": "2026-08-12",
    "origen": "Ocean Industries y aliados",
