@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Fundación Semilla Colectiva">
+  <title>Fundación Semilla Colectiva</title>
+  <defs>
+    <clipPath id="sc-circle"><circle cx="200" cy="200" r="190"/></clipPath>
+  </defs>
+  <g clip-path="url(#sc-circle)">
+    <rect x="0" y="0" width="400" height="400" fill="#A9E4E9"/>
+    <path d="M-10 268 C 60 236 130 232 200 244 C 268 256 336 254 410 236 L 410 410 L -10 410 Z" fill="#5FBB46"/>
+
+    <!-- Árbol -->
+    <g fill="#1F7A3C">
+      <path d="M192 330 L192 214 C 192 206 208 206 208 214 L 208 330 Z"/>
+      <path d="M196 236 L150 196 l-11 12 l57 47 z"/>
+      <path d="M204 236 L250 196 l11 12 l-57 47 z"/>
+      <path d="M197 218 L168 178 l-12 8 l41 55 z"/>
+      <path d="M203 218 L232 178 l12 8 l-41 55 z"/>
+    </g>
+
+    <!-- Hojas -->
+    <g>
+      <path d="M200 60 C 226 84 226 122 200 150 C 174 122 174 84 200 60 Z" fill="#4CAE4F"/>
+      <path d="M200 74 C 210 96 210 122 200 142 C 190 122 190 96 200 74 Z" fill="#69C25A" opacity=".55"/>
+
+      <path d="M262 86 C 282 116 272 154 240 170 C 228 136 236 104 262 86 Z" fill="#2E9142"/>
+      <path d="M258 102 C 266 124 262 146 246 158 C 242 136 246 116 258 102 Z" fill="#7CCB63" opacity=".5"/>
+
+      <path d="M138 86 C 118 116 128 154 160 170 C 172 136 164 104 138 86 Z" fill="#4CAE4F"/>
+      <path d="M142 102 C 134 124 138 146 154 158 C 158 136 154 116 142 102 Z" fill="#7CCB63" opacity=".5"/>
+
+      <path d="M320 128 C 322 164 296 190 258 190 C 262 154 286 132 320 128 Z" fill="#2E9142"/>
+      <path d="M306 142 C 302 162 288 176 268 180 C 274 162 288 148 306 142 Z" fill="#7CCB63" opacity=".45"/>
+
+      <path d="M80 128 C 78 164 104 190 142 190 C 138 154 114 132 80 128 Z" fill="#4CAE4F"/>
+      <path d="M94 142 C 98 162 112 176 132 180 C 126 162 112 148 94 142 Z" fill="#7CCB63" opacity=".45"/>
+
+      <path d="M352 196 C 340 226 306 238 274 226 C 290 198 320 190 352 196 Z" fill="#2E9142"/>
+      <path d="M48 196 C 60 226 94 238 126 226 C 110 198 80 190 48 196 Z" fill="#4CAE4F"/>
+    </g>
+
+    <!-- Casas -->
+    <g fill="#1F7A3C">
+      <path d="M300 250 L300 316 L364 316 L364 250 L332 224 Z"/>
+      <path d="M370 268 L370 316 L410 316 L410 268 L390 250 Z"/>
+    </g>
+    <g fill="#A9E4E9">
+      <rect x="322" y="262" width="20" height="18" rx="2"/>
+      <rect x="384" y="280" width="14" height="14" rx="2"/>
+    </g>
+
+    <!-- Familia -->
+    <g fill="#1B6B37">
+      <!-- adulto izquierda -->
+      <circle cx="148" cy="284" r="16"/>
+      <path d="M148 302 c 16 0 24 11 24 26 l 0 74 l -48 0 l 0 -74 c 0 -15 8 -26 24 -26 Z"/>
+      <path d="M126 312 c -9 4 -14 12 -16 24 l -3 30 l 12 2 l 4 -28 z"/>
+      <path d="M170 312 c 9 4 14 12 16 24 l 2 18 l -12 2 l -3 -16 z"/>
+      <!-- adulto derecha con moño -->
+      <circle cx="252" cy="288" r="15"/>
+      <path d="M266 279 c 11 -4 18 1 18 8 c 0 7 -9 11 -17 7 z"/>
+      <path d="M252 305 c 15 0 23 10 24 25 l 3 72 l -54 0 l 3 -72 c 1 -15 9 -25 24 -25 Z"/>
+      <path d="M274 314 c 9 4 14 13 16 24 l 3 30 l -12 2 l -4 -28 z"/>
+      <path d="M230 314 c -9 4 -13 12 -15 22 l -2 14 l 12 2 l 2 -12 z"/>
+      <!-- niña centro -->
+      <circle cx="201" cy="320" r="13"/>
+      <path d="M201 336 c 13 0 18 9 20 22 l 6 44 l -52 0 l 6 -44 c 2 -13 7 -22 20 -22 Z"/>
+      <path d="M186 344 l -12 -8 l 6 -10 l 13 9 z"/>
+      <path d="M216 344 l 12 -8 l -6 -10 l -13 9 z"/>
+    </g>
+  </g>
+</svg>
