@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.renacecol.org/sitemap.xml
+
+# CRM interno: no indexar
+Disallow: /equipo/
