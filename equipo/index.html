@@ -55,15 +55,24 @@ const API = 'https://ocean-n8n.hj1tdk.easypanel.host/webhook/renace-crm';
 let CLAVE = '', DATOS = null;
 
 async function api(body){
-  const r = await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify(Object.assign({usuario:document.getElementById('u').value.trim(),clave:CLAVE},body))});
-  return r.json();
+  // Con try/catch: si la red falla, se dice. Antes el boton se quedaba en
+  // "Entrando..." para siempre y no habia forma de saber que paso.
+  try{
+    const r = await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(Object.assign({usuario:document.getElementById('u').value.trim(),clave:CLAVE},body))});
+    if(!r.ok) return {ok:false,error:'El servidor respondió '+r.status+'. Avísale a Juan.'};
+    return await r.json();
+  }catch(e){
+    return {ok:false,error:'No hay conexión con el servidor. Revisa tu internet e intenta otra vez.'};
+  }
 }
 async function entrar(){
   const b=document.getElementById('btn'); b.disabled=true; b.textContent='Entrando…';
   CLAVE = document.getElementById('p').value;
-  const d = await api({accion:'listar'});
-  b.disabled=false; b.textContent='Entrar';
+  let d;
+  try { d = await api({accion:'listar'}); }
+  catch(e){ d = {ok:false,error:'Error inesperado: '+e.message}; }
+  finally { b.disabled=false; b.textContent='Entrar'; }
   if(!d.ok){ document.getElementById('err').textContent = d.error||'No se pudo entrar'; return; }
   DATOS = d;
   document.getElementById('login').classList.add('oculto');
