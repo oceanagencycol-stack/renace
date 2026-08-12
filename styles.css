@@ -336,4 +336,5 @@ background:linear-gradient(180deg,rgba(192,83,43,.045),transparent 62%)}
 .via__foot .btn{width:100%}
 .traza__mesh i{max-width:100vw}
 .wrap{padding-inline:16px}}
+.js-hint{display:none;font-size:.86rem;color:var(--muted);border-left:2px solid var(--line-strong);padding-left:12px;margin:22px 0 0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
