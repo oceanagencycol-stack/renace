@@ -84,6 +84,7 @@
     <nav class="nav__links" id="menu" aria-label="Principal">
       <a href="#metas" data-i="n0">Metas</a>
       <a href="#que-paso" data-i="n1">Qué pasó</a>
+      <a href="#ayuda" data-i="n9">Ayuda ahora</a>
       <a href="#mapa" data-i="n7">Mapa</a>
       <a href="#alianza" data-i="n8">La alianza</a>
       <a href="#como-funciona" data-i="n2">Cómo funciona</a>
@@ -248,6 +249,17 @@
     </div>
   </div>
 </section>
+<section class="sec ayu-sec" id="ayuda" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <p class="eyebrow" data-i="ay0">Si necesitas ayuda ahora</p>
+      <h2 data-i="ay1">Esto no lo damos nosotros, pero deberías saberlo.</h2>
+      <p class="lede" data-i="ay2">RENACE reconstruye, que es lo que viene después. Si lo que necesitas hoy es techo, coordinación o una línea de emergencia, aquí está quién sí lo da y qué te van a pedir.</p>
+    </div>
+    <div class="ayu" id="ayuL"></div>
+    <p class="fuente rv" data-i="ay3">Ninguno de estos recursos es de RENACE. Los enlazamos porque resuelven lo inmediato y verificamos que estén activos para Colombia. Si encuentras que alguno dejó de funcionar, escríbenos y lo quitamos.</p>
+  </div>
+</section>
 <section class="sec mapa-sec" id="mapa" style="padding-top:0">
   <div class="wrap">
     <div class="sec__head rv">
@@ -268,17 +280,6 @@
         <ul class="mapa__l" id="mapaLista"></ul>
       </aside>
     </div>
-    <aside class="emg rv">
-      <div class="emg__t">
-        <p class="emg__k" data-i="eg0">Si lo que necesitas es ayuda ahora</p>
-        <h3 data-i="eg1">Mapa de emergencia comunitario</h3>
-        <p data-i="eg2">Cientos de personas coordinan ahí, en vivo, dónde faltan manos, dónde ya sobran y qué se necesita en cada dirección de Valle, Chocó y Cauca. Puedes consultarlo o añadir un punto.</p>
-        <p class="emg__n" data-i="eg3">No es nuestro. Lo hizo y lo sostiene Artefacto. Lo enlazamos porque resuelve la urgencia inmediata, que no es lo que hace RENACE.</p>
-      </div>
-      <a class="btn emg__b" href="https://mapa-emergencia.artefactofilms.workers.dev" target="_blank" rel="noopener">
-        <span data-i="eg4">Abrir el mapa de emergencia</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-    </aside>
   </div>
 </section>
 <section class="sec ali-sec" id="alianza" style="padding-top:0">
@@ -680,6 +681,10 @@ eg0:'If what you need is help right now',eg1:'Community emergency map',
 eg2:'Hundreds of people coordinate there, live, where hands are missing, where there are already enough, and what is needed at each address across Valle, Chocó and Cauca. You can check it or add a point.',
 eg3:'It is not ours. It was built and is maintained by Artefacto. We link it because it solves the immediate emergency, which is not what RENACE does.',
 eg4:'Open the emergency map',f9:'Emergency map (Artefacto) ↗',
+ay0:'If you need help right now',ay1:'We do not provide this, but you should know about it.',
+ay2:'RENACE rebuilds, which is what comes later. If what you need today is shelter, coordination or an emergency line, here is who does provide it and what they will ask you for.',
+ay3:'None of these resources belong to RENACE. We link them because they solve the immediate need and we checked that they are active for Colombia. If you find one has stopped working, write to us and we will take it down.',
+n9:'Help now',
 al0:'The alliance',al1:'Who each one is and what they bring.',
 al2:'Eight organizations with different trades. None of them could do this alone. It took people embedded in the neighbourhoods, an entity with the paperwork to receive and spend, someone to convene, and a way to prove it.',
 al3:'The legal details of the entity that receives and executes are in the transparency section, and can be checked on RUES and DIAN.',n8:'The alliance',
@@ -761,7 +766,7 @@ nodes.forEach(function(el){var k=el.getAttribute('data-i');if(d[k]!==undefined){
 if(tagEl)tagEl.setAttribute('data-tag',lang==='en'?EN.tagDirecta:tagES);
 document.documentElement.lang=(lang==='en')?'en':'es-CO';
 bES.classList.toggle('on',lang!=='en');bEN.classList.toggle('on',lang==='en');
-setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}if(typeof pintaEntregas==='function')pintaEntregas();if(typeof pintaRegistro==='function')pintaRegistro();if(typeof pintaMapa==='function')pintaMapa();if(typeof pintaNov==='function')pintaNov();if(typeof pintaTablero==='function')pintaTablero();if(typeof pintaAli==='function')pintaAli();if(typeof pintaComprobante==='function')pintaComprobante();
+setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}if(typeof pintaEntregas==='function')pintaEntregas();if(typeof pintaRegistro==='function')pintaRegistro();if(typeof pintaMapa==='function')pintaMapa();if(typeof pintaNov==='function')pintaNov();if(typeof pintaTablero==='function')pintaTablero();if(typeof pintaAli==='function')pintaAli();if(typeof pintaRecursos==='function')pintaRecursos();if(typeof pintaComprobante==='function')pintaComprobante();
 try{localStorage.setItem('renace_lang',lang);}catch(e){}
 if(push&&window.history&&history.replaceState){
 try{var u=new URL(window.location.href);
@@ -1214,6 +1219,25 @@ go.addEventListener('click',buscar);
 inp.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();buscar();}});
 inp.addEventListener('search',function(){if(!inp.value)out.innerHTML='';});
 })();
+
+/* recursos de emergencia que no son de RENACE */
+var RECURSOS=null;
+function pintaRecursos(){
+var c=document.getElementById('ayuL'); if(!c||!RECURSOS)return;
+var lang=document.documentElement.lang==='en'?'en':'es';
+var EXT=lang==='en'?'External site':'Sitio externo';
+c.innerHTML=(RECURSOS.recursos||[]).map(function(r){
+var req=(lang==='en'&&r.requisitos_en?r.requisitos_en:r.requisitos)||[];
+return '<article class="ayu__i"><div>'
++'<p class="ayu__k">'+esc(lang==='en'&&r.tipo_en?r.tipo_en:r.tipo)+'</p>'
++'<h3>'+esc(lang==='en'&&r.titulo_en?r.titulo_en:r.titulo)+'</h3>'
++'<p class="ayu__x">'+esc(lang==='en'&&r.texto_en?r.texto_en:r.texto)+'</p>'
++(req.length?'<ul class="ayu__r">'+req.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>':'')
++'<span class="ayu__q">'+esc(r.quien)+'</span></div>'
++'<div class="ayu__a"><a class="btn btn--ghost" href="'+esc(r.url)+'" target="_blank" rel="noopener">'
++esc(lang==='en'&&r.cta_en?r.cta_en:r.cta)+'</a><span class="ayu__ext">'+EXT+' \u2197</span></div></article>';}).join('');}
+fetch('/data/recursos.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null;})
+.then(function(d){RECURSOS=d;pintaRecursos();}).catch(function(){});
 
 var btn=document.getElementById('btnCopiar');
 if(btn){btn.addEventListener('click',function(){

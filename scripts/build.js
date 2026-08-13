@@ -67,11 +67,21 @@ const otros = {
   'data/entregas.json':  d => Array.isArray(d.entregas)  || 'falta la lista "entregas"',
   'data/zonas.json':     d => Array.isArray(d.zonas)     || 'falta la lista "zonas"',
   'data/aliados.json':   d => Array.isArray(d.aliados)   || 'falta la lista "aliados"',
+  'data/recursos.json':  d => Array.isArray(d.recursos)  || 'falta la lista "recursos"',
   'assets/col.json':     d => Array.isArray(d.deps) && d.deps.length > 20 || 'el mapa no trae los departamentos',
 };
 for (const [rel, comprueba] of Object.entries(otros)) {
   const d = leerJSON(rel);
   if (d) { const r = comprueba(d); if (r !== true) errores.push(`${rel} — ${r}`); }
+}
+
+// todo recurso externo debe llevar enlace y quién lo opera
+const rec = leerJSON('data/recursos.json');
+if (rec && Array.isArray(rec.recursos)) {
+  rec.recursos.forEach(r => {
+    if (!/^https:\/\//.test(r.url || '')) errores.push(`recursos.json — "${r.titulo}" necesita una URL https`);
+    if (!r.quien) errores.push(`recursos.json — "${r.titulo}" debe decir quién lo opera`);
+  });
 }
 
 // las zonas del mapa deben caer dentro del lienzo
