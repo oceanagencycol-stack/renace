@@ -13,6 +13,16 @@
  "obras_entregadas": 0,
  "aportes": [
   {
+   "folio": "RNC-2608-000032",
+   "fecha": "2026-08-13",
+   "origen": "Aporte anónimo",
+   "nota": "Aporte por Davivienda",
+   "monto": 500000,
+   "moneda": "COP",
+   "canal": "Davivienda",
+   "estado": "recibido"
+  },
+  {
    "folio": "RNC-2608-000031",
    "fecha": "2026-08-13",
    "origen": "Aporte anónimo",
