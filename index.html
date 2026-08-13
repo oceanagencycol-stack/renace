@@ -427,7 +427,26 @@
         </div>
         <a class="btn btn--wa" id="pkBtn" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.9 9.9 0 0 0 4.74 1.2c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2Zm0 18.02a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Z"/></svg><span data-i="w24">Avisar mi aporte y recibir folio</span></a>
       </div>
-      <p class="via__nota" data-i="w25">Cuando transfieras, mándanos el comprobante por WhatsApp. Te devolvemos el folio y tu aporte entra al registro público de esta página.</p>
+      <div class="pasos2 rv">
+        <div class="pasos2__i">
+          <span class="pasos2__n">1</span>
+          <div><b data-i="w33">Transfiere por la vía que elegiste</b>
+          <p data-i="w34">Copia el dato de arriba y hazlo desde tu banco o tu app. No pasa nada si es un monto distinto al que marcaste.</p></div>
+        </div>
+        <div class="pasos2__i pasos2__i--wa">
+          <span class="pasos2__n">2</span>
+          <div><b data-i="w35">Mándanos el comprobante por WhatsApp</b>
+          <p data-i="w36">Sin este paso no podemos darte folio ni registrar tu aporte. Es una foto o un PDF, nada más.</p>
+          <div class="pasos2__wa">
+            <a class="btn btn--wa" href="https://wa.me/573166891508?text=Hola.%20Acabo%20de%20hacer%20un%20aporte%20a%20RENACE%20y%20les%20env%C3%ADo%20el%20comprobante%20para%20recibir%20mi%20folio." target="_blank" rel="noopener" id="waComp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.38a9.9 9.9 0 0 0 4.74 1.2c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2Zm0 18.02a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Z"/></svg>
+              <span data-i="w37">Enviar comprobante</span></a>
+            <span class="pasos2__num">+57 316 689 1508<button class="cp" type="button" data-copy="+573166891508" aria-label="Copiar el número"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></span>
+          </div>
+          <p class="pasos2__f" data-i="w38">Te devolvemos tu folio el mismo día. Con ese folio puedes consultar tu aporte en esta página.</p>
+        </div>
+        </div>
+      </div>
     </div>
 
     <div class="otras rv stg">
@@ -695,6 +714,12 @@ mp0:'Where we are',mp1:'The operation map.',
 mp2:'The dots show where the alliance works and how far along each territory is. We are not measuring damage — that is the government\u2019s job. We are showing what we are doing.',
 mp3:'Operating',mp4:'Assessing',mp5:'Planned',mp6:'Epicenter',
 n20:'What is happening',n21:'Updates, progress and new needs, dated.',
+w33:'Transfer through the route you picked',
+w34:'Copy the details above and do it from your bank or your app. It is fine if the amount differs from the one you selected.',
+w35:'Send us the receipt over WhatsApp',
+w36:'Without this step we cannot give you a tracking number or log your contribution. A photo or a PDF is enough.',
+w37:'Send receipt',
+w38:'We send your number back the same day. With it you can look up your contribution on this page.',
 w32:'You are seeing all three routes at once because JavaScript is disabled in your browser. The details are the same.',
 w0:'Bank in Colombia',w1:'Bre-B · instant',w2:'From abroad',
 w3:'Savings account · Davivienda (Colombia)',w4:'Account holder',w4b:'Account holder',w4c:'Account holder',
@@ -861,7 +886,9 @@ new IntersectionObserver(function(e){enAportar=e[0].isIntersecting;upd();},{thre
 
 /* copiar generico */
 document.querySelectorAll('[data-copy]').forEach(function(b){
-b.addEventListener('click',function(){var v=b.getAttribute('data-copy');
+b.addEventListener('click',function(){
+if(b.closest('.via__panel')){var p2=document.querySelector('.pasos2__i--wa');
+if(p2){p2.classList.add('destaca');setTimeout(function(){p2.classList.remove('destaca');},2600);}}var v=b.getAttribute('data-copy');
 var ok=function(){b.classList.add('ok');setTimeout(function(){b.classList.remove('ok');},1800);};
 if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(ok).catch(function(){});}
 else{try{var t=document.createElement('textarea');t.value=v;t.style.position='fixed';t.style.opacity='0';
