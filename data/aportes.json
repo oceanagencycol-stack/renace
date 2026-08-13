@@ -6,12 +6,25 @@
   "regla": "Si un aporte no se pudo ejecutar, se registra igual con estado no_ejecutado y su razón.",
   "costos_operacion": "Los gastos de operar (transporte, bodegaje, transferencias, papeleo) salen de lo recaudado y se registran aquí con estado 'costo_operacion' y su factura. Cero comisión significa que nadie de la alianza cobra un porcentaje como ingreso, no que el 100% llegue en materiales."
  },
- "actualizado": "2026-08-12",
+ "actualizado": "2026-08-13",
  "trm": 3125.47,
  "meta_usd": 500000,
  "meta_obras": 100,
  "obras_entregadas": 0,
  "aportes": [
+  {
+   "folio": "RNC-2608-000028",
+   "fecha": "2026-08-13",
+   "origen": "Aporte anónimo",
+   "nota": "Aporte por DolarApp",
+   "monto": 1250188,
+   "moneda": "COP",
+   "canal": "DolarApp",
+   "estado": "recibido",
+   "monto_orig": 400,
+   "moneda_orig": "USD",
+   "trm_aplicada": 3125.47
+  },
   {
    "folio": "RNC-2608-000011",
    "fecha": "2026-08-12",
