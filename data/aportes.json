@@ -13,6 +13,16 @@
  "obras_entregadas": 0,
  "aportes": [
   {
+   "folio": "RNC-2608-000024",
+   "fecha": "2026-08-12",
+   "origen": "Aporte anónimo",
+   "nota": "Aporte por Bre-B",
+   "monto": 999,
+   "moneda": "COP",
+   "canal": "Bre-B",
+   "estado": "recibido"
+  },
+  {
    "folio": "RNC-2608-000023",
    "fecha": "2026-08-12",
    "origen": "Rosa Delgado",
