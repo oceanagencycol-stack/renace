@@ -1068,7 +1068,8 @@ function svgPunto(z,cls,i,extra){
 return '<g class="pto '+(extra||'')+'" data-z="'+i+'" tabindex="0" role="button" aria-label="'+esc(z.n||z.nombre)+'">'
 +'<circle class="anillo s-'+cls+'" cx="'+z.x+'" cy="'+z.y+'" r="14"/>'
 +'<circle class="c c-'+cls+'" cx="'+z.x+'" cy="'+z.y+'" r="13"/>'
-+'<circle class="h" cx="'+z.x+'" cy="'+z.y+'" r="34"/></g>';}
++'<circle class="h" cx="'+z.x+'" cy="'+z.y+'" r="52"/>'
++'</g>';}
 function pintaMapa(){
 var cont=document.getElementById('mapaSvg'); if(!cont||!MAPA||!ZONAS)return;
 var lang=document.documentElement.lang==='en'?'en':'es', T=M_T[lang];
