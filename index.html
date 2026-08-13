@@ -149,14 +149,14 @@
   <div class="wrap aliados rv">
     <p class="aliados__title" data-i="ali">Una alianza, no una cuenta suelta</p>
     <div class="aliados__row stg">
-      <span class="aliado"><img loading="lazy" decoding="async" height="46" src="/assets/hogar-sin-olvido.png" alt="Fundación Un Hogar Sin Olvido"></span>
+      <span class="aliado"><picture><source srcset="/assets/hogar-sin-olvido.webp" type="image/webp"><img loading="lazy" decoding="async" height="46" src="/assets/hogar-sin-olvido.png" alt="Fundación Un Hogar Sin Olvido"></picture></span>
       <span class="aliado"><img loading="lazy" decoding="async" height="52" src="/assets/semilla-colectiva.svg" alt="Fundación Semilla Colectiva" style="height:52px"><span class="aliado__txt">Semilla<br>Colectiva<small data-i="fnd">Fundación</small></span></span>
       <span class="aliado"><img loading="lazy" decoding="async" height="60" src="/assets/buenaventura-progresa.png" alt="Buenaventura Progresa" style="height:60px"></span>
-      <span class="aliado"><img loading="lazy" decoding="async" height="44" src="/assets/afroz-el-valle.png" alt="Afroz El Valle" style="height:44px"></span>
+      <span class="aliado"><picture><source srcset="/assets/afroz-el-valle.webp" type="image/webp"><img loading="lazy" decoding="async" height="44" src="/assets/afroz-el-valle.png" alt="Afroz El Valle" style="height:44px"></picture></span>
       <span class="aliado"><img loading="lazy" decoding="async" height="32" src="/assets/mlk-proyectos-inversiones.png" alt="MLK Proyectos e Inversiones" style="height:32px"></span>
       <span class="aliado"><img loading="lazy" decoding="async" height="52" src="/assets/alvaro-arroyo.png" alt="Álvaro Arroyo" style="height:52px"></span>
-      <span class="aliado"><img loading="lazy" decoding="async" height="32" src="/assets/ocean-industries.png" alt="Ocean Industries" style="height:32px"></span>
-      <span class="aliado"><img loading="lazy" decoding="async" height="36" src="/assets/juan-cuero.png" alt="Juan Cuero" style="height:36px"></span>
+      <span class="aliado"><picture><source srcset="/assets/ocean-industries.webp" type="image/webp"><img loading="lazy" decoding="async" height="32" src="/assets/ocean-industries.png" alt="Ocean Industries" style="height:32px"></picture></span>
+      <span class="aliado"><picture><source srcset="/assets/juan-cuero.webp" type="image/webp"><img loading="lazy" decoding="async" height="36" src="/assets/juan-cuero.png" alt="Juan Cuero" style="height:36px"></picture></span>
     </div>
   </div>
 </section>
@@ -1176,7 +1176,10 @@ if(a.ciudad)meta+='<span>'+esc(a.ciudad)+'</span>';
 if(a.nit)meta+='<span>'+L.nit+' <b>'+esc(a.nit)+'</b></span>';
 if(a.desde)meta+='<span>'+L.desde+' <b>'+esc(a.desde)+'</b></span>';
 if(a.web)meta+='<span><a href="'+esc(a.web)+'" target="_blank" rel="noopener">'+L.sitio+' →</a></span>';
-return '<article class="ali__i"><div class="ali__lg"><img src="/assets/'+esc(a.logo)+'" alt="'+esc(a.nombre)+'" height="'+(a.alto||48)+'" style="height:'+(a.alto||48)+'px" loading="lazy" decoding="async"></div>'
+var wp=a.logo.replace(/\.png$/,'.webp');
+return '<article class="ali__i"><div class="ali__lg"><picture>'
++(wp!==a.logo?'<source srcset="/assets/'+esc(wp)+'" type="image/webp">':'')
++'<img src="/assets/'+esc(a.logo)+'" alt="'+esc(a.nombre)+'" height="'+(a.alto||48)+'" style="height:'+(a.alto||48)+'px" loading="lazy" decoding="async"></picture></div>'
 +'<div><div class="ali__t"><h3>'+esc(a.nombre)+'</h3><span class="ali__tp">'+esc(a.tipo)+'</span></div>'
 +'<p class="ali__rl">'+esc(lang==='en'&&a.rol_en?a.rol_en:a.rol)+'</p>'
 +'<p class="ali__x">'+esc(lang==='en'&&a.texto_en?a.texto_en:a.texto)+'</p>'
