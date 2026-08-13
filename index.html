@@ -142,8 +142,8 @@
         <div class="live__track"><div class="live__fill" id="lvFill"></div></div>
         <div class="live__pct"><span id="lvPct">0,08 %</span><span data-i="lv2">de la meta de recursos</span></div>
         <div class="live__grid">
-          <div><b id="lvAportes">3</b><span data-i="lv3">aporte registrado</span></div>
-          <div><b id="lvObras">0 / 100</b><span data-i="lv4">obras entregadas</span></div>
+          <div><b id="lvAportes">3</b><span id="lvAportesL">aportes registrados</span></div>
+          <div><b id="lvObras">0 / 100</b><span id="lvObrasL">obras entregadas</span></div>
         </div>
       </div>
     </div>
@@ -172,7 +172,7 @@
     <div class="tab rv stg" id="tablero">
       <div><b id="tRec">$1.312.547</b><span data-i="d0">recaudado</span></div>
       <div><b id="tPct">0,08 %</b><span data-i="d1">de la meta de US$ 500.000</span></div>
-      <div><b id="tAp">3</b><span data-i="d2">aportes registrados</span></div>
+      <div><b id="tAp">3</b><span id="tApL">aportes registrados</span></div>
       <div><b id="tOb">0 / 100</b><span data-i="d3">obras entregadas</span></div>
       <div><b id="tMu">2</b><span data-i="d4">municipios en operación</span></div>
       <div><b>8</b><span data-i="d5">organizaciones aliadas</span></div>
@@ -611,6 +611,11 @@ set('lvUsd',(lang==='en'?'\u2248 US$ ':'\u2248 US$ ')+Math.round(usd).toLocaleSt
 set('lvPct',pctTxt); set('mPct',pctTxt);
 set('lvAportes',P.aportes); set('lvObras',P.obras+' / '+P.metaObras); set('mObras',P.obras+' / '+P.metaObras);
 set('lvUpd',P.actualizado[lang==='en'?'en':'es']);
+var uno=P.aportes===1;
+var LAB=lang==='en'
+?{a:uno?'contribution logged':'contributions logged',o:'projects delivered'}
+:{a:uno?'aporte registrado':'aportes registrados',o:'obras entregadas'};
+set('lvAportesL',LAB.a); set('tApL',LAB.a); set('lvObrasL',LAB.o);
 var w=Math.max(pct,0.6)+'%';
 ['lvFill','mFillUsd'].forEach(function(id){var e=document.getElementById(id);if(e)e.setAttribute('data-fill',w);});
 var o=document.getElementById('mFillObras');if(o)o.setAttribute('data-fill',Math.max(P.obras/P.metaObras*100,0)+'%');
