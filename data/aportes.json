@@ -13,62 +13,6 @@
  "obras_entregadas": 0,
  "aportes": [
   {
-   "folio": "RNC-2608-000033",
-   "fecha": "2026-08-13",
-   "origen": "Aporte anónimo",
-   "nota": "Aporte por DolarApp",
-   "monto": 1000150,
-   "moneda": "COP",
-   "canal": "DolarApp",
-   "estado": "recibido",
-   "monto_orig": 320,
-   "moneda_orig": "USD",
-   "trm_aplicada": 3125.47
-  },
-  {
-   "folio": "RNC-2608-000032",
-   "fecha": "2026-08-13",
-   "origen": "Aporte anónimo",
-   "nota": "Aporte por Davivienda",
-   "monto": 500000,
-   "moneda": "COP",
-   "canal": "Davivienda",
-   "estado": "recibido"
-  },
-  {
-   "folio": "RNC-2608-000031",
-   "fecha": "2026-08-13",
-   "origen": "Aporte anónimo",
-   "nota": "Aporte por Bre-B",
-   "monto": 77,
-   "moneda": "COP",
-   "canal": "Bre-B",
-   "estado": "recibido"
-  },
-  {
-   "folio": "RNC-2608-000030",
-   "fecha": "2026-08-13",
-   "origen": "Aporte anónimo",
-   "nota": "Aporte por Bre-B",
-   "monto": 99,
-   "moneda": "COP",
-   "canal": "Bre-B",
-   "estado": "recibido"
-  },
-  {
-   "folio": "RNC-2608-000029",
-   "fecha": "2026-08-13",
-   "origen": "Aporte anónimo",
-   "nota": "Aporte por DolarApp",
-   "monto": 781368,
-   "moneda": "COP",
-   "canal": "DolarApp",
-   "estado": "recibido",
-   "monto_orig": 250,
-   "moneda_orig": "USD",
-   "trm_aplicada": 3125.47
-  },
-  {
    "folio": "RNC-2608-000011",
    "fecha": "2026-08-12",
    "origen": "Marta Ospina",
