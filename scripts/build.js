@@ -116,7 +116,9 @@ let cambios = 0;
 for (const [id, valor] of reemplazos) {
   const re = new RegExp(`(id="${id}"[^>]*>)([^<]*)(<)`);
   const m = html.match(re);
-  if (m && m[2] !== valor) { html = html.replace(re, `$1${valor}$3`); cambios++; }
+  // ojo: el valor lleva "$" y en replace() eso es una retrorreferencia.
+  // Por eso se usa una función, que no interpreta $ ni nada.
+  if (m && m[2] !== valor) { html = html.replace(re, (_, a, __, c) => a + valor + c); cambios++; }
 }
 if (cambios) fs.writeFileSync(idx, html);
 
