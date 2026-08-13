@@ -379,4 +379,5 @@ padding:clamp(26px,3.2vw,34px) 0;border-bottom:1px solid var(--line);position:re
 .ayu__a .btn{width:100%;justify-content:center;padding:13px 20px;font-size:.9rem}
 .ayu__ext{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center;width:100%}
 @media (max-width:820px){.ayu__ext{text-align:left}}
+.fallo{padding:30px 0;color:var(--brick-t);font-size:.94rem;line-height:1.55;max-width:64ch;border-left:3px solid var(--brick);padding-left:18px;margin:20px 0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
