@@ -13,6 +13,16 @@
  "obras_entregadas": 0,
  "aportes": [
   {
+   "folio": "RNC-2608-000008",
+   "fecha": "2026-08-12",
+   "origen": "E2E Prueba 561783",
+   "nota": "Aporte por Bre-B",
+   "monto": 15617,
+   "moneda": "COP",
+   "canal": "Bre-B",
+   "estado": "recibido"
+  },
+  {
    "folio": "RNC-2608-000004",
    "fecha": "2026-08-12",
    "origen": "Andrés Moya",
