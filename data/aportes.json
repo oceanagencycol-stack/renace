@@ -13,6 +13,19 @@
  "obras_entregadas": 0,
  "aportes": [
   {
+   "folio": "RNC-2608-000029",
+   "fecha": "2026-08-13",
+   "origen": "Aporte anónimo",
+   "nota": "Aporte por DolarApp",
+   "monto": 781368,
+   "moneda": "COP",
+   "canal": "DolarApp",
+   "estado": "recibido",
+   "monto_orig": 250,
+   "moneda_orig": "USD",
+   "trm_aplicada": 3125.47
+  },
+  {
    "folio": "RNC-2608-000011",
    "fecha": "2026-08-12",
    "origen": "Marta Ospina",
