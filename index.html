@@ -137,12 +137,12 @@
         <div class="live__top"><span class="live__dot"></span><span data-i="lv0">En vivo</span>
           <span class="live__upd" id="lvUpd"></span></div>
         <div class="live__k" data-i="lv1">Recaudado</div>
-        <div class="live__v"><span id="lvMonto">$1.312.547</span> <small>COP</small></div>
+        <div class="live__v"><span id="lvMonto">id="lvMonto">.892.547</span> <small>COP</small></div>
         <div class="live__usd" id="lvUsd"></div>
         <div class="live__track"><div class="live__fill" id="lvFill"></div></div>
-        <div class="live__pct"><span id="lvPct">0,08 %</span><span data-i="lv2">de la meta de recursos</span></div>
+        <div class="live__pct"><span id="lvPct">0,12 %</span><span data-i="lv2">de la meta de recursos</span></div>
         <div class="live__grid">
-          <div><b id="lvAportes">3</b><span id="lvAportesL">aportes registrados</span></div>
+          <div><b id="lvAportes">6</b><span id="lvAportesL">aportes registrados</span></div>
           <div><b id="lvObras">0 / 100</b><span id="lvObrasL">obras entregadas</span></div>
         </div>
       </div>
@@ -170,9 +170,9 @@
       <p class="lede" data-i="m0s">Dos metas públicas, actualizadas en vivo. Solo se mueven con evidencia detrás.</p>
     </div>
     <div class="tab rv stg" id="tablero">
-      <div><b id="tRec">$1.312.547</b><span data-i="d0">recaudado</span></div>
-      <div><b id="tPct">0,08 %</b><span data-i="d1">de la meta de US$ 500.000</span></div>
-      <div><b id="tAp">3</b><span id="tApL">aportes registrados</span></div>
+      <div><b id="tRec">id="tRec">.892.547</b><span data-i="d0">recaudado</span></div>
+      <div><b id="tPct">0,12 %</b><span data-i="d1">de la meta de US$ 500.000</span></div>
+      <div><b id="tAp">6</b><span id="tApL">aportes registrados</span></div>
       <div><b id="tOb">0 / 100</b><span data-i="d3">obras entregadas</span></div>
       <div><b id="tMu">2</b><span data-i="d4">municipios en operación</span></div>
       <div><b>8</b><span data-i="d5">organizaciones aliadas</span></div>
@@ -992,13 +992,17 @@ vacio:'Todavía no hay aportes registrados. La primera entrada aparece aquí en 
 en:{folio:'Ref.',fecha:'Date',origen:'Source',monto:'Amount',estado:'Status',
 tot:function(n){return 'Total · '+n+(n===1?' contribution logged':' contributions logged');},
 vacio:'No contributions logged yet. The first entry appears here as soon as the deposit is verified.'}};
-var APORTES=null;
+var APORTES=null, DATOS_OK=null;
 function fFecha(iso,lang){try{return new Date(iso+'T12:00:00').toLocaleDateString(lang==='en'?'en-US':'es-CO',
 {day:'2-digit',month:'short',year:'numeric'});}catch(e){return iso;}}
 function pintaRegistro(){
-var cont=document.getElementById('regT2'); if(!cont||!APORTES)return;
+var cont=document.getElementById('regT2'); if(!cont)return;
+if(!APORTES&&DATOS_OK!==false)return;
 var lang=document.documentElement.lang==='en'?'en':'es',T=R_T[lang],L=EST[lang];
-var lista=APORTES.aportes||[];
+var lista=(APORTES&&APORTES.aportes)||[];
+if(DATOS_OK===false){cont.innerHTML='<p class="reg__v reg__err">'+(lang==='en'
+?'We could not load the public log right now. It is not empty — it failed to load. Refresh the page, or write to us and we will send it to you.'
+:'No pudimos cargar el registro en este momento. No está vacío: falló la carga. Recarga la página, o escríbenos y te lo enviamos.')+'</p>';return;}
 if(!lista.length){cont.innerHTML='<p class="reg__v">'+T.vacio+'</p>';return;}
 var total=lista.reduce(function(a,x){return a+(x.monto||0);},0);
 var filas=lista.map(function(a){
@@ -1034,8 +1038,10 @@ if(typeof animarCifras==='function')animarCifras();}
 
 fetch('/data/aportes.json',{cache:'no-cache'})
 .then(function(r){return r.ok?r.json():Promise.reject(0);})
-.then(aplicarAportes)
-.catch(function(){pintaRegistro();});
+.then(function(d){if(!d||!Array.isArray(d.aportes))return Promise.reject(0);DATOS_OK=true;aplicarAportes(d);})
+.catch(function(){DATOS_OK=false;pintaRegistro();
+var av=document.getElementById('lvUpd');
+if(av)av.textContent=document.documentElement.lang==='en'?'Log unavailable':'Registro no disponible';});
 
 /* exportar el registro tal cual, para que cualquiera lo audite */
 var csvBtn=document.getElementById('regCsv');
@@ -1185,6 +1191,8 @@ function buscar(){
 var lang=document.documentElement.lang==='en'?'en':'es',L=T[lang];
 var q=norm(inp.value);
 if(!q){out.className='fol__r no';out.innerHTML='<p>'+L.vac+'</p>';return;}
+if(DATOS_OK===false){out.className='fol__r no';
+out.innerHTML='<p>'+(lang==='en'?'The log could not be loaded right now, so we cannot confirm your reference. Refresh the page or write to us.':'El registro no cargó en este momento, así que no podemos confirmar tu folio. Recarga la página o escríbenos.')+'</p>';return;}
 var lista=(APORTES&&APORTES.aportes)||[];
 var a=null;
 for(var i=0;i<lista.length;i++){if(norm(lista[i].folio)===q||norm(lista[i].folio).slice(-6)===q){a=lista[i];break;}}

@@ -94,7 +94,7 @@ letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
 .est{display:inline-flex;align-items:center;gap:7px;font-size:.8rem;color:var(--ink-soft);white-space:nowrap}
 .est i{width:7px;height:7px;border-radius:50%;background:var(--sun);flex:none}
 .est.ok i{background:var(--olive)}.est.no i{background:var(--brick)}
-.reg__v{padding:34px 0;color:var(--muted);font-size:.94rem;border-bottom:1px solid var(--line)}
+.reg__v{padding:34px 0;color:var(--muted);font-size:.94rem;border-bottom:1px solid var(--line)}.reg__err{color:var(--brick-t);border-left:3px solid var(--brick);padding-left:16px;max-width:64ch}
 @media (max-width:720px){
 .reg thead{display:none}
 .reg table,.reg tbody,.reg tr,.reg td,.reg tfoot{display:block;width:100%}

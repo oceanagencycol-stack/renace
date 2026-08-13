@@ -107,5 +107,7 @@
       "destination": "/?lang=en",
       "permanent": false
     }
-  ]
+  ],
+  "buildCommand": "node scripts/build.js",
+  "outputDirectory": "."
 }
