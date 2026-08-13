@@ -13,6 +13,16 @@
  "obras_entregadas": 0,
  "aportes": [
   {
+   "folio": "RNC-2608-000011",
+   "fecha": "2026-08-12",
+   "origen": "Marta Ospina",
+   "nota": "Aporte reportado por WhatsApp",
+   "monto": 30000,
+   "moneda": "COP",
+   "canal": "Bre-B",
+   "estado": "recibido"
+  },
+  {
    "folio": "RNC-2608-000004",
    "fecha": "2026-08-12",
    "origen": "Andrés Moya",
