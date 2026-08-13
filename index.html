@@ -103,11 +103,11 @@
   </div>
 </header>
 <main id="contenido">
-<section class="hero" id="inicio">
+<section class="hero" id="inicio" aria-labelledby="heroT">
   <div class="wrap hero__grid">
     <div>
       <span class="tag-emergencia"><i class="pulse"></i><span data-i="alerta">Emergencia activa · Sismo del 10 de agosto de 2026</span></span>
-      <h1 data-i="h1">Reconstruyendo <span class="accent">hogares</span> donde el temblor los tumbó.</h1>
+      <h1 id="heroT">Reconstruyendo <span class="accent">hogares</span> donde el temblor los tumbó.</h1>
       <p class="lede" style="margin-top:26px" data-i="hsub">Somos ocho organizaciones colombianas juntando plata para volver a levantar casas, colegios y puestos de salud en los pueblos que tumbó el terremoto. Si aportas, te damos un número. Con ese número puedes seguir tu plata hasta la obra donde terminó.</p>
       <div class="hero__actions">
         <a class="btn" href="#aportar"><span data-i="cta2">Quiero donar</span>
@@ -543,10 +543,10 @@
         <p style="color:rgba(243,238,228,.8);font-family:var(--display);font-size:1.15rem;margin-bottom:10px" data-i="f0">Reconstruyendo hogares.</p>
         <p data-i="f1">Alianza de reconstrucción tras el terremoto del 10 de agosto de 2026. Chocó, Valle del Cauca y Eje Cafetero, Colombia.</p>
       </div>
-      <div><h4 data-i="f2">La alianza</h4><ul>
+      <div><h3 data-i="f2">La alianza</h3><ul>
         <li>Fundación Un Hogar Sin Olvido</li><li>Fundación Semilla Colectiva</li><li>Buenaventura Progresa</li>
         <li>Afroz El Valle</li><li>MLK Proyectos e Inversiones</li><li>Álvaro Arroyo</li><li><a href="https://www.oceanindustries.com.co/" target="_blank" rel="noopener">Ocean Industries</a></li><li>Juan Cuero</li></ul></div>
-      <div><h4 data-i="f3">Contacto</h4><ul>
+      <div><h3 data-i="f3">Contacto</h3><ul>
         <li><a href="#" data-wa="Hola. Escribo desde la página de RENACE." data-wa-en="Hello. I am writing from the RENACE website.">WhatsApp +57 316 6891508</a></li>
         <li><a href="mailto:funhogarsinolvido@gmail.com">funhogarsinolvido@gmail.com</a></li>
         <li data-i="f4">Buenaventura, Valle del Cauca</li>
@@ -782,7 +782,8 @@ var nav=document.getElementById('nav'),menu=document.getElementById('menu'),burg
 var onScroll=function(){if(nav)nav.classList.toggle('is-stuck',window.scrollY>12);};
 window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 if(burger&&menu){
-burger.addEventListener('click',function(){var o=menu.classList.toggle('is-open');burger.setAttribute('aria-expanded',o?'true':'false');});
+burger.addEventListener('click',function(){var o=menu.classList.toggle('is-open');
+if(o){atrapaFoco(menu);}else{sueltaFoco(menu);}burger.setAttribute('aria-expanded',o?'true':'false');});
 menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('is-open');burger.setAttribute('aria-expanded','false');}});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('is-open')){menu.classList.remove('is-open');burger.setAttribute('aria-expanded','false');burger.focus();}});}
 
@@ -936,8 +937,8 @@ lbM.innerHTML=e.tipo==='video'
 lbT.innerHTML='<b>'+esc(lang==='en'&&e.titulo_en?e.titulo_en:e.titulo)+'</b>'
 +esc(lang==='en'&&e.texto_en?e.texto_en:e.texto)
 +'<span>'+fechaLarga(e.fecha,lang)+' · '+esc(e.lugar)+(e.credito?' · '+esc(e.credito):'')+'</span>';
-lb.classList.add('on');document.body.classList.add('lb-open');lbX.focus();}
-function cerrarLb(){lb.classList.remove('on');document.body.classList.remove('lb-open');lbM.innerHTML='';}
+lb.classList.add('on');atrapaFoco(lb);document.body.classList.add('lb-open');lbX.focus();}
+function cerrarLb(){lb.classList.remove('on');sueltaFoco(lb);document.body.classList.remove('lb-open');lbM.innerHTML='';}
 if(lb){
 lbX.addEventListener('click',cerrarLb);
 lb.addEventListener('click',function(e){if(e.target===lb)cerrarLb();});
@@ -964,8 +965,8 @@ var P=PROGRESO,v=document.getElementById('popV'),o=document.getElementById('popO
 if(v)v.textContent=fmtCOP(P.recaudadoCOP);
 if(o)o.textContent=P.obras+' / '+P.metaObras;
 pop.classList.add('on');document.body.classList.add('pop-open');
-popC.marcar(0);setTimeout(function(){var x=document.getElementById('popX');if(x)x.focus();},80);};
-var cerrar=function(dias){pop.classList.remove('on');document.body.classList.remove('pop-open');popC.marcar(dias||0);};
+popC.marcar(0);atrapaFoco(pop);setTimeout(function(){var x=document.getElementById('popX');if(x)x.focus();},80);};
+var cerrar=function(dias){pop.classList.remove('on');document.body.classList.remove('pop-open');sueltaFoco(pop);popC.marcar(dias||0);};
 document.getElementById('popX').addEventListener('click',function(){cerrar(0);});
 document.getElementById('popNo').addEventListener('click',function(){cerrar(7);});
 document.getElementById('popGo').addEventListener('click',function(){cerrar(30);});
@@ -1222,6 +1223,27 @@ go.addEventListener('click',buscar);
 inp.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();buscar();}});
 inp.addEventListener('search',function(){if(!inp.value)out.innerHTML='';});
 })();
+
+/* trampa de foco: en un dialogo modal el teclado no debe salirse */
+var SEL_FOCO='a[href],button:not([disabled]),input:not([disabled]),select,textarea,summary,[tabindex]:not([tabindex="-1"])';
+var _focoPrevio=null;
+function atrapaFoco(cont){
+if(!cont)return;
+_focoPrevio=document.activeElement;
+cont._trap=function(ev){
+if(ev.key!=='Tab')return;
+var f=[].filter.call(cont.querySelectorAll(SEL_FOCO),function(el){
+var r=el.getBoundingClientRect();return r.width>0&&r.height>0&&getComputedStyle(el).visibility!=='hidden';});
+if(!f.length)return;
+var pri=f[0],ult=f[f.length-1];
+if(ev.shiftKey&&document.activeElement===pri){ev.preventDefault();ult.focus();}
+else if(!ev.shiftKey&&document.activeElement===ult){ev.preventDefault();pri.focus();}
+else if(!cont.contains(document.activeElement)){ev.preventDefault();pri.focus();}};
+document.addEventListener('keydown',cont._trap,true);}
+function sueltaFoco(cont){
+if(cont&&cont._trap){document.removeEventListener('keydown',cont._trap,true);cont._trap=null;}
+if(_focoPrevio&&document.contains(_focoPrevio)){try{_focoPrevio.focus();}catch(e){}}
+_focoPrevio=null;}
 
 /* aviso comun cuando una seccion no puede cargar sus datos */
 function avisoFallo(id,queEs){
