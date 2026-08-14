@@ -134,10 +134,11 @@
       <div class="live">
         <div class="live__top"><span class="live__dot"></span><span data-i="lv0">En vivo</span>
           <span class="live__upd" id="lvUpd"></span></div>
-        <div class="live__k" data-i="lv1">Avance de la meta</div>
-        <div class="live__v"><span id="lvPct">0,20 %</span></div>
-        <div class="live__usd" id="lvUsd" data-i="lv2">de la meta de US$ 500.000 en recursos</div>
+        <div class="live__k" data-i="lv1">Recaudado</div>
+        <div class="live__v"><span id="lvMonto">$3.054.547</span> <small>COP</small></div>
+        <div class="live__usd" id="lvUsd">≈ US$ 977 de la meta de US$ 500.000</div>
         <div class="live__track"><div class="live__fill" id="lvFill"></div></div>
+        <div class="live__pct"><span id="lvPct">0,20 %</span><span data-i="lv2">de la meta de recursos</span></div>
         <div class="live__grid">
           <div><b id="lvAportes">14</b><span id="lvAportesL">aportes registrados</span></div>
           <div><b id="lvObras">0 / 100</b><span id="lvObrasL">obras entregadas</span></div>
@@ -167,6 +168,7 @@
       <p class="lede" data-i="m0s">Dos metas públicas, actualizadas en vivo. Solo se mueven con evidencia detrás.</p>
     </div>
     <div class="tab rv stg" id="tablero">
+      <div><b id="tRec">$3.054.547</b><span data-i="d0">recaudado</span></div>
       <div><b id="tPct">0,20 %</b><span data-i="d1">de avance sobre la meta</span></div>
       <div><b id="tAp">14</b><span id="tApL">aportes registrados</span></div>
       <div><b id="tOb">0 / 100</b><span data-i="d3">obras entregadas</span></div>
@@ -193,7 +195,7 @@
       <header class="reg__h">
         <div>
           <h3 id="regT" data-i="lg0">Registro público de aportes</h3>
-          <p data-i="lg1">Cada aporte se publica con su folio y su fecha, sin excepciones. Por seguridad de quienes donan no publicamos montos, ni por aporte ni en total.</p>
+          <p data-i="lg1">Cada aporte se publica con su folio y su fecha, sin excepciones. Publicamos el total recaudado, pero no cuánto puso cada persona: eso es asunto suyo.</p>
         </div>
         <button class="reg__csv" id="regCsv" type="button">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
@@ -596,7 +598,7 @@
     <h2 id="popT" data-i="pp0">Tu aporte no se pierde de vista.</h2>
     <p id="popD" data-i="pp1">Cada aporte recibe un folio y queda publicado. La obra que financia se publica con factura, acta de entrega y fotos.</p>
     <div class="pop__n">
-      <div><b id="popV">—</b><span data-i="pp2">de la meta</span></div>
+      <div><b id="popV">—</b><span data-i="pp2">recaudado</span></div>
       <div><b id="popO">—</b><span data-i="pp3">obras entregadas</span></div>
       <div><b>0 %</b><span data-i="pp4">de comisión de la alianza</span></div>
     </div>
@@ -617,7 +619,7 @@
 <script>(function(){
 'use strict';
 var WA='573166891508',CUENTA='108900830473';
-var PROGRESO={pct:0.19,aportes:13,obras:0,metaObras:100,metaUSD:500000,
+var PROGRESO={recaudadoCOP:3054547,trm:3125.47,aportes:14,obras:0,metaObras:100,metaUSD:500000,
 actualizado:{es:'Actualizado 13 ago 2026',en:'Updated Aug 12, 2026'}};
 var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 var VIA='banco', pkMonto2=250000;
@@ -629,10 +631,12 @@ function fmtCOP(n){return '$'+Number(n||0).toLocaleString('es-CO');}
 function fmtPct(v,lang){var t=(v>0&&v<0.01)?'<0,01':Number(v).toFixed(2);
 return (lang==='en'?t.replace(',','.'):t.replace('.',','))+' %';}
 function pintarProgreso(lang){
-var P=PROGRESO,pct=(typeof P.pct==='number'?P.pct:0);
+var P=PROGRESO,usd=P.recaudadoCOP/P.trm,pct=usd/P.metaUSD*100;
 var pctTxt=(pct>0&&pct<0.01)?'<0,01 %':(pct.toFixed(2).replace('.',',')+' %');
 if(lang==='en')pctTxt=(pct>0&&pct<0.01)?'<0.01 %':(pct.toFixed(2)+' %');
 var set=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};
+set('lvMonto',fmtCOP(P.recaudadoCOP));
+set('lvUsd',(lang==='en'?'\u2248 US$ ':'\u2248 US$ ')+Math.round(usd).toLocaleString(lang==='en'?'en-US':'es-CO')+(lang==='en'?' of the US$ 500,000 goal':' de la meta de US$ 500.000'));
 set('lvPct',pctTxt); set('mPct',pctTxt);
 set('lvAportes',P.aportes); set('lvObras',P.obras+' / '+P.metaObras); set('mObras',P.obras+' / '+P.metaObras);
 set('lvUpd',P.actualizado[lang==='en'?'en':'es']);
@@ -688,15 +692,15 @@ t21:'Honest status: the receipt above is real, with the data of the first contri
 e4:'How to give today',a0:'Where to transfer, depending on where you are.',a1:'Three routes. Take whichever is easiest for you. All three end up in the same place and all three land in the same public log.',
 a4:'Savings account · Davivienda (Colombia)',a5:'Account holder: Fundaci\u00f3n Hogar Sin Olvido<br>Tax ID 901.047.625-4 · Buenaventura, Colombia',
 cop:'Copy number',a6:'Send the receipt over WhatsApp and we send back your tracking number',a7:'No alliance commission: 100 % goes into the operation',
-lv0:'Live',lv1:'Progress toward the goal',lv2:'of the US$ 500,000 funding goal',lv3:'contribution logged',lv4:'projects delivered',
-lg0:'Public contribution log',lg1:'Every contribution is published with its reference and its date, no exceptions. For the safety of those who give, we do not publish amounts \u2014 not per contribution and not in total.',
+lv0:'Live',lv1:'Raised so far',lv2:'of the funding goal',lv3:'contribution logged',lv4:'projects delivered',
+lg0:'Public contribution log',lg1:'Every contribution is published with its reference and its date, no exceptions. We publish the total raised, but not how much each person gave \u2014 that is their business.',
 lg10:'Download CSV',
 lg11:'Reference numbers run in sequence and are never reused. The ones missing here were system tests during setup and do not correspond to money received. A real contribution is never deleted.',
 t2b:'This is where reference <b>RNC-2608-000001</b> stands \u2014 the first logged contribution.',
 u2:'Three more ways to give: instantly from any Colombian bank, from a US dollar wallet, or by bank transfer from the United States.',
 pp0:'Your contribution stays in sight.',
 pp1:'Every contribution gets a reference and is published. The work it funds is published with its invoice, delivery record and photos.',
-pp2:'of the goal',pp3:'projects delivered',pp4:'alliance commission',
+pp2:'raised',pp3:'projects delivered',pp4:'alliance commission',
 pp5:'Donate now',pp6:'See the public log',pp7:'Not right now, thanks',
 d0:'raised',d1:'progress toward the goal',d2:'contributions logged',d3:'projects delivered',
 d4:'municipalities in operation',d5:'partner organizations',n7:'Map',
@@ -751,7 +755,7 @@ v10:'Your card details or access to your banking app',v11:'To transfer to any ac
 v12:'To donate urgently or before a deadline',v13:'Only official page:',
 b0:'Aug 10, 2026',b1:'The earthquake',b2:'Magnitude 7.4 at 7:34 a.m., epicenter in San Jos\u00e9 del Palmar. The alliance organizations begin assessing needs in Buenaventura, Choc\u00f3 and Cali.',
 s0:'Share on WhatsApp',s1:'Share on X',s2:'LinkedIn',s3:'Copy link',
-dk0:'of the US$ 500,000 goal',dk1:'Donate',
+dk0:'raised of the US$ 500,000 goal',dk1:'Donate',
 e5:'Transparency',x0:'Who receives, who executes and with what paperwork.',
 x1:'Fundaci\u00f3n Hogar Sin Olvido receives the money and spends it. It is a non-profit, founded in 2016, and the Valle del Cauca Government oversees it.',
 x2:'Legal name',x3:'Tax ID (NIT)',x4:'Legal representative',x5:'Domicile',x5v:'Buenaventura, Valle del Cauca, Colombia',x6:'Incorporated',x7:'January 20, 2016',x8:'Oversight',x9:'Valle del Cauca Government',x10:'Email',x11:'Contact',
@@ -846,9 +850,10 @@ var t0=null;function paso(t){if(!t0)t0=t;var p=Math.min((t-t0)/ms,1);
 var e=1-Math.pow(1-p,3);el.textContent=fmt(Math.round(fin*e));
 if(p<1)requestAnimationFrame(paso);}requestAnimationFrame(paso);}
 function animarCifras(){
-var P=PROGRESO,a=document.getElementById('lvAportes');
+var P=PROGRESO,m=document.getElementById('lvMonto'),a=document.getElementById('lvAportes');
+if(m&&!m.dataset.done){m.dataset.done='1';contar(m,P.recaudadoCOP,1200,fmtCOP);}
 if(a&&!a.dataset.done){a.dataset.done='1';contar(a,P.aportes,700,function(v){return String(v);});}
-var d=document.getElementById('dkV');if(d)d.textContent=fmtPct(P.pct,document.documentElement.lang==='en'?'en':'es');}
+var d=document.getElementById('dkV');if(d)d.textContent=fmtCOP(P.recaudadoCOP);}
 
 /* tres vias de aporte, una sola superficie */
 function pintaPicker(){
@@ -994,7 +999,7 @@ marcar:function(dias){try{sessionStorage.setItem('renace_pop','1');if(dias)local
 var abrir=function(){
 if(popC.ver()||pop.classList.contains('on'))return;
 var P=PROGRESO,v=document.getElementById('popV'),o=document.getElementById('popO');
-if(v)v.textContent=fmtPct(P.pct,document.documentElement.lang==='en'?'en':'es');
+if(v)v.textContent=fmtCOP(P.recaudadoCOP);
 if(o)o.textContent=P.obras+' / '+P.metaObras;
 pop.classList.add('on');document.body.classList.add('pop-open');
 popC.marcar(0);atrapaFoco(pop);setTimeout(function(){var x=document.getElementById('popX');if(x)x.focus();},80);};
@@ -1053,7 +1058,8 @@ cont.innerHTML='<table><thead><tr><th>'+T.folio+'</th><th>'+T.fecha+'</th><th>'+
 function aplicarAportes(d){
 APORTES=d;
 PROGRESO.aportes=(d.aportes||[]).length;
-if(typeof d.avance_pct==='number')PROGRESO.pct=d.avance_pct;
+if(typeof d.total_cop==='number')PROGRESO.recaudadoCOP=d.total_cop;
+if(typeof d.trm==='number')PROGRESO.trm=d.trm;
 if(typeof d.obras_entregadas==='number')PROGRESO.obras=d.obras_entregadas;
 if(d.meta_usd)PROGRESO.metaUSD=d.meta_usd;
 if(d.meta_obras)PROGRESO.metaObras=d.meta_obras;
@@ -1064,7 +1070,7 @@ var lang=document.documentElement.lang==='en'?'en':'es';
 pintarProgreso(lang); pintaRegistro(); if(typeof pintaTablero==='function')pintaTablero(); if(typeof pintaComprobante==='function')pintaComprobante();
 document.querySelectorAll('[data-fill],#lvFill,#mFillUsd,#mFillObras').forEach(function(el){
 if(el.getAttribute('data-fill'))el.style.width=el.getAttribute('data-fill');});
-['lvAportes'].forEach(function(id){var e=document.getElementById(id);if(e)delete e.dataset.done;});
+['lvMonto','lvAportes'].forEach(function(id){var e=document.getElementById(id);if(e)delete e.dataset.done;});
 if(typeof animarCifras==='function')animarCifras();}
 
 fetch('/data/aportes.json',{cache:'no-cache'})

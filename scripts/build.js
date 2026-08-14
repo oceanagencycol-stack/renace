@@ -33,7 +33,7 @@ const NEUTRA = { es: 'Aporte verificado con comprobante', en: 'Contribution veri
 const ANON = { es: 'Aporte anónimo por decisión de quien donó', en: 'Anonymous contribution by the donor choice' };
 
 const ap = leerJSON('data/aportes.json');
-let n = 0, obras = '0 / 100', pct = '0,00 %', cambio = false;
+let n = 0, obras = '0 / 100', pct = '0,00 %', total = 0, usd = 0, cambio = false;
 
 if (ap) {
   if (!Array.isArray(ap.aportes)) errores.push('aportes.json — "aportes" debe ser una lista');
@@ -70,13 +70,17 @@ if (ap) {
         saneados.push(`${a.folio}: se quitó un número largo del campo "origen"`);
       }
     });
-    if (typeof ap.avance_pct !== 'number' || ap.avance_pct < 0 || ap.avance_pct > 100)
-      errores.push('aportes.json — "avance_pct" debe ser un número entre 0 y 100');
+    if (typeof ap.total_cop !== 'number' || !isFinite(ap.total_cop) || ap.total_cop < 0)
+      errores.push('aportes.json — "total_cop" debe ser el total recaudado en pesos, como número');
+    if (typeof ap.trm !== 'number' || ap.trm <= 0)
+      errores.push('aportes.json — "trm" debe ser un número mayor que cero');
     if (!esFecha(ap.actualizado)) avisos.push('aportes.json — "actualizado" con fecha inválida');
     if (!errores.length) {
       n = ap.aportes.length;
       obras = `${ap.obras_entregadas || 0} / ${ap.meta_obras || 100}`;
-      pct = ap.avance_pct.toFixed(2).replace('.', ',') + ' %';
+      total = ap.total_cop;
+      usd = Math.round(total / ap.trm);
+      pct = (total / ap.trm / (ap.meta_usd || 500000) * 100).toFixed(2).replace('.', ',') + ' %';
     }
   }
 }
@@ -130,12 +134,15 @@ if (cambio) {
 const idx = path.join(RAIZ, 'index.html');
 let html = fs.readFileSync(idx, 'utf8');
 let cambios = 0;
-for (const [id, valor] of [['tPct',pct],['tAp',String(n)],['tOb',obras],
-                           ['lvPct',pct],['lvAportes',String(n)],['lvObras',obras],['mPct',pct]]) {
+const fmt = v => '$' + v.toLocaleString('es-CO');
+const usdTxt = '\u2248 US$ ' + usd.toLocaleString('es-CO') + ' de la meta de US$ 500.000';
+for (const [id, valor] of [['tPct',pct],['tAp',String(n)],['tOb',obras],['tRec',fmt(total)],
+                           ['lvPct',pct],['lvAportes',String(n)],['lvObras',obras],['mPct',pct],
+                           ['lvMonto',fmt(total)],['lvUsd',usdTxt]]) {
   const re = new RegExp(`(id="${id}"[^>]*>)([^<]*)(<)`);
   const m = html.match(re);
   if (m && m[2] !== valor) { html = html.replace(re, (_, a, __, c) => a + valor + c); cambios++; }
 }
 if (cambios) fs.writeFileSync(idx, html);
-console.log(`✅ Publicando · ${n} aportes · ${pct} de la meta · sin montos`);
+console.log(`✅ Publicando · ${n} aportes · ${fmt(total)} · ${pct} de la meta · sin montos individuales`);
 console.log(`   Cifras del HTML sincronizadas (${cambios} ${cambios === 1 ? 'cambio' : 'cambios'}).\n`);
