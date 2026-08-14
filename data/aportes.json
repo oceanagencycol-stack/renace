@@ -14,6 +14,28 @@
  "obras_entregadas": 0,
  "aportes": [
   {
+   "folio": "RNC-2608-000035",
+   "fecha": "2026-08-13",
+   "origen": "Yoselin Reyes",
+   "nota": "Aporte por Bre-B, verificado con comprobante",
+   "nota_en": "Contribution via Bre-B, verified with receipt",
+   "monto": 7000,
+   "moneda": "COP",
+   "canal": "Bre-B",
+   "estado": "recibido"
+  },
+  {
+   "folio": "RNC-2608-000034",
+   "fecha": "2026-08-13",
+   "origen": "Juan Camilo Cárdenas Campo",
+   "nota": "Aporte por Bre-B, verificado con comprobante",
+   "nota_en": "Contribution via Bre-B, verified with receipt",
+   "monto": 200000,
+   "moneda": "COP",
+   "canal": "Bre-B",
+   "estado": "recibido"
+  },
+  {
    "folio": "RNC-2608-000011",
    "fecha": "2026-08-12",
    "origen": "Marta Ospina",
