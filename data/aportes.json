@@ -4,7 +4,8 @@
   "como_agregar": "Añade el objeto al principio de 'aportes' y sube 'actualizado'. git push y la web se actualiza sola.",
   "estados": "recibido | en_asignacion | comprado | entregado | no_ejecutado | costo_operacion",
   "regla": "Si un aporte no se pudo ejecutar, se registra igual con estado no_ejecutado y su razón.",
-  "costos_operacion": "Los gastos de operar (transporte, bodegaje, transferencias, papeleo) salen de lo recaudado y se registran aquí con estado 'costo_operacion' y su factura. Cero comisión significa que nadie de la alianza cobra un porcentaje como ingreso, no que el 100% llegue en materiales."
+  "costos_operacion": "Los gastos de operar (transporte, bodegaje, transferencias, papeleo) salen de lo recaudado y se registran aquí con estado 'costo_operacion' y su factura. Cero comisión significa que nadie de la alianza cobra un porcentaje como ingreso, no que el 100% llegue en materiales.",
+  "numeracion": "Los folios son consecutivos y no se reutilizan. Los que no aparecen en el registro fueron pruebas del sistema durante la puesta en marcha y no corresponden a dinero recibido. Nunca se borra un aporte real."
  },
  "actualizado": "2026-08-13",
  "trm": 3125.47,

@@ -202,6 +202,7 @@
           <span data-i="lg10">Descargar CSV</span></button>
       </header>
       <div class="reg__t" id="regT2"></div>
+      <p class="reg__num" data-i="lg11">Los folios son consecutivos y no se reutilizan. Los que no aparecen aquí fueron pruebas del sistema durante la puesta en marcha y no corresponden a dinero recibido. Un aporte real nunca se borra.</p>
     </section>
     <section class="nov rv" aria-labelledby="novT">
       <header class="nov__h"><h3 id="novT" data-i="n20">Qué está pasando</h3>
@@ -692,6 +693,7 @@ cop:'Copy number',a6:'Send the receipt over WhatsApp and we send back your track
 lv0:'Live',lv1:'Raised so far',lv2:'of the funding goal',lv3:'contribution logged',lv4:'projects delivered',
 lg0:'Public contribution log',lg1:'Every entry gets published. No exceptions, including the ones that could not be executed.',
 lg10:'Download CSV',
+lg11:'Reference numbers run in sequence and are never reused. The ones missing here were system tests during setup and do not correspond to money received. A real contribution is never deleted.',
 t2b:'This is where reference <b>RNC-2608-000001</b> stands \u2014 the first logged contribution.',
 u2:'Three more ways to give: instantly from any Colombian bank, from a US dollar wallet, or by bank transfer from the United States.',
 pp0:'Your contribution stays in sight.',
@@ -1233,11 +1235,13 @@ var norm=function(v){return String(v||'').toUpperCase().replace(/[^A-Z0-9]/g,'')
 var PASOS={recibido:20,en_asignacion:40,comprado:60,entregado:100,no_ejecutado:0,costo_operacion:100};
 var T={es:{ok:'Encontrado en el registro público',no:'No encontrado',
  f:'Folio',d:'Fecha',o:'Origen',m:'Monto',e:'Estado',p:'Ejecutado',
- nada:'No encontramos ese folio en el registro. Puede que todavía no esté verificado — ',esc:'escríbenos y lo revisamos',
+ nada:'No encontramos ese folio en el registro. Puede que todavía no esté verificado — ',
+ prueba:'Ese folio se emitió durante las pruebas del sistema y no corresponde a un aporte recibido. Si tú lo tienes de un aporte real, ',esc:'escríbenos y lo revisamos',
  vac:'Escribe el folio que quieres consultar.'},
  en:{ok:'Found in the public log',no:'Not found',
  f:'Reference',d:'Date',o:'Source',m:'Amount',e:'Status',p:'Executed',
- nada:'We could not find that number in the log. It may not be verified yet — ',esc:'write to us and we will check it',
+ nada:'We could not find that number in the log. It may not be verified yet — ',
+ prueba:'That number was issued while the system was being tested and does not match a contribution we received. If yours came from a real contribution, ',esc:'write to us and we will check it',
  vac:'Enter the reference you want to look up.'}};
 function buscar(){
 var lang=document.documentElement.lang==='en'?'en':'es',L=T[lang];
@@ -1249,8 +1253,11 @@ var lista=(APORTES&&APORTES.aportes)||[];
 var a=null;
 for(var i=0;i<lista.length;i++){if(norm(lista[i].folio)===q||norm(lista[i].folio).slice(-6)===q){a=lista[i];break;}}
 if(!a){
+var mx=0; for(var j=0;j<lista.length;j++){var v=parseInt(String(lista[j].folio).replace(/\D/g,'').slice(-6),10);if(v>mx)mx=v;}
+var pedido=parseInt(q.replace(/\D/g,'').slice(-6),10);
+var prueba=(pedido>0&&pedido<mx);
 out.className='fol__r no';
-out.innerHTML='<div class="ttl"><span>'+L.no+'</span></div><p>'+L.nada
+out.innerHTML='<div class="ttl"><span>'+L.no+'</span></div><p>'+(prueba?L.prueba:L.nada)
 +'<a href="'+waLink(lang==='en'?'Hello. I would like to check my RENACE contribution reference: '+inp.value:'Hola. Quiero consultar mi folio de aporte a RENACE: '+inp.value)
 +'" target="_blank" rel="noopener">'+L.esc+'</a>.</p>';return;}
 var nota=(lang==='en'&&a.nota_en?a.nota_en:a.nota)||'';

@@ -3,8 +3,24 @@
   "tipos": "noticia | necesidad | avance | alerta",
   "como_agregar": "Añade al principio del array y empuja."
  },
- "actualizado": "2026-08-12",
+ "actualizado": "2026-08-13",
  "novedades": [
+  {
+   "fecha": "2026-08-13",
+   "tipo": "avance",
+   "titulo": "El RUT de la fundación ya se descarga desde la página",
+   "titulo_en": "The foundation tax registration is now downloadable from this page",
+   "texto": "Publicamos el registro de la DIAN con el NIT, la razón social y el régimen tributario. Van las hojas 1 y 2; las otras cuatro traen cédulas de la junta y del revisor fiscal, y esas no se publican.",
+   "texto_en": "We published the DIAN record with the tax ID, the legal name and the tax regime. Sheets 1 and 2 only; the other four carry the ID numbers of the board and the auditor, and those do not get published."
+  },
+  {
+   "fecha": "2026-08-13",
+   "tipo": "avance",
+   "titulo": "Entran los primeros aportes de fuera de la alianza",
+   "titulo_en": "The first contributions from outside the alliance arrive",
+   "texto": "Andrés Moya y Marta Ospina aportan por su cuenta. Hasta ahora todo lo recaudado venía de las mismas organizaciones que montaron esto. Dejamos de ser solo nosotros.",
+   "texto_en": "Andrés Moya and Marta Ospina give on their own. Until now everything raised came from the same organizations that set this up. We are no longer just us."
+  },
   {
    "fecha": "2026-08-12",
    "tipo": "avance",
