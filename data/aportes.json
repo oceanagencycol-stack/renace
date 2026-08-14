@@ -14,6 +14,16 @@
  "obras_entregadas": 0,
  "aportes": [
   {
+   "folio": "RNC-2608-000037",
+   "fecha": "2026-08-14",
+   "origen": "Andrea Lorena Herrera Vargas",
+   "nota": "Comprobante TREzuNF9m2EC · 14/08/2026 07:40 · pidió su folio",
+   "monto": 105000,
+   "moneda": "COP",
+   "canal": "Bre-B",
+   "estado": "recibido"
+  },
+  {
    "folio": "RNC-2608-000036",
    "fecha": "2026-08-14",
    "origen": "Aporte anónimo",
