@@ -107,7 +107,7 @@
   <div class="wrap hero__grid">
     <div>
       <span class="tag-emergencia"><i class="pulse"></i><span data-i="alerta">Emergencia activa · Sismo del 10 de agosto de 2026</span></span>
-      <h1 id="heroT">Reconstruyendo <span class="accent">hogares</span> donde el temblor los tumbó.</h1>
+      <h1 id="heroT" data-i="h1">Reconstruyendo <span class="accent">hogares</span> donde el temblor los tumbó.</h1>
       <p class="lede" style="margin-top:26px" data-i="hsub">Somos ocho organizaciones colombianas juntando plata para volver a levantar casas, colegios y puestos de salud en los pueblos que tumbó el terremoto. Si aportas, te damos un número. Con ese número puedes seguir tu plata hasta la obra donde terminó.</p>
       <div class="hero__actions">
         <a class="btn" href="#aportar"><span data-i="cta2">Quiero donar</span>
@@ -135,11 +135,11 @@
         <div class="live__top"><span class="live__dot"></span><span data-i="lv0">En vivo</span>
           <span class="live__upd" id="lvUpd"></span></div>
         <div class="live__k" data-i="lv1">Avance de la meta</div>
-        <div class="live__v"><span id="lvPct">0,19 %</span></div>
+        <div class="live__v"><span id="lvPct">0,20 %</span></div>
         <div class="live__usd" id="lvUsd" data-i="lv2">de la meta de US$ 500.000 en recursos</div>
         <div class="live__track"><div class="live__fill" id="lvFill"></div></div>
         <div class="live__grid">
-          <div><b id="lvAportes">13</b><span id="lvAportesL">aportes registrados</span></div>
+          <div><b id="lvAportes">14</b><span id="lvAportesL">aportes registrados</span></div>
           <div><b id="lvObras">0 / 100</b><span id="lvObrasL">obras entregadas</span></div>
         </div>
       </div>
@@ -167,8 +167,8 @@
       <p class="lede" data-i="m0s">Dos metas públicas, actualizadas en vivo. Solo se mueven con evidencia detrás.</p>
     </div>
     <div class="tab rv stg" id="tablero">
-      <div><b id="tPct">0,19 %</b><span data-i="d1">de avance sobre la meta</span></div>
-      <div><b id="tAp">13</b><span id="tApL">aportes registrados</span></div>
+      <div><b id="tPct">0,20 %</b><span data-i="d1">de avance sobre la meta</span></div>
+      <div><b id="tAp">14</b><span id="tApL">aportes registrados</span></div>
       <div><b id="tOb">0 / 100</b><span data-i="d3">obras entregadas</span></div>
       <div><b id="tMu">2</b><span data-i="d4">municipios en operación</span></div>
       <div><b>8</b><span data-i="d5">organizaciones aliadas</span></div>
@@ -186,7 +186,7 @@
         <div class="meta__v num" style="color:var(--olive)">US$ 500.000</div>
         <div class="meta__d" data-i="m2d">entre donantes individuales, empresas aliadas y cooperación internacional. <strong>Nadie de la alianza cobra comisión.</strong> Los costos de operar sí salen de lo recaudado y se publican con su factura.</div>
         <div class="meta__track"><div class="meta__fill" id="mFillUsd"></div></div>
-        <div class="meta__foot"><span data-i="mav2">Avance verificado</span><span class="num" id="mPct">0,19 %</span></div>
+        <div class="meta__foot"><span data-i="mav2">Avance verificado</span><span class="num" id="mPct">0,20 %</span></div>
       </div>
     </div>
     <section class="reg rv" aria-labelledby="regT">
@@ -702,9 +702,6 @@ d0:'raised',d1:'progress toward the goal',d2:'contributions logged',d3:'projects
 d4:'municipalities in operation',d5:'partner organizations',n7:'Map',
 tb0:'Need help right now, or want to report where hands are missing?',
 tb1:'Community emergency map, live · in Spanish',
-eg0:'If what you need is help right now',eg1:'Community emergency map',
-eg2:'Hundreds of people coordinate there, live, where hands are missing, where there are already enough, and what is needed at each address across Valle, Chocó and Cauca. You can check it or add a point.',
-eg3:'It is not ours. It was built and is maintained by Artefacto. We link it because it solves the immediate emergency, which is not what RENACE does.',
 eg4:'Open the emergency map',f9:'Emergency map (Artefacto) ↗',
 ay0:'If you need help right now',ay1:'We do not provide this, but you should know about it.',
 ay2:'RENACE rebuilds, which is what comes later. If what you need today is shelter, coordination or an emergency line, here is who does provide it and what they will ask you for.',
@@ -715,8 +712,6 @@ al2:'Eight organizations with different trades. None of them could do this alone
 al3:'The legal details of the entity that receives and executes are in the transparency section, and can be checked on RUES and DIAN.',n8:'The alliance',
 fl0:'Look up your tracking number',fl1:'Search',
 fl2:'Enter the number we sent you over WhatsApp. The search runs in your browser, against the same public log you can download.',
-fl3:'Not found',fl4:'We could not find that number. It may not be logged yet — write to us and we will check it.',
-fl5:'Found in the public log',fl6:'Write to us',
 cm0:'Real document · first contribution',cm1:'Reference',cm2:'Logged',cm3:'Date',cm4:'Source',cm5:'Amount',cm6:'Status',cm7:'Executed',
 cm8:'This is not a mock-up. It is the first entry of the public log, the same data you can download as CSV above.',
 mp0:'Where we are',mp1:'The operation map.',
@@ -726,7 +721,6 @@ n20:'What is happening',n21:'Updates, progress and new needs, dated.',
 rutv0:'Foundation tax registration — download it',rutv1:'The DIAN record, sheets 1 and 2, with no personal data of the board',
 ru0:'Download the foundation tax registration',
 ru1:'The DIAN record with the tax ID, the legal name and the tax regime. Compare it with what this page says before you transfer.',
-ru2:'The official document, right here',
 w33:'Transfer through the route you picked',
 w34:'Copy the details above and do it from your bank or your app. It is fine if the amount differs from the one you selected.',
 w35:'Send us the receipt over WhatsApp',
@@ -744,7 +738,6 @@ w14:'DolarApp · in US dollars, from the app',w15:'Or by bank transfer from the 
 w16:'Bank',w17:'Account number',w18:'ABA / Routing',w19:'Type',w20:'Checking',w21:'Bank address',
 w22:'Director of the alliance. Temporary channel while the foundation enables its US dollar account; what is received is transferred to the foundation and gets a tracking number.',
 w23:'Amount',w24:'Tell us and get your tracking number',
-w25:'Once you transfer, send us the receipt over WhatsApp. We send back your tracking number and your contribution enters the public log on this page.',
 w26:'Would you rather give in kind?',w27:'Roof tiles, cement, timber and tools. School furniture. Food, water and hygiene. Mattresses and blankets. We do not accept used clothing, medicines or perishables.',
 w28:'Arrange a delivery →',
 w29:'Coming from a company or foundation?',w30:'You can sponsor a full project, provide transport and warehousing to the Pacific coast, or mobilise your team. You receive an execution report with invoice and delivery record.',
