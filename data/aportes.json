@@ -5,10 +5,13 @@
   "estados": "recibido | en_asignacion | comprado | entregado | no_ejecutado | costo_operacion",
   "regla": "Si un aporte no se pudo ejecutar, se registra igual con estado no_ejecutado y su razón.",
   "costos_operacion": "Los gastos de operar (transporte, bodegaje, transferencias, papeleo) salen de lo recaudado y se registran aquí con estado 'costo_operacion' y su factura. Cero comisión significa que nadie de la alianza cobra un porcentaje como ingreso, no que el 100% llegue en materiales.",
-  "numeracion": "Los folios son consecutivos y no se reutilizan. Los que no aparecen en el registro fueron pruebas del sistema durante la puesta en marcha y no corresponden a dinero recibido. Nunca se borra un aporte real."
+  "numeracion": "Los folios son consecutivos y no se reutilizan. Los que no aparecen en el registro fueron pruebas del sistema durante la puesta en marcha y no corresponden a dinero recibido. Nunca se borra un aporte real.",
+  "privacidad": "Por seguridad NO se publican montos, ni por aporte ni en total. Lo único público es 'avance_pct'. El registro de montos se lleva aparte, fuera de este repositorio.",
+  "avance_pct": "Porcentaje de avance sobre la meta = (total recaudado en COP / trm / meta_usd) x 100, con dos decimales. Actualízalo cada vez que agregues aportes.",
+  "campos": "folio · fecha · origen · nota · canal · estado. NUNCA agregues 'monto' aquí.",
+  "notas": "La nota es pública. NUNCA debe contener referencias de transacción, números de cuenta, documentos, horas exactas ni nombres de terceros. Solo una descripción neutra del aporte."
  },
  "actualizado": "2026-08-14",
- "trm": 3125.47,
  "meta_usd": 500000,
  "meta_obras": 100,
  "obras_entregadas": 0,
@@ -17,9 +20,7 @@
    "folio": "RNC-2608-000041",
    "fecha": "2026-08-14",
    "origen": "Natalia Idárraga",
-   "nota": "Bre-B 14/08 10:22 · titular Natalia Idárraga Tunjo · sin contacto por WhatsApp",
-   "monto": 50000,
-   "moneda": "COP",
+   "nota": "Aporte verificado con comprobante",
    "canal": "Bre-B",
    "estado": "recibido"
   },
@@ -28,8 +29,6 @@
    "fecha": "2026-08-14",
    "origen": "Aporte anónimo",
    "nota": "Aporte por Bre-B",
-   "monto": 100000,
-   "moneda": "COP",
    "canal": "Bre-B",
    "estado": "recibido"
   },
@@ -37,9 +36,7 @@
    "folio": "RNC-2608-000039",
    "fecha": "2026-08-14",
    "origen": "Catalina Hernández",
-   "nota": "Comprobante TRj79qKf2lEC · 14/08 09:29 · titular Laura Catalina Hernández Parra",
-   "monto": 100000,
-   "moneda": "COP",
+   "nota": "Aporte verificado con comprobante",
    "canal": "Bre-B",
    "estado": "recibido"
   },
@@ -47,9 +44,7 @@
    "folio": "RNC-2608-000038",
    "fecha": "2026-08-14",
    "origen": "Sergio Puerto",
-   "nota": "Transferencia a Fundación AA · Davivienda 108900830473 · 14/08 08:40",
-   "monto": 500000,
-   "moneda": "COP",
+   "nota": "Aporte verificado con comprobante",
    "canal": "Davivienda",
    "estado": "recibido"
   },
@@ -57,9 +52,7 @@
    "folio": "RNC-2608-000037",
    "fecha": "2026-08-14",
    "origen": "Lorena Herrera",
-   "nota": "Comprobante TREzuNF9m2EC · 14/08/2026 07:40 · pidió su folio",
-   "monto": 105000,
-   "moneda": "COP",
+   "nota": "Aporte verificado con comprobante",
    "canal": "Bre-B",
    "estado": "recibido"
   },
@@ -67,9 +60,7 @@
    "folio": "RNC-2608-000036",
    "fecha": "2026-08-14",
    "origen": "Aporte anónimo",
-   "nota": "Comprobante TRLTJ7iLvmEC · 14/08/2026 · la donante pidió que sea anónimo",
-   "monto": 50000,
-   "moneda": "COP",
+   "nota": "Aporte anónimo por decisión de quien donó",
    "canal": "Bre-B",
    "estado": "recibido"
   },
@@ -79,8 +70,6 @@
    "origen": "Yoselin Reyes",
    "nota": "Aporte por Bre-B, verificado con comprobante",
    "nota_en": "Contribution via Bre-B, verified with receipt",
-   "monto": 7000,
-   "moneda": "COP",
    "canal": "Bre-B",
    "estado": "recibido"
   },
@@ -90,8 +79,6 @@
    "origen": "Juan Camilo Cárdenas Campo",
    "nota": "Aporte por Bre-B, verificado con comprobante",
    "nota_en": "Contribution via Bre-B, verified with receipt",
-   "monto": 200000,
-   "moneda": "COP",
    "canal": "Bre-B",
    "estado": "recibido"
   },
@@ -100,8 +87,6 @@
    "fecha": "2026-08-12",
    "origen": "Marta Ospina",
    "nota": "Aporte reportado por WhatsApp",
-   "monto": 30000,
-   "moneda": "COP",
    "canal": "Bre-B",
    "estado": "recibido"
   },
@@ -110,8 +95,6 @@
    "fecha": "2026-08-12",
    "origen": "Andrés Moya",
    "nota": "Aporte reportado con comprobante",
-   "monto": 500000,
-   "moneda": "COP",
    "canal": "Davivienda",
    "estado": "recibido"
   },
@@ -121,11 +104,6 @@
    "origen": "Ocean Industries y aliados",
    "nota": "Aporte en dólares desde el exterior",
    "nota_en": "Contribution in US dollars from abroad",
-   "monto": 312547,
-   "moneda": "COP",
-   "monto_orig": 100,
-   "moneda_orig": "USD",
-   "trm_aplicada": 3125.47,
    "canal": "DolarApp",
    "estado": "en_asignacion"
   },
@@ -135,8 +113,6 @@
    "origen": "Álvaro Arroyo",
    "nota": "Aliado de la alianza",
    "nota_en": "Alliance partner",
-   "monto": 500000,
-   "moneda": "COP",
    "canal": "Bre-B",
    "estado": "en_asignacion"
   },
@@ -146,10 +122,9 @@
    "origen": "Fundación Hogar Sin Olvido",
    "nota": "Aporte semilla de la alianza",
    "nota_en": "Alliance seed contribution",
-   "monto": 500000,
-   "moneda": "COP",
    "canal": "Davivienda",
    "estado": "en_asignacion"
   }
- ]
+ ],
+ "avance_pct": 0.19
 }

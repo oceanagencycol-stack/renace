@@ -29,7 +29,7 @@ const esFecha = v => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v);
 // ── aportes ──────────────────────────────────────────────
 const ESTADOS = ['recibido','en_asignacion','comprado','entregado','no_ejecutado','costo_operacion'];
 const ap = leerJSON('data/aportes.json');
-let total = null, n = 0, obras = '0 / 100', pct = '0,00 %';
+let n = 0, obras = '0 / 100', pct = '0,00 %';
 
 if (ap) {
   if (!Array.isArray(ap.aportes)) errores.push('aportes.json — "aportes" debe ser una lista');
@@ -41,24 +41,48 @@ if (ap) {
       else if (folios.has(a.folio)) errores.push(`${d} folio repetido: ${a.folio}`);
       else folios.add(a.folio);
       if (!esFecha(a.fecha)) errores.push(`${d} (${a.folio}) fecha inválida, se espera AAAA-MM-DD`);
-      if (typeof a.monto !== 'number' || !isFinite(a.monto) || a.monto < 0)
-        errores.push(`${d} (${a.folio}) monto debe ser un número en pesos, sin puntos ni comillas`);
+      if ('monto' in a || 'monto_orig' in a)
+        errores.push(`${d} (${a.folio}) trae un MONTO. Por seguridad no se publican montos: quítalo de este archivo.`);
       if (!a.origen) errores.push(`${d} (${a.folio}) sin origen`);
       if (a.estado && !ESTADOS.includes(a.estado))
         errores.push(`${d} (${a.folio}) estado "${a.estado}" no existe. Válidos: ${ESTADOS.join(', ')}`);
-      if (a.moneda_orig && a.moneda_orig !== 'COP' && typeof a.monto_orig !== 'number')
-        avisos.push(`${d} (${a.folio}) declara ${a.moneda_orig} pero no trae monto_orig`);
+
     });
-    if (typeof ap.trm !== 'number' || ap.trm <= 0) errores.push('aportes.json — "trm" debe ser un número mayor que cero');
+    if (typeof ap.avance_pct !== 'number' || ap.avance_pct < 0 || ap.avance_pct > 100)
+      errores.push('aportes.json — "avance_pct" debe ser un número entre 0 y 100');
     if (!esFecha(ap.actualizado)) errores.push('aportes.json — "actualizado" con fecha inválida');
 
     if (!errores.length) {
-      total = ap.aportes.reduce((s, a) => s + a.monto, 0);
       n = ap.aportes.length;
       obras = `${ap.obras_entregadas || 0} / ${ap.meta_obras || 100}`;
-      pct = ((total / ap.trm) / (ap.meta_usd || 500000) * 100).toFixed(2).replace('.', ',') + ' %';
+      pct = ap.avance_pct.toFixed(2).replace('.', ',') + ' %';
     }
   }
+}
+
+
+// ── nada sensible puede quedar publicado en una nota ──────
+const PROHIBIDO = [
+  [/\bTR[A-Za-z0-9]{6,}\b/, 'una referencia de transacción'],
+  [/\b\d{9,}\b/, 'un número largo (cuenta o documento)'],
+  [/\btitular\b/i, 'la palabra "titular" seguida de un nombre'],
+  [/\b\d{1,2}:\d{2}\b/, 'una hora exacta'],
+  [/\b\d{1,2}\/\d{1,2}(\/\d{2,4})?\b/, 'una fecha escrita con barras'],
+];
+if (ap && Array.isArray(ap.aportes)) {
+  ap.aportes.forEach(a => {
+    ['nota', 'nota_en'].forEach(campo => {
+      const v = a[campo];
+      if (!v) return;
+      PROHIBIDO.forEach(([re_, que]) => {
+        if (re_.test(v))
+          errores.push(`aportes.json — la nota de ${a.folio} contiene ${que}. ` +
+            `Las notas son públicas: deja solo una descripción neutra del aporte.`);
+      });
+    });
+    if (typeof a.origen === 'string' && /\d{7,}/.test(a.origen))
+      errores.push(`aportes.json — el origen de ${a.folio} trae un número largo. Usa solo el nombre.`);
+  });
 }
 
 // ── el resto de archivos ─────────────────────────────────
@@ -117,10 +141,9 @@ if (errores.length) {
 // ── sincronizar las cifras escritas en el HTML ───────────
 const idx = path.join(RAIZ, 'index.html');
 let html = fs.readFileSync(idx, 'utf8');
-const fmt = v => '$' + v.toLocaleString('es-CO');
 const reemplazos = [
-  ['tRec', fmt(total)], ['tPct', pct], ['tAp', String(n)], ['tOb', obras],
-  ['lvMonto', fmt(total)], ['lvAportes', String(n)], ['lvObras', obras], ['lvPct', pct],
+  ['tPct', pct], ['tAp', String(n)], ['tOb', obras],
+  ['lvPct', pct], ['lvAportes', String(n)], ['lvObras', obras], ['mPct', pct],
 ];
 let cambios = 0;
 for (const [id, valor] of reemplazos) {
@@ -132,5 +155,5 @@ for (const [id, valor] of reemplazos) {
 }
 if (cambios) fs.writeFileSync(idx, html);
 
-console.log(`\n✅ Datos correctos · ${n} aportes · ${fmt(total)} · ${pct} de la meta`);
+console.log(`\n✅ Datos correctos · ${n} aportes · ${pct} de la meta · sin montos publicados`);
 console.log(`   Cifras del HTML sincronizadas (${cambios} ${cambios === 1 ? 'cambio' : 'cambios'}).\n`);

@@ -134,13 +134,12 @@
       <div class="live">
         <div class="live__top"><span class="live__dot"></span><span data-i="lv0">En vivo</span>
           <span class="live__upd" id="lvUpd"></span></div>
-        <div class="live__k" data-i="lv1">Recaudado</div>
-        <div class="live__v"><span id="lvMonto">$2.049.547</span> <small>COP</small></div>
-        <div class="live__usd" id="lvUsd"></div>
+        <div class="live__k" data-i="lv1">Avance de la meta</div>
+        <div class="live__v"><span id="lvPct">0,19 %</span></div>
+        <div class="live__usd" id="lvUsd" data-i="lv2">de la meta de US$ 500.000 en recursos</div>
         <div class="live__track"><div class="live__fill" id="lvFill"></div></div>
-        <div class="live__pct"><span id="lvPct">0,13 %</span><span data-i="lv2">de la meta de recursos</span></div>
         <div class="live__grid">
-          <div><b id="lvAportes">7</b><span id="lvAportesL">aportes registrados</span></div>
+          <div><b id="lvAportes">13</b><span id="lvAportesL">aportes registrados</span></div>
           <div><b id="lvObras">0 / 100</b><span id="lvObrasL">obras entregadas</span></div>
         </div>
       </div>
@@ -168,9 +167,8 @@
       <p class="lede" data-i="m0s">Dos metas públicas, actualizadas en vivo. Solo se mueven con evidencia detrás.</p>
     </div>
     <div class="tab rv stg" id="tablero">
-      <div><b id="tRec">$2.049.547</b><span data-i="d0">recaudado</span></div>
-      <div><b id="tPct">0,13 %</b><span data-i="d1">de la meta de US$ 500.000</span></div>
-      <div><b id="tAp">7</b><span id="tApL">aportes registrados</span></div>
+      <div><b id="tPct">0,19 %</b><span data-i="d1">de avance sobre la meta</span></div>
+      <div><b id="tAp">13</b><span id="tApL">aportes registrados</span></div>
       <div><b id="tOb">0 / 100</b><span data-i="d3">obras entregadas</span></div>
       <div><b id="tMu">2</b><span data-i="d4">municipios en operación</span></div>
       <div><b>8</b><span data-i="d5">organizaciones aliadas</span></div>
@@ -186,16 +184,16 @@
       <div class="meta">
         <div class="meta__k" data-i="m2k">Meta de recursos</div>
         <div class="meta__v num" style="color:var(--olive)">US$ 500.000</div>
-        <div class="meta__d" data-i="m2d">recaudados entre donantes individuales, empresas aliadas y cooperación internacional. <strong>Nadie de la alianza cobra comisión.</strong> Los costos de operar sí salen de lo recaudado y se publican con su factura.</div>
+        <div class="meta__d" data-i="m2d">entre donantes individuales, empresas aliadas y cooperación internacional. <strong>Nadie de la alianza cobra comisión.</strong> Los costos de operar sí salen de lo recaudado y se publican con su factura.</div>
         <div class="meta__track"><div class="meta__fill" id="mFillUsd"></div></div>
-        <div class="meta__foot"><span data-i="mav2">Avance verificado</span><span class="num" id="mPct">—</span></div>
+        <div class="meta__foot"><span data-i="mav2">Avance verificado</span><span class="num" id="mPct">0,19 %</span></div>
       </div>
     </div>
     <section class="reg rv" aria-labelledby="regT">
       <header class="reg__h">
         <div>
           <h3 id="regT" data-i="lg0">Registro público de aportes</h3>
-          <p data-i="lg1">Cada entrada se publica. Sin excepciones, incluidas las que no se pudieron ejecutar.</p>
+          <p data-i="lg1">Cada aporte se publica con su folio y su fecha, sin excepciones. Por seguridad de quienes donan no publicamos montos, ni por aporte ni en total.</p>
         </div>
         <button class="reg__csv" id="regCsv" type="button">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
@@ -297,7 +295,7 @@
     <div class="pasos rv stg">
       <article class="paso rv"><div class="paso__n"></div>
         <div class="paso__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M3 8 12 3l9 5"/><path d="M9 14h6"/></svg></div>
-        <h3 data-i="c1">Recibimos y registramos</h3><p data-i="c2">Tu plata llega a la cuenta de la fundación. Queda anotada con fecha y monto, y te devolvemos por WhatsApp el número que le corresponde.</p></article>
+        <h3 data-i="c1">Recibimos y registramos</h3><p data-i="c2">Tu plata llega a la cuenta de la fundación. Queda anotada con su fecha y su folio, y te devolvemos ese número por WhatsApp.</p></article>
       <article class="paso rv"><div class="paso__n"></div>
         <div class="paso__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg></div>
         <h3 data-i="c3">Compramos y reconstruimos</h3><p data-i="c4">Ese dinero se vuelve tejas, cemento, aulas y jornales. Lo compran y lo montan las organizaciones que ya viven ahí.</p></article>
@@ -348,7 +346,7 @@
           <dl class="cmp__r">
             <div><dt data-i="cm3">Fecha</dt><dd id="cmD">—</dd></div>
             <div><dt data-i="cm4">Origen</dt><dd id="cmO">—</dd></div>
-            <div><dt data-i="cm5">Monto</dt><dd id="cmM">—</dd></div>
+            
             <div><dt data-i="cm6">Estado</dt><dd id="cmE">—</dd></div>
           </dl>
           <div class="cmp__p"><i id="cmB"></i></div>
@@ -515,7 +513,7 @@
     </div>
     <div class="promesas">
       <div class="rv si"><h3 data-i="x12">Lo que sí prometemos</h3><ul>
-        <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="x13">Que cada aporte quede registrado con folio, fecha y monto</span></li>
+        <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="x13">Que cada aporte quede registrado y publicado con su folio y su fecha</span></li>
         <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="x14">Que publiquemos factura y acta de cada obra</span></li>
         <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="x15">Que nadie de la alianza cobre comisión, y que cada costo de operación se publique con su factura</span></li>
         <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span data-i="x16">Que digamos también lo que salió mal o no se pudo ejecutar</span></li></ul></div>
@@ -596,9 +594,9 @@
     <button class="pop__x" id="popX" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
     <img src="/assets/renace-mark.svg" alt="" width="58" height="46" class="pop__l">
     <h2 id="popT" data-i="pp0">Tu aporte no se pierde de vista.</h2>
-    <p id="popD" data-i="pp1">Cada peso que entra recibe un folio y se publica con factura, acta de entrega y fotos. Puedes seguirlo hasta la obra.</p>
+    <p id="popD" data-i="pp1">Cada aporte recibe un folio y queda publicado. La obra que financia se publica con factura, acta de entrega y fotos.</p>
     <div class="pop__n">
-      <div><b id="popV">—</b><span data-i="pp2">recaudado</span></div>
+      <div><b id="popV">—</b><span data-i="pp2">de la meta</span></div>
       <div><b id="popO">—</b><span data-i="pp3">obras entregadas</span></div>
       <div><b>0 %</b><span data-i="pp4">de comisión de la alianza</span></div>
     </div>
@@ -619,7 +617,7 @@
 <script>(function(){
 'use strict';
 var WA='573166891508',CUENTA='108900830473';
-var PROGRESO={recaudadoCOP:1842547,aportes:5,obras:0,metaObras:100,metaUSD:500000,trm:3125.47,
+var PROGRESO={pct:0.19,aportes:13,obras:0,metaObras:100,metaUSD:500000,
 actualizado:{es:'Actualizado 13 ago 2026',en:'Updated Aug 12, 2026'}};
 var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 var VIA='banco', pkMonto2=250000;
@@ -628,13 +626,13 @@ breb:{es:'por la llave Bre-B',en:'via the Bre-B key'},
 usa:{es:'desde el exterior',en:'from abroad'}};
 var DEST_EN={'Vivienda':'Housing','Colegios':'Schools','Centros de salud':'Health posts','Ayuda de emergencia':'Emergency relief','Donde m\u00e1s se necesite':'Wherever it is needed most'};
 function fmtCOP(n){return '$'+Number(n||0).toLocaleString('es-CO');}
+function fmtPct(v,lang){var t=(v>0&&v<0.01)?'<0,01':Number(v).toFixed(2);
+return (lang==='en'?t.replace(',','.'):t.replace('.',','))+' %';}
 function pintarProgreso(lang){
-var P=PROGRESO,usd=P.recaudadoCOP/P.trm,pct=usd/P.metaUSD*100;
+var P=PROGRESO,pct=(typeof P.pct==='number'?P.pct:0);
 var pctTxt=(pct>0&&pct<0.01)?'<0,01 %':(pct.toFixed(2).replace('.',',')+' %');
 if(lang==='en')pctTxt=(pct>0&&pct<0.01)?'<0.01 %':(pct.toFixed(2)+' %');
 var set=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};
-set('lvMonto',fmtCOP(P.recaudadoCOP));
-set('lvUsd',(lang==='en'?'\u2248 US$ ':'\u2248 US$ ')+Math.round(usd).toLocaleString(lang==='en'?'en-US':'es-CO')+(lang==='en'?' of the US$ 500,000 goal':' de la meta de US$ 500.000'));
 set('lvPct',pctTxt); set('mPct',pctTxt);
 set('lvAportes',P.aportes); set('lvObras',P.obras+' / '+P.metaObras); set('mObras',P.obras+' / '+P.metaObras);
 set('lvUpd',P.actualizado[lang==='en'?'en':'es']);
@@ -663,7 +661,7 @@ ch1:'Choc\u00f3 · Valle del Cauca · Coffee Region',ch2:'partner organizations'
 ali:'An alliance, not just a bank account',fnd:'Foundation',
 e0:'The goals',m0:'Where we are going, in numbers.',m0s:'Two public goals, updated live. They only move when there is proof behind the move.',
 m1k:'Build goal',m1d:'pieces of infrastructure rebuilt or repaired — <strong>schools, homes, health posts and community spaces</strong> across Choc\u00f3, Valle del Cauca and the Coffee Region.',
-m2k:'Funding goal',m2d:'raised from individual donors, corporate partners and international cooperation. <strong>Nobody in the alliance takes a commission.</strong> Operating costs do come out of what is raised, and are published with their invoice.',
+m2k:'Funding goal',m2d:'from individual donors, corporate partners and international cooperation. <strong>Nobody in the alliance takes a commission.</strong> Operating costs do come out of what is raised, and are published with their invoice.',
 mav:'Verified progress',mav2:'Verified progress',
 m3:'<strong>We are starting at zero and we say so.</strong> Every point these bars move will be backed by an invoice, a signed delivery record and photos — published, not promised.',
 e1:'What happened',q1:'One minute of shaking. Years of rebuilding ahead.',
@@ -676,7 +674,7 @@ q10:'RENACE exists for that second stage. Putting the roof, the classroom and th
 q11:'Where we are focused',q12:'We start where our partner organizations already live. Buenaventura and the Valle Pacific coast. Choc\u00f3, in Quibd\u00f3 and San Jos\u00e9 del Palmar. The hit areas of Cali and the Coffee Region. If we cannot deliver and check it ourselves, we do not promise it.',
 q13:'<strong>No duplicated effort.</strong> We do not compete with the government response. We coordinate with UNGRD and local authorities, and cover what the large aid operations leave out.',
 e2:'How it works',c0:'Three steps. None behind closed doors.',
-c1:'We take it in and log it',c2:'Your money lands in the foundation account. We log it with the date and the amount, and send you back its number over WhatsApp.',
+c1:'We take it in and log it',c2:'Your money lands in the foundation account. We log it with its date and its reference, and send that number back to you over WhatsApp.',
 c3:'We buy and rebuild',c4:'That money turns into roof tiles, cement, classrooms and day wages. The organizations already living there do the buying and the building.',
 c5:'We publish the receipt',c6:'The invoice, the signed record and the photos hang off your number. And when something cannot be done, that shows up too. Red gets the same space as green.',
 dev:'● Platform in development · v1',e3:'Traceability',t0:'Your contribution gets a number. And the number can be followed.',
@@ -690,17 +688,17 @@ t21:'Honest status: the receipt above is real, with the data of the first contri
 e4:'How to give today',a0:'Where to transfer, depending on where you are.',a1:'Three routes. Take whichever is easiest for you. All three end up in the same place and all three land in the same public log.',
 a4:'Savings account · Davivienda (Colombia)',a5:'Account holder: Fundaci\u00f3n Hogar Sin Olvido<br>Tax ID 901.047.625-4 · Buenaventura, Colombia',
 cop:'Copy number',a6:'Send the receipt over WhatsApp and we send back your tracking number',a7:'No alliance commission: 100 % goes into the operation',
-lv0:'Live',lv1:'Raised so far',lv2:'of the funding goal',lv3:'contribution logged',lv4:'projects delivered',
-lg0:'Public contribution log',lg1:'Every entry gets published. No exceptions, including the ones that could not be executed.',
+lv0:'Live',lv1:'Progress toward the goal',lv2:'of the US$ 500,000 funding goal',lv3:'contribution logged',lv4:'projects delivered',
+lg0:'Public contribution log',lg1:'Every contribution is published with its reference and its date, no exceptions. For the safety of those who give, we do not publish amounts \u2014 not per contribution and not in total.',
 lg10:'Download CSV',
 lg11:'Reference numbers run in sequence and are never reused. The ones missing here were system tests during setup and do not correspond to money received. A real contribution is never deleted.',
 t2b:'This is where reference <b>RNC-2608-000001</b> stands \u2014 the first logged contribution.',
 u2:'Three more ways to give: instantly from any Colombian bank, from a US dollar wallet, or by bank transfer from the United States.',
 pp0:'Your contribution stays in sight.',
-pp1:'Every peso that comes in gets a tracking number and is published with its invoice, delivery record and photos. You can follow it all the way to the finished work.',
-pp2:'raised',pp3:'projects delivered',pp4:'alliance commission',
+pp1:'Every contribution gets a reference and is published. The work it funds is published with its invoice, delivery record and photos.',
+pp2:'of the goal',pp3:'projects delivered',pp4:'alliance commission',
 pp5:'Donate now',pp6:'See the public log',pp7:'Not right now, thanks',
-d0:'raised',d1:'of the US$ 500,000 goal',d2:'contributions logged',d3:'projects delivered',
+d0:'raised',d1:'progress toward the goal',d2:'contributions logged',d3:'projects delivered',
 d4:'municipalities in operation',d5:'partner organizations',n7:'Map',
 tb0:'Need help right now, or want to report where hands are missing?',
 tb1:'Community emergency map, live · in Spanish',
@@ -760,11 +758,11 @@ v10:'Your card details or access to your banking app',v11:'To transfer to any ac
 v12:'To donate urgently or before a deadline',v13:'Only official page:',
 b0:'Aug 10, 2026',b1:'The earthquake',b2:'Magnitude 7.4 at 7:34 a.m., epicenter in San Jos\u00e9 del Palmar. The alliance organizations begin assessing needs in Buenaventura, Choc\u00f3 and Cali.',
 s0:'Share on WhatsApp',s1:'Share on X',s2:'LinkedIn',s3:'Copy link',
-dk0:'raised of the US$ 500,000 goal',dk1:'Donate',
+dk0:'of the US$ 500,000 goal',dk1:'Donate',
 e5:'Transparency',x0:'Who receives, who executes and with what paperwork.',
 x1:'Fundaci\u00f3n Hogar Sin Olvido receives the money and spends it. It is a non-profit, founded in 2016, and the Valle del Cauca Government oversees it.',
 x2:'Legal name',x3:'Tax ID (NIT)',x4:'Legal representative',x5:'Domicile',x5v:'Buenaventura, Valle del Cauca, Colombia',x6:'Incorporated',x7:'January 20, 2016',x8:'Oversight',x9:'Valle del Cauca Government',x10:'Email',x11:'Contact',
-x12:'What we do promise',x13:'To log every contribution with its number, date and amount',x14:'To publish an invoice and a signed record for every project',
+x12:'What we do promise',x13:'To log and publish every contribution with its reference and its date',x14:'To publish an invoice and a signed record for every project',
 x15:'That nobody in the alliance takes a commission, and that every operating cost is published with its invoice',x16:'To also report what went wrong or could not be executed',
 x17:'What we will not claim',x18:'Impact figures we have not produced yet',x19:'That your donation is tax-deductible without confirming the tax regime',
 x20:'Testimonials or photos of people without their consent',x21:'That we replace the government in the emergency response',
@@ -855,10 +853,9 @@ var t0=null;function paso(t){if(!t0)t0=t;var p=Math.min((t-t0)/ms,1);
 var e=1-Math.pow(1-p,3);el.textContent=fmt(Math.round(fin*e));
 if(p<1)requestAnimationFrame(paso);}requestAnimationFrame(paso);}
 function animarCifras(){
-var P=PROGRESO,m=document.getElementById('lvMonto'),a=document.getElementById('lvAportes');
-if(m&&!m.dataset.done){m.dataset.done='1';contar(m,P.recaudadoCOP,1100,fmtCOP);}
+var P=PROGRESO,a=document.getElementById('lvAportes');
 if(a&&!a.dataset.done){a.dataset.done='1';contar(a,P.aportes,700,function(v){return String(v);});}
-var d=document.getElementById('dkV');if(d)d.textContent=fmtCOP(P.recaudadoCOP);}
+var d=document.getElementById('dkV');if(d)d.textContent=fmtPct(P.pct,document.documentElement.lang==='en'?'en':'es');}
 
 /* tres vias de aporte, una sola superficie */
 function pintaPicker(){
@@ -1004,7 +1001,7 @@ marcar:function(dias){try{sessionStorage.setItem('renace_pop','1');if(dias)local
 var abrir=function(){
 if(popC.ver()||pop.classList.contains('on'))return;
 var P=PROGRESO,v=document.getElementById('popV'),o=document.getElementById('popO');
-if(v)v.textContent=fmtCOP(P.recaudadoCOP);
+if(v)v.textContent=fmtPct(P.pct,document.documentElement.lang==='en'?'en':'es');
 if(o)o.textContent=P.obras+' / '+P.metaObras;
 pop.classList.add('on');document.body.classList.add('pop-open');
 popC.marcar(0);atrapaFoco(pop);setTimeout(function(){var x=document.getElementById('popX');if(x)x.focus();},80);};
@@ -1032,10 +1029,10 @@ if(!e.relatedTarget&&e.clientY<8&&window.scrollY>300)abrir();});}
 /* ── el dinero sale de un solo archivo: data/aportes.json ── */
 var EST={es:{recibido:'Recibido',en_asignacion:'En asignación',comprado:'Comprado',entregado:'Entregado',no_ejecutado:'No ejecutado'},
 en:{recibido:'Received',en_asignacion:'Being assigned',comprado:'Purchased',entregado:'Delivered',no_ejecutado:'Not executed'}};
-var R_T={es:{folio:'Folio',fecha:'Fecha',origen:'Origen',monto:'Monto',estado:'Estado',
+var R_T={es:{folio:'Folio',fecha:'Fecha',origen:'Origen',estado:'Estado',
 tot:function(n){return 'Total · '+n+(n===1?' aporte registrado':' aportes registrados');},
 vacio:'Todavía no hay aportes registrados. La primera entrada aparece aquí en cuanto se verifique el ingreso.'},
-en:{folio:'Ref.',fecha:'Date',origen:'Source',monto:'Amount',estado:'Status',
+en:{folio:'Ref.',fecha:'Date',origen:'Source',estado:'Status',
 tot:function(n){return 'Total · '+n+(n===1?' contribution logged':' contributions logged');},
 vacio:'No contributions logged yet. The first entry appears here as soon as the deposit is verified.'}};
 var APORTES=null, DATOS_OK=null;
@@ -1050,26 +1047,21 @@ if(DATOS_OK===false){cont.innerHTML='<p class="reg__v reg__err">'+(lang==='en'
 ?'We could not load the public log right now. It is not empty — it failed to load. Refresh the page, or write to us and we will send it to you.'
 :'No pudimos cargar el registro en este momento. No está vacío: falló la carga. Recarga la página, o escríbenos y te lo enviamos.')+'</p>';return;}
 if(!lista.length){cont.innerHTML='<p class="reg__v">'+T.vacio+'</p>';return;}
-var total=lista.reduce(function(a,x){return a+(x.monto||0);},0);
 var filas=lista.map(function(a){
 var cls=a.estado==='entregado'?' ok':(a.estado==='no_ejecutado'?' no':'');
 var nota=(lang==='en'&&a.nota_en?a.nota_en:a.nota)||'';
-var orig=(a.moneda_orig&&a.moneda_orig!=='COP')
-?'<span class="or">'+esc(a.moneda_orig)+' '+Number(a.monto_orig||0).toLocaleString(lang==='en'?'en-US':'es-CO')+'</span>':'';
 return '<tr><td class="f">'+esc(a.folio)+'</td><td class="d">'+fFecha(a.fecha,lang)+'</td>'
 +'<td class="o"><b>'+esc(a.origen)+'</b>'+(nota?'<span>'+esc(nota)+'</span>':'')+'</td>'
-+'<td class="m r">'+fmtCOP(a.monto)+orig+'</td>'
 +'<td class="r"><span class="est'+cls+'"><i></i>'+(L[a.estado]||esc(a.estado))+'</span></td></tr>';}).join('');
 cont.innerHTML='<table><thead><tr><th>'+T.folio+'</th><th>'+T.fecha+'</th><th>'+T.origen+'</th>'
-+'<th class="r">'+T.monto+'</th><th class="r">'+T.estado+'</th></tr></thead><tbody>'+filas+'</tbody>'
-+'<tfoot><tr><td colspan="3">'+T.tot(lista.length)+'</td><td class="m r">'+fmtCOP(total)+'</td><td></td></tr></tfoot></table>';}
++'<th class="r">'+T.estado+'</th></tr></thead><tbody>'+filas+'</tbody>'
++'<tfoot><tr><td colspan="3">'+T.tot(lista.length)+'</td><td class="r"></td></tr></tfoot></table>';}
 
 function aplicarAportes(d){
 APORTES=d;
-var t=(d.aportes||[]).reduce(function(a,x){return a+(x.monto||0);},0);
-PROGRESO.recaudadoCOP=t; PROGRESO.aportes=(d.aportes||[]).length;
+PROGRESO.aportes=(d.aportes||[]).length;
+if(typeof d.avance_pct==='number')PROGRESO.pct=d.avance_pct;
 if(typeof d.obras_entregadas==='number')PROGRESO.obras=d.obras_entregadas;
-if(d.trm)PROGRESO.trm=d.trm;
 if(d.meta_usd)PROGRESO.metaUSD=d.meta_usd;
 if(d.meta_obras)PROGRESO.metaObras=d.meta_obras;
 if(d.actualizado){try{var f=new Date(d.actualizado+'T12:00:00');
@@ -1079,7 +1071,7 @@ var lang=document.documentElement.lang==='en'?'en':'es';
 pintarProgreso(lang); pintaRegistro(); if(typeof pintaTablero==='function')pintaTablero(); if(typeof pintaComprobante==='function')pintaComprobante();
 document.querySelectorAll('[data-fill],#lvFill,#mFillUsd,#mFillObras').forEach(function(el){
 if(el.getAttribute('data-fill'))el.style.width=el.getAttribute('data-fill');});
-['lvMonto','lvAportes'].forEach(function(id){var e=document.getElementById(id);if(e)delete e.dataset.done;});
+['lvAportes'].forEach(function(id){var e=document.getElementById(id);if(e)delete e.dataset.done;});
 if(typeof animarCifras==='function')animarCifras();}
 
 fetch('/data/aportes.json',{cache:'no-cache'})
@@ -1094,9 +1086,9 @@ var csvBtn=document.getElementById('regCsv');
 if(csvBtn)csvBtn.addEventListener('click',function(){
 if(!APORTES)return;
 var q=function(v){return '"'+String(v==null?'':v).replace(/"/g,'""')+'"';};
-var filas=[['folio','fecha','origen','nota','monto_cop','moneda','canal','estado'].map(q).join(',')];
+var filas=[['folio','fecha','origen','nota','canal','estado'].map(q).join(',')];
 (APORTES.aportes||[]).forEach(function(a){
-filas.push([a.folio,a.fecha,a.origen,a.nota||'',a.monto,a.moneda||'COP',a.canal||'',a.estado].map(q).join(','));});
+filas.push([a.folio,a.fecha,a.origen,a.nota||'',a.canal||'',a.estado].map(q).join(','));});
 var blob=new Blob(['\ufeff'+filas.join('\r\n')],{type:'text/csv;charset=utf-8'});
 var u=URL.createObjectURL(blob),a=document.createElement('a');
 a.href=u; a.download='renace-aportes-'+(APORTES.actualizado||'')+'.csv';
@@ -1174,9 +1166,9 @@ fetch('/data/novedades.json',{cache:'no-cache'}).then(function(r){return r.ok?r.
 
 /* ── tablero ── */
 function pintaTablero(){
-var P=PROGRESO,usd=P.recaudadoCOP/P.trm,pct=usd/P.metaUSD*100,lang=document.documentElement.lang==='en'?'en':'es';
+var P=PROGRESO,pct=(typeof P.pct==='number'?P.pct:0),lang=document.documentElement.lang==='en'?'en':'es';
 var s=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};
-s('tRec',fmtCOP(P.recaudadoCOP)); s('tAp',P.aportes); s('tOb',P.obras+' / '+P.metaObras);
+s('tAp',P.aportes); s('tOb',P.obras+' / '+P.metaObras);
 s('tPct',(pct<0.01?(lang==='en'?'<0.01 %':'<0,01 %'):(lang==='en'?pct.toFixed(2)+' %':pct.toFixed(2).replace('.',',')+' %')));}
 
 /* ── organizaciones de la alianza ── */
@@ -1209,7 +1201,7 @@ if(!APORTES||!(APORTES.aportes||[]).length)return;
 var a=APORTES.aportes[APORTES.aportes.length-1];
 var lang=document.documentElement.lang==='en'?'en':'es';
 var s=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};
-s('cmF',a.folio); s('cmD',fFecha(a.fecha,lang)); s('cmO',a.origen); s('cmM',fmtCOP(a.monto));
+s('cmF',a.folio); s('cmD',fFecha(a.fecha,lang)); s('cmO',a.origen);
 s('cmE',(EST[lang]||{})[a.estado]||a.estado);
 var pasos={recibido:20,en_asignacion:40,comprado:60,entregado:100,no_ejecutado:0};
 var pc=pasos[a.estado]||0; s('cmP',pc+' %');
@@ -1261,12 +1253,10 @@ out.innerHTML='<div class="ttl"><span>'+L.no+'</span></div><p>'+(prueba?L.prueba
 +'<a href="'+waLink(lang==='en'?'Hello. I would like to check my RENACE contribution reference: '+inp.value:'Hola. Quiero consultar mi folio de aporte a RENACE: '+inp.value)
 +'" target="_blank" rel="noopener">'+L.esc+'</a>.</p>';return;}
 var nota=(lang==='en'&&a.nota_en?a.nota_en:a.nota)||'';
-var orig=(a.moneda_orig&&a.moneda_orig!=='COP')?' · '+esc(a.moneda_orig)+' '+Number(a.monto_orig||0).toLocaleString(lang==='en'?'en-US':'es-CO'):'';
 out.className='fol__r';
 out.innerHTML='<div class="ttl"><span>'+L.ok+'</span></div><div class="fo">'+esc(a.folio)+'</div><dl>'
 +'<div><dt>'+L.d+'</dt><dd>'+fFecha(a.fecha,lang)+'</dd></div>'
 +'<div><dt>'+L.o+'</dt><dd>'+esc(a.origen)+(nota?' · '+esc(nota):'')+'</dd></div>'
-+'<div><dt>'+L.m+'</dt><dd>'+fmtCOP(a.monto)+orig+'</dd></div>'
 +'<div><dt>'+L.e+'</dt><dd>'+((EST[lang]||{})[a.estado]||esc(a.estado))+'</dd></div>'
 +'<div><dt>'+L.p+'</dt><dd>'+(PASOS[a.estado]||0)+' %</dd></div></dl>';}
 go.addEventListener('click',buscar);
