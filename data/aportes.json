@@ -14,6 +14,16 @@
  "obras_entregadas": 0,
  "aportes": [
   {
+   "folio": "RNC-2608-000040",
+   "fecha": "2026-08-14",
+   "origen": "Paola Baracaldo",
+   "nota": "Aporte por Bre-B",
+   "monto": 100000,
+   "moneda": "COP",
+   "canal": "Bre-B",
+   "estado": "recibido"
+  },
+  {
    "folio": "RNC-2608-000039",
    "fecha": "2026-08-14",
    "origen": "Catalina Hernández",
