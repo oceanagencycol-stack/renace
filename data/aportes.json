@@ -14,6 +14,16 @@
  "obras_entregadas": 0,
  "aportes": [
   {
+   "folio": "RNC-2608-000038",
+   "fecha": "2026-08-14",
+   "origen": "Sergio Puerto",
+   "nota": "Transferencia a Fundación AA · Davivienda 108900830473 · 14/08 08:40",
+   "monto": 500000,
+   "moneda": "COP",
+   "canal": "Davivienda",
+   "estado": "recibido"
+  },
+  {
    "folio": "RNC-2608-000037",
    "fecha": "2026-08-14",
    "origen": "Lorena Herrera",
