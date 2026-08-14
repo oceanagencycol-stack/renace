@@ -14,6 +14,16 @@
  "obras_entregadas": 0,
  "aportes": [
   {
+   "folio": "RNC-2608-000041",
+   "fecha": "2026-08-14",
+   "origen": "Natalia Idárraga",
+   "nota": "Bre-B 14/08 10:22 · titular Natalia Idárraga Tunjo · sin contacto por WhatsApp",
+   "monto": 50000,
+   "moneda": "COP",
+   "canal": "Bre-B",
+   "estado": "recibido"
+  },
+  {
    "folio": "RNC-2608-000040",
    "fecha": "2026-08-14",
    "origen": "Paola Baracaldo",
