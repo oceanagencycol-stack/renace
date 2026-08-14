@@ -7,12 +7,22 @@
   "costos_operacion": "Los gastos de operar (transporte, bodegaje, transferencias, papeleo) salen de lo recaudado y se registran aquí con estado 'costo_operacion' y su factura. Cero comisión significa que nadie de la alianza cobra un porcentaje como ingreso, no que el 100% llegue en materiales.",
   "numeracion": "Los folios son consecutivos y no se reutilizan. Los que no aparecen en el registro fueron pruebas del sistema durante la puesta en marcha y no corresponden a dinero recibido. Nunca se borra un aporte real."
  },
- "actualizado": "2026-08-13",
+ "actualizado": "2026-08-14",
  "trm": 3125.47,
  "meta_usd": 500000,
  "meta_obras": 100,
  "obras_entregadas": 0,
  "aportes": [
+  {
+   "folio": "RNC-2608-000036",
+   "fecha": "2026-08-14",
+   "origen": "Aporte anónimo",
+   "nota": "Comprobante TRLTJ7iLvmEC · 14/08/2026 · la donante pidió que sea anónimo",
+   "monto": 50000,
+   "moneda": "COP",
+   "canal": "Bre-B",
+   "estado": "recibido"
+  },
   {
    "folio": "RNC-2608-000035",
    "fecha": "2026-08-13",
