@@ -437,4 +437,49 @@ body{font-size:10pt;line-height:1.45}
 a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;color:#555}
 .traza,.cif,.tab{border:1px solid #ccc!important}
 @page{margin:1.6cm}}
+.jor{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--ink);
+border-bottom:1px solid var(--line);margin-bottom:clamp(30px,4vw,46px)}
+@media (max-width:760px){.jor{grid-template-columns:repeat(2,1fr)}}
+.jor>div{padding:24px clamp(12px,1.8vw,22px) 24px 0}
+.jor>div+div{border-left:1px solid var(--line);padding-left:clamp(16px,2vw,24px)}
+@media (max-width:760px){.jor>div:nth-child(2n+1){border-left:0;padding-left:0}.jor>div:nth-child(n+3){border-top:1px solid var(--line)}}
+.jor b{display:block;font-family:var(--display);font-size:clamp(2.1rem,4vw,3.1rem);font-weight:800;
+letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums;color:var(--brick-t)}
+.jor span{display:block;font-size:.82rem;color:var(--muted);margin-top:10px;line-height:1.4;max-width:22ch}
+.jor2{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,4vw,60px);align-items:start}
+@media (max-width:860px){.jor2{grid-template-columns:1fr;gap:34px}}
+.jor2__k{font-family:var(--mono);font-size:.62rem;font-weight:600;letter-spacing:.19em;text-transform:uppercase;
+color:var(--brick-t);margin-bottom:16px}
+.jor2__l{list-style:none;padding:0;margin:0;border-top:1.5px solid var(--ink)}
+.jor2__l li{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;padding:14px 0;border-bottom:1px solid var(--line)}
+.jor2__l b{font-family:var(--mono);font-size:1.02rem;font-weight:600;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
+.jor2__l span{flex:1;min-width:200px;font-size:.93rem;color:var(--muted);line-height:1.5}
+.jb{display:grid;gap:14px;border-top:1.5px solid var(--ink);padding-top:16px}
+.jb>div{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:center}
+.jb__n{font-family:var(--mono);font-size:1.06rem;font-weight:600;font-variant-numeric:tabular-nums;text-align:right}
+.jb__l{font-size:.9rem;font-weight:600}
+.jb__bar{grid-column:2;height:6px;border-radius:99px;background:var(--cream-2);overflow:hidden;margin-top:-6px}
+.jb__bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--olive),var(--sun))}
+.jor2__n{font-size:.88rem;color:var(--muted);line-height:1.55;margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}
+.jfoto{margin:clamp(30px,4vw,46px) 0 0;border-radius:var(--r-lg);overflow:hidden;position:relative;box-shadow:var(--shadow-soft)}
+.jfoto img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.jfoto figcaption{position:absolute;left:0;right:0;bottom:0;padding:56px 26px 22px;color:#FFF9F0;font-size:.9rem;
+line-height:1.5;background:linear-gradient(180deg,transparent,rgba(20,17,14,.86));max-width:none}
+/* vuelo de dron a sangre */
+.dron{position:relative;min-height:clamp(460px,72vh,720px);display:flex;align-items:flex-end;overflow:hidden;background:var(--ink)}
+.dron__v{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.dron__sc{position:absolute;inset:0;z-index:1;pointer-events:none;
+background:linear-gradient(180deg,rgba(16,13,11,.72) 0%,rgba(16,13,11,.3) 34%,rgba(16,13,11,.9) 100%)}
+.dron__x{position:relative;z-index:3;padding:clamp(36px,6vw,74px) var(--pad);max-width:var(--maxw);margin-inline:auto;width:100%;color:#FFF9F0}
+.dron__x h2{font-size:clamp(2rem,4.6vw,3.4rem);max-width:18ch;margin-bottom:16px}
+.dron__x p{font-size:clamp(.95rem,1.5vw,1.06rem);color:rgba(255,249,240,.8);line-height:1.55;max-width:56ch}
+.dron__b{margin-top:26px;display:inline-flex;align-items:center;gap:11px;background:rgba(255,249,240,.14);
+border:1px solid rgba(255,249,240,.34);color:#FFF9F0;border-radius:999px;padding:13px 24px;font:inherit;
+font-size:.94rem;font-weight:600;cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+transition:background .26s,border-color .26s,transform .2s}
+.dron__b:hover{background:rgba(255,249,240,.24);border-color:rgba(255,249,240,.6)}
+.dron__b:active{transform:scale(.97)}
+.dron__b svg{width:17px;height:17px}
+@media (prefers-reduced-motion:reduce){.dron__v{display:none}
+.dron{background:var(--ink) url('/assets/bva/dron-poster.jpg') center/cover}}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.sr:focus{position:fixed;top:12px;left:12px;z-index:200;width:auto;height:auto;clip:auto;background:var(--ink);color:var(--cream);padding:14px 22px;border-radius:999px;font-weight:600;font-size:.92rem;text-decoration:none;box-shadow:var(--shadow-lift)}
