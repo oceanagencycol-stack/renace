@@ -1,24 +1,108 @@
 {
-  "_schema": {
-    "descripcion": "Registro público de entregas de RENACE. Cada objeto se publica en renacecol.org/#entregas.",
-    "como_agregar": "1) Sube la foto o el video a assets/entregas/. 2) Agrega el objeto al principio del array. 3) git push — la web se actualiza sola.",
-    "campos": {
-      "id": "consecutivo E-001, E-002…",
-      "fecha": "AAAA-MM-DD",
-      "titulo": "qué se entregó, en una línea",
-      "titulo_en": "opcional, traducción del título",
-      "lugar": "municipio, departamento",
-      "texto": "dos o tres líneas de qué pasó. Si algo salió mal, se escribe igual.",
-      "texto_en": "opcional",
-      "folios": ["RNC-2608-000001"],
-      "familias": "número o null",
-      "tipo": "foto | video",
-      "media": "nombre del archivo dentro de assets/entregas/",
-      "poster": "solo para video: imagen de portada dentro de assets/entregas/",
-      "credito": "quién tomó la foto o el video",
-      "evidencia": { "factura": true, "acta": true }
-    }
+ "_schema": {
+  "descripcion": "Registro público de entregas de RENACE. Cada objeto se publica en renacecol.org/#entregas.",
+  "como_agregar": "1) Sube la foto o el video a assets/entregas/. 2) Agrega el objeto al principio del array. 3) git push — la web se actualiza sola.",
+  "campos": {
+   "id": "consecutivo E-001, E-002…",
+   "fecha": "AAAA-MM-DD",
+   "titulo": "qué se entregó, en una línea",
+   "titulo_en": "opcional, traducción del título",
+   "lugar": "municipio, departamento",
+   "texto": "dos o tres líneas de qué pasó. Si algo salió mal, se escribe igual.",
+   "texto_en": "opcional",
+   "folios": [
+    "RNC-2608-000001"
+   ],
+   "familias": "número o null",
+   "tipo": "foto | video",
+   "media": "nombre del archivo dentro de assets/entregas/",
+   "poster": "solo para video: imagen de portada dentro de assets/entregas/",
+   "credito": "quién tomó la foto o el video",
+   "evidencia": {
+    "factura": true,
+    "acta": true
+   }
+  }
+ },
+ "actualizado": "2026-08-15",
+ "entregas": [
+  {
+   "fecha": "2026-08-14",
+   "municipio": "Buenaventura",
+   "barrio": "Punta del Este",
+   "tipo": "video",
+   "media": "obra.mp4",
+   "poster": "obra-poster.jpg",
+   "titulo": "Levantando de nuevo el techo",
+   "titulo_en": "Putting the roof back up",
+   "texto": "Cuadrilla del barrio armando la estructura sobre una vivienda que perdió la cubierta.",
+   "texto_en": "A neighbourhood crew building the structure over a home that lost its roof."
   },
-  "actualizado": "2026-08-12",
-  "entregas": []
+  {
+   "fecha": "2026-08-14",
+   "municipio": "Buenaventura",
+   "barrio": "Punta del Este",
+   "tipo": "imagen",
+   "media": "obra-f.webp",
+   "titulo": "Trabajo sobre la placa",
+   "titulo_en": "Work on the slab",
+   "texto": "Amarre de hierro y columnas en una vivienda de dos pisos.",
+   "texto_en": "Rebar and columns on a two-storey home."
+  },
+  {
+   "fecha": "2026-08-14",
+   "municipio": "Buenaventura",
+   "barrio": "Punta del Este",
+   "tipo": "imagen",
+   "media": "obra-g.webp",
+   "titulo": "Reforzando la estructura",
+   "titulo_en": "Reinforcing the structure",
+   "texto": "El equipo del barrio trabajando sobre la losa dañada por el sismo.",
+   "texto_en": "The neighbourhood crew working on the slab damaged by the earthquake."
+  },
+  {
+   "fecha": "2026-08-14",
+   "municipio": "Buenaventura",
+   "barrio": "Santa Cruz",
+   "tipo": "imagen",
+   "media": "obra-d.webp",
+   "titulo": "Armado de hierro",
+   "titulo_en": "Rebar assembly",
+   "texto": "Preparación de la parrilla antes de fundir. Mano de obra local.",
+   "texto_en": "Preparing the rebar grid before pouring. Local labour."
+  },
+  {
+   "fecha": "2026-08-14",
+   "municipio": "Buenaventura",
+   "barrio": "Inmaculada",
+   "tipo": "imagen",
+   "media": "censo-c.webp",
+   "titulo": "Ficha llenada frente a la casa",
+   "titulo_en": "Form filled at the doorstep",
+   "texto": "Cada ficha se diligenció en el celular, leyendo en voz alta la autorización de datos antes de empezar.",
+   "texto_en": "Each form was filled on the phone, reading the data authorization aloud before starting."
+  },
+  {
+   "fecha": "2026-08-14",
+   "municipio": "Buenaventura",
+   "barrio": "Santa Fe",
+   "tipo": "imagen",
+   "media": "censo-d.webp",
+   "titulo": "Revisión del daño en cubierta",
+   "titulo_en": "Checking the roof damage",
+   "texto": "Verificación en terreno de una vivienda que perdió el techo.",
+   "texto_en": "On-site check of a home that lost its roof."
+  },
+  {
+   "fecha": "2026-08-14",
+   "municipio": "Buenaventura",
+   "barrio": "Buenaventura",
+   "tipo": "imagen",
+   "media": "equipo2.webp",
+   "titulo": "El equipo de la jornada",
+   "titulo_en": "The field team",
+   "texto": "Treinta personas de tres organizaciones de la alianza, el 14 de agosto en Buenaventura.",
+   "texto_en": "Thirty people from three alliance organizations, August 14 in Buenaventura."
+  }
+ ]
 }
