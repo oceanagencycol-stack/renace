@@ -628,8 +628,6 @@ breb:{es:'por la llave Bre-B',en:'via the Bre-B key'},
 usa:{es:'desde el exterior',en:'from abroad'}};
 var DEST_EN={'Vivienda':'Housing','Colegios':'Schools','Centros de salud':'Health posts','Ayuda de emergencia':'Emergency relief','Donde m\u00e1s se necesite':'Wherever it is needed most'};
 function fmtCOP(n){return '$'+Number(n||0).toLocaleString('es-CO');}
-function fmtPct(v,lang){var t=(v>0&&v<0.01)?'<0,01':Number(v).toFixed(2);
-return (lang==='en'?t.replace(',','.'):t.replace('.',','))+' %';}
 function pintarProgreso(lang){
 var P=PROGRESO,usd=P.recaudadoCOP/P.trm,pct=usd/P.metaUSD*100;
 var pctTxt=(pct>0&&pct<0.01)?'<0,01 %':(pct.toFixed(2).replace('.',',')+' %');

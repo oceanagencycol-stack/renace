@@ -75,6 +75,14 @@ if (ap) {
     if (typeof ap.trm !== 'number' || ap.trm <= 0)
       errores.push('aportes.json — "trm" debe ser un número mayor que cero');
     if (!esFecha(ap.actualizado)) avisos.push('aportes.json — "actualizado" con fecha inválida');
+
+    // el total se mantiene a mano: avisar si hay aportes posteriores a su última actualización
+    const fechas = ap.aportes.map(a => a.fecha).filter(esFecha).sort();
+    const ultima = fechas[fechas.length - 1];
+    if (ultima && esFecha(ap.actualizado) && ultima > ap.actualizado) {
+      avisos.push(`el total podría estar desfasado — hay aportes del ${ultima} pero "total_cop" ` +
+        `se actualizó por última vez el ${ap.actualizado}. Suma los nuevos y sube también "actualizado".`);
+    }
     if (!errores.length) {
       n = ap.aportes.length;
       obras = `${ap.obras_entregadas || 0} / ${ap.meta_obras || 100}`;
