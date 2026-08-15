@@ -12,7 +12,7 @@
   "notas": "La nota es pública. NUNCA debe contener referencias de transacción, números de cuenta, documentos, horas exactas ni nombres de terceros. Solo una descripción neutra del aporte.",
   "total_cop": "Total recaudado en pesos, sumando todos los aportes. Actualízalo cada vez que entre uno nuevo. El porcentaje de avance se calcula solo a partir de este número."
  },
- "actualizado": "2026-08-14",
+ "actualizado": "2026-08-15",
  "total_cop": 3054547,
  "trm": 3125.47,
  "meta_usd": 500000,
@@ -136,5 +136,6 @@
    "canal": "Davivienda",
    "estado": "en_asignacion"
   }
- ]
+ ],
+ "avance_pct": 0.2
 }
