@@ -201,13 +201,13 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
           <span data-i="lg10">Descargar CSV</span></button>
       </header>
-      <div class="reg__t" id="regT2"></div>
+      <div class="reg__t" id="regT2" data-cargando="Cargando el registro…"></div>
       <p class="reg__num" data-i="lg11">Los folios son consecutivos y no se reutilizan. Los que no aparecen aquí fueron pruebas del sistema durante la puesta en marcha y no corresponden a dinero recibido. Un aporte real nunca se borra.</p>
     </section>
     <section class="nov rv" aria-labelledby="novT">
       <header class="nov__h"><h3 id="novT" data-i="n20">Qué está pasando</h3>
         <p data-i="n21">Novedades, avances y necesidades nuevas, con fecha.</p></header>
-      <div id="novL"></div>
+      <div id="novL" data-cargando="Cargando las novedades…"></div>
     </section>
     <div class="cero rv">
       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M9 12h6M9 16h4"/></svg>
@@ -254,7 +254,7 @@
       <h2 data-i="ay1">Esto no lo damos nosotros, pero deberías saberlo.</h2>
       <p class="lede" data-i="ay2">RENACE reconstruye, que es lo que viene después. Si lo que necesitas hoy es techo, coordinación o una línea de emergencia, aquí está quién sí lo da y qué te van a pedir.</p>
     </div>
-    <div class="ayu" id="ayuL"></div>
+    <div class="ayu" id="ayuL" data-cargando="Cargando los recursos…"></div>
     <p class="fuente rv" data-i="ay3">Ninguno de estos recursos es de RENACE. Los enlazamos porque resuelven lo inmediato y verificamos que estén activos para Colombia. Si encuentras que alguno dejó de funcionar, escríbenos y lo quitamos.</p>
   </div>
 </section>
@@ -287,7 +287,7 @@
       <h2 data-i="al1">Quién es cada uno y qué pone.</h2>
       <p class="lede" data-i="al2">Ocho organizaciones con oficios distintos. Ninguna sola podía hacer esto. Hacía falta gente metida en los barrios, una entidad con papeles para recibir y ejecutar, quien convoque, y con qué probarlo.</p>
     </div>
-    <div class="ali" id="aliL"></div>
+    <div class="ali" id="aliL" data-cargando="Cargando las organizaciones…"></div>
     <p class="fuente rv" data-i="al3">Los datos legales de la entidad que recibe y ejecuta están en la sección de transparencia, y se pueden verificar en el RUES y en la DIAN.</p>
   </div>
 </section>
@@ -321,7 +321,7 @@
         <h3 style="margin-bottom:6px" data-i="t2">El recorrido de un aporte</h3>
         <p class="ruta__real" data-i="t2b">Así va el folio <b>RNC-2608-000001</b>, el primer aporte registrado.</p>
         <div class="ruta">
-          <div class="ruta__item is-done"><span class="ruta__dot num">1</span><div><div class="ruta__t" data-i="t3">Aporte recibido</div><p class="ruta__d" data-i="t4">Monto, fecha y medio de pago. Se emite el folio.</p></div></div>
+          <div class="ruta__item is-done"><span class="ruta__dot num">1</span><div><div class="ruta__t" data-i="t3">Aporte recibido</div><p class="ruta__d" data-i="t4">Fecha y medio de pago. Se emite el folio y queda publicado.</p></div></div>
           <div class="ruta__item"><span class="ruta__dot num">2</span><div><div class="ruta__t" data-i="t5">Asignado a una obra</div><p class="ruta__d" data-i="t6">Vivienda, colegio, centro de salud o ayuda de emergencia.</p></div></div>
           <div class="ruta__item"><span class="ruta__dot num">3</span><div><div class="ruta__t" data-i="t7">Comprado</div><p class="ruta__d" data-i="t8">Factura del proveedor asociada al folio, con cantidad y precio unitario.</p></div></div>
           <div class="ruta__item"><span class="ruta__dot num">4</span><div><div class="ruta__t" data-i="t9">Ejecutado en territorio</div><p class="ruta__d" data-i="t10">Municipio, comunidad, número de familias y acta firmada.</p></div></div>
@@ -367,7 +367,7 @@
       <h2 data-i="g1">Lo que se está haciendo con los recursos.</h2>
       <p class="lede" data-i="g2">Aquí van las fotos y los videos de cada entrega, con su factura y su acta firmada. Cuando algo salga mal, va a estar aquí también.</p>
     </div>
-    <div class="galeria rv" id="gGrid" aria-live="polite"></div>
+    <div class="galeria rv" id="gGrid" aria-live="polite" data-cargando="Cargando las entregas…"></div>
     <p class="fuente rv" id="gPie"></p>
   </div>
 </section>
@@ -681,7 +681,7 @@ c3:'We buy and rebuild',c4:'That money turns into roof tiles, cement, classrooms
 c5:'We publish the receipt',c6:'The invoice, the signed record and the photos hang off your number. And when something cannot be done, that shows up too. Red gets the same space as green.',
 dev:'● Platform in development · v1',e3:'Traceability',t0:'Your contribution gets a number. And the number can be followed.',
 t1:'Most people who do not give are not short on goodwill. They are short on proof. They never find out where the money ended up. So every contribution here carries a number, and that number opens the whole trail without asking anyone for permission.',
-t2:'The journey of a contribution',t3:'Contribution received',t4:'Amount, date and payment method. The tracking number is issued.',
+t2:'The journey of a contribution',t3:'Date and payment method. The reference is issued and published.',t4:'Amount, date and payment method. The tracking number is issued.',
 t5:'Assigned to a project',t6:'Housing, school, health post or emergency relief.',
 t7:'Purchased',t8:'Supplier invoice tied to the number, with quantity and unit price.',
 t9:'Executed on the ground',t10:'Municipality, community, number of families and signed record.',

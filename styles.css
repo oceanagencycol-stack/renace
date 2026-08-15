@@ -298,7 +298,7 @@ background-image:radial-gradient(circle at 7px 0,transparent 6px,var(--cream) 6.
 @media (max-width:760px){#aliL{min-height:1800px}}
 #novL{min-height:330px}
 @media (max-width:640px){#novL{min-height:430px}}
-#regT2{min-height:190px}
+
 @media (max-width:720px){#regT2{min-height:260px}}
 .via__panel{min-height:290px}
 @media (max-width:760px){.via__panel{min-height:420px}}
@@ -410,4 +410,31 @@ transition:background .28s,border-color .28s,transform .28s}
 .reg__num{margin-top:18px;font-size:.82rem;color:var(--muted);line-height:1.55;max-width:76ch;border-left:2px solid var(--line-strong);padding-left:14px}
 .live__pct{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:10px;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .live__pct span:first-child{color:var(--ink);font-weight:600;font-size:.78rem;letter-spacing:.06em}
+/* mientras llegan los datos: en 3G esto puede tardar segundos */
+@keyframes brillo{0%{background-position:-460px 0}100%{background-position:460px 0}}
+#regT2:empty,#aliL:empty,#ayuL:empty,#novL:empty,#gGrid:empty,#mapaSvg:empty{
+display:block;border-radius:var(--r-md);position:relative;max-height:320px;min-height:150px;
+background:linear-gradient(100deg,var(--cream-2) 30%,rgba(255,255,255,.65) 50%,var(--cream-2) 70%);
+background-size:460px 100%;animation:brillo 1.5s linear infinite}
+#regT2:empty::after,#aliL:empty::after,#ayuL:empty::after,#novL:empty::after,#gGrid:empty::after{
+content:attr(data-cargando);position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);
+text-align:center;font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;
+color:var(--muted);opacity:.75}
+#mapaSvg:empty{background:linear-gradient(100deg,rgba(255,255,255,.05) 30%,rgba(255,255,255,.12) 50%,rgba(255,255,255,.05) 70%);background-size:460px 100%}
+@media (prefers-reduced-motion:reduce){
+#regT2:empty,#aliL:empty,#ayuL:empty,#novL:empty,#gGrid:empty,#mapaSvg:empty{animation:none;background:var(--cream-2)}}
+/* impresión: para juntas directivas y donantes institucionales */
+@media print{
+*{background:#fff!important;color:#000!important;box-shadow:none!important}
+.nav,.tbar,.dock,.pop,.lb,.wa-float,.sp,.burger,.lang,.share,.cierre,.hfoto,.cfoto,
+.mapa__c,.reg__csv,.fol,.pasos2__wa,.al,.otras{display:none!important}
+.sec{padding:14pt 0!important;page-break-inside:avoid}
+h1{font-size:24pt!important}h2{font-size:16pt!important}h3{font-size:12pt!important}
+body{font-size:10pt;line-height:1.45}
+.reg table{font-size:9pt}
+.via__panel[hidden]{display:block!important}
+.via__tabs{display:none!important}
+a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;color:#555}
+.traza,.cif,.tab{border:1px solid #ccc!important}
+@page{margin:1.6cm}}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.sr:focus{position:fixed;top:12px;left:12px;z-index:200;width:auto;height:auto;clip:auto;background:var(--ink);color:var(--cream);padding:14px 22px;border-radius:999px;font-weight:600;font-size:.92rem;text-decoration:none;box-shadow:var(--shadow-lift)}

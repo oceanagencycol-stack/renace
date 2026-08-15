@@ -152,5 +152,14 @@ for (const [id, valor] of [['tPct',pct],['tAp',String(n)],['tOb',obras],['tRec',
   if (m && m[2] !== valor) { html = html.replace(re, (_, a, __, c) => a + valor + c); cambios++; }
 }
 if (cambios) fs.writeFileSync(idx, html);
+// el sitemap lleva la fecha del último despliegue, no una escrita a mano
+const sm = path.join(RAIZ, 'sitemap.xml');
+if (fs.existsSync(sm)) {
+  const hoy = new Date().toISOString().slice(0, 10);
+  let x = fs.readFileSync(sm, 'utf8');
+  const y = x.replace(/<lastmod>[^<]*<\/lastmod>/g, `<lastmod>${hoy}</lastmod>`);
+  if (y !== x) { fs.writeFileSync(sm, y); console.log(`   sitemap.xml actualizado a ${hoy}.`); }
+}
+
 console.log(`✅ Publicando · ${n} aportes · ${fmt(total)} · ${pct} de la meta · sin montos individuales`);
 console.log(`   Cifras del HTML sincronizadas (${cambios} ${cambios === 1 ? 'cambio' : 'cambios'}).\n`);
