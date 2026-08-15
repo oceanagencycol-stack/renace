@@ -20,6 +20,14 @@
  "obras_entregadas": 0,
  "aportes": [
   {
+   "folio": "RNC-2608-000045",
+   "fecha": "2026-08-15",
+   "origen": "Camilo",
+   "nota": "Davivienda · 15/08 13:30 · pidió confirmación del aporte",
+   "canal": "Davivienda",
+   "estado": "recibido"
+  },
+  {
    "folio": "RNC-2608-000044",
    "fecha": "2026-08-15",
    "origen": "Jerson Hernández",
