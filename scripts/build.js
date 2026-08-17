@@ -76,7 +76,13 @@ if (ap) {
       errores.push('aportes.json — "trm" debe ser un número mayor que cero');
     if (!esFecha(ap.actualizado)) avisos.push('aportes.json — "actualizado" con fecha inválida');
 
-    // el total se mantiene a mano: avisar si hay aportes posteriores a su última actualización
+    // el total se mantiene a mano: avisar si quedó corto
+    if (typeof ap.aportes_en_total === 'number' && ap.aportes_en_total !== ap.aportes.length) {
+      avisos.push(`EL TOTAL ESTÁ CORTO — hay ${ap.aportes.length} aportes en la lista pero "total_cop" ` +
+        `solo suma ${ap.aportes_en_total}. Actualiza "total_cop" y "aportes_en_total".`);
+    }
+
+    // y si hay aportes con fecha posterior a la última actualización
     const fechas = ap.aportes.map(a => a.fecha).filter(esFecha).sort();
     const ultima = fechas[fechas.length - 1];
     if (ultima && esFecha(ap.actualizado) && ultima > ap.actualizado) {

@@ -10,10 +10,11 @@
   "avance_pct": "Porcentaje de avance sobre la meta = (total recaudado en COP / trm / meta_usd) x 100, con dos decimales. Actualízalo cada vez que agregues aportes.",
   "campos": "folio · fecha · origen · nota · canal · estado. NUNCA agregues 'monto' a un aporte.",
   "notas": "La nota es pública. NUNCA debe contener referencias de transacción, números de cuenta, documentos, horas exactas ni nombres de terceros. Solo una descripción neutra del aporte.",
-  "total_cop": "Total recaudado en pesos, sumando todos los aportes. Actualízalo cada vez que entre uno nuevo. El porcentaje de avance se calcula solo a partir de este número."
+  "total_cop": "Total recaudado en pesos, sumando todos los aportes. Actualízalo cada vez que entre uno nuevo. El porcentaje de avance se calcula solo a partir de este número.",
+  "aportes_en_total": "Cuántos aportes están sumados dentro de 'total_cop'. Si no coincide con el número de entradas de la lista, el total quedó corto y el despliegue avisa."
  },
- "actualizado": "2026-08-16",
- "total_cop": 3054547,
+ "actualizado": "2026-08-17",
+ "total_cop": 3704547,
  "trm": 3125.47,
  "meta_usd": 500000,
  "meta_obras": 100,
@@ -153,5 +154,6 @@
    "estado": "en_asignacion"
   }
  ],
- "avance_pct": 0.2
+ "avance_pct": 0.2,
+ "aportes_en_total": 16
 }
