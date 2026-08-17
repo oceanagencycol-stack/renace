@@ -12,13 +12,21 @@
   "notas": "La nota es pública. NUNCA debe contener referencias de transacción, números de cuenta, documentos, horas exactas ni nombres de terceros. Solo una descripción neutra del aporte.",
   "total_cop": "Total recaudado en pesos, sumando todos los aportes. Actualízalo cada vez que entre uno nuevo. El porcentaje de avance se calcula solo a partir de este número."
  },
- "actualizado": "2026-08-15",
+ "actualizado": "2026-08-16",
  "total_cop": 3054547,
  "trm": 3125.47,
  "meta_usd": 500000,
  "meta_obras": 100,
  "obras_entregadas": 0,
  "aportes": [
+  {
+   "folio": "RNC-2608-000046",
+   "fecha": "2026-08-16",
+   "origen": "Aporte anónimo",
+   "nota": "Aporte por Bre-B",
+   "canal": "Bre-B",
+   "estado": "recibido"
+  },
   {
    "folio": "RNC-2608-000045",
    "fecha": "2026-08-15",
