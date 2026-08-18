@@ -4,7 +4,7 @@
   "campos": "id · nombre · tipo · rol · texto · ciudad · nit · desde · web · logo · alto",
   "pendiente": "Faltan NIT, ciudad y año de varias. Cuando lleguen, se agregan aquí y aparecen solas en la web."
  },
- "actualizado": "2026-08-12",
+ "actualizado": "2026-08-18",
  "aliados": [
   {
    "id": "hso",
@@ -99,6 +99,16 @@
    "texto_en": "Coordinates the alliance, public communication and relations with donors and companies. He answers for what this page promises.",
    "logo": "juan-cuero.png",
    "alto": 40
+  },
+  {
+   "nombre": "Fundación Yeyson Buenaños Pinilla",
+   "sigla": "Vamos Pa' Adelante",
+   "logo": "vamos-pa-adelante-oscuro.png",
+   "alto": 58,
+   "rol": "Trabajo comunitario y acompañamiento",
+   "rol_en": "Community work and accompaniment",
+   "desc": "Fundación de base que trabaja con comunidades de Buenaventura bajo el lema «Vamos Pa' Adelante». Se suma a la alianza para el acompañamiento en terreno y la difusión de la convocatoria.",
+   "desc_en": "A grassroots foundation working with Buenaventura communities under the motto «Vamos Pa' Adelante». It joins the alliance for on-the-ground accompaniment and outreach."
   }
  ]
 }

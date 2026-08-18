@@ -3,8 +3,16 @@
   "tipos": "noticia | necesidad | avance | alerta",
   "como_agregar": "Añade al principio del array y empuja."
  },
- "actualizado": "2026-08-13",
+ "actualizado": "2026-08-18",
  "novedades": [
+  {
+   "fecha": "2026-08-18",
+   "tipo": "avance",
+   "titulo": "Se suma la Fundación Yeyson Buenaños Pinilla",
+   "titulo_en": "Fundación Yeyson Buenaños Pinilla joins",
+   "texto": "«Vamos Pa' Adelante» entra a la alianza para el acompañamiento en terreno en Buenaventura. Ya somos nueve organizaciones.",
+   "texto_en": "«Vamos Pa' Adelante» joins the alliance for on-the-ground accompaniment in Buenaventura. We are now nine organizations."
+  },
   {
    "fecha": "2026-08-13",
    "tipo": "avance",
