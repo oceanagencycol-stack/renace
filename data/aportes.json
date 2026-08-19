@@ -13,13 +13,21 @@
   "total_cop": "Total recaudado en pesos, sumando todos los aportes. Actualízalo cada vez que entre uno nuevo. El porcentaje de avance se calcula solo a partir de este número.",
   "aportes_en_total": "Cuántos aportes están sumados dentro de 'total_cop'. Si no coincide con el número de entradas de la lista, el total quedó corto y el despliegue avisa."
  },
- "actualizado": "2026-08-17",
+ "actualizado": "2026-08-19",
  "total_cop": 3704547,
  "trm": 3125.47,
  "meta_usd": 500000,
  "meta_obras": 100,
  "obras_entregadas": 0,
  "aportes": [
+  {
+   "folio": "RNC-2608-000048",
+   "fecha": "2026-08-19",
+   "origen": "Tiru Tadesse, Andrés Castro y Lizeth Molina",
+   "nota": "Transferencia internacional vía Revolut desde Países Bajos, equivalente a €157,29",
+   "canal": "Davivienda",
+   "estado": "recibido"
+  },
   {
    "folio": "RNC-2608-000047",
    "fecha": "2026-08-17",
