@@ -14,7 +14,7 @@
   "aportes_en_total": "Cuántos aportes están sumados dentro de 'total_cop'. Si no coincide con el número de entradas de la lista, el total quedó corto y el despliegue avisa."
  },
  "actualizado": "2026-08-19",
- "total_cop": 3704547,
+ "total_cop": 4754547,
  "trm": 3125.47,
  "meta_usd": 500000,
  "meta_obras": 100,
@@ -24,7 +24,7 @@
    "folio": "RNC-2608-000048",
    "fecha": "2026-08-19",
    "origen": "Tiru Tadesse, Andrés Castro y Lizeth Molina",
-   "nota": "Transferencia internacional vía Revolut desde Países Bajos, equivalente a €157,29",
+   "nota": "Aporte verificado con comprobante",
    "canal": "Davivienda",
    "estado": "recibido"
   },
@@ -171,5 +171,5 @@
   }
  ],
  "avance_pct": 0.2,
- "aportes_en_total": 16
+ "aportes_en_total": 18
 }
