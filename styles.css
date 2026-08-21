@@ -482,4 +482,8 @@ transition:background .26s,border-color .26s,transform .2s}
 .dron__b svg{width:17px;height:17px}
 @media (prefers-reduced-motion:reduce){.dron__v{display:none}
 .dron{background:var(--ink) url('/assets/bva/dron-poster.jpg') center/cover}}
+.jb2{display:flex;flex-wrap:wrap;gap:9px;margin:4px 0 18px}
+.jb2 span{font-family:var(--mono);font-size:.72rem;letter-spacing:.11em;text-transform:uppercase;
+color:var(--ink);background:var(--cream-2);border:1px solid var(--line);border-radius:999px;padding:7px 13px}
+.jor2__n2{margin-top:10px;font-size:.82rem;color:var(--muted);line-height:1.55}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.sr:focus{position:fixed;top:12px;left:12px;z-index:200;width:auto;height:auto;clip:auto;background:var(--ink);color:var(--cream);padding:14px 22px;border-radius:999px;font-weight:600;font-size:.92rem;text-decoration:none;box-shadow:var(--shadow-lift)}
