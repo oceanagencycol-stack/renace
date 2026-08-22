@@ -1,61 +1,61 @@
 {
-  "_schema": {
-    "descripcion": "Recursos de emergencia que NO son de RENACE. Se enlazan porque resuelven necesidades inmediatas que la alianza no cubre.",
-    "regla": "Antes de agregar uno, verifica que esté activo para Colombia y anota los requisitos reales. Enviar a alguien sin casa a una puerta cerrada hace daño.",
-    "campos": "id · tipo · titulo · texto · requisitos · quien · url · cta"
+ "_schema": {
+  "descripcion": "Recursos de emergencia que NO son de RENACE. Se enlazan porque resuelven necesidades inmediatas que la alianza no cubre.",
+  "regla": "Antes de agregar uno, verifica que esté activo para Colombia y anota los requisitos reales. Enviar a alguien sin casa a una puerta cerrada hace daño.",
+  "campos": "id · tipo · titulo · texto · requisitos · quien · url · cta"
+ },
+ "actualizado": "2026-08-22",
+ "recursos": [
+  {
+   "id": "airbnb",
+   "tipo": "Alojamiento temporal",
+   "tipo_en": "Temporary housing",
+   "titulo": "Airbnb.org — alojamiento de emergencia gratuito",
+   "titulo_en": "Airbnb.org — free emergency housing",
+   "texto": "Airbnb.org tiene una respuesta activa para el sismo de Chocó. Da estadías cortas y gratuitas a familias desplazadas, con espacio para niños y mascotas.",
+   "texto_en": "Airbnb.org has an active response for the Chocó earthquake. It provides free short-term stays for displaced families, with room for children and pets.",
+   "requisitos": [
+    "Tu vivienda principal debe estar en zona de evacuación obligatoria. Con aviso o alerta de evacuación todavía no aplicas.",
+    "Necesitas una cuenta de Airbnb para que verifiquen tu identidad. Se puede crear gratis.",
+    "La solicitud se hace directamente en su página, en inglés."
+   ],
+   "requisitos_en": [
+    "Your primary home must be in a mandatory evacuation zone. An evacuation notice or warning does not qualify yet.",
+    "You need an Airbnb account so they can verify your identity. It is free to create one.",
+    "You apply directly on their page."
+   ],
+   "quien": "Airbnb.org, con Project Hope y Cenaced",
+   "url": "https://www.airbnb.org/colombia-earthquake",
+   "cta": "Solicitar alojamiento",
+   "cta_en": "Apply for housing"
   },
-  "actualizado": "2026-08-13",
-  "recursos": [
-    {
-      "id": "airbnb",
-      "tipo": "Alojamiento temporal",
-      "tipo_en": "Temporary housing",
-      "titulo": "Airbnb.org — alojamiento de emergencia gratuito",
-      "titulo_en": "Airbnb.org — free emergency housing",
-      "texto": "Airbnb.org tiene una respuesta activa para el sismo de Chocó. Da estadías cortas y gratuitas a familias desplazadas, con espacio para niños y mascotas.",
-      "texto_en": "Airbnb.org has an active response for the Chocó earthquake. It provides free short-term stays for displaced families, with room for children and pets.",
-      "requisitos": [
-        "Tu vivienda principal debe estar en zona de evacuación obligatoria. Con aviso o alerta de evacuación todavía no aplicas.",
-        "Necesitas una cuenta de Airbnb para que verifiquen tu identidad. Se puede crear gratis.",
-        "La solicitud se hace directamente en su página, en inglés."
-      ],
-      "requisitos_en": [
-        "Your primary home must be in a mandatory evacuation zone. An evacuation notice or warning does not qualify yet.",
-        "You need an Airbnb account so they can verify your identity. It is free to create one.",
-        "You apply directly on their page."
-      ],
-      "quien": "Airbnb.org, con Project Hope y Cenaced",
-      "url": "https://www.airbnb.org/colombia-earthquake",
-      "cta": "Solicitar alojamiento",
-      "cta_en": "Apply for housing"
-    },
-    {
-      "id": "mapa",
-      "tipo": "Coordinación en vivo",
-      "tipo_en": "Live coordination",
-      "titulo": "Mapa de emergencia comunitario",
-      "titulo_en": "Community emergency map",
-      "texto": "Cientos de personas coordinan ahí, en tiempo real, dónde faltan manos, dónde ya sobran y qué se necesita en cada dirección de Valle, Chocó y Cauca. Puedes consultarlo o añadir un punto.",
-      "texto_en": "Hundreds of people coordinate there, live, where hands are missing, where there are already enough, and what is needed at each address across Valle, Chocó and Cauca. You can check it or add a point.",
-      "requisitos": [],
-      "quien": "Artefacto",
-      "url": "https://mapa-emergencia.artefactofilms.workers.dev",
-      "cta": "Abrir el mapa",
-      "cta_en": "Open the map"
-    },
-    {
-      "id": "oficial",
-      "tipo": "Líneas oficiales",
-      "tipo_en": "Official lines",
-      "titulo": "Emergencias y gestión del riesgo",
-      "titulo_en": "Emergencies and disaster management",
-      "texto": "Para una emergencia en curso, una persona atrapada o herida, marca 123. La UNGRD coordina la respuesta nacional y publica los boletines oficiales de damnificados y desaparecidos.",
-      "texto_en": "For an ongoing emergency, someone trapped or injured, call 123. UNGRD coordinates the national response and publishes the official bulletins on affected and missing people.",
-      "requisitos": [],
-      "quien": "Estado colombiano",
-      "url": "https://www.gestiondelriesgo.gov.co/",
-      "cta": "Ir a la UNGRD",
-      "cta_en": "Go to UNGRD"
-    }
-  ]
+  {
+   "id": "mapa",
+   "tipo": "Coordinación en vivo",
+   "tipo_en": "Live coordination",
+   "titulo": "Mapa de emergencia comunitario",
+   "titulo_en": "Community emergency map",
+   "texto": "Cientos de personas coordinan ahí, en tiempo real, dónde faltan manos, dónde ya sobran y qué se necesita en cada dirección de Valle, Chocó y Cauca. Puedes consultarlo o añadir un punto.",
+   "texto_en": "Hundreds of people coordinate there, live, where hands are missing, where there are already enough, and what is needed at each address across Valle, Chocó and Cauca. You can check it or add a point.",
+   "requisitos": [],
+   "quien": "Artefacto",
+   "url": "https://mapa-emergencia.artefactofilms.workers.dev",
+   "cta": "Abrir el mapa",
+   "cta_en": "Open the map"
+  },
+  {
+   "id": "oficial",
+   "tipo": "Líneas oficiales",
+   "tipo_en": "Official lines",
+   "titulo": "Líneas de emergencia y reporte oficial",
+   "titulo_en": "Emergency lines and official reporting",
+   "texto": "Para una emergencia en curso, una persona atrapada o herida, marca 123. Para reportar afectación por el sismo, 111. El Servicio Geológico Colombiano publica los boletines sísmicos oficiales; el sitio de la UNGRD está caído por ahora, así que llama en vez de buscarlo.",
+   "texto_en": "For an ongoing emergency, someone trapped or injured, call 123. To report earthquake damage, 111. The Colombian Geological Survey publishes the official seismic bulletins; the UNGRD website is down for now, so call instead of looking for it.",
+   "requisitos": [],
+   "quien": "Estado colombiano · SGC",
+   "url": "https://www.sgc.gov.co/",
+   "cta": "Boletines del SGC",
+   "cta_en": "SGC bulletins"
+  }
+ ]
 }
