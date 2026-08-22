@@ -11,10 +11,11 @@
   "campos": "folio · fecha · origen · nota · canal · estado. NUNCA agregues 'monto' a un aporte.",
   "notas": "La nota es pública. NUNCA debe contener referencias de transacción, números de cuenta, documentos, horas exactas ni nombres de terceros. Solo una descripción neutra del aporte.",
   "total_cop": "Total recaudado en pesos, sumando todos los aportes. Actualízalo cada vez que entre uno nuevo. El porcentaje de avance se calcula solo a partir de este número.",
-  "aportes_en_total": "Cuántos aportes están sumados dentro de 'total_cop'. Si no coincide con el número de entradas de la lista, el total quedó corto y el despliegue avisa."
+  "aportes_en_total": "Cuántos aportes están sumados dentro de 'total_cop'. Si no coincide con el número de entradas de la lista, el total quedó corto y el despliegue avisa.",
+  "capital_semilla": "Los aportes marcados 'costo_operacion' con nota de capital semilla financiaron la construcción de esta plataforma. Se publican con su folio para que quede el rastro, pero NO suman al total del fondo de obras: mostrarlos como recaudado le diría al donante que hay más dinero para reconstruir del que hay."
  },
- "actualizado": "2026-08-19",
- "total_cop": 4754547,
+ "actualizado": "2026-08-22",
+ "total_cop": 2942000,
  "trm": 3125.47,
  "meta_usd": 500000,
  "meta_obras": 100,
@@ -32,9 +33,9 @@
    "folio": "RNC-2608-000047",
    "fecha": "2026-08-17",
    "origen": "Andrés Moya",
-   "nota": "Aporte por Davivienda",
+   "nota": "Registro duplicado del mismo aporte. Se conserva el folio porque los consecutivos no se reutilizan, pero no suma al total.",
    "canal": "Davivienda",
-   "estado": "recibido"
+   "estado": "no_ejecutado"
   },
   {
    "folio": "RNC-2608-000045",
@@ -146,30 +147,30 @@
    "folio": "RNC-2608-000003",
    "fecha": "2026-08-12",
    "origen": "Ocean Industries y aliados",
-   "nota": "Aporte en dólares desde el exterior",
+   "nota": "Capital semilla destinado a construir y sostener la plataforma. No hace parte del fondo de obras.",
    "nota_en": "Contribution in US dollars from abroad",
    "canal": "DolarApp",
-   "estado": "en_asignacion"
+   "estado": "costo_operacion"
   },
   {
    "folio": "RNC-2608-000002",
    "fecha": "2026-08-12",
    "origen": "Álvaro Arroyo",
-   "nota": "Aliado de la alianza",
+   "nota": "Capital semilla destinado a construir y sostener la plataforma. No hace parte del fondo de obras.",
    "nota_en": "Alliance partner",
    "canal": "Bre-B",
-   "estado": "en_asignacion"
+   "estado": "costo_operacion"
   },
   {
    "folio": "RNC-2608-000001",
    "fecha": "2026-08-12",
    "origen": "Fundación Hogar Sin Olvido",
-   "nota": "Aporte semilla de la alianza",
+   "nota": "Capital semilla destinado a construir y sostener la plataforma. No hace parte del fondo de obras.",
    "nota_en": "Alliance seed contribution",
    "canal": "Davivienda",
-   "estado": "en_asignacion"
+   "estado": "costo_operacion"
   }
  ],
- "avance_pct": 0.2,
- "aportes_en_total": 18
+ "avance_pct": 0.19,
+ "aportes_en_total": 14
 }
