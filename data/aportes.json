@@ -14,13 +14,21 @@
   "aportes_en_total": "Cuántos aportes están sumados dentro de 'total_cop'. Si no coincide con el número de entradas de la lista, el total quedó corto y el despliegue avisa.",
   "capital_semilla": "Los aportes marcados 'costo_operacion' con nota de capital semilla financiaron la construcción de esta plataforma. Se publican con su folio para que quede el rastro, pero NO suman al total del fondo de obras: mostrarlos como recaudado le diría al donante que hay más dinero para reconstruir del que hay."
  },
- "actualizado": "2026-08-24",
+ "actualizado": "2026-08-25",
  "total_cop": 2942000,
  "trm": 3125.47,
  "meta_usd": 500000,
  "meta_obras": 100,
  "obras_entregadas": 0,
  "aportes": [
+  {
+   "folio": "RNC-2608-000050",
+   "fecha": "2026-08-25",
+   "origen": "Andrés Rengifo",
+   "nota": "Aporte por Bre-B",
+   "canal": "Bre-B",
+   "estado": "recibido"
+  },
   {
    "folio": "RNC-2608-000049",
    "fecha": "2026-08-24",
