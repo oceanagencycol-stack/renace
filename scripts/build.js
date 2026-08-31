@@ -77,9 +77,11 @@ if (ap) {
     if (!esFecha(ap.actualizado)) avisos.push('aportes.json — "actualizado" con fecha inválida');
 
     // el total se mantiene a mano: avisar si quedó corto
-    if (typeof ap.aportes_en_total === 'number' && ap.aportes_en_total !== ap.aportes.length) {
-      avisos.push(`EL TOTAL ESTÁ CORTO — hay ${ap.aportes.length} aportes en la lista pero "total_cop" ` +
-        `solo suma ${ap.aportes_en_total}. Actualiza "total_cop" y "aportes_en_total".`);
+    const CUENTAN = ['recibido', 'en_asignacion', 'comprado', 'entregado'];
+    const nIngreso = ap.aportes.filter(a => !a.estado || CUENTAN.includes(a.estado)).length;
+    if (typeof ap.aportes_en_total === 'number' && ap.aportes_en_total !== nIngreso) {
+      avisos.push(`EL TOTAL ESTÁ CORTO — ${nIngreso} aportes cuentan como ingreso pero "total_cop" ` +
+        `solo suma ${ap.aportes_en_total}. Corre: node scripts/total.js`);
     }
 
     // y si hay aportes con fecha posterior a la última actualización

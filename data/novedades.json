@@ -3,8 +3,40 @@
   "tipos": "noticia | necesidad | avance | alerta",
   "como_agregar": "Añade al principio del array y empuja."
  },
- "actualizado": "2026-08-18",
+ "actualizado": "2026-08-27",
  "novedades": [
+  {
+   "fecha": "2026-08-27",
+   "tipo": "avance",
+   "titulo": "La llave Bre-B ya es de la fundación",
+   "titulo_en": "The Bre-B key now belongs to the foundation",
+   "texto": "Dos de las tres vías para aportar están ahora a nombre de la Fundación Hogar Sin Olvido, con su NIT. Era el punto que más nos costaba explicar y ya no hace falta explicarlo.",
+   "texto_en": "Two of the three ways to give are now in the name of Fundación Hogar Sin Olvido, with its tax ID. It was the point hardest to explain, and now it needs no explaining."
+  },
+  {
+   "fecha": "2026-08-25",
+   "tipo": "avance",
+   "titulo": "Cuatro aportes nuevos en una semana",
+   "titulo_en": "Four new contributions in one week",
+   "texto": "Jerson Hernández, Camilo, Carlos Álvarez con Lizi, y Andrés Rengifo. Ninguno pertenece a las organizaciones de la alianza: son personas que vieron la campaña y decidieron entrar.",
+   "texto_en": "Jerson Hernández, Camilo, Carlos Álvarez with Lizi, and Andrés Rengifo. None belong to the alliance organizations: they are people who saw the campaign and decided to join."
+  },
+  {
+   "fecha": "2026-08-19",
+   "tipo": "necesidad",
+   "titulo": "Un aporte quedó registrado dos veces y lo dejamos a la vista",
+   "titulo_en": "One contribution was logged twice and we left it visible",
+   "texto": "El folio RNC-2608-000047 duplicaba un aporte ya registrado. No lo borramos: queda marcado como no ejecutado, porque un folio emitido no se elimina nunca. El total no lo cuenta.",
+   "texto_en": "Reference RNC-2608-000047 duplicated a contribution already logged. We did not delete it: it stays marked as not executed, because an issued reference is never removed. The total does not count it."
+  },
+  {
+   "fecha": "2026-08-15",
+   "tipo": "entrega",
+   "titulo": "Se publican las primeras siete piezas de obra",
+   "titulo_en": "The first seven pieces of work are published",
+   "texto": "Video de la cuadrilla levantando el techo, fotos del armado de hierro y de la jornada de caracterización. La sección de entregas dejó de estar vacía.",
+   "texto_en": "Video of the crew putting the roof back up, photos of the rebar assembly and of the assessment day. The deliveries section is no longer empty."
+  },
   {
    "fecha": "2026-08-18",
    "tipo": "avance",

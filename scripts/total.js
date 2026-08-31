@@ -50,7 +50,11 @@ try {
 let total = 0;
 const sinMonto = [];
 const detalle = [];
+const CUENTAN = new Set(['recibido', 'en_asignacion', 'comprado', 'entregado']);
+const excluidos = [];
 for (const a of ap.aportes) {
+  // un duplicado o un costo de operación no es plata que entró
+  if (a.estado && !CUENTAN.has(a.estado)) { excluidos.push(`${a.folio} · ${a.estado}`); continue; }
   const m = porMensaje.get(a.folio) ?? porArchivo.get(a.folio);
   if (m == null) { sinMonto.push(a.folio + ' · ' + a.origen); continue; }
   total += m;
@@ -59,7 +63,11 @@ for (const a of ap.aportes) {
 }
 
 const cop = v => '$' + v.toLocaleString('es-CO');
-console.log(`\n  ${ap.aportes.length} aportes publicados`);
+console.log(`\n  ${ap.aportes.length} entradas en el registro · ${detalle.length + sinMonto.length} cuentan como ingreso`);
+if (excluidos.length) {
+  console.log(`  ${excluidos.length} excluidas del total:`);
+  excluidos.forEach(x => console.log('   · ' + x));
+}
 console.log(`  ${detalle.length} con monto recuperado · ${sinMonto.length} sin monto\n`);
 for (const d of detalle) {
   console.log(`   ${d.folio}  ${cop(d.monto).padStart(12)}  ${d.origen.slice(0, 30).padEnd(32)} (${d.fuente})`);
@@ -81,7 +89,7 @@ if (process.argv.includes('--aplicar')) {
     process.exit(1);
   }
   ap.total_cop = total;
-  ap.aportes_en_total = ap.aportes.length;
+  ap.aportes_en_total = detalle.length;
   ap.actualizado = new Date().toISOString().slice(0, 10);
   fs.writeFileSync(P, JSON.stringify(ap, null, 1));
   console.log(`\n  ✅ aportes.json actualizado a ${cop(total)} con ${ap.aportes.length} aportes.\n`);

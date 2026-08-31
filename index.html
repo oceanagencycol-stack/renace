@@ -1099,13 +1099,15 @@ if(!e.relatedTarget&&e.clientY<8&&window.scrollY>300)abrir();});}
 }
 
 /* ── el dinero sale de un solo archivo: data/aportes.json ── */
-var EST={es:{recibido:'Recibido',en_asignacion:'En asignación',comprado:'Comprado',entregado:'Entregado',no_ejecutado:'No ejecutado'},
-en:{recibido:'Received',en_asignacion:'Being assigned',comprado:'Purchased',entregado:'Delivered',no_ejecutado:'Not executed'}};
+var EST={es:{recibido:'Recibido',en_asignacion:'En asignación',comprado:'Comprado',entregado:'Entregado',no_ejecutado:'No ejecutado',costo_operacion:'Costo de operación'},
+en:{recibido:'Received',en_asignacion:'Being assigned',comprado:'Purchased',entregado:'Delivered',no_ejecutado:'Not executed',costo_operacion:'Operating cost'}};
 var R_T={es:{folio:'Folio',fecha:'Fecha',origen:'Origen',estado:'Estado',
-tot:function(n){return 'Total · '+n+(n===1?' aporte registrado':' aportes registrados');},
+tot:function(n){return 'Total · '+n+(n===1?' aporte recibido':' aportes recibidos');},
+ex:function(n){return ' · '+n+(n===1?' entrada más que no suma al total':' entradas más que no suman al total')+' (duplicados y costos de operación, publicados igual)';},
 vacio:'Todavía no hay aportes registrados. La primera entrada aparece aquí en cuanto se verifique el ingreso.'},
 en:{folio:'Ref.',fecha:'Date',origen:'Source',estado:'Status',
-tot:function(n){return 'Total · '+n+(n===1?' contribution logged':' contributions logged');},
+tot:function(n){return 'Total · '+n+(n===1?' contribution received':' contributions received');},
+ex:function(n){return ' · '+n+(n===1?' more entry that does not add to the total':' more entries that do not add to the total')+' (duplicates and operating costs, published anyway)';},
 vacio:'No contributions logged yet. The first entry appears here as soon as the deposit is verified.'}};
 var APORTES=null, DATOS_OK=null;
 function fFecha(iso,lang){try{return new Date(iso+'T12:00:00').toLocaleDateString(lang==='en'?'en-US':'es-CO',
@@ -1125,9 +1127,11 @@ var nota=(lang==='en'&&a.nota_en?a.nota_en:a.nota)||'';
 return '<tr><td class="f">'+esc(a.folio)+'</td><td class="d">'+fFecha(a.fecha,lang)+'</td>'
 +'<td class="o"><b>'+esc(a.origen)+'</b>'+(nota?'<span>'+esc(nota)+'</span>':'')+'</td>'
 +'<td class="r"><span class="est'+cls+'"><i></i>'+(L[a.estado]||esc(a.estado))+'</span></td></tr>';}).join('');
+var CUENTAN={recibido:1,en_asignacion:1,comprado:1,entregado:1};
+var nIng=lista.filter(function(x){return !x.estado||CUENTAN[x.estado];}).length;
 cont.innerHTML='<table><thead><tr><th>'+T.folio+'</th><th>'+T.fecha+'</th><th>'+T.origen+'</th>'
 +'<th class="r">'+T.estado+'</th></tr></thead><tbody>'+filas+'</tbody>'
-+'<tfoot><tr><td colspan="3">'+T.tot(lista.length)+'</td><td class="r"></td></tr></tfoot></table>';}
++'<tfoot><tr><td colspan="3">'+T.tot(nIng)+(nIng!==lista.length?'<span class="reg__ex">'+T.ex(lista.length-nIng)+'</span>':'')+'</td><td class="r"></td></tr></tfoot></table>';}
 
 function aplicarAportes(d){
 APORTES=d;
