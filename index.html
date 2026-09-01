@@ -431,6 +431,34 @@
     <p class="fuente rv" id="gPie"></p>
   </div>
 </section>
+
+  <section class="sec viv" id="viviendas" aria-labelledby="vivT">
+    <div class="wrap">
+      <p class="eyebrow rv"><span data-i="vv0">Casa por casa</span></p>
+      <h2 id="vivT" class="rv" data-i="vv1">A qué vivienda<br>fue tu aporte.</h2>
+      <p class="sec__lede rv" data-i="vv2">Cada casa priorizada tiene un código. Cuando tu aporte se asigna a una,
+      ese código queda colgado de tu folio: puedes ver en qué barrio está, qué se le va a hacer, qué se compró
+      con su factura, y cómo va la obra.</p>
+
+      <div class="viv__f rv" role="group" aria-label="Filtrar viviendas">
+        <button type="button" class="viv__b is-on" data-f="todas" data-i="vv3">Todas</button>
+        <button type="button" class="viv__b" data-f="en_intervencion" data-i="vv4">En obra</button>
+        <button type="button" class="viv__b" data-f="terminada" data-i="vv5">Terminadas</button>
+        <button type="button" class="viv__b" data-f="priorizada" data-i="vv6">Priorizadas</button>
+      </div>
+
+      <div class="viv__g rv" id="vivGrid" data-cargando="Cargando las viviendas…"></div>
+      <p class="viv__pie" id="vivPie"></p>
+
+      <div class="viv__nota rv">
+        <b data-i="vv7">Por qué ves un código y no un nombre</b>
+        <p data-i="vv8">Son hogares con menores, adultos mayores y personas con discapacidad. Publicar su nombre,
+        su dirección exacta o su situación económica los expone. El mapa marca el barrio, no la puerta.
+        La familia sabe cuál es su casa, tú sabes a dónde fue tu plata, y nadie más necesita saber quién vive ahí.</p>
+      </div>
+    </div>
+  </section>
+
 <section class="sec" id="aportar">
   <div class="wrap">
     <div class="sec__head rv"><p class="eyebrow" data-i="e4">Cómo aportar hoy</p><h2 data-i="a0">Dónde transferir, según desde dónde estés.</h2>
@@ -807,6 +835,16 @@ w37:'Send receipt',
 w38:'We send your number back the same day. With it you can look up your contribution on this page.',
 w32:'You are seeing all three routes at once because JavaScript is disabled in your browser. The details are the same.',
 w0:'Bank in Colombia',w1:'Bre-B · instant',w2:'From abroad',
+vv0:'House by house',
+vv1:'Which home your contribution went to.',
+vv2:'Every prioritized home has a code. When your contribution is assigned to one, that code hangs from your reference number: you can see which neighbourhood it is in, what will be done to it, what was bought with its invoice, and how the work is going.',
+vv3:'All',
+vv4:'Under way',
+vv5:'Completed',
+vv6:'Prioritized',
+vv7:'Why you see a code and not a name',
+vv8:'These are households with children, older adults and people living with a disability. Publishing their name, their exact address or their financial situation exposes them. The map marks the neighbourhood, not the door. The family knows which house is theirs, you know where your money went, and nobody else needs to know who lives there.',
+n11:'Homes',
 w3:'Savings account · Davivienda (Colombia)',w4:'Account holder',w4b:'Account holder',w4c:'Account holder',
 w5:'Tax ID (NIT)',w6:'Who executes',w7:'This is the account of the foundation that buys, invoices and delivers.',
 w8:'Bre-B key · from any Colombian bank or wallet',w9:'Tax ID 901.047.625-4',
@@ -872,7 +910,7 @@ nodes.forEach(function(el){var k=el.getAttribute('data-i');if(d[k]!==undefined){
 if(tagEl)tagEl.setAttribute('data-tag',lang==='en'?EN.tagDirecta:tagES);
 document.documentElement.lang=(lang==='en')?'en':'es-CO';
 bES.classList.toggle('on',lang!=='en');bEN.classList.toggle('on',lang==='en');
-setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}if(typeof pintaEntregas==='function')pintaEntregas();if(typeof pintaRegistro==='function')pintaRegistro();if(typeof pintaMapa==='function')pintaMapa();if(typeof pintaNov==='function')pintaNov();if(typeof pintaTablero==='function')pintaTablero();if(typeof pintaAli==='function')pintaAli();if(typeof pintaRecursos==='function')pintaRecursos();if(typeof pintaComprobante==='function')pintaComprobante();
+setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}if(typeof pintaEntregas==='function')pintaEntregas(); pintaViviendas();if(typeof pintaRegistro==='function')pintaRegistro();if(typeof pintaMapa==='function')pintaMapa();if(typeof pintaNov==='function')pintaNov();if(typeof pintaTablero==='function')pintaTablero();if(typeof pintaAli==='function')pintaAli();if(typeof pintaRecursos==='function')pintaRecursos();if(typeof pintaComprobante==='function')pintaComprobante();
 try{localStorage.setItem('renace_lang',lang);}catch(e){}
 if(push&&window.history&&history.replaceState){
 try{var u=new URL(window.location.href);
@@ -1059,6 +1097,76 @@ if(grid0){grid0.addEventListener('click',function(e){var m=e.target.closest('[da
 grid0.addEventListener('keydown',function(e){if(e.key!=='Enter'&&e.key!==' ')return;var m=e.target.closest('[data-e]');if(m){e.preventDefault();abrirLb(+m.getAttribute('data-e'));}});}}
 
 /* carga del registro; si falla, se muestra el estado vacio honesto */
+
+/* ── viviendas: la capa que conecta un aporte con una casa ───── */
+var VIVIENDAS=null, VIV_F='todas';
+var V_T={es:{pri:'Priorizada',obr:'En obra',ter:'Terminada',no:'No ejecutada',
+ barrio:'Barrio',afect:'Afectación',hogar:'Hogar',dana:'Daño',trabajo:'Trabajo',
+ pers:function(n){return n+(n==1?' persona':' personas');},
+ riesgo:'Vivienda con riesgo para quienes la habitan',
+ carpeta:'Ver avances',factura:'Factura',folio:'Folio',
+ vacio:'Todavía no hay viviendas en ese estado.',
+ pie:function(a,b){return a+' de '+b+' viviendas priorizadas · meta de 100';},
+ sinb:'Barrio por confirmar'},
+ en:{pri:'Prioritized',obr:'Under way',ter:'Completed',no:'Not executed',
+ barrio:'Neighbourhood',afect:'Damage',hogar:'Household',dana:'Damaged',trabajo:'Work',
+ pers:function(n){return n+(n==1?' person':' people');},
+ riesgo:'Unsafe for the people living there',
+ carpeta:'See progress',factura:'Invoice',folio:'Ref.',
+ vacio:'No homes in that state yet.',
+ pie:function(a,b){return a+' of '+b+' prioritized homes · goal of 100';},
+ sinb:'Neighbourhood to confirm'}};
+
+function pintaViviendas(){
+var g=document.getElementById('vivGrid'), pie=document.getElementById('vivPie');
+if(!g||!VIVIENDAS)return;
+var lang=document.documentElement.lang==='en'?'en':'es', T=V_T[lang];
+var MAT={Madera:'Timber',Concreto:'Concrete',Ladrillo:'Brick',Mixta:'Mixed',Guadua:'Guadua',Otro:'Other'};
+var NIV={Leve:'Light',Moderada:'Moderate',Grave:'Severe','P\u00e9rdida parcial':'Partial loss','P\u00e9rdida total':'Total loss'};
+var ARE={techo:'roof',paredes:'walls',piso:'floor',cocina:'kitchen','ba\u00f1o':'bathroom','instalaci\u00f3n el\u00e9ctrica':'wiring','instalaci\u00f3n hidr\u00e1ulica':'plumbing','puertas o ventanas':'doors or windows',estructura:'structure'};
+var INT={'Reparaci\u00f3n':'Repair','Reposici\u00f3n':'Replacement','Adecuaci\u00f3n':'Upgrade','Reconstrucci\u00f3n':'Rebuild'};
+var tr=function(m,v){return lang==='en'&&m[v]?m[v]:v;};
+var todas=VIVIENDAS.viviendas||[];
+var lista=VIV_F==='todas'?todas:todas.filter(function(v){return v.estado===VIV_F;});
+if(!lista.length){g.innerHTML='<p class="viv__vacio">'+T.vacio+'</p>';if(pie)pie.textContent='';return;}
+g.innerHTML=lista.map(function(v){
+var cls=v.estado==='en_intervencion'?'obr':(v.estado==='terminada'?'ter':'pri');
+var et=v.estado==='en_intervencion'?T.obr:(v.estado==='terminada'?T.ter:(v.estado==='no_ejecutada'?T.no:T.pri));
+var areas=(v.areas||[]).map(function(a){return '<i>'+esc(tr(ARE,a))+'</i>';}).join('');
+var trab=(v.intervencion||[]).map(function(a){return '<i>'+esc(tr(INT,a))+'</i>';}).join('');
+var fol=(v.folios||[]).map(function(f){return '<i>'+T.folio+' '+esc(f)+'</i>';}).join('');
+var acc='';
+if(v.carpeta)acc+='<a href="'+esc(v.carpeta)+'" target="_blank" rel="noopener">'+T.carpeta+' \u2197</a>';
+(v.compras||[]).forEach(function(c){
+ if(c.factura)acc+='<a href="'+esc(c.factura)+'" target="_blank" rel="noopener">'+T.factura+': '+esc(c.concepto||'')+' \u2197</a>';});
+return '<article class="vc">'
++'<div class="vc__t"><span class="vc__c">'+esc(v.codigo)+'</span>'
++'<span class="vc__e '+cls+'">'+et+'</span></div>'
++'<div class="vc__b">'+esc(v.barrio||T.sinb)+'</div>'
++'<div class="vc__m">'+esc(v.municipio||'')+(v.material?' \u00b7 '+esc(tr(MAT,v.material)):'')
++(v.habitaciones?' \u00b7 '+v.habitaciones+(lang==='en'?' rooms':' habitaciones'):'')+'</div>'
++(v.riesgo?'<span class="vc__ri"><i></i>'+T.riesgo+'</span>':'')
++'<div class="vc__d">'
++(v.afectacion?'<span class="vc__r"><span>'+T.afect+'</span><span>'+esc(v.afectacion)+'</span></span>':'')
++(v.personas?'<span class="vc__r"><span>'+T.hogar+'</span><span>'+T.pers(v.personas)+'</span></span>':'')
++(areas?'<span class="vc__r"><span>'+T.dana+'</span><span class="vc__k">'+areas+'</span></span>':'')
++(trab?'<span class="vc__r"><span>'+T.trabajo+'</span><span class="vc__k">'+trab+'</span></span>':'')
++(fol?'<span class="vc__r"><span>'+T.folio+'</span><span class="vc__k">'+fol+'</span></span>':'')
++'</div>'
++(acc?'<div class="vc__a">'+acc+'</div>':'')
++'</article>';}).join('');
+if(pie)pie.textContent=T.pie(lista.length,todas.length);}
+
+document.addEventListener('click',function(e){
+var b=e.target.closest('.viv__b'); if(!b)return;
+VIV_F=b.dataset.f;
+document.querySelectorAll('.viv__b').forEach(function(x){x.classList.toggle('is-on',x===b);});
+pintaViviendas();});
+
+fetch('/data/viviendas.json',{cache:'no-store'}).then(function(r){return r.json();})
+.then(function(d){VIVIENDAS=d;pintaViviendas();})
+.catch(function(){avisoFallo('vivGrid','No pudimos cargar las viviendas.','We could not load the homes.');});
+
 fetch('/data/entregas.json',{cache:'no-cache'})
 .then(function(r){return r.ok?r.json():Promise.reject(0);})
 .then(function(d){if(!d||!Array.isArray(d.entregas))return Promise.reject(0);ENTREGAS=d;pintaEntregas();})

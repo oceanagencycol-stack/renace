@@ -1,0 +1,526 @@
+{
+ "_schema": {
+  "que_es": "Las viviendas priorizadas para intervención. Es la capa que conecta un aporte con una casa.",
+  "privacidad": "NUNCA se publica nombre, documento, teléfono, edad, ingresos, discapacidad ni la composición del hogar por edades. La ubicación es el centro del barrio, no la casa: publicar el GPS exacto de un hogar vulnerable con menores es exponerlo.",
+  "codigo": "Identificador anónimo de la ficha. Es el que ve el donante, y no permite llegar a la familia.",
+  "estado": "priorizada · en_intervencion · terminada · no_ejecutada",
+  "folios": "Los folios de aporte que financian esta vivienda. Es el vínculo entre el donante y la casa.",
+  "compras": "Cada compra con su factura: {concepto, monto_publicado:false, factura, fecha}",
+  "carpeta": "Enlace a la carpeta de avances de esa vivienda."
+ },
+ "actualizado": "2026-08-27",
+ "meta_viviendas": 100,
+ "viviendas": [
+  {
+   "codigo": "RNC-F-b5290e16",
+   "barrio": "Punta del Este",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8842,
+    -77.0527
+   ],
+   "personas": 2,
+   "material": "Ladrillo",
+   "habitaciones": 2,
+   "afectacion": "Pérdida parcial",
+   "areas": [
+    "techo",
+    "paredes",
+    "piso",
+    "cocina",
+    "baño",
+    "instalación eléctrica",
+    "puertas o ventanas",
+    "estructura"
+   ],
+   "intervencion": [
+    "Reconstrucción"
+   ],
+   "riesgo": true,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-5f48dbf8",
+   "barrio": "Punta del Este",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8842,
+    -77.0527
+   ],
+   "personas": 3,
+   "material": "Madera",
+   "habitaciones": 2,
+   "afectacion": "Leve",
+   "areas": [
+    "techo",
+    "paredes",
+    "piso",
+    "cocina",
+    "baño",
+    "instalación eléctrica"
+   ],
+   "intervencion": [
+    "Reconstrucción"
+   ],
+   "riesgo": true,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-ef2687d8",
+   "barrio": null,
+   "municipio": "Buenaventura",
+   "zona": null,
+   "personas": 5,
+   "material": "Madera",
+   "habitaciones": 3,
+   "afectacion": "Moderada",
+   "areas": [
+    "techo",
+    "paredes",
+    "piso",
+    "cocina",
+    "baño"
+   ],
+   "intervencion": [
+    "Reparación"
+   ],
+   "riesgo": false,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-1450dc3a",
+   "barrio": "Punta del Este",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8842,
+    -77.0527
+   ],
+   "personas": 5,
+   "material": "Mixta",
+   "habitaciones": 5,
+   "afectacion": "Moderada",
+   "areas": [
+    "techo",
+    "paredes",
+    "piso",
+    "baño",
+    "instalación eléctrica",
+    "puertas o ventanas",
+    "estructura"
+   ],
+   "intervencion": [
+    "Reparación"
+   ],
+   "riesgo": true,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-33dc4a77",
+   "barrio": "Punta del Este",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8842,
+    -77.0527
+   ],
+   "personas": 7,
+   "material": "Madera",
+   "habitaciones": 2,
+   "afectacion": "Leve",
+   "areas": [
+    "techo",
+    "paredes",
+    "piso",
+    "cocina",
+    "baño"
+   ],
+   "intervencion": [
+    "Adecuación"
+   ],
+   "riesgo": false,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-bbd94396",
+   "barrio": "Santa Cruz",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8957,
+    -77.0547
+   ],
+   "personas": 7,
+   "material": "Madera",
+   "habitaciones": 3,
+   "afectacion": "Leve",
+   "areas": [
+    "techo",
+    "paredes"
+   ],
+   "intervencion": [
+    "Reparación",
+    "Adecuación"
+   ],
+   "riesgo": false,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-1e54f162",
+   "barrio": "Santa Cruz",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8957,
+    -77.0547
+   ],
+   "personas": 5,
+   "material": "Madera",
+   "habitaciones": 4,
+   "afectacion": "Moderada",
+   "areas": [
+    "techo",
+    "baño",
+    "estructura"
+   ],
+   "intervencion": [
+    "Reparación"
+   ],
+   "riesgo": false,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-d7bd6e1e",
+   "barrio": "Punta del Este",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8842,
+    -77.0527
+   ],
+   "personas": 4,
+   "material": "Mixta",
+   "habitaciones": 4,
+   "afectacion": "Leve",
+   "areas": [
+    "techo",
+    "piso",
+    "baño"
+   ],
+   "intervencion": [
+    "Reparación"
+   ],
+   "riesgo": false,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-b2e1bfbb",
+   "barrio": "Santa Cruz",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8957,
+    -77.0547
+   ],
+   "personas": 2,
+   "material": "Madera",
+   "habitaciones": 1,
+   "afectacion": "Leve",
+   "areas": [
+    "techo",
+    "cocina",
+    "baño"
+   ],
+   "intervencion": [
+    "Reparación"
+   ],
+   "riesgo": true,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-753c5ed5",
+   "barrio": "Santa Cruz",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8957,
+    -77.0547
+   ],
+   "personas": 3,
+   "material": "Concreto",
+   "habitaciones": 5,
+   "afectacion": "Moderada",
+   "areas": [
+    "techo",
+    "paredes"
+   ],
+   "intervencion": [
+    "Reparación"
+   ],
+   "riesgo": false,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-57d83b44",
+   "barrio": "Santa Cruz",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8957,
+    -77.0547
+   ],
+   "personas": 3,
+   "material": "Mixta",
+   "habitaciones": 3,
+   "afectacion": "Moderada",
+   "areas": [
+    "techo",
+    "paredes",
+    "piso",
+    "cocina",
+    "baño",
+    "instalación hidráulica"
+   ],
+   "intervencion": [
+    "Reposición"
+   ],
+   "riesgo": true,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-84ed8f51",
+   "barrio": "Santa Cruz",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8957,
+    -77.0547
+   ],
+   "personas": 5,
+   "material": "Madera",
+   "habitaciones": 3,
+   "afectacion": "Moderada",
+   "areas": [
+    "techo",
+    "paredes",
+    "piso",
+    "cocina"
+   ],
+   "intervencion": [
+    "Reparación"
+   ],
+   "riesgo": true,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-2db89153",
+   "barrio": "Santa Cruz",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8957,
+    -77.0547
+   ],
+   "personas": 5,
+   "material": "Madera",
+   "habitaciones": 3,
+   "afectacion": "Moderada",
+   "areas": [
+    "techo",
+    "paredes"
+   ],
+   "intervencion": [
+    "Reparación"
+   ],
+   "riesgo": false,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-9536b40c",
+   "barrio": "Inmaculada",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8894,
+    -77.0611
+   ],
+   "personas": 4,
+   "material": "Madera",
+   "habitaciones": 2,
+   "afectacion": "Moderada",
+   "areas": [
+    "techo",
+    "paredes",
+    "piso",
+    "cocina",
+    "estructura"
+   ],
+   "intervencion": [
+    "Reparación"
+   ],
+   "riesgo": true,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-e6b56244",
+   "barrio": null,
+   "municipio": "Buenaventura",
+   "zona": null,
+   "personas": 7,
+   "material": "Madera",
+   "habitaciones": 2,
+   "afectacion": "Leve",
+   "areas": [
+    "techo",
+    "paredes",
+    "piso",
+    "cocina",
+    "baño",
+    "instalación eléctrica",
+    "instalación hidráulica",
+    "puertas o ventanas"
+   ],
+   "intervencion": [
+    "Reparación"
+   ],
+   "riesgo": true,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-5cc1ee8d",
+   "barrio": "Santa Cruz",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8957,
+    -77.0547
+   ],
+   "personas": 2,
+   "material": "Madera",
+   "habitaciones": 2,
+   "afectacion": "Moderada",
+   "areas": [
+    "techo",
+    "paredes",
+    "piso",
+    "cocina",
+    "baño",
+    "instalación eléctrica",
+    "instalación hidráulica",
+    "puertas o ventanas",
+    "estructura"
+   ],
+   "intervencion": [
+    "Reconstrucción"
+   ],
+   "riesgo": true,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-79fcbaf9",
+   "barrio": "Santa Cruz",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8957,
+    -77.0547
+   ],
+   "personas": 3,
+   "material": "Madera",
+   "habitaciones": 1,
+   "afectacion": "Moderada",
+   "areas": [
+    "techo",
+    "paredes",
+    "piso"
+   ],
+   "intervencion": [
+    "Reparación"
+   ],
+   "riesgo": true,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-dafa130b",
+   "barrio": "Santa Fe",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8801,
+    -77.0489
+   ],
+   "personas": 3,
+   "material": "Concreto",
+   "habitaciones": 2,
+   "afectacion": "Moderada",
+   "areas": [
+    "techo",
+    "paredes",
+    "estructura"
+   ],
+   "intervencion": [
+    "Reparación"
+   ],
+   "riesgo": false,
+   "estado": "priorizada",
+   "folios": [],
+   "compras": [],
+   "carpeta": null,
+   "avance": null
+  }
+ ]
+}
