@@ -528,4 +528,11 @@ padding:18px 22px;border-radius:0 var(--r-sm) var(--r-sm) 0;max-width:82ch}
 .viv__nota b{display:block;font-size:.98rem;font-weight:700;margin-bottom:6px}
 .viv__nota p{font-size:.86rem;color:var(--muted);line-height:1.6}
 @media (max-width:560px){.viv__g{grid-template-columns:1fr}}
+.fol__casa{margin-top:16px;padding-top:15px;border-top:1px solid rgba(243,238,228,.18)}
+.fol__casa dt{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,238,228,.55);margin-bottom:8px}
+.fol__casa dd{margin:0 0 7px;font-size:.92rem;color:#F3EEE4;line-height:1.55}
+.fol__casa dd b{font-family:var(--mono);font-weight:600;letter-spacing:.02em}
+.fol__casa.no dd{color:rgba(243,238,228,.7);font-size:.85rem}
+.fol__cp{display:block;margin-top:5px}
+.fol__cp a{color:var(--sun);text-decoration:none;font-size:.8rem;border-bottom:1px solid rgba(223,162,36,.4)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.sr:focus{position:fixed;top:12px;left:12px;z-index:200;width:auto;height:auto;clip:auto;background:var(--ink);color:var(--cream);padding:14px 22px;border-radius:999px;font-weight:600;font-size:.92rem;text-decoration:none;box-shadow:var(--shadow-lift)}

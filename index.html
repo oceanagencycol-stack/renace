@@ -1404,6 +1404,26 @@ if(!oculto)t.hidden=false;
 x.addEventListener('click',function(){t.hidden=true;
 try{localStorage.setItem('renace_tbar_no',Date.now()+3*864e5);}catch(e){}});})();
 
+
+/* qué vivienda financia este folio */
+function casasDeFolio(f){
+if(typeof VIVIENDAS==='undefined'||!VIVIENDAS||!VIVIENDAS.viviendas)return [];
+var n=String(f).replace(/\D/g,'').slice(-6);
+return VIVIENDAS.viviendas.filter(function(v){
+return (v.folios||[]).some(function(x){return String(x).replace(/\D/g,'').slice(-6)===n;});});}
+function bloqueCasas(f,lang){
+var L=lang==='en'
+?{t:'Home it funds',no:'Not assigned to a home yet. Contributions get assigned when work starts, and this updates then.',ver:'See progress',cp:'What was bought'}
+:{t:'Vivienda que financia',no:'Todavía no está asignado a una vivienda. Los aportes se asignan cuando arranca la obra, y esto se actualiza en ese momento.',ver:'Ver avances',cp:'Qué se compró'};
+var cs=casasDeFolio(f);
+if(!cs.length)return '<div class="fol__casa no"><dt>'+L.t+'</dt><dd>'+L.no+'</dd></div>';
+return '<div class="fol__casa"><dt>'+L.t+'</dt><dd>'+cs.map(function(v){
+var ex=(v.compras||[]).filter(function(c){return c.factura;}).map(function(c){
+return '<a href="'+esc(c.factura)+'" target="_blank" rel="noopener">'+esc(c.concepto||L.cp)+' \u2197</a>';});
+if(v.carpeta)ex.push('<a href="'+esc(v.carpeta)+'" target="_blank" rel="noopener">'+L.ver+' \u2197</a>');
+return '<b>'+esc(v.codigo)+'</b> \u00b7 '+esc(v.barrio||'')+(v.municipio?', '+esc(v.municipio):'')
++(ex.length?'<span class="fol__cp">'+ex.join(' ')+'</span>':'');}).join('</dd><dd>')+'</dd></div>';}
+
 /* consulta pública por folio, contra el mismo registro descargable */
 (function(){
 var inp=document.getElementById('folIn'),go=document.getElementById('folGo'),out=document.getElementById('folR');
@@ -1443,7 +1463,7 @@ out.innerHTML='<div class="ttl"><span>'+L.ok+'</span></div><div class="fo">'+esc
 +'<div><dt>'+L.d+'</dt><dd>'+fFecha(a.fecha,lang)+'</dd></div>'
 +'<div><dt>'+L.o+'</dt><dd>'+esc(a.origen)+(nota?' · '+esc(nota):'')+'</dd></div>'
 +'<div><dt>'+L.e+'</dt><dd>'+((EST[lang]||{})[a.estado]||esc(a.estado))+'</dd></div>'
-+'<div><dt>'+L.p+'</dt><dd>'+(PASOS[a.estado]||0)+' %</dd></div></dl>';}
++'<div><dt>'+L.p+'</dt><dd>'+(PASOS[a.estado]||0)+' %</dd></div></dl>'+bloqueCasas(a.folio,lang);}
 go.addEventListener('click',buscar);
 inp.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();buscar();}});
 inp.addEventListener('search',function(){if(!inp.value)out.innerHTML='';});
