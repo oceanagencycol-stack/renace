@@ -4,7 +4,7 @@
   "estados": "operando | evaluando | planeado",
   "como_agregar": "Añade el objeto y empuja. El mapa se actualiza solo."
  },
- "actualizado": "2026-08-12",
+ "actualizado": "2026-08-27",
  "epicentro": {
   "nombre": "San José del Palmar",
   "dep": "Chocó",
@@ -28,8 +28,8 @@
    "x": 164.0,
    "y": 714.7,
    "estado": "operando",
-   "foco": "Sede de la fundación ejecutora y base logística hacia el litoral.",
-   "foco_en": "Home of the executing foundation and logistics base toward the coastline."
+   "foco": "Sede de la fundación ejecutora y base logística hacia el litoral. 18 viviendas priorizadas para intervención en 4 barrios, de las 106 caracterizadas el 14 de agosto.",
+   "foco_en": "Home of the executing foundation and logistics base toward the coast. 18 homes prioritized for intervention across 4 neighbourhoods, out of the 106 assessed on August 14."
   },
   {
    "n": "Quibdó",

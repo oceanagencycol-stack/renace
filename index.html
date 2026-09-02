@@ -447,6 +447,7 @@
         <button type="button" class="viv__b" data-f="priorizada" data-i="vv6">Priorizadas</button>
       </div>
 
+      <div class="viv__bar rv" id="vivBar"></div>
       <div class="viv__g rv" id="vivGrid" data-cargando="Cargando las viviendas…"></div>
       <p class="viv__pie" id="vivPie"></p>
 
@@ -1117,6 +1118,22 @@ var V_T={es:{pri:'Priorizada',obr:'En obra',ter:'Terminada',no:'No ejecutada',
  pie:function(a,b){return a+' of '+b+' prioritized homes · goal of 100';},
  sinb:'Neighbourhood to confirm'}};
 
+
+/* reparto por barrio: la georreferenciación al detalle que sirve */
+function pintaBarrios(){
+var c=document.getElementById('vivBar'); if(!c||!VIVIENDAS)return;
+var lang=document.documentElement.lang==='en'?'en':'es';
+var L=lang==='en'?{t:'Where they are',u:'home',us:'homes',sinb:'To confirm'}
+                 :{t:'Dónde están',u:'vivienda',us:'viviendas',sinb:'Por confirmar'};
+var m={};
+(VIVIENDAS.viviendas||[]).forEach(function(v){var k=v.barrio||L.sinb;m[k]=(m[k]||0)+1;});
+var pares=Object.keys(m).map(function(k){return [k,m[k]];}).sort(function(a,b){return b[1]-a[1];});
+var mx=pares.length?pares[0][1]:1;
+c.innerHTML='<p class="viv__bt">'+L.t+'</p>'+pares.map(function(p){
+return '<div class="vb"><span class="vb__n">'+p[1]+'</span><span class="vb__l">'+esc(p[0])+'</span>'
++'<span class="vb__b"><i style="width:'+Math.round(p[1]/mx*100)+'%"></i></span>'
++'<span class="vb__u">'+(p[1]===1?L.u:L.us)+'</span></div>';}).join('');}
+
 function pintaViviendas(){
 var g=document.getElementById('vivGrid'), pie=document.getElementById('vivPie');
 if(!g||!VIVIENDAS)return;
@@ -1155,7 +1172,8 @@ return '<article class="vc">'
 +'</div>'
 +(acc?'<div class="vc__a">'+acc+'</div>':'')
 +'</article>';}).join('');
-if(pie)pie.textContent=T.pie(lista.length,todas.length);}
+if(pie)pie.textContent=T.pie(lista.length,todas.length);
+pintaBarrios();}
 
 document.addEventListener('click',function(e){
 var b=e.target.closest('.viv__b'); if(!b)return;
