@@ -1414,7 +1414,9 @@ Promise.all([
 if(!MAPA||!ZONAS||!Array.isArray(ZONAS.zonas)){avisoFallo('mapaSvg',{es:'el mapa de operación',en:'the operation map'});return;}
 pintaMapa();
 var mu=document.getElementById('tMu');
-if(mu&&ZONAS)mu.textContent=ZONAS.zonas.filter(function(z){return z.estado==='operando';}).length;});
+if(mu&&VIVIENDAS&&VIVIENDAS.viviendas){
+var m=new Set(VIVIENDAS.viviendas.filter(function(v){return v.estado==='en_intervencion';}).map(function(v){return v.municipio;}));
+mu.textContent=m.size||1;}});
 
 /* ── novedades ── */
 var NOV=null;
