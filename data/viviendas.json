@@ -15,15 +15,16 @@
  "viviendas": [
   {
    "codigo": "RNC-F-b5290e16",
+   "casa": 1,
    "barrio": "Punta del Este",
    "municipio": "Buenaventura",
    "zona": [
     3.8842,
     -77.0527
    ],
-   "personas": 2,
+   "personas": 2.0,
    "material": "Ladrillo",
-   "habitaciones": 2,
+   "habitaciones": 2.0,
    "afectacion": "Pérdida parcial",
    "areas": [
     "techo",
@@ -47,15 +48,16 @@
   },
   {
    "codigo": "RNC-F-5f48dbf8",
+   "casa": 2,
    "barrio": "Punta del Este",
    "municipio": "Buenaventura",
    "zona": [
     3.8842,
     -77.0527
    ],
-   "personas": 3,
+   "personas": 3.0,
    "material": "Madera",
-   "habitaciones": 2,
+   "habitaciones": 2.0,
    "afectacion": "Leve",
    "areas": [
     "techo",
@@ -77,12 +79,13 @@
   },
   {
    "codigo": "RNC-F-ef2687d8",
+   "casa": 3,
    "barrio": null,
    "municipio": "Buenaventura",
    "zona": null,
-   "personas": 5,
+   "personas": 5.0,
    "material": "Madera",
-   "habitaciones": 3,
+   "habitaciones": 3.0,
    "afectacion": "Moderada",
    "areas": [
     "techo",
@@ -103,15 +106,16 @@
   },
   {
    "codigo": "RNC-F-1450dc3a",
+   "casa": 4,
    "barrio": "Punta del Este",
    "municipio": "Buenaventura",
    "zona": [
     3.8842,
     -77.0527
    ],
-   "personas": 5,
+   "personas": 5.0,
    "material": "Mixta",
-   "habitaciones": 5,
+   "habitaciones": 5.0,
    "afectacion": "Moderada",
    "areas": [
     "techo",
@@ -134,15 +138,16 @@
   },
   {
    "codigo": "RNC-F-33dc4a77",
+   "casa": 5,
    "barrio": "Punta del Este",
    "municipio": "Buenaventura",
    "zona": [
     3.8842,
     -77.0527
    ],
-   "personas": 7,
+   "personas": 7.0,
    "material": "Madera",
-   "habitaciones": 2,
+   "habitaciones": 2.0,
    "afectacion": "Leve",
    "areas": [
     "techo",
@@ -163,15 +168,16 @@
   },
   {
    "codigo": "RNC-F-bbd94396",
+   "casa": 6,
    "barrio": "Santa Cruz",
    "municipio": "Buenaventura",
    "zona": [
     3.8957,
     -77.0547
    ],
-   "personas": 7,
+   "personas": 7.0,
    "material": "Madera",
-   "habitaciones": 3,
+   "habitaciones": 3.0,
    "afectacion": "Leve",
    "areas": [
     "techo",
@@ -190,15 +196,16 @@
   },
   {
    "codigo": "RNC-F-1e54f162",
+   "casa": 7,
    "barrio": "Santa Cruz",
    "municipio": "Buenaventura",
    "zona": [
     3.8957,
     -77.0547
    ],
-   "personas": 5,
+   "personas": 5.0,
    "material": "Madera",
-   "habitaciones": 4,
+   "habitaciones": 4.0,
    "afectacion": "Moderada",
    "areas": [
     "techo",
@@ -217,15 +224,16 @@
   },
   {
    "codigo": "RNC-F-d7bd6e1e",
+   "casa": 8,
    "barrio": "Punta del Este",
    "municipio": "Buenaventura",
    "zona": [
     3.8842,
     -77.0527
    ],
-   "personas": 4,
+   "personas": 4.0,
    "material": "Mixta",
-   "habitaciones": 4,
+   "habitaciones": 4.0,
    "afectacion": "Leve",
    "areas": [
     "techo",
@@ -244,15 +252,16 @@
   },
   {
    "codigo": "RNC-F-b2e1bfbb",
+   "casa": 9,
    "barrio": "Santa Cruz",
    "municipio": "Buenaventura",
    "zona": [
     3.8957,
     -77.0547
    ],
-   "personas": 2,
+   "personas": 2.0,
    "material": "Madera",
-   "habitaciones": 1,
+   "habitaciones": 1.0,
    "afectacion": "Leve",
    "areas": [
     "techo",
@@ -271,15 +280,16 @@
   },
   {
    "codigo": "RNC-F-753c5ed5",
+   "casa": 10,
    "barrio": "Santa Cruz",
    "municipio": "Buenaventura",
    "zona": [
     3.8957,
     -77.0547
    ],
-   "personas": 3,
+   "personas": 3.0,
    "material": "Concreto",
-   "habitaciones": 5,
+   "habitaciones": 5.0,
    "afectacion": "Moderada",
    "areas": [
     "techo",
@@ -297,15 +307,16 @@
   },
   {
    "codigo": "RNC-F-57d83b44",
+   "casa": 11,
    "barrio": "Santa Cruz",
    "municipio": "Buenaventura",
    "zona": [
     3.8957,
     -77.0547
    ],
-   "personas": 3,
+   "personas": 3.0,
    "material": "Mixta",
-   "habitaciones": 3,
+   "habitaciones": 3.0,
    "afectacion": "Moderada",
    "areas": [
     "techo",
@@ -327,15 +338,16 @@
   },
   {
    "codigo": "RNC-F-84ed8f51",
+   "casa": 12,
    "barrio": "Santa Cruz",
    "municipio": "Buenaventura",
    "zona": [
     3.8957,
     -77.0547
    ],
-   "personas": 5,
+   "personas": 5.0,
    "material": "Madera",
-   "habitaciones": 3,
+   "habitaciones": 3.0,
    "afectacion": "Moderada",
    "areas": [
     "techo",
@@ -355,15 +367,16 @@
   },
   {
    "codigo": "RNC-F-2db89153",
+   "casa": 13,
    "barrio": "Santa Cruz",
    "municipio": "Buenaventura",
    "zona": [
     3.8957,
     -77.0547
    ],
-   "personas": 5,
+   "personas": 5.0,
    "material": "Madera",
-   "habitaciones": 3,
+   "habitaciones": 3.0,
    "afectacion": "Moderada",
    "areas": [
     "techo",
@@ -381,15 +394,16 @@
   },
   {
    "codigo": "RNC-F-9536b40c",
+   "casa": 14,
    "barrio": "Inmaculada",
    "municipio": "Buenaventura",
    "zona": [
     3.8894,
     -77.0611
    ],
-   "personas": 4,
+   "personas": 4.0,
    "material": "Madera",
-   "habitaciones": 2,
+   "habitaciones": 2.0,
    "afectacion": "Moderada",
    "areas": [
     "techo",
@@ -410,12 +424,13 @@
   },
   {
    "codigo": "RNC-F-e6b56244",
+   "casa": 15,
    "barrio": null,
    "municipio": "Buenaventura",
    "zona": null,
-   "personas": 7,
+   "personas": 7.0,
    "material": "Madera",
-   "habitaciones": 2,
+   "habitaciones": 2.0,
    "afectacion": "Leve",
    "areas": [
     "techo",
@@ -439,15 +454,16 @@
   },
   {
    "codigo": "RNC-F-5cc1ee8d",
+   "casa": 16,
    "barrio": "Santa Cruz",
    "municipio": "Buenaventura",
    "zona": [
     3.8957,
     -77.0547
    ],
-   "personas": 2,
+   "personas": 2.0,
    "material": "Madera",
-   "habitaciones": 2,
+   "habitaciones": 2.0,
    "afectacion": "Moderada",
    "areas": [
     "techo",
@@ -472,15 +488,16 @@
   },
   {
    "codigo": "RNC-F-79fcbaf9",
+   "casa": 17,
    "barrio": "Santa Cruz",
    "municipio": "Buenaventura",
    "zona": [
     3.8957,
     -77.0547
    ],
-   "personas": 3,
+   "personas": 3.0,
    "material": "Madera",
-   "habitaciones": 1,
+   "habitaciones": 1.0,
    "afectacion": "Moderada",
    "areas": [
     "techo",
@@ -499,15 +516,16 @@
   },
   {
    "codigo": "RNC-F-dafa130b",
+   "casa": 18,
    "barrio": "Santa Fe",
    "municipio": "Buenaventura",
    "zona": [
     3.8801,
     -77.0489
    ],
-   "personas": 3,
+   "personas": 3.0,
    "material": "Concreto",
-   "habitaciones": 2,
+   "habitaciones": 2.0,
    "afectacion": "Moderada",
    "areas": [
     "techo",
@@ -522,6 +540,142 @@
    "folios": [],
    "compras": [],
    "carpeta": null,
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-0d52a548",
+   "casa": 19,
+   "barrio": "Santa Cruz",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8957,
+    -77.0547
+   ],
+   "personas": 4.0,
+   "material": "Madera",
+   "habitaciones": 2.0,
+   "afectacion": "Moderada",
+   "areas": [
+    "paredes",
+    "piso",
+    "cocina",
+    "baño",
+    "puertas o ventanas"
+   ],
+   "intervencion": [
+    "Reparación"
+   ],
+   "riesgo": true,
+   "estado": "en_intervencion",
+   "folios": [
+    "RNC-2608-000051"
+   ],
+   "compras": [
+    {
+     "concepto": "Madera para estructura",
+     "factura": "https://drive.google.com/file/d/1V8ZupxoPrMt-f6WE2TqBysO1005Yoh2t/view"
+    },
+    {
+     "concepto": "Materiales de obra",
+     "factura": "https://drive.google.com/file/d/1nJN74A428rWKId-F68edRtAe35TR874c/view"
+    }
+   ],
+   "carpeta": "https://drive.google.com/drive/folders/1yv1PaXq4L_O7PH8hAy--11DSTKxMQJXE",
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-71001eed",
+   "casa": 20,
+   "barrio": "El Jardín",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8912,
+    -77.0455
+   ],
+   "personas": 4.0,
+   "material": "Mixta",
+   "habitaciones": 2.0,
+   "afectacion": "Moderada",
+   "areas": [
+    "techo",
+    "paredes",
+    "instalación eléctrica"
+   ],
+   "intervencion": [
+    "Reparación",
+    "Adecuación"
+   ],
+   "riesgo": true,
+   "estado": "en_intervencion",
+   "folios": [
+    "RNC-2608-000051"
+   ],
+   "compras": [],
+   "carpeta": "https://drive.google.com/drive/folders/1HhMtknM-7U7yoye6lOmlCrfXqlUNpX2t",
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-7254735c",
+   "casa": 21,
+   "barrio": "El Jardín",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8912,
+    -77.0455
+   ],
+   "personas": 1.0,
+   "material": "Mixta",
+   "habitaciones": 3.0,
+   "afectacion": "Moderada",
+   "areas": [
+    "techo",
+    "paredes"
+   ],
+   "intervencion": [
+    "Reparación",
+    "Adecuación"
+   ],
+   "riesgo": true,
+   "estado": "en_intervencion",
+   "folios": [
+    "RNC-2608-000050"
+   ],
+   "compras": [],
+   "carpeta": "https://drive.google.com/drive/folders/122e9Dgzs1qMx_DDcB7UooSVJIT6q1uxR",
+   "avance": null
+  },
+  {
+   "codigo": "RNC-F-515cf9dd",
+   "casa": 22,
+   "barrio": "Santa Fe",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8801,
+    -77.0489
+   ],
+   "personas": 4.0,
+   "material": "Madera",
+   "habitaciones": 2.0,
+   "afectacion": "Moderada",
+   "areas": [
+    "techo",
+    "piso"
+   ],
+   "intervencion": [
+    "Reposición"
+   ],
+   "riesgo": false,
+   "estado": "en_intervencion",
+   "folios": [
+    "RNC-2608-000049"
+   ],
+   "compras": [
+    {
+     "concepto": "Materiales de obra",
+     "factura": "https://drive.google.com/file/d/1urXjnoGiudGzXtdzn8uGuVjnAQbSr2qR/view"
+    }
+   ],
+   "carpeta": "https://drive.google.com/drive/folders/1PT_zmDGJlGPeg6d0V_mdP2XGTCZ1619P",
    "avance": null
   }
  ],
