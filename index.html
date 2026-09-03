@@ -51,7 +51,7 @@
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/f_a68a20012d.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/f_d196e8ee77.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/f_a7544cc400.woff2" crossorigin>
-<link rel="stylesheet" href="/styles.css?v=524ab921">
+<link rel="stylesheet" href="/styles.css?v=d0ea4f24">
 <noscript><style>
 .via__tabs{display:none}
 .via__panel[hidden]{display:block!important}
@@ -262,6 +262,7 @@
           <img class="sat__c" src="/assets/sat/z4-bventura.webp" alt="Vista satelital de la bahía de Buenaventura" width="1200" height="1200" loading="lazy" decoding="async">
           <img class="sat__c" src="/assets/sat/z5-comunas.webp" alt="Vista satelital de las comunas 5 y 6 de Buenaventura" width="1200" height="1200" loading="lazy" decoding="async">
           <img class="sat__c" src="/assets/sat/z6-detalle.webp" alt="Detalle satelital de las comunas 5 y 6 de Buenaventura" width="1200" height="1200" loading="lazy" decoding="async">
+          <img class="sat__c" src="/assets/sat/z7-afectacion.webp" alt="Las 101 viviendas caracterizadas en las comunas 5 y 6, por nivel de afectación" width="1300" height="755" loading="lazy" decoding="async">
           <span class="sat__m" id="satM" aria-hidden="true"></span>
         </div>
         <div class="sat__ui">
@@ -272,6 +273,7 @@
             <button type="button" class="sat__p" data-z="3" data-i="sz3">Buenaventura</button>
             <button type="button" class="sat__p" data-z="4" data-i="sz4">Comunas 5 y 6</button>
             <button type="button" class="sat__p" data-z="5" data-i="sz5">Al detalle</button>
+            <button type="button" class="sat__p" data-z="6" data-i="sz6">Las viviendas</button>
           </div>
           <figcaption class="sat__cap" id="satCap"></figcaption>
         </div>
@@ -858,6 +860,7 @@ sz2:'Pacific',
 sz3:'Buenaventura',
 sz4:'Comunas 5 and 6',
 sz5:'Close up',
+sz6:'The homes',
 vv1:'Which home your contribution went to.',
 vv2:'Every prioritized home has a code. When your contribution is assigned to one, that code hangs from your reference number: you can see which neighbourhood it is in, what will be done to it, what was bought with its invoice, and how the work is going.',
 vv3:'All',
@@ -1164,13 +1167,13 @@ var caps={es:[
  'Colombia. El epicentro fue en San José del Palmar, Chocó, a 96 km de profundidad.',
  'La costa pacífica del Valle del Cauca. Aquí llueve más de seis mil milímetros al año.',
  'Buenaventura. El principal puerto del país y uno de sus distritos más pobres.',
- 'Comunas 5 y 6. Aquí están las viviendas que estamos interviniendo.','El detalle. Cada manzana de esta imagen tiene casas caracterizadas. Es la resolución máxima que da el satélite público.'],
+ 'Comunas 5 y 6. Aquí están las viviendas que estamos interviniendo.','El detalle. Cada manzana de esta imagen tiene casas caracterizadas. Es la resolución máxima que da el satélite público.','Las 101 viviendas caracterizadas, por nivel de afectación. Rojo es pérdida total, naranja daño grave, amarillo daño leve. Cada punto está desplazado unos 100 metros: señala la manzana, nunca la puerta.'],
  en:[
  'The region. The August 10 earthquake was felt across sixteen departments.',
  'Colombia. The epicentre was in San José del Palmar, Chocó, 96 km deep.',
  'The Pacific coast of Valle del Cauca. Over six thousand millimetres of rain a year.',
  'Buenaventura. The country\u2019s main port and one of its poorest districts.',
- 'Comunas 5 and 6. This is where the homes we are working on are.','Close up. Every block in this image has assessed homes. This is the highest resolution the public satellite gives.']};
+ 'Comunas 5 and 6. This is where the homes we are working on are.','Close up. Every block in this image has assessed homes. This is the highest resolution the public satellite gives.','The 101 assessed homes, by damage level. Red is total loss, orange severe damage, yellow light damage. Each point is offset by about 100 metres: it marks the block, never the door.']};
 var caps_i=0, n=fig.querySelectorAll('.sat__c').length;
 function ir(k){
 caps_i=Math.max(0,Math.min(n-1,k));
@@ -1179,7 +1182,10 @@ fig.querySelectorAll('.sat__p').forEach(function(b,i){b.classList.toggle('is-on'
 b.setAttribute('aria-pressed',i===caps_i?'true':'false');});
 var lang=document.documentElement.lang==='en'?'en':'es';
 var c=document.getElementById('satCap'); if(c)c.textContent=caps[lang][caps_i]||'';
-var m=document.getElementById('satM'); if(m)m.classList.toggle('is-on',caps_i===n-1);}
+var m=document.getElementById('satM'); var CAJA={3:[57.5,49.5,10.0,6.7]};
+if(m){var c=CAJA[caps_i];
+if(c){m.style.left=c[0]+'%';m.style.top=c[1]+'%';m.style.width=c[2]+'%';m.style.height=c[3]+'%';
+m.classList.add('is-on');}else{m.classList.remove('is-on');}}}
 fig.addEventListener('click',function(e){
 var b=e.target.closest('.sat__p');
 if(b){ir(+b.dataset.z);return;}
