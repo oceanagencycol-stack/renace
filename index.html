@@ -17,7 +17,7 @@
 <meta property="og:locale" content="es_CO">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:title" content="RENACE — Reconstruyendo hogares">
-<meta property="og:description" content="Alianza de reconstrucción tras el terremoto del 10 de agosto de 2026 en Colombia. Meta: 100 infraestructuras y US$ 500.000. Cada aporte recibe un folio.">
+<meta property="og:description" content="Alianza de reconstrucción tras el terremoto del 10 de agosto de 2026 en Colombia. Meta: 100 infraestructuras y USD 500.000. Cada aporte recibe un folio.">
 <meta property="og:image" content="https://www.renacecol.org/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -172,7 +172,7 @@
       <div><b id="tPct">0,86 %</b><span data-i="d1">de avance sobre la meta</span></div>
       <div><b id="tAp">21</b><span id="tApL">aportes registrados</span></div>
       <div><b id="tOb">0 / 100</b><span data-i="d3">obras entregadas</span></div>
-      <div><b id="tMu">2</b><span data-i="d4">municipios en operación</span></div>
+      <div><b id="tMu">1</b><span data-i="d4">municipios en operación</span></div>
       <div><b>9</b><span data-i="d5">organizaciones aliadas</span></div>
     </div>
     <div class="metas rv stg">
@@ -185,7 +185,7 @@
       </div>
       <div class="meta">
         <div class="meta__k" data-i="m2k">Meta de recursos</div>
-        <div class="meta__v num" style="color:var(--olive)">US$ 500.000</div>
+        <div class="meta__v num" style="color:var(--olive)">USD 500.000</div>
         <div class="meta__d" data-i="m2d">entre donantes individuales, empresas aliadas y cooperación internacional. <strong>Nadie de la alianza cobra comisión.</strong> Los costos de operar sí salen de lo recaudado y se publican con su factura.</div>
         <div class="meta__track"><div class="meta__fill" id="mFillUsd"></div></div>
         <div class="meta__foot"><span data-i="mav2">Avance verificado</span><span class="num" id="mPct">0,86 %</span></div>
@@ -287,13 +287,13 @@
     <div class="pasos rv stg">
       <article class="paso rv"><div class="paso__n"></div>
         <div class="paso__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M3 8 12 3l9 5"/><path d="M9 14h6"/></svg></div>
-        <h3 data-i="c1">Recibimos y registramos</h3><p data-i="c2">Tu plata llega a la cuenta de la fundación. Queda anotada con su fecha y su folio, y te devolvemos ese número por WhatsApp.</p></article>
+        <h3 data-i="c1">Recibimos y registramos tu aporte</h3><p data-i="c2">Tu aporte llega a la cuenta de la Fundación Hogar Sin Olvido. Queda anotado con su fecha y su folio, y te devolvemos ese número por WhatsApp para que puedas seguir en qué vivienda y con qué familia terminó. Así le haces seguimiento permanente.</p></article>
       <article class="paso rv"><div class="paso__n"></div>
         <div class="paso__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg></div>
-        <h3 data-i="c3">Compramos y reconstruimos</h3><p data-i="c4">Ese dinero se vuelve tejas, cemento, aulas y jornales. Lo compran y lo montan las organizaciones que ya viven ahí.</p></article>
+        <h3 data-i="c3">Compramos y reconstruimos</h3><p data-i="c4">Compramos materiales u otros bienes y servicios necesarios para la reparación, la intervención estructural o la reconstrucción. Lo compran y lo montan las organizaciones que ya viven ahí.</p></article>
       <article class="paso rv"><div class="paso__n"></div>
         <div class="paso__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
-        <h3 data-i="c5">Publicamos el comprobante</h3><p data-i="c6">La factura, el acta y las fotos quedan colgadas de tu número. Y si algo no se pudo hacer, también aparece. El rojo se muestra igual que el verde.</p></article>
+        <h3 data-i="c5">Publicamos el comprobante</h3><p data-i="c6">Las facturas, el acta y las fotos quedan colgadas de tu número de folio. Lo que se comprometió y no se logró se muestra igual que lo que sí. El rojo se publica como el verde.</p></article>
     </div>
   </div>
 </section>
@@ -686,7 +686,7 @@
   </div>
 </footer>
 <div class="dock" id="dock">
-  <div class="dock__t"><b id="dkV">—</b><span data-i="dk0">recaudado de US$ 500.000</span></div>
+  <div class="dock__t"><b id="dkV">—</b><span data-i="dk0">recaudado de USD 500.000</span></div>
   <a class="btn" href="#aportar" data-i="dk1">Donar</a>
 </div>
 <div class="pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="popT" aria-describedby="popD">
@@ -732,7 +732,7 @@ var pctTxt=(pct>0&&pct<0.01)?'<0,01 %':(pct.toFixed(2).replace('.',',')+' %');
 if(lang==='en')pctTxt=(pct>0&&pct<0.01)?'<0.01 %':(pct.toFixed(2)+' %');
 var set=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};
 set('lvMonto',fmtCOP(P.recaudadoCOP));
-set('lvUsd',(lang==='en'?'\u2248 US$ ':'\u2248 US$ ')+Math.round(usd).toLocaleString(lang==='en'?'en-US':'es-CO')+(lang==='en'?' of the US$ 500,000 goal':' de la meta de US$ 500.000'));
+set('lvUsd',(lang==='en'?'\u2248 USD ':'\u2248 USD ')+Math.round(usd).toLocaleString(lang==='en'?'en-US':'es-CO')+(lang==='en'?' of the USD 500,000 goal':' de la meta de USD 500.000'));
 set('lvPct',pctTxt); set('mPct',pctTxt);
 set('lvAportes',P.aportes); set('lvObras',P.obras+' / '+P.metaObras); set('mObras',P.obras+' / '+P.metaObras);
 set('lvUpd',P.actualizado[lang==='en'?'en':'es']);
@@ -774,9 +774,9 @@ q10:'RENACE exists for that second stage. Putting the roof, the classroom and th
 q11:'Where we are focused',q12:'We start where our partner organizations already live. Buenaventura and the Valle Pacific coast. Choc\u00f3, in Quibd\u00f3 and San Jos\u00e9 del Palmar. The hit areas of Cali and the Coffee Region. If we cannot deliver and check it ourselves, we do not promise it.',
 q13:'<strong>No duplicated effort.</strong> We do not compete with the government response. We coordinate with UNGRD and local authorities, and cover what the large aid operations leave out.',
 e2:'How it works',c0:'Three steps. None behind closed doors.',
-c1:'We take it in and log it',c2:'Your money lands in the foundation account. We log it with its date and its reference, and send that number back to you over WhatsApp.',
-c3:'We buy and rebuild',c4:'That money turns into roof tiles, cement, classrooms and day wages. The organizations already living there do the buying and the building.',
-c5:'We publish the receipt',c6:'The invoice, the signed record and the photos hang off your number. And when something cannot be done, that shows up too. Red gets the same space as green.',
+c1:'We receive and log your contribution',c2:'Your contribution reaches the account of Fundación Hogar Sin Olvido. It is logged with its date and its reference number, and we send that number back to you on WhatsApp so you can follow which home and which family it ended up in. That way you can track it permanently.',
+c3:'We buy and rebuild',c4:'We buy the materials, goods and services needed for repair, structural work or rebuilding. The organizations that already live there buy it and put it up.',
+c5:'We publish the receipt',c6:'The invoices, the signed record and the photos hang from your reference number. What was promised and not achieved is shown just like what was. Red gets published the same as green.',
 dev:'● Platform in development · v1',e3:'Traceability',t0:'Your contribution gets a number. And the number can be followed.',
 t1:'Most people who do not give are not short on goodwill. They are short on proof. They never find out where the money ended up. So every contribution here carries a number, and that number opens the whole trail without asking anyone for permission.',
 t2:'The journey of a contribution',t3:'Date and payment method. The reference is issued and published.',t4:'Amount, date and payment method. The tracking number is issued.',
@@ -889,7 +889,7 @@ v10:'Your card details or access to your banking app',v11:'To transfer to any ac
 v12:'To donate urgently or before a deadline',v13:'Only official page:',
 b0:'Aug 10, 2026',b1:'The earthquake',b2:'Magnitude 7.4 at 7:34 a.m., epicenter in San Jos\u00e9 del Palmar. The alliance organizations begin assessing needs in Buenaventura, Choc\u00f3 and Cali.',
 s0:'Share on WhatsApp',s1:'Share on X',s2:'LinkedIn',s3:'Copy link',
-dk0:'raised of the US$ 500,000 goal',dk1:'Donate',
+dk0:'raised of the USD 500,000 goal',dk1:'Donate',
 e5:'Transparency',x0:'Who receives, who executes and with what paperwork.',
 x1:'Fundaci\u00f3n Hogar Sin Olvido receives the money and spends it. It is a non-profit, founded in 2016, and the Valle del Cauca Government oversees it.',
 x2:'Legal name',x3:'Tax ID (NIT)',x4:'Legal representative',x5:'Domicile',x5v:'Buenaventura, Valle del Cauca, Colombia',x6:'Incorporated',x7:'January 20, 2016',x8:'Oversight',x9:'Valle del Cauca Government',x10:'Email',x11:'Contact',
@@ -1432,7 +1432,7 @@ fetch('/data/novedades.json',{cache:'no-cache'}).then(function(r){return r.ok?r.
 
 /* ── tablero ── */
 function pintaTablero(){
-var P=PROGRESO,pct=(typeof P.pct==='number'?P.pct:0),lang=document.documentElement.lang==='en'?'en':'es';
+var P=PROGRESO,pct=(P.recaudadoCOP&&P.trm&&P.metaUSD)?(P.recaudadoCOP/P.trm/P.metaUSD*100):0,lang=document.documentElement.lang==='en'?'en':'es';
 var s=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};
 s('tAp',P.aportes); s('tOb',P.obras+' / '+P.metaObras);
 s('tPct',(pct<0.01?(lang==='en'?'<0.01 %':'<0,01 %'):(lang==='en'?pct.toFixed(2)+' %':pct.toFixed(2).replace('.',',')+' %')));}
