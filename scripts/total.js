@@ -50,7 +50,8 @@ try {
 let total = 0;
 const sinMonto = [];
 const detalle = [];
-const CUENTAN = new Set(['recibido', 'en_asignacion', 'comprado', 'entregado']);
+const CUENTAN = new Set(['recibido', 'en_asignacion', 'comprado', 'entregado']);  // 'pendiente' no: aún no llegó
+// 'pendiente' queda fuera hasta que el banco confirme
 const excluidos = [];
 for (const a of ap.aportes) {
   // un duplicado o un costo de operación no es plata que entró

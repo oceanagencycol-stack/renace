@@ -139,7 +139,7 @@
         <div class="live__track"><div class="live__fill" id="lvFill"></div></div>
         <div class="live__pct"><span id="lvPct">0,22 %</span><span data-i="lv2">de la meta de recursos</span></div>
         <div class="live__grid">
-          <div><b id="lvAportes">20</b><span id="lvAportesL">aportes registrados</span></div>
+          <div><b id="lvAportes">21</b><span id="lvAportesL">aportes registrados</span></div>
           <div><b id="lvObras">0 / 100</b><span id="lvObrasL">obras entregadas</span></div>
         </div>
       </div>
@@ -170,7 +170,7 @@
     <div class="tab rv stg" id="tablero">
       <div><b id="tRec">$3.482.000</b><span data-i="d0">recaudado</span></div>
       <div><b id="tPct">0,22 %</b><span data-i="d1">de avance sobre la meta</span></div>
-      <div><b id="tAp">20</b><span id="tApL">aportes registrados</span></div>
+      <div><b id="tAp">21</b><span id="tApL">aportes registrados</span></div>
       <div><b id="tOb">0 / 100</b><span data-i="d3">obras entregadas</span></div>
       <div><b id="tMu">2</b><span data-i="d4">municipios en operación</span></div>
       <div><b>9</b><span data-i="d5">organizaciones aliadas</span></div>
@@ -1225,8 +1225,8 @@ if(!e.relatedTarget&&e.clientY<8&&window.scrollY>300)abrir();});}
 }
 
 /* ── el dinero sale de un solo archivo: data/aportes.json ── */
-var EST={es:{recibido:'Recibido',en_asignacion:'En asignación',comprado:'Comprado',entregado:'Entregado',no_ejecutado:'No ejecutado',costo_operacion:'Costo de operación'},
-en:{recibido:'Received',en_asignacion:'Being assigned',comprado:'Purchased',entregado:'Delivered',no_ejecutado:'Not executed',costo_operacion:'Operating cost'}};
+var EST={es:{recibido:'Recibido',en_asignacion:'En asignación',comprado:'Comprado',entregado:'Entregado',no_ejecutado:'No ejecutado',costo_operacion:'Costo de operación',pendiente:'Pendiente de confirmar',pendiente:'Pendiente de confirmar'},
+en:{recibido:'Received',en_asignacion:'Being assigned',comprado:'Purchased',entregado:'Delivered',no_ejecutado:'Not executed',costo_operacion:'Operating cost',pendiente:'Pending confirmation',pendiente:'Pending confirmation'}};
 var R_T={es:{folio:'Folio',fecha:'Fecha',origen:'Origen',estado:'Estado',
 tot:function(n){return 'Total · '+n+(n===1?' aporte recibido':' aportes recibidos');},
 ex:function(n){return ' · '+n+(n===1?' entrada más que no suma al total':' entradas más que no suman al total')+' (duplicados y costos de operación, publicados igual)';},

@@ -21,7 +21,7 @@ function leerJSON(rel) {
 }
 const esFecha = v => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v);
 
-const ESTADOS = ['recibido','en_asignacion','comprado','entregado','no_ejecutado','costo_operacion'];
+const ESTADOS = ['recibido','en_asignacion','comprado','entregado','no_ejecutado','costo_operacion','pendiente'];
 const SENSIBLE = [
   [/\bTR[A-Za-z0-9]{6,}\b/i, 'referencia de transacción'],
   [/\b\d{9,}\b/, 'número largo (cuenta o documento)'],
@@ -78,6 +78,7 @@ if (ap) {
 
     // el total se mantiene a mano: avisar si quedó corto
     const CUENTAN = ['recibido', 'en_asignacion', 'comprado', 'entregado'];
+    // 'pendiente' y 'costo_operacion' quedan fuera: no son plata confirmada
     const nIngreso = ap.aportes.filter(a => !a.estado || CUENTAN.includes(a.estado)).length;
     if (typeof ap.aportes_en_total === 'number' && ap.aportes_en_total !== nIngreso) {
       avisos.push(`EL TOTAL ESTÁ CORTO — ${nIngreso} aportes cuentan como ingreso pero "total_cop" ` +
