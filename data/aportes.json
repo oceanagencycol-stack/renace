@@ -14,8 +14,8 @@
   "aportes_en_total": "Cuántos aportes están sumados dentro de 'total_cop'. Si no coincide con el número de entradas de la lista, el total quedó corto y el despliegue avisa.",
   "capital_semilla": "Los aportes marcados 'costo_operacion' con nota de capital semilla financiaron la construcción de esta plataforma. Se publican con su folio para que quede el rastro, pero NO suman al total del fondo de obras: mostrarlos como recaudado le diría al donante que hay más dinero para reconstruir del que hay."
  },
- "actualizado": "2026-09-02",
- "total_cop": 3482000,
+ "actualizado": "2026-09-03",
+ "total_cop": 13482000,
  "trm": 3125.47,
  "meta_usd": 500000,
  "meta_obras": 100,
@@ -28,7 +28,7 @@
    "nota": "Aporte verificado con comprobante",
    "nota_en": "Contribution verified with receipt",
    "canal": "Bancolombia",
-   "estado": "pendiente"
+   "estado": "recibido"
   },
   {
    "folio": "RNC-2608-000050",
@@ -197,5 +197,5 @@
   }
  ],
  "avance_pct": 0.22,
- "aportes_en_total": 16
+ "aportes_en_total": 17
 }
