@@ -6,9 +6,11 @@
   "estado": "priorizada · en_intervencion · terminada · no_ejecutada",
   "folios": "Los folios de aporte que financian esta vivienda. Es el vínculo entre el donante y la casa.",
   "compras": "Cada compra con su factura: {concepto, monto_publicado:false, factura, fecha}",
-  "carpeta": "Enlace a la carpeta de avances de esa vivienda."
+  "carpeta": "Enlace a la carpeta de avances de esa vivienda.",
+  "modelo": "fondo_comun: los aportes no se marcan por donante. Entran a un fondo y con ese fondo se compran materiales para viviendas concretas. La trazabilidad es fondo → vivienda → factura, no donante → vivienda. Es lo que de verdad ocurre y por eso es lo que se publica.",
+  "viviendas_en_obra": "Cuántas viviendas está financiando el fondo hoy."
  },
- "actualizado": "2026-08-27",
+ "actualizado": "2026-09-03",
  "meta_viviendas": 100,
  "viviendas": [
   {
@@ -522,5 +524,7 @@
    "carpeta": null,
    "avance": null
   }
- ]
+ ],
+ "modelo": "fondo_comun",
+ "viviendas_en_obra": 4
 }

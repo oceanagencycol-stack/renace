@@ -406,6 +406,13 @@
         <button type="button" class="viv__b" data-f="priorizada" data-i="vv6">Priorizadas</button>
       </div>
 
+      <div class="viv__fondo rv">
+        <span class="viv__fn" id="vivFn">4</span>
+        <div><b data-i="vf0">El fondo es común, la obra es concreta</b>
+        <p data-i="vf1">Los aportes no se marcan uno a uno a una casa: entran a un fondo de la alianza y con ese fondo
+        se compra material y se ejecuta obra. Hoy financia las primeras cuatro viviendas. Cada compra se publica con
+        su factura y cada casa con sus avances, así que la cadena se puede seguir completa: fondo, compra, vivienda.</p></div>
+      </div>
       <div class="viv__bar rv" id="vivBar"></div>
       <div class="viv__g rv" id="vivGrid" data-cargando="Cargando las viviendas…"></div>
       <p class="viv__pie" id="vivPie"></p>
@@ -836,6 +843,8 @@ w38:'We send your number back the same day. With it you can look up your contrib
 w32:'You are seeing all three routes at once because JavaScript is disabled in your browser. The details are the same.',
 w0:'Bank in Colombia',w1:'Bre-B · instant',w2:'From abroad',
 vv0:'House by house',
+vf0:'The fund is pooled, the work is specific',
+vf1:'Contributions are not earmarked one by one to a house: they go into an alliance fund, and that fund buys materials and pays for the work. Today it is funding the first four homes. Every purchase is published with its invoice and every home with its progress, so the chain can be followed end to end: fund, purchase, home.',
 sa0:'Where we are working',
 sa1:'Buenaventura,<br>comunas 5 and 6.',
 sa2:'From the whole country down to the two districts where we are working. Tap to zoom in.',
@@ -1481,8 +1490,8 @@ return VIVIENDAS.viviendas.filter(function(v){
 return (v.folios||[]).some(function(x){return String(x).replace(/\D/g,'').slice(-6)===n;});});}
 function bloqueCasas(f,lang){
 var L=lang==='en'
-?{t:'Home it funds',no:'Not assigned to a home yet. Contributions get assigned when work starts, and this updates then.',ver:'See progress',cp:'What was bought'}
-:{t:'Vivienda que financia',no:'Todavía no está asignado a una vivienda. Los aportes se asignan cuando arranca la obra, y esto se actualiza en ese momento.',ver:'Ver avances',cp:'Qué se compró'};
+?{t:'Where your contribution goes',no:'Your contribution went into the alliance\u2019s common fund. That fund is paying for the first homes under way: contributions are not earmarked house by house, materials are bought and work is done with the pooled money. Below you can see which homes and how they are going.',ver:'See progress',cp:'What was bought'}
+:{t:'A dónde va tu aporte',no:'Tu aporte entró al fondo común de la alianza. Con ese fondo se están interviniendo las primeras viviendas: no se marca cada aporte a una casa, se compra material y se ejecuta obra con el conjunto. Abajo puedes ver cuáles son y cómo van.',ver:'Ver avances',cp:'Qué se compró'};
 var cs=casasDeFolio(f);
 if(!cs.length)return '<div class="fol__casa no"><dt>'+L.t+'</dt><dd>'+L.no+'</dd></div>';
 return '<div class="fol__casa"><dt>'+L.t+'</dt><dd>'+cs.map(function(v){
