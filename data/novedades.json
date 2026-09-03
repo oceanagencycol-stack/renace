@@ -3,8 +3,40 @@
   "tipos": "noticia | necesidad | avance | alerta",
   "como_agregar": "Añade al principio del array y empuja."
  },
- "actualizado": "2026-08-27",
+ "actualizado": "2026-09-03",
  "novedades": [
+  {
+   "fecha": "2026-09-03",
+   "tipo": "avance",
+   "titulo": "Ya se puede ver a qué casa fue cada aporte",
+   "titulo_en": "You can now see which home each contribution went to",
+   "texto": "Consultas tu folio y ves la vivienda que financia, la factura de lo que se compró y la carpeta con los avances de la obra. Cuatro casas ya tienen ese circuito completo.",
+   "texto_en": "You look up your reference number and see the home it funds, the invoice for what was bought, and the folder with the work in progress. Four homes already have that full chain."
+  },
+  {
+   "fecha": "2026-09-03",
+   "tipo": "avance",
+   "titulo": "Entró la donación más grande hasta hoy",
+   "titulo_en": "The largest donation so far came in",
+   "texto": "Jobelisi S.A.S. aportó diez millones de pesos. El fondo pasó de $3.482.000 a $13.482.000 y el avance de la meta subió de 0,22 % a 0,86 %.",
+   "texto_en": "Jobelisi S.A.S. contributed ten million pesos. The fund went from $3,482,000 to $13,482,000 and progress toward the goal rose from 0.22% to 0.86%."
+  },
+  {
+   "fecha": "2026-09-03",
+   "tipo": "avance",
+   "titulo": "22 viviendas priorizadas y cuatro en obra",
+   "titulo_en": "22 homes prioritized and four under way",
+   "texto": "De las 106 fichas salieron 22 viviendas priorizadas con los criterios de la alianza: hogares con menores, adultos mayores o personas con discapacidad, casa propia o familiar, y daño que se puede reparar. Cuatro ya están en obra.",
+   "texto_en": "From the 106 assessments came 22 prioritized homes under the alliance criteria: households with children, older adults or people with a disability, owned or family-held homes, and damage that can be repaired. Four are already under way."
+  },
+  {
+   "fecha": "2026-09-03",
+   "tipo": "avance",
+   "titulo": "El mapa ahora muestra dónde está cada casa",
+   "titulo_en": "The map now shows where each home is",
+   "texto": "Siete niveles de acercamiento por imagen satelital, de Suramérica hasta las comunas 5 y 6, terminando en las 101 viviendas caracterizadas por nivel de daño. Las imágenes están en nuestro propio servidor: la página no llama a ningún tercero ni rastrea a quien la visita.",
+   "texto_en": "Seven satellite zoom levels, from South America down to comunas 5 and 6, ending on the 101 assessed homes by damage level. The imagery sits on our own server: the page calls no third party and tracks no visitor."
+  },
   {
    "fecha": "2026-08-27",
    "tipo": "avance",
