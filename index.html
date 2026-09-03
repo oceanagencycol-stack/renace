@@ -261,6 +261,7 @@
           <img class="sat__c" src="/assets/sat/z3-valle.webp" alt="Vista satelital de la costa pacífica del Valle del Cauca" width="1200" height="1200" loading="lazy" decoding="async">
           <img class="sat__c" src="/assets/sat/z4-bventura.webp" alt="Vista satelital de la bahía de Buenaventura" width="1200" height="1200" loading="lazy" decoding="async">
           <img class="sat__c" src="/assets/sat/z5-comunas.webp" alt="Vista satelital de las comunas 5 y 6 de Buenaventura" width="1200" height="1200" loading="lazy" decoding="async">
+          <img class="sat__c" src="/assets/sat/z6-detalle.webp" alt="Detalle satelital de las comunas 5 y 6 de Buenaventura" width="1200" height="1200" loading="lazy" decoding="async">
           <span class="sat__m" id="satM" aria-hidden="true"></span>
         </div>
         <div class="sat__ui">
@@ -270,6 +271,7 @@
             <button type="button" class="sat__p" data-z="2" data-i="sz2">Pacífico</button>
             <button type="button" class="sat__p" data-z="3" data-i="sz3">Buenaventura</button>
             <button type="button" class="sat__p" data-z="4" data-i="sz4">Comunas 5 y 6</button>
+            <button type="button" class="sat__p" data-z="5" data-i="sz5">Al detalle</button>
           </div>
           <figcaption class="sat__cap" id="satCap"></figcaption>
         </div>
@@ -855,6 +857,7 @@ sz1:'Colombia',
 sz2:'Pacific',
 sz3:'Buenaventura',
 sz4:'Comunas 5 and 6',
+sz5:'Close up',
 vv1:'Which home your contribution went to.',
 vv2:'Every prioritized home has a code. When your contribution is assigned to one, that code hangs from your reference number: you can see which neighbourhood it is in, what will be done to it, what was bought with its invoice, and how the work is going.',
 vv3:'All',
@@ -1161,13 +1164,13 @@ var caps={es:[
  'Colombia. El epicentro fue en San José del Palmar, Chocó, a 96 km de profundidad.',
  'La costa pacífica del Valle del Cauca. Aquí llueve más de seis mil milímetros al año.',
  'Buenaventura. El principal puerto del país y uno de sus distritos más pobres.',
- 'Comunas 5 y 6. Aquí están las viviendas que estamos interviniendo.'],
+ 'Comunas 5 y 6. Aquí están las viviendas que estamos interviniendo.','El detalle. Cada manzana de esta imagen tiene casas caracterizadas. Es la resolución máxima que da el satélite público.'],
  en:[
  'The region. The August 10 earthquake was felt across sixteen departments.',
  'Colombia. The epicentre was in San José del Palmar, Chocó, 96 km deep.',
  'The Pacific coast of Valle del Cauca. Over six thousand millimetres of rain a year.',
  'Buenaventura. The country\u2019s main port and one of its poorest districts.',
- 'Comunas 5 and 6. This is where the homes we are working on are.']};
+ 'Comunas 5 and 6. This is where the homes we are working on are.','Close up. Every block in this image has assessed homes. This is the highest resolution the public satellite gives.']};
 var caps_i=0, n=fig.querySelectorAll('.sat__c').length;
 function ir(k){
 caps_i=Math.max(0,Math.min(n-1,k));
@@ -1446,6 +1449,7 @@ if(a.ciudad)meta+='<span>'+esc(a.ciudad)+'</span>';
 if(a.nit)meta+='<span>'+L.nit+' <b>'+esc(a.nit)+'</b></span>';
 if(a.desde)meta+='<span>'+L.desde+' <b>'+esc(a.desde)+'</b></span>';
 if(a.web)meta+='<span><a href="'+esc(a.web)+'" target="_blank" rel="noopener">'+L.sitio+' →</a></span>';
+if(a.lider)meta+='<span class="ali__ld">'+esc(a.lider)+'</span>';
 var wp=a.logo.replace(/\.png$/,'.webp');
 return '<article class="ali__i"><div class="ali__lg"><picture>'
 +(wp!==a.logo?'<source srcset="/assets/'+esc(wp)+'" type="image/webp">':'')
