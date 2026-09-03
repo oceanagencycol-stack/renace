@@ -10,6 +10,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const RAIZ = path.join(__dirname, '..');
 const errores = [], saneados = [], avisos = [];
 
@@ -168,6 +169,18 @@ if (fs.existsSync(sm)) {
   let x = fs.readFileSync(sm, 'utf8');
   const y = x.replace(/<lastmod>[^<]*<\/lastmod>/g, `<lastmod>${hoy}</lastmod>`);
   if (y !== x) { fs.writeFileSync(sm, y); console.log(`   sitemap.xml actualizado a ${hoy}.`); }
+}
+
+// la versión del CSS sale de su contenido: si cambia, la URL cambia sola
+const cssPath = path.join(RAIZ, 'styles.css');
+if (fs.existsSync(cssPath)) {
+  const huellaCSS = crypto.createHash('sha1').update(fs.readFileSync(cssPath)).digest('hex').slice(0, 8);
+  const antes = html;
+  html = html.replace(/(href="\/styles\.css\?v=)[^"]*(")/, `$1${huellaCSS}$2`);
+  if (html !== antes) {
+    fs.writeFileSync(idx, html);
+    console.log(`   styles.css?v=${huellaCSS} (versión recalculada del contenido).`);
+  }
 }
 
 console.log(`✅ Publicando · ${n} aportes · ${fmt(total)} · ${pct} de la meta · sin montos individuales`);
