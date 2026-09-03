@@ -258,28 +258,38 @@
     <p class="fuente rv" data-i="ay3">Ninguno de estos recursos es de RENACE. Los enlazamos porque resuelven lo inmediato y verificamos que estén activos para Colombia. Si encuentras que alguno dejó de funcionar, escríbenos y lo quitamos.</p>
   </div>
 </section>
-<section class="sec mapa-sec" id="mapa" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec__head rv">
-      <p class="eyebrow" data-i="mp0">Dónde estamos</p>
-      <h2 data-i="mp1">El mapa de la operación.</h2>
-      <p class="lede" data-i="mp2">Los puntos marcan dónde trabaja la alianza y en qué etapa va cada territorio. No medimos daño, que eso le toca al Estado. Mostramos en qué andamos nosotros.</p>
-    </div>
-    <div class="mapa rv">
-      <div class="mapa__c"><div id="mapaSvg" role="img" aria-label="Mapa de Colombia con las zonas de operación de RENACE"></div></div>
-      <aside class="mapa__p">
-        <div class="mapa__leg">
-          <span><i class="pt pt--op"></i><span data-i="mp3">Operando</span></span>
-          <span><i class="pt pt--ev"></i><span data-i="mp4">Evaluando</span></span>
-          <span><i class="pt pt--pl"></i><span data-i="mp5">Planeado</span></span>
-          <span><i class="pt pt--ep"></i><span data-i="mp6">Epicentro</span></span>
+<section class="sec sat-sec" id="mapa" aria-labelledby="satT">
+    <div class="wrap">
+      <p class="eyebrow rv"><span data-i="sa0">Dónde estamos trabajando</span></p>
+      <h2 id="satT" class="rv" data-i="sa1">Buenaventura,<br>comunas 5 y 6.</h2>
+      <p class="sec__lede rv" data-i="sa2">De todo el país a las dos comunas donde estamos interviniendo.
+      Toca para acercar.</p>
+
+      <figure class="sat rv" id="satFig">
+        <div class="sat__v">
+          <img class="sat__c is-on" src="/assets/sat/z1-mundo.webp" alt="Vista satelital de Suramérica" width="1200" height="1200" decoding="async">
+          <img class="sat__c" src="/assets/sat/z2-colombia.webp" alt="Vista satelital de Colombia" width="1200" height="1200" loading="lazy" decoding="async">
+          <img class="sat__c" src="/assets/sat/z3-valle.webp" alt="Vista satelital de la costa pacífica del Valle del Cauca" width="1200" height="1200" loading="lazy" decoding="async">
+          <img class="sat__c" src="/assets/sat/z4-bventura.webp" alt="Vista satelital de la bahía de Buenaventura" width="1200" height="1200" loading="lazy" decoding="async">
+          <img class="sat__c" src="/assets/sat/z5-comunas.webp" alt="Vista satelital de las comunas 5 y 6 de Buenaventura" width="1200" height="1200" loading="lazy" decoding="async">
+          <span class="sat__m" id="satM" aria-hidden="true"></span>
         </div>
-        <div id="mapaInfo" class="mapa__i" aria-live="polite"></div>
-        <ul class="mapa__l" id="mapaLista"></ul>
-      </aside>
+        <div class="sat__ui">
+          <div class="sat__pasos" role="group" aria-label="Nivel de acercamiento">
+            <button type="button" class="sat__p is-on" data-z="0" data-i="sz0">Suramérica</button>
+            <button type="button" class="sat__p" data-z="1" data-i="sz1">Colombia</button>
+            <button type="button" class="sat__p" data-z="2" data-i="sz2">Pacífico</button>
+            <button type="button" class="sat__p" data-z="3" data-i="sz3">Buenaventura</button>
+            <button type="button" class="sat__p" data-z="4" data-i="sz4">Comunas 5 y 6</button>
+          </div>
+          <figcaption class="sat__cap" id="satCap"></figcaption>
+        </div>
+      </figure>
+
+      <p class="sat__cred" data-i="sa9">Imagen satelital: Sentinel-2 cloudless de EOX IT Services, con datos
+      Copernicus Sentinel modificados. Alojada en este mismo servidor: la página no llama a ningún tercero.</p>
     </div>
-  </div>
-</section>
+  </section>
 <section class="sec jor-sec" id="jornada" style="padding-top:0">
   <div class="wrap">
     <div class="sec__head rv">
@@ -837,6 +847,15 @@ w38:'We send your number back the same day. With it you can look up your contrib
 w32:'You are seeing all three routes at once because JavaScript is disabled in your browser. The details are the same.',
 w0:'Bank in Colombia',w1:'Bre-B · instant',w2:'From abroad',
 vv0:'House by house',
+sa0:'Where we are working',
+sa1:'Buenaventura,<br>comunas 5 and 6.',
+sa2:'From the whole country down to the two districts where we are working. Tap to zoom in.',
+sa9:'Satellite imagery: Sentinel-2 cloudless by EOX IT Services, containing modified Copernicus Sentinel data. Hosted on this same server: the page calls no third party.',
+sz0:'South America',
+sz1:'Colombia',
+sz2:'Pacific',
+sz3:'Buenaventura',
+sz4:'Comunas 5 and 6',
 vv1:'Which home your contribution went to.',
 vv2:'Every prioritized home has a code. When your contribution is assigned to one, that code hangs from your reference number: you can see which neighbourhood it is in, what will be done to it, what was bought with its invoice, and how the work is going.',
 vv3:'All',
@@ -911,7 +930,7 @@ nodes.forEach(function(el){var k=el.getAttribute('data-i');if(d[k]!==undefined){
 if(tagEl)tagEl.setAttribute('data-tag',lang==='en'?EN.tagDirecta:tagES);
 document.documentElement.lang=(lang==='en')?'en':'es-CO';
 bES.classList.toggle('on',lang!=='en');bEN.classList.toggle('on',lang==='en');
-setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}if(typeof pintaEntregas==='function')pintaEntregas(); pintaViviendas();if(typeof pintaRegistro==='function')pintaRegistro();if(typeof pintaMapa==='function')pintaMapa();if(typeof pintaNov==='function')pintaNov();if(typeof pintaTablero==='function')pintaTablero();if(typeof pintaAli==='function')pintaAli();if(typeof pintaRecursos==='function')pintaRecursos();if(typeof pintaComprobante==='function')pintaComprobante();
+setWA(lang);pintarProgreso(lang);if(typeof pintaPicker==='function'){pintaPicker();pintaShare();}if(typeof pintaEntregas==='function')pintaEntregas(); pintaViviendas(); if(window.satLang)window.satLang();if(typeof pintaRegistro==='function')pintaRegistro();if(typeof pintaMapa==='function')pintaMapa();if(typeof pintaNov==='function')pintaNov();if(typeof pintaTablero==='function')pintaTablero();if(typeof pintaAli==='function')pintaAli();if(typeof pintaRecursos==='function')pintaRecursos();if(typeof pintaComprobante==='function')pintaComprobante();
 try{localStorage.setItem('renace_lang',lang);}catch(e){}
 if(push&&window.history&&history.replaceState){
 try{var u=new URL(window.location.href);
@@ -1133,6 +1152,48 @@ c.innerHTML='<p class="viv__bt">'+L.t+'</p>'+pares.map(function(p){
 return '<div class="vb"><span class="vb__n">'+p[1]+'</span><span class="vb__l">'+esc(p[0])+'</span>'
 +'<span class="vb__b"><i style="width:'+Math.round(p[1]/mx*100)+'%"></i></span>'
 +'<span class="vb__u">'+(p[1]===1?L.u:L.us)+'</span></div>';}).join('');}
+
+
+/* ── acercamiento satelital, todo local ─────────────────── */
+(function(){
+var fig=document.getElementById('satFig'); if(!fig)return;
+var caps={es:[
+ 'La región. El sismo del 10 de agosto se sintió en dieciséis departamentos.',
+ 'Colombia. El epicentro fue en San José del Palmar, Chocó, a 96 km de profundidad.',
+ 'La costa pacífica del Valle del Cauca. Aquí llueve más de seis mil milímetros al año.',
+ 'Buenaventura. El principal puerto del país y uno de sus distritos más pobres.',
+ 'Comunas 5 y 6. Aquí están las viviendas que estamos interviniendo.'],
+ en:[
+ 'The region. The August 10 earthquake was felt across sixteen departments.',
+ 'Colombia. The epicentre was in San José del Palmar, Chocó, 96 km deep.',
+ 'The Pacific coast of Valle del Cauca. Over six thousand millimetres of rain a year.',
+ 'Buenaventura. The country\u2019s main port and one of its poorest districts.',
+ 'Comunas 5 and 6. This is where the homes we are working on are.']};
+var caps_i=0, n=fig.querySelectorAll('.sat__c').length;
+function ir(k){
+caps_i=Math.max(0,Math.min(n-1,k));
+fig.querySelectorAll('.sat__c').forEach(function(im,i){im.classList.toggle('is-on',i===caps_i);});
+fig.querySelectorAll('.sat__p').forEach(function(b,i){b.classList.toggle('is-on',i===caps_i);
+b.setAttribute('aria-pressed',i===caps_i?'true':'false');});
+var lang=document.documentElement.lang==='en'?'en':'es';
+var c=document.getElementById('satCap'); if(c)c.textContent=caps[lang][caps_i]||'';
+var m=document.getElementById('satM'); if(m)m.classList.toggle('is-on',caps_i===n-1);}
+fig.addEventListener('click',function(e){
+var b=e.target.closest('.sat__p');
+if(b){ir(+b.dataset.z);return;}
+if(e.target.closest('.sat__v'))ir(caps_i>=n-1?0:caps_i+1);});
+fig.addEventListener('keydown',function(e){
+if(e.key==='ArrowRight')ir(caps_i+1); else if(e.key==='ArrowLeft')ir(caps_i-1);});
+window.satLang=function(){ir(caps_i);};
+/* al entrar en pantalla, recorre solo una vez hasta las comunas */
+var visto=false;
+if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion:reduce)').matches){
+new IntersectionObserver(function(en,ob){en.forEach(function(x){
+if(x.isIntersecting&&!visto){visto=true;
+var k=0; var t=setInterval(function(){k++;ir(k);if(k>=n-1)clearInterval(t);},1100);
+ob.unobserve(x.target);}});},{threshold:.45}).observe(fig);}
+ir(0);
+})();
 
 function pintaViviendas(){
 var g=document.getElementById('vivGrid'), pie=document.getElementById('vivPie');
