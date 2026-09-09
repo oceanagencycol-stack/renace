@@ -24,8 +24,36 @@
    }
   }
  },
- "actualizado": "2026-08-15",
+ "actualizado": "2026-09-08",
  "entregas": [
+  {
+   "fecha": "2026-09-07",
+   "municipio": "Buenaventura",
+   "barrio": "Santa Cruz",
+   "tipo": "imagen",
+   "media": "casa19-interior.webp",
+   "folios": [
+    "RNC-2608-000051"
+   ],
+   "titulo": "Primera vivienda terminada",
+   "titulo_en": "First home completed",
+   "texto": "La sala con la cubierta nueva puesta. Es la primera casa que la alianza entrega desde el sismo: perdió paredes, piso, cocina, baño y puertas, y vuelve a ser habitable.",
+   "texto_en": "The living room with its new roof in place. It is the first home the alliance has handed over since the earthquake: it lost walls, floor, kitchen, bathroom and doors, and is livable again."
+  },
+  {
+   "fecha": "2026-09-07",
+   "municipio": "Buenaventura",
+   "barrio": "Santa Cruz",
+   "tipo": "imagen",
+   "media": "casa19-techo.webp",
+   "folios": [
+    "RNC-2608-000051"
+   ],
+   "titulo": "La cubierta nueva",
+   "titulo_en": "The new roof",
+   "texto": "Detalle del techo terminado. La madera y los materiales están en las facturas publicadas junto a esta vivienda.",
+   "texto_en": "Detail of the finished roof. The timber and materials appear in the invoices published alongside this home."
+  },
   {
    "fecha": "2026-08-14",
    "municipio": "Buenaventura",

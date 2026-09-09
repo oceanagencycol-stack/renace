@@ -10,7 +10,7 @@
   "modelo": "fondo_comun: los aportes no se marcan por donante. Entran a un fondo y con ese fondo se compran materiales para viviendas concretas. La trazabilidad es fondo → vivienda → factura, no donante → vivienda. Es lo que de verdad ocurre y por eso es lo que se publica.",
   "viviendas_en_obra": "Cuántas viviendas está financiando el fondo hoy."
  },
- "actualizado": "2026-09-03",
+ "actualizado": "2026-09-08",
  "meta_viviendas": 100,
  "viviendas": [
   {
@@ -566,7 +566,7 @@
     "Reparación"
    ],
    "riesgo": true,
-   "estado": "en_intervencion",
+   "estado": "terminada",
    "folios": [
     "RNC-2608-000051"
    ],
@@ -580,8 +580,8 @@
      "factura": "https://drive.google.com/file/d/1nJN74A428rWKId-F68edRtAe35TR874c/view"
     }
    ],
-   "carpeta": "https://drive.google.com/drive/folders/1yv1PaXq4L_O7PH8hAy--11DSTKxMQJXE",
-   "avance": null
+   "carpeta": "https://drive.google.com/drive/folders/1RsS5OpaKL9jCzB6Guq4g4HCwEiL5rMkz",
+   "avance": 100
   },
   {
    "codigo": "RNC-F-71001eed",
@@ -680,5 +680,6 @@
   }
  ],
  "modelo": "fondo_comun",
- "viviendas_en_obra": 4
+ "viviendas_en_obra": 3,
+ "viviendas_terminadas": 1
 }
