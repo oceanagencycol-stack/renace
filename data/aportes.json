@@ -14,13 +14,21 @@
   "aportes_en_total": "Cuántos aportes están sumados dentro de 'total_cop'. Si no coincide con el número de entradas de la lista, el total quedó corto y el despliegue avisa.",
   "capital_semilla": "Los aportes marcados 'costo_operacion' con nota de capital semilla financiaron la construcción de esta plataforma. Se publican con su folio para que quede el rastro, pero NO suman al total del fondo de obras: mostrarlos como recaudado le diría al donante que hay más dinero para reconstruir del que hay."
  },
- "actualizado": "2026-09-07",
+ "actualizado": "2026-09-13",
  "total_cop": 25382000,
  "trm": 3125.47,
  "meta_usd": 500000,
  "meta_obras": 100,
  "obras_entregadas": 1,
  "aportes": [
+  {
+   "folio": "RNC-2609-000054",
+   "fecha": "2026-09-13",
+   "origen": "Aporte anónimo",
+   "nota": "Aporte por Davivienda",
+   "canal": "Davivienda",
+   "estado": "recibido"
+  },
   {
    "folio": "RNC-2608-000053",
    "fecha": "2026-09-05",
