@@ -10,7 +10,7 @@
   "modelo": "fondo_comun: los aportes no se marcan por donante. Entran a un fondo y con ese fondo se compran materiales para viviendas concretas. La trazabilidad es fondo → vivienda → factura, no donante → vivienda. Es lo que de verdad ocurre y por eso es lo que se publica.",
   "viviendas_en_obra": "Cuántas viviendas está financiando el fondo hoy."
  },
- "actualizado": "2026-09-08",
+ "actualizado": "2026-09-18",
  "meta_viviendas": 100,
  "viviendas": [
   {
@@ -677,9 +677,68 @@
    ],
    "carpeta": "https://drive.google.com/drive/folders/1PT_zmDGJlGPeg6d0V_mdP2XGTCZ1619P",
    "avance": null
+  },
+  {
+   "codigo": "RNC-F-f2a5571b",
+   "casa": 23,
+   "barrio": "El Porvenir",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8837,
+    -77.0323
+   ],
+   "personas": 5.0,
+   "material": "Madera",
+   "habitaciones": 3.0,
+   "afectacion": "Grave",
+   "areas": [
+    "techo",
+    "paredes",
+    "piso"
+   ],
+   "intervencion": [
+    "Reconstrucción"
+   ],
+   "riesgo": true,
+   "estado": "terminada",
+   "folios": [
+    "RNC-2608-000053"
+   ],
+   "compras": [],
+   "carpeta": "https://drive.google.com/drive/folders/1Bnr4Czu89zPt_aOXE90FTqxStgZYH8Jy",
+   "avance": 100
+  },
+  {
+   "codigo": "RNC-F-695962bd",
+   "casa": 24,
+   "barrio": "Santa Cruz",
+   "municipio": "Buenaventura",
+   "zona": [
+    3.8957,
+    -77.0547
+   ],
+   "personas": 4.0,
+   "material": "Concreto",
+   "habitaciones": 3.0,
+   "afectacion": "Moderada",
+   "areas": [
+    "techo",
+    "paredes"
+   ],
+   "intervencion": [
+    "Reparación"
+   ],
+   "riesgo": true,
+   "estado": "en_intervencion",
+   "folios": [
+    "RNC-2608-000052"
+   ],
+   "compras": [],
+   "carpeta": "https://drive.google.com/drive/folders/1q7XA0qye4oPIkStsLfnVWHteEYdJ5d8C",
+   "avance": null
   }
  ],
  "modelo": "fondo_comun",
- "viviendas_en_obra": 3,
- "viviendas_terminadas": 1
+ "viviendas_en_obra": 4,
+ "viviendas_terminadas": 2
 }
