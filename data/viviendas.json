@@ -636,13 +636,13 @@
     "Adecuación"
    ],
    "riesgo": true,
-   "estado": "terminada",
+   "estado": "en_intervencion",
    "folios": [
     "RNC-2608-000050"
    ],
    "compras": [],
    "carpeta": "https://drive.google.com/drive/folders/122e9Dgzs1qMx_DDcB7UooSVJIT6q1uxR",
-   "avance": 100
+   "avance": null
   },
   {
    "codigo": "RNC-F-515cf9dd",
@@ -739,6 +739,6 @@
   }
  ],
  "modelo": "fondo_comun",
- "viviendas_en_obra": 2,
- "viviendas_terminadas": 4
+ "viviendas_en_obra": 3,
+ "viviendas_terminadas": 3
 }
