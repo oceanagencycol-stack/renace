@@ -606,13 +606,13 @@
     "Adecuación"
    ],
    "riesgo": true,
-   "estado": "en_intervencion",
+   "estado": "terminada",
    "folios": [
     "RNC-2608-000051"
    ],
    "compras": [],
    "carpeta": "https://drive.google.com/drive/folders/1HhMtknM-7U7yoye6lOmlCrfXqlUNpX2t",
-   "avance": null
+   "avance": 100
   },
   {
    "codigo": "RNC-F-7254735c",
@@ -636,13 +636,13 @@
     "Adecuación"
    ],
    "riesgo": true,
-   "estado": "en_intervencion",
+   "estado": "terminada",
    "folios": [
     "RNC-2608-000050"
    ],
    "compras": [],
    "carpeta": "https://drive.google.com/drive/folders/122e9Dgzs1qMx_DDcB7UooSVJIT6q1uxR",
-   "avance": null
+   "avance": 100
   },
   {
    "codigo": "RNC-F-515cf9dd",
@@ -739,6 +739,6 @@
   }
  ],
  "modelo": "fondo_comun",
- "viviendas_en_obra": 4,
- "viviendas_terminadas": 2
+ "viviendas_en_obra": 2,
+ "viviendas_terminadas": 4
 }
