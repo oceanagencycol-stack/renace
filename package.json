@@ -1,0 +1,9 @@
+{
+  "name": "renace",
+  "private": true,
+  "description": "RENACE: web estática y la función que recibe los avisos de aporte (api/aviso.js).",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "nodemailer": "10.0.14"
+  }
+}

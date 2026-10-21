@@ -79,6 +79,28 @@
           "value": "*"
         }
       ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
+      "source": "/avisar",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -109,5 +131,11 @@
     }
   ],
   "buildCommand": "node scripts/build.js",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "functions": {
+    "api/aviso.js": {
+      "maxDuration": 30,
+      "memory": 1024
+    }
+  }
 }

@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Avisar mi aporte · RENACE</title>
+<meta name="description" content="Avisa tu aporte a RENACE con el comprobante y recibe tu folio el mismo día.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F3EEE4">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://www.renacecol.org/avisar">
+<link rel="icon" type="image/svg+xml" href="/assets/renace-mark.svg">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/fonts/faces.css">
+<style>
+:root{--cream:#F3EEE4;--cream-2:#EAE3D4;--cream-3:#E0D7C4;--ink:#221E1A;--ink-soft:#3A342C;--brick:#C0532B;--brick-d:#A24320;--olive:#4E5F3C;--olive-d:#3B4A2C;--muted:#6E6558;--line:rgba(34,30,26,.13);--line-strong:rgba(34,30,26,.28);--err:#A2321A;
+--display:'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',sans-serif;--sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;--mono:'IBM Plex Mono',ui-monospace,Menlo,monospace}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 16px/1.55 var(--sans)}
+a{color:var(--olive-d)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:680px;margin:0 auto;padding:16px 20px}
+.marca{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:800 1.05rem/1 var(--display);letter-spacing:.02em}
+.marca img{width:28px;height:28px}
+.idioma{display:flex;border:1px solid var(--line-strong);border-radius:999px;overflow:hidden}
+.idioma button{border:0;background:transparent;padding:7px 12px;font:600 .8rem/1 var(--sans);color:var(--muted);cursor:pointer}
+.idioma button[aria-pressed="true"]{background:var(--ink);color:var(--cream)}
+main{max-width:680px;margin:0 auto;padding:4px 20px 64px}
+h1{font:800 clamp(2rem,7vw,2.8rem)/1.02 var(--display);letter-spacing:-.02em;margin:14px 0 12px}
+.lead{color:var(--ink-soft);margin:0 0 26px;font-size:1.05rem}
+.aviso-correo{background:var(--cream-2);border-radius:14px;padding:16px 18px;margin:0 0 22px}
+.aviso-correo p{margin:0 0 10px}
+form{display:grid;gap:22px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend,.et{display:block;font:600 .95rem/1.3 var(--sans);margin:0 0 8px;padding:0}
+.op{font-weight:400;color:var(--muted)}
+.ayuda{display:block;color:var(--muted);font-size:.86rem;margin-top:6px}
+input[type=text],input[type=email],input[type=tel],input[type=date],select{width:100%;min-height:52px;padding:12px 14px;border:1.5px solid var(--line-strong);border-radius:12px;background:#FFFDF9;color:var(--ink);font:400 1.05rem/1.2 var(--sans);appearance:none;-webkit-appearance:none}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+input:focus-visible,select:focus-visible,button:focus-visible,.archivo:focus-within,.seg label:focus-within,.casilla:focus-within{outline:3px solid var(--olive);outline-offset:2px}
+.fila{display:grid;grid-template-columns:1fr 112px;gap:10px}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg label{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border:1.5px solid var(--line-strong);border-radius:12px;background:#FFFDF9;font-weight:600;cursor:pointer;text-align:center;padding:8px}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg label:has(input:checked){border-color:var(--olive);background:#E6EADD;color:var(--olive-d)}
+.archivo{position:relative;display:grid;place-items:center;gap:6px;min-height:132px;border:2px dashed var(--line-strong);border-radius:14px;background:#FFFDF9;text-align:center;padding:18px;cursor:pointer}
+.archivo input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}
+.archivo b{font:700 1.05rem/1.2 var(--display)}
+.archivo.lleno{border-style:solid;border-color:var(--olive);background:#F4F6EE}
+.prev{display:flex;align-items:center;gap:12px;text-align:left;width:100%}
+.prev img{width:64px;height:64px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+.prev .pdf{width:64px;height:64px;display:grid;place-items:center;border-radius:8px;background:var(--brick);color:#fff;font:700 .85rem/1 var(--mono)}
+.prev span{display:block;font-size:.88rem;color:var(--muted);word-break:break-all}
+.casilla{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:12px;background:var(--cream-2);cursor:pointer}
+.casilla input{width:22px;height:22px;margin:2px 0 0;flex:none;accent-color:var(--olive)}
+.casilla span{font-size:.9rem;line-height:1.5}
+.err{display:none;color:var(--err);font-size:.88rem;font-weight:600;margin-top:6px}
+.invalido .err{display:block}
+.invalido input,.invalido select,.invalido .archivo{border-color:var(--err)}
+.trampa{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.enviar{text-decoration:none;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:58px;border:0;border-radius:999px;background:var(--brick);color:#fff;font:700 1.08rem/1 var(--sans);cursor:pointer;box-shadow:0 1px 2px rgba(34,30,26,.14),0 10px 24px -12px rgba(162,67,32,.7)}
+.enviar:disabled{opacity:.65;cursor:progress}
+.estado{min-height:1.2em;font-size:.92rem;color:var(--muted);text-align:center;margin:-8px 0 0}
+.estado.mal{color:var(--err);font-weight:600}
+.listo{display:none;background:#FFFDF9;border:1.5px solid var(--olive);border-radius:18px;padding:26px 22px;text-align:center}
+.listo h2{font:800 1.7rem/1.1 var(--display);margin:8px 0 10px}
+.listo .num{display:inline-block;margin:6px 0 14px;padding:8px 14px;border-radius:10px;background:var(--cream-2);font:600 1.05rem/1 var(--mono);letter-spacing:.04em}
+.listo p{margin:0 0 12px}
+.ok-ico{width:56px;height:56px;margin:0 auto;border-radius:50%;background:var(--olive);display:grid;place-items:center}
+.ok-ico svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:3}
+.pie{max-width:680px;margin:0 auto;padding:0 20px 40px;color:var(--muted);font-size:.82rem}
+.enviado form,.enviado .lead,.enviado h1{display:none}
+.enviado .listo{display:block}
+@media(min-width:620px){.casilla span{font-size:.92rem}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="marca" href="/"><img src="/assets/renace-mark.svg" alt="" width="28" height="28">RENACE</a>
+  <div class="idioma" role="group" aria-label="Idioma / Language">
+    <button type="button" data-lang="es" aria-pressed="true">ES</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+
+<main id="main">
+  <h1 data-t="h1">Avisa tu aporte y recibe tu folio</h1>
+  <p class="lead" data-t="lead">Cuéntanos lo esencial y adjunta el comprobante. La fundación lo verifica y te envía tu folio hoy mismo.</p>
+
+  <div class="aviso-correo" id="sinForm" hidden>
+    <p data-t="sin1">Por ahora, envía tu comprobante al correo de la fundación y te devolvemos el folio el mismo día.</p>
+    <a class="enviar" id="sinFormBtn" href="mailto:funhogarsinolvido@gmail.com?subject=RENACE%20%E2%80%94%20comprobante%20de%20aporte" data-t="sin2">Enviar el comprobante por correo</a>
+  </div>
+
+  <form id="f" novalidate>
+    <div class="campo" data-campo="nombre">
+      <label class="et" for="nombre" data-t="nombre">Tu nombre</label>
+      <input id="nombre" name="nombre" type="text" autocomplete="name" maxlength="120" required>
+      <span class="err" data-t="e_nombre">Escribe tu nombre.</span>
+    </div>
+
+    <fieldset class="campo" data-campo="contacto">
+      <legend data-t="donde">¿Dónde te enviamos el folio?</legend>
+      <div class="seg">
+        <label><input type="radio" name="canal" value="correo" checked><span data-t="correo">Correo</span></label>
+        <label><input type="radio" name="canal" value="whatsapp"><span>WhatsApp</span></label>
+      </div>
+      <input id="contacto" name="contacto" type="email" autocomplete="email" inputmode="email" maxlength="160" style="margin-top:10px" aria-label="Correo" placeholder="tu@correo.com" required>
+      <span class="err" id="eContacto" data-t="e_correo">Revisa el correo.</span>
+    </fieldset>
+
+    <div class="campo" data-campo="monto">
+      <label class="et" for="monto" data-t="monto">¿Cuánto aportaste?</label>
+      <div class="fila">
+        <input id="monto" name="monto" type="text" inputmode="decimal" autocomplete="off" placeholder="250.000" required>
+        <select id="moneda" name="moneda" aria-label="Moneda"><option value="COP">COP</option><option value="USD">USD</option></select>
+      </div>
+      <span class="err" data-t="e_monto">Escribe el monto que transferiste.</span>
+    </div>
+
+    <div class="campo" data-campo="fecha">
+      <label class="et" for="fecha" data-t="fecha">¿Qué día lo hiciste?</label>
+      <input id="fecha" name="fecha" type="date" required>
+      <span class="err" data-t="e_fecha">Elige la fecha del aporte (no puede ser futura).</span>
+    </div>
+
+    <div class="campo" data-campo="medio">
+      <label class="et" for="medio" data-t="medio">¿Por dónde pagaste?</label>
+      <select id="medio" name="medio" required>
+        <option value="" data-t="elige">Elige una opción</option>
+        <option value="davivienda" data-t="m_dav">Cuenta Davivienda de la fundación</option>
+        <option value="breb" data-t="m_breb">Bre-B (llave NIT)</option>
+        <option value="dolarapp" data-t="m_dolar">DolarApp</option>
+        <option value="exterior" data-t="m_ext">Transferencia desde EE. UU. (ACH o wire)</option>
+        <option value="otro" data-t="m_otro">Otro</option>
+      </select>
+      <span class="err" data-t="e_medio">Elige cómo pagaste.</span>
+    </div>
+
+    <div class="campo" data-campo="archivo">
+      <span class="et" id="etArchivo" data-t="comp">Comprobante</span>
+      <label class="archivo" id="zona">
+        <input id="archivo" name="archivo" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,application/pdf,.heic,.heif,.pdf" aria-labelledby="etArchivo" required>
+        <span id="zonaTxt"><b data-t="adj">Adjuntar foto o PDF</b><span class="ayuda" data-t="adj2">Pantallazo, foto o PDF del comprobante. Las fotos se ajustan solas; los PDF, hasta 3 MB.</span></span>
+      </label>
+      <span class="err" id="eArchivo" data-t="e_archivo">Adjunta el comprobante.</span>
+    </div>
+
+    <fieldset class="campo">
+      <legend><span data-t="pub">En el registro público, quiero aparecer</span> <span class="op" data-t="opcional">(opcional)</span></legend>
+      <div class="seg">
+        <label><input type="radio" name="publico" value="anonimo" checked><span data-t="anon">Como anónimo</span></label>
+        <label><input type="radio" name="publico" value="nombre"><span data-t="connombre">Con mi nombre</span></label>
+      </div>
+      <span class="ayuda" data-t="pub2">El registro público nunca muestra el monto, tu correo ni tu teléfono.</span>
+    </fieldset>
+
+    <div class="campo">
+      <label class="et" for="obra"><span data-t="obra">¿A qué obra quieres que vaya?</span> <span class="op" data-t="opcional">(opcional)</span></label>
+      <select id="obra" name="obra"><option value="donde_mas_se_necesite" data-t="obra0">Donde más se necesite</option></select>
+      <span class="ayuda" data-t="obra2">Las viviendas aparecen por su código, como en la página. Nunca publicamos nombres ni direcciones de las familias.</span>
+    </div>
+
+    <div class="trampa" aria-hidden="true"><label>Sitio web<input type="text" name="sitio" tabindex="-1" autocomplete="off"></label></div>
+
+    <div class="campo" data-campo="autoriza">
+      <label class="casilla"><input type="checkbox" id="autoriza" name="autoriza" required>
+        <span data-t="ley">Autorizo a la Fundación Un Hogar Sin Olvido (NIT 901.047.625-4) a tratar mis datos y mi comprobante solo para verificar mi aporte, asignarle un folio y escribirme sobre él, según la Ley 1581 de 2012. Puedo consultarlos, corregirlos o pedir que los borren escribiendo a <a href="mailto:funhogarsinolvido@gmail.com">funhogarsinolvido@gmail.com</a>.</span></label>
+      <span class="err" data-t="e_ley">Para recibir tu aviso necesitamos esta autorización.</span>
+    </div>
+
+    <button class="enviar" id="btn" type="submit" data-t="enviar">Enviar aviso</button>
+    <p class="estado" id="estado" role="status" aria-live="polite"></p>
+  </form>
+
+  <section class="listo" id="listo" tabindex="-1" aria-live="polite">
+    <div class="ok-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <h2 data-t="ok1">Recibimos tu aviso</h2>
+    <p><span data-t="ok2">Número de aviso</span><br><span class="num" id="okNum"></span></p>
+    <p id="okTxt"></p>
+    <p class="ayuda" data-t="ok4">Guarda este número. Si algo no llega, escríbenos a funhogarsinolvido@gmail.com con él.</p>
+    <p style="margin-top:18px"><a href="/" data-t="volver">Volver a RENACE</a></p>
+  </section>
+</main>
+<p class="pie" data-t="pie">El comprobante se guarda en un archivo privado de la fundación, nunca en una página pública. Datos tratados conforme a la Ley 1581 de 2012.</p>
+
+<script>
+(function(){
+var ES={}, EN={
+h1:'Tell us about your contribution and get your tracking number',
+lead:'Share the essentials and attach the receipt. The foundation checks it and sends you your tracking number (folio) the same day.',
+sin1:'For now, email your receipt to the foundation and we will send your tracking number the same day.',sin2:'Email the receipt',
+nombre:'Your name',e_nombre:'Please write your name.',donde:'Where should we send your tracking number?',correo:'Email',
+e_correo:'Please check the email address.',e_wa:'Please check the WhatsApp number, with country code.',
+monto:'How much did you contribute?',e_monto:'Please enter the amount you sent.',fecha:'What day did you send it?',e_fecha:'Choose the date of your contribution (it cannot be in the future).',
+medio:'How did you pay?',elige:'Choose one',m_dav:'Foundation Davivienda account',m_breb:'Bre-B (NIT key)',m_dolar:'DolarApp',m_ext:'Transfer from the U.S. (ACH or wire)',m_otro:'Other',e_medio:'Choose how you paid.',
+comp:'Receipt',adj:'Attach photo or PDF',adj2:'Screenshot, photo or PDF of the receipt. Photos are resized automatically; PDFs up to 3 MB.',e_archivo:'Please attach the receipt.',
+pub:'In the public log, show me',opcional:'(optional)',anon:'As anonymous',connombre:'With my name',pub2:'The public log never shows the amount, your email or your phone.',
+obra:'Which project should it go to?',obra0:'Where it is needed most',obra2:'Homes are listed by their code, as on the website. We never publish the names or addresses of the families.',
+ley:'I authorize Fundación Un Hogar Sin Olvido (NIT 901.047.625-4) to process my data and my receipt only to verify my contribution, assign it a tracking number and write to me about it, under Colombian Law 1581 of 2012. I can review, correct or ask to delete them by writing to <a href="mailto:funhogarsinolvido@gmail.com">funhogarsinolvido@gmail.com</a>.',
+e_ley:'We need this authorization to receive your notice.',enviar:'Send notice',
+ok1:'We received your notice',ok2:'Notice number',ok4:'Keep this number. If anything does not arrive, write to funhogarsinolvido@gmail.com with it.',volver:'Back to RENACE',
+pie:'The receipt is stored in a private foundation file, never on a public page. Data handled under Colombian Law 1581 of 2012.'};
+var M={es:{enviando:'Enviando tu aviso…',preparando:'Preparando el comprobante…',revisa:'Revisa los campos marcados.',limite:'Enviaste varios avisos seguidos. Espera unos minutos e inténtalo otra vez.',
+ red:'No pudimos enviar el aviso. Revisa tu conexión e inténtalo otra vez. Si sigue fallando, envía el comprobante a funhogarsinolvido@gmail.com.',
+ grande:'El archivo pesa más de 3 MB. Envía un pantallazo o un PDF más liviano.',tipo:'Ese archivo no es una foto ni un PDF. Adjunta un pantallazo, una foto o el PDF del comprobante.',heic:'Esta foto está en un formato que tu navegador no puede ajustar. Envía un pantallazo del comprobante.',
+ okCorreo:function(c){return 'Tu folio te llega hoy a <b>'+c+'</b>. También te mandamos un correo confirmando que recibimos tu aviso.';},
+ okWa:function(c){return 'Tu folio te llega hoy por WhatsApp al <b>'+c+'</b>.';},quitar:'Cambiar archivo'},
+en:{enviando:'Sending your notice…',preparando:'Preparing the receipt…',revisa:'Please check the highlighted fields.',limite:'You sent several notices in a row. Please wait a few minutes and try again.',
+ red:'We could not send the notice. Check your connection and try again. If it keeps failing, email the receipt to funhogarsinolvido@gmail.com.',
+ grande:'The file is larger than 3 MB. Please send a screenshot or a lighter PDF.',tipo:'That file is not a photo or a PDF. Please attach a screenshot, a photo or the PDF of the receipt.',heic:'This photo is in a format your browser cannot resize. Please send a screenshot of the receipt.',
+ okCorreo:function(c){return 'Your tracking number will reach <b>'+c+'</b> today. We also emailed you a confirmation that we received your notice.';},
+ okWa:function(c){return 'Your tracking number will reach you today on WhatsApp at <b>'+c+'</b>.';},quitar:'Change file'}};
+var nodos=document.querySelectorAll('[data-t]');
+nodos.forEach(function(n){ES[n.getAttribute('data-t')]=n.innerHTML;});
+var q=new URLSearchParams(location.search), lang=q.get('lang')==='en'?'en':'es';
+var f=document.getElementById('f'), $=function(id){return document.getElementById(id);};
+var inicio=Date.now(), archivo=null;
+
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function ponerIdioma(l){lang=l;var d=l==='en'?EN:ES;
+ nodos.forEach(function(n){var k=n.getAttribute('data-t');if(d[k]!==undefined)n.innerHTML=d[k];});
+ document.documentElement.lang=l==='en'?'en':'es-CO';
+ document.querySelectorAll('.idioma button').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-lang')===l));});
+ document.title=l==='en'?'Tell us about your contribution · RENACE':'Avisar mi aporte · RENACE';
+ ponerCanal(); if(archivo)pintarArchivo();}
+document.querySelectorAll('.idioma button').forEach(function(b){b.addEventListener('click',function(){ponerIdioma(b.getAttribute('data-lang'));
+ var u=new URL(location.href);if(lang==='en')u.searchParams.set('lang','en');else u.searchParams.delete('lang');history.replaceState(null,'',u);});});
+
+/* correo o WhatsApp: el mismo campo cambia de teclado y de validación */
+function canal(){return f.canal.value;}
+function ponerCanal(){var c=$('contacto'),wa=canal()==='whatsapp';
+ c.type=wa?'tel':'email';c.inputMode=wa?'tel':'email';c.autocomplete=wa?'tel':'email';
+ c.placeholder=wa?'+57 300 000 0000':(lang==='en'?'you@email.com':'tu@correo.com');
+ c.setAttribute('aria-label',wa?'WhatsApp':(lang==='en'?'Email':'Correo'));
+ $('eContacto').innerHTML=wa?(lang==='en'?EN.e_wa:'Revisa el número de WhatsApp, con el indicativo del país.'):(lang==='en'?EN.e_correo:ES.e_correo);}
+f.querySelectorAll('input[name=canal]').forEach(function(r){r.addEventListener('change',function(){ponerCanal();$('contacto').focus();});});
+
+/* valores que llegan desde la página (monto y vía elegidos) */
+var hoy=new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10);
+$('fecha').value=hoy;$('fecha').max=hoy;
+var mq=parseInt(q.get('monto'),10); if(mq>0)$('monto').value=mq.toLocaleString('es-CO');
+var VIAS={banco:'davivienda',breb:'breb',usa:'dolarapp'}; if(VIAS[q.get('via')])$('medio').value=VIAS[q.get('via')];
+$('medio').addEventListener('change',function(){if(this.value==='dolarapp'||this.value==='exterior')$('moneda').value='USD';else if(this.value)$('moneda').value='COP';});
+
+/* obras: solo el código de cada vivienda, nunca nombres ni direcciones */
+fetch('/data/viviendas.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null;}).then(function(d){
+ if(!d||!Array.isArray(d.viviendas))return;var s=$('obra');
+ d.viviendas.filter(function(v){return v.estado!=='terminada'&&/^RNC-[A-Z]-[0-9a-f]{8}$/.test(v.codigo);}).forEach(function(v){
+  var o=document.createElement('option');o.value=v.codigo;o.textContent=v.codigo;s.appendChild(o);});
+ var oq=q.get('obra');if(oq&&/^RNC-[A-Z]-[0-9a-f]{8}$/.test(oq))s.value=oq;}).catch(function(){});
+
+/* comprobante: las fotos se reducen en el teléfono antes de enviarse (lo bancario sigue legible) */
+var MAX=3*1024*1024;
+function leerDataURL(blob){return new Promise(function(ok,mal){var r=new FileReader();r.onload=function(){ok(r.result);};r.onerror=mal;r.readAsDataURL(blob);});}
+function reducir(file){return new Promise(function(ok,mal){
+ leerDataURL(file).then(function(url){var img=new Image();img.onload=function(){
+  var lado=2000,w=img.naturalWidth,h=img.naturalHeight,k=Math.min(1,lado/Math.max(w,h));
+  if(k===1&&file.size<=1.5*1024*1024&&file.type==='image/jpeg'){ok({datos:url,tipo:file.type,peso:file.size,vista:url});return;}
+  var c=document.createElement('canvas');c.width=Math.round(w*k);c.height=Math.round(h*k);
+  var x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(img,0,0,c.width,c.height);
+  var calidad=.86,u=c.toDataURL('image/jpeg',calidad);
+  while(u.length*.75>MAX&&calidad>.5){calidad-=.12;u=c.toDataURL('image/jpeg',calidad);}
+  ok({datos:u,tipo:'image/jpeg',peso:Math.round(u.length*.75),vista:u});};
+  img.onerror=function(){mal(new Error('heic'));};img.src=url;}).catch(mal);});}
+function kb(n){return n>1048576?(n/1048576).toFixed(1).replace('.',',')+' MB':Math.max(1,Math.round(n/1024))+' KB';}
+function pintarArchivo(){var z=$('zonaTxt'),a=archivo;
+ z.innerHTML='<span class="prev">'+(a.vista?'<img src="'+a.vista+'" alt="">':'<span class="pdf">PDF</span>')+
+ '<span><b>'+esc(a.nombre)+'</b><span>'+kb(a.peso)+' · '+M[lang].quitar+'</span></span></span>';$('zona').classList.add('lleno');}
+$('archivo').addEventListener('change',function(){
+ var file=this.files&&this.files[0];archivo=null;$('zona').classList.remove('lleno');marcar('archivo',false);
+ if(!file)return;
+ var nombre=file.name||'comprobante',esPdf=file.type==='application/pdf'||/\.pdf$/i.test(nombre),esImg=/^image\//.test(file.type)||/\.(heic|heif)$/i.test(nombre);
+ var errA=function(k){archivo=null;this.value='';$('eArchivo').textContent=M[lang][k];marcar('archivo',true);}.bind(this);
+ if(!esPdf&&!esImg)return errA('tipo');
+ if(esPdf){if(file.size>MAX)return errA('grande');
+  leerDataURL(file).then(function(u){archivo={nombre:nombre,datos:u,tipo:'application/pdf',peso:file.size};pintarArchivo();});return;}
+ estado(M[lang].preparando);
+ reducir(file).then(function(r){estado('');archivo={nombre:nombre,datos:r.datos,tipo:r.tipo,peso:r.peso,vista:r.vista};pintarArchivo();})
+ .catch(function(){estado('');
+  /* el navegador no pudo abrirla: solo pasa tal cual si es HEIC (fotos de iPhone); lo demás no es una imagen */
+  var heic=/hei[cf]/i.test(file.type)||/\.(heic|heif)$/i.test(nombre);
+  if(!heic)return errA('tipo');
+  if(file.size<=MAX){leerDataURL(file).then(function(u){archivo={nombre:nombre,datos:u,tipo:'image/heic',peso:file.size};pintarArchivo();});}
+  else errA('heic');});});
+
+/* validación en el teléfono (el servidor vuelve a validar todo) */
+function marcar(campo,mal){var el=f.querySelector('[data-campo="'+campo+'"]');if(el)el.classList.toggle('invalido',!!mal);}
+function estado(t,mal){var e=$('estado');e.textContent=t||'';e.classList.toggle('mal',!!mal);}
+function montoNum(v){return Number(String(v).replace(/[^\d.,]/g,'').replace(/[.,](?=\d{3}(\D|$))/g,'').replace(',','.'));}
+function revisar(){var malos=[],v;
+ if($('nombre').value.trim().length<2)malos.push('nombre');
+ v=$('contacto').value.trim();
+ if(canal()==='correo'?!/^[^\s@<>()",;:]+@[^\s@<>()",;:]+\.[a-z]{2,}$/i.test(v):!/^\+?\d{7,15}$/.test(v.replace(/[^\d+]/g,'')))malos.push('contacto');
+ v=montoNum($('monto').value);if(!(v>0))malos.push('monto');
+ v=$('fecha').value;if(!/^\d{4}-\d{2}-\d{2}$/.test(v)||v>hoy)malos.push('fecha');
+ if(!$('medio').value)malos.push('medio');
+ if(!archivo){if(!f.querySelector('[data-campo=archivo]').classList.contains('invalido'))$('eArchivo').innerHTML=(lang==='en'?EN:ES).e_archivo;malos.push('archivo');}
+ if(!$('autoriza').checked)malos.push('autoriza');
+ ['nombre','contacto','monto','fecha','medio','archivo','autoriza'].forEach(function(c){marcar(c,malos.indexOf(c)>-1);});
+ return malos;}
+f.addEventListener('input',function(e){var c=e.target.closest('[data-campo]');if(c&&c.classList.contains('invalido')&&e.target.type!=='file')c.classList.remove('invalido');});
+
+/* conversión «aviso de aporte»: un solo evento con ese nombre para GA4 y el píxel de Meta */
+function conversion(d){
+ var datos={medio:d.medio,moneda:d.moneda,valor:d.monto,obra:d.obra==='donde_mas_se_necesite'?'general':'vivienda'};
+ window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'aviso_de_aporte',aviso_de_aporte:datos});
+ try{if(typeof window.gtag==='function')window.gtag('event','aviso_de_aporte',{value:d.monto,currency:d.moneda,medio:d.medio});}catch(e){}
+ try{if(typeof window.fbq==='function')window.fbq('trackCustom','aviso_de_aporte',{value:d.monto,currency:d.moneda});}catch(e){}
+ try{document.dispatchEvent(new CustomEvent('renace:aviso_de_aporte',{detail:datos}));}catch(e){}}
+
+f.addEventListener('submit',function(e){e.preventDefault();
+ var malos=revisar();
+ if(malos.length){estado(M[lang].revisa,true);var p=f.querySelector('.invalido input,.invalido select');if(p)p.focus();return;}
+ var d={nombre:$('nombre').value.trim(),canal:canal(),contacto:$('contacto').value.trim(),monto:montoNum($('monto').value),moneda:$('moneda').value,
+  fecha:$('fecha').value,medio:$('medio').value,publico:f.publico.value,obra:$('obra').value,autoriza:$('autoriza').checked,idioma:lang,
+  sitio:f.sitio.value,t:Date.now()-inicio,archivo:{nombre:archivo.nombre,tipo:archivo.tipo,datos:archivo.datos.split(',')[1]}};
+ var b=$('btn');b.disabled=true;estado(M[lang].enviando);
+ fetch('/api/aviso',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+ .then(function(r){return r.json().catch(function(){return {ok:false};}).then(function(j){j._s=r.status;return j;});})
+ .then(function(j){
+  if(j.ok){$('okNum').textContent=j.aviso;
+   $('okTxt').innerHTML=d.canal==='correo'?M[lang].okCorreo(esc(d.contacto)):M[lang].okWa(esc(d.contacto));
+   document.body.classList.add('enviado');window.scrollTo(0,0);$('listo').focus({preventScroll:true});conversion(d);return;}
+  b.disabled=false;
+  if(j._s===422&&j.campos){Object.keys(j.campos).forEach(function(c){
+    if(c==='archivo')$('eArchivo').textContent=M[lang][j.campos[c]==='falta'?'red':j.campos[c]]||M[lang].tipo;marcar(c,true);});estado(M[lang].revisa,true);return;}
+  estado(j._s===429?M[lang].limite:M[lang].red,true);})
+ .catch(function(){b.disabled=false;estado(M[lang].red,true);});});
+
+/* sin configuración completa no se abre el formulario: se ofrece el correo, para no perder ningún aviso */
+fetch('/api/aviso',{cache:'no-store'}).then(function(r){return r.json();}).then(function(j){if(!j.listo)sinFormulario();}).catch(sinFormulario);
+function sinFormulario(){f.hidden=true;$('sinForm').hidden=false;}
+ponerIdioma(lang);
+})();
+</script>
+</body>
+</html>
