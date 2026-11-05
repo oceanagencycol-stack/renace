@@ -3,8 +3,16 @@
   "tipos": "noticia | necesidad | avance | alerta",
   "como_agregar": "Añade al principio del array y empuja."
  },
- "actualizado": "2026-10-08",
+ "actualizado": "2026-11-05",
  "novedades": [
+  {
+   "fecha": "2026-11-05",
+   "tipo": "avance",
+   "titulo": "Llega la donación más grande hasta hoy",
+   "titulo_en": "The largest donation so far arrives",
+   "texto": "La Fundación de Mónaco aportó 5.000 euros, casi el doble del aporte más grande que había recibido RENACE. Con esta donación el fondo de obras pasó del 1,66 % al 2,81 % de la meta. El valor en pesos se ajustará cuando el banco confirme la conversión.",
+   "texto_en": "The Monaco Foundation contributed 5,000 euros, almost twice the largest contribution RENACE had received. With this donation the works fund rose from 1.66% to 2.81% of the goal. The peso amount will be adjusted once the bank confirms the conversion."
+  },
   {
    "fecha": "2026-10-03",
    "tipo": "entrega",
@@ -130,8 +138,8 @@
    "tipo": "alerta",
    "titulo": "Sismo de magnitud 7,4 en el Pacífico",
    "titulo_en": "Magnitude 7.4 earthquake on the Pacific coast",
-   "texto": "7:34 a.m., epicentro en San José del Palmar, Chocó, a 96 km de profundidad. Se sintió en 16 departamentos y dejó más de 100 réplicas en 36 horas.",
-   "texto_en": "7:34 a.m., epicenter in San José del Palmar, Chocó, 96 km deep. Felt across 16 departments, with more than 100 aftershocks in 36 hours.",
+   "texto": "7:34 a.m., epicentro en San José del Palmar, Chocó, a 103 km de profundidad. Se sintió en 16 departamentos y dejó más de 100 réplicas en 36 horas.",
+   "texto_en": "7:34 a.m., epicenter in San José del Palmar, Chocó, 103 km deep. Felt across 16 departments, with more than 100 aftershocks in 36 hours.",
    "fuente": "Servicio Geológico Colombiano"
   }
  ]

@@ -24,8 +24,50 @@
    }
   }
  },
- "actualizado": "2026-09-08",
+ "actualizado": "2026-11-05",
  "entregas": [
+  {
+   "fecha": "2026-09-22",
+   "municipio": "Buenaventura",
+   "barrio": "El Jardín",
+   "tipo": "imagen",
+   "media": "casa20-cubierta.webp",
+   "folios": [
+    "RNC-2608-000051"
+   ],
+   "titulo": "Cubierta nueva en El Jardín",
+   "titulo_en": "A new roof in El Jardín",
+   "texto": "Instalación de la cubierta de zinc en la vivienda de El Jardín que se entregó a comienzos de octubre. Las láminas y los eléctricos están en la factura publicada junto a esta casa.",
+   "texto_en": "Installing the zinc roof on the El Jardín home handed over in early October. The sheets and the electrical parts appear in the invoice published alongside this home."
+  },
+  {
+   "fecha": "2026-09-07",
+   "municipio": "Buenaventura",
+   "barrio": "El Porvenir",
+   "tipo": "imagen",
+   "media": "casa23-estructura.webp",
+   "folios": [
+    "RNC-2608-000053"
+   ],
+   "titulo": "Reconstrucción en El Porvenir",
+   "titulo_en": "Rebuilding in El Porvenir",
+   "texto": "La vivienda de El Porvenir, con daño grave por el sismo, se levantó de nuevo: estructura de madera y techo nuevo.",
+   "texto_en": "The El Porvenir home, badly damaged by the earthquake, was built back up: a timber frame and a new roof."
+  },
+  {
+   "fecha": "2026-09-07",
+   "municipio": "Buenaventura",
+   "barrio": "El Porvenir",
+   "tipo": "imagen",
+   "media": "casa23-interior.webp",
+   "folios": [
+    "RNC-2608-000053"
+   ],
+   "titulo": "Paredes y piso de nuevo",
+   "titulo_en": "Walls and floor again",
+   "texto": "El interior de la misma casa con paredes y piso nuevos. Fue la segunda vivienda entregada por la alianza.",
+   "texto_en": "Inside the same home, with new walls and floor. It was the second home the alliance handed over."
+  },
   {
    "fecha": "2026-09-07",
    "municipio": "Buenaventura",
